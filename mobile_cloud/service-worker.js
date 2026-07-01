@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lotto649-ironlaw-20260701134718';
+const CACHE_NAME = 'lotto649-ironlaw-20260701140514';
 const APP_SHELL = [
   './',
   './index.html',
