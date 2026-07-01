@@ -22,6 +22,6 @@ jobs:
         run: |
           git config user.name "lotto649-ironlaw-bot"
           git config user.email "actions@github.com"
-          git add data reports mobile_cloud
+          git add data reports mobile_cloud docs
           git diff --cached --quiet || git commit -m "Update Lotto649 iron-law reports"
           git push

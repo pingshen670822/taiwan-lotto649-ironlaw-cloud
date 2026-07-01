@@ -22,10 +22,11 @@ python .\lotto649_ironlaw_system.py --all
 - `reports/latest_battle_report.html`
 - `reports/latest_analysis.json`
 - `mobile_cloud/index.html`
+- `docs/index.html`
 
 ## 雲端手機獨立版
 
-把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，`.github/workflows/update-mobile-cloud.yml` 會在台灣時間週二、週五晚間開獎後自動更新並部署 `mobile_cloud`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
+把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會在台灣時間週二、週五晚間開獎後自動更新 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
 
 ## 重要提醒
 

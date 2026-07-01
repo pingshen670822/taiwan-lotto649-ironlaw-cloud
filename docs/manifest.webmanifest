@@ -1,0 +1,9 @@
+{
+  "name": "台灣大樂透鐵律戰報",
+  "short_name": "大樂透鐵律",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f8f5",
+  "theme_color": "#12343b",
+  "lang": "zh-Hant"
+}
