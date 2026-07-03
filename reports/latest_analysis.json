@@ -1,56 +1,263 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v1_20260701",
-  "generated_at": "2026-07-01T14:05:14",
+  "generated_at": "2026-07-04T02:50:37",
   "history_info": {
     "status": "ready",
-    "draw_count": 2148,
+    "draw_count": 2149,
     "first_period": 96000001,
     "first_date": "2007-01-02",
-    "latest_period": 115000066,
-    "latest_date": "2026-06-30",
+    "latest_period": 115000067,
+    "latest_date": "2026-07-03",
     "official_download_range_note": "台灣彩券官方年度下載與月查詢 API 可取得範圍",
     "duplicate_dates": [],
     "invalid_rows": [],
     "freshness": {
       "status": "fresh",
-      "latest_date": "2026-06-30",
-      "expected_latest_date": "2026-06-30",
+      "latest_date": "2026-07-03",
+      "expected_latest_date": "2026-07-03",
       "lag_days": 0,
-      "checked_at": "2026-07-01T14:05:14"
+      "checked_at": "2026-07-04T02:50:37"
     },
-    "generated_at": "2026-07-01T14:05:14"
+    "generated_at": "2026-07-04T02:50:37"
   },
   "latest_draw": {
-    "period": 115000066,
-    "draw_date": "2026-06-30",
+    "period": 115000067,
+    "draw_date": "2026-07-03",
     "numbers": [
-      4,
-      10,
+      11,
       16,
-      29,
-      36,
-      45
+      19,
+      23,
+      39,
+      47
     ],
-    "special": 14,
-    "sales_amount": 205899950,
+    "special": 15,
+    "sales_amount": 205992200,
     "sales_count": null,
-    "prize_total": 511818423,
-    "source": "taiwanlottery_lotto649_result_2026-06"
+    "prize_total": 558591364,
+    "source": "taiwanlottery_lotto649_result_2026-07"
   },
-  "target_period": 115000067,
-  "target_date": "2026-07-03",
+  "target_period": 115000068,
+  "target_date": "2026-07-07",
   "data_freshness": {
     "status": "fresh",
-    "latest_date": "2026-06-30",
-    "expected_latest_date": "2026-06-30",
+    "latest_date": "2026-07-03",
+    "expected_latest_date": "2026-07-03",
     "lag_days": 0,
-    "checked_at": "2026-07-01T14:05:14"
+    "checked_at": "2026-07-04T02:50:37"
   },
   "failure_review": {
-    "has_review": false,
-    "severity": "none",
-    "actions": []
+    "has_review": true,
+    "severity": "warning",
+    "actions": [
+      "小幅降低短線追熱",
+      "提高中期趨勢與區間分散比重"
+    ],
+    "last_settled": {
+      "based_on_period": 115000066,
+      "target_period": 115000067,
+      "actual_period": 115000067,
+      "actual_date": "2026-07-03",
+      "actual_numbers": [
+        11,
+        16,
+        19,
+        23,
+        39,
+        47
+      ],
+      "actual_special": 15,
+      "candidate_numbers": [
+        5,
+        29,
+        11,
+        37,
+        15,
+        49,
+        25,
+        41,
+        20,
+        48,
+        35,
+        43,
+        47,
+        26,
+        12,
+        7,
+        30,
+        6,
+        40,
+        1,
+        22,
+        46,
+        39,
+        33,
+        13,
+        8,
+        18,
+        45,
+        34,
+        28,
+        16,
+        17,
+        21,
+        27,
+        10,
+        2,
+        23,
+        38,
+        31,
+        14,
+        19,
+        24,
+        4,
+        9,
+        44,
+        3,
+        42,
+        36,
+        32
+      ],
+      "special_candidates": [
+        30,
+        34,
+        37,
+        31,
+        2,
+        3,
+        38,
+        5,
+        41,
+        14,
+        1,
+        24,
+        10,
+        45,
+        16,
+        47,
+        39,
+        23,
+        46,
+        43,
+        48,
+        27,
+        26,
+        6,
+        40,
+        22,
+        7,
+        28,
+        13,
+        25,
+        35,
+        49,
+        12,
+        8,
+        42,
+        36,
+        44,
+        33,
+        29,
+        11,
+        18,
+        21,
+        4,
+        20,
+        17,
+        15,
+        32,
+        19,
+        9
+      ],
+      "strong_pack_hits": {
+        "strong_single": {
+          "name": "最強單支",
+          "numbers": [
+            5
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        },
+        "two_hit_one": {
+          "name": "最強2中1",
+          "numbers": [
+            5,
+            29
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        },
+        "three_hit_one": {
+          "name": "最強3中1",
+          "numbers": [
+            5,
+            11,
+            29
+          ],
+          "hit_goal": 1,
+          "hits": 1,
+          "passed": true
+        },
+        "five_hit_two": {
+          "name": "最強5中2",
+          "numbers": [
+            5,
+            11,
+            20,
+            29,
+            37
+          ],
+          "hit_goal": 2,
+          "hits": 1,
+          "passed": false
+        },
+        "nine_hit_three": {
+          "name": "最強9中3",
+          "numbers": [
+            5,
+            11,
+            20,
+            26,
+            29,
+            35,
+            37,
+            43,
+            48
+          ],
+          "hit_goal": 3,
+          "hits": 1,
+          "passed": false
+        },
+        "special_single": {
+          "name": "特別號最強單支",
+          "numbers": [
+            30
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        },
+        "special_three_watch": {
+          "name": "特別號3碼觀察",
+          "numbers": [
+            30,
+            34,
+            37
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        }
+      },
+      "top6_hits": 1,
+      "top12_hits": 1,
+      "top18_hits": 2,
+      "special_top1_hit": 0,
+      "special_top3_hit": 0
+    }
   },
   "backtest": {
     "rounds": 520,
@@ -62,26 +269,26 @@
     "strategies": {
       "heat_short": {
         "rounds": 520,
-        "top6_avg_hits": 0.754,
-        "top6_edge_vs_random": 0.019,
-        "top12_avg_hits": 1.437,
-        "top12_edge_vs_random": -0.032,
-        "top18_avg_hits": 2.138,
-        "top18_edge_vs_random": -0.066
+        "top6_avg_hits": 0.756,
+        "top6_edge_vs_random": 0.021,
+        "top12_avg_hits": 1.44,
+        "top12_edge_vs_random": -0.029,
+        "top18_avg_hits": 2.14,
+        "top18_edge_vs_random": -0.064
       },
       "heat_mid": {
         "rounds": 520,
-        "top6_avg_hits": 0.823,
-        "top6_edge_vs_random": 0.088,
-        "top12_avg_hits": 1.523,
-        "top12_edge_vs_random": 0.054,
-        "top18_avg_hits": 2.298,
-        "top18_edge_vs_random": 0.094
+        "top6_avg_hits": 0.827,
+        "top6_edge_vs_random": 0.092,
+        "top12_avg_hits": 1.529,
+        "top12_edge_vs_random": 0.06,
+        "top18_avg_hits": 2.302,
+        "top18_edge_vs_random": 0.098
       },
       "heat_long": {
         "rounds": 520,
-        "top6_avg_hits": 0.656,
-        "top6_edge_vs_random": -0.079,
+        "top6_avg_hits": 0.654,
+        "top6_edge_vs_random": -0.081,
         "top12_avg_hits": 1.371,
         "top12_edge_vs_random": -0.098,
         "top18_avg_hits": 2.119,
@@ -89,48 +296,48 @@
       },
       "omission": {
         "rounds": 520,
-        "top6_avg_hits": 0.765,
-        "top6_edge_vs_random": 0.03,
-        "top12_avg_hits": 1.45,
-        "top12_edge_vs_random": -0.019,
-        "top18_avg_hits": 2.179,
-        "top18_edge_vs_random": -0.025
+        "top6_avg_hits": 0.763,
+        "top6_edge_vs_random": 0.028,
+        "top12_avg_hits": 1.446,
+        "top12_edge_vs_random": -0.023,
+        "top18_avg_hits": 2.175,
+        "top18_edge_vs_random": -0.029
       },
       "pair": {
         "rounds": 520,
         "top6_avg_hits": 0.671,
         "top6_edge_vs_random": -0.064,
-        "top12_avg_hits": 1.373,
-        "top12_edge_vs_random": -0.096,
-        "top18_avg_hits": 2.158,
-        "top18_edge_vs_random": -0.046
+        "top12_avg_hits": 1.377,
+        "top12_edge_vs_random": -0.092,
+        "top18_avg_hits": 2.16,
+        "top18_edge_vs_random": -0.044
       },
       "tail_zone": {
         "rounds": 520,
-        "top6_avg_hits": 0.771,
-        "top6_edge_vs_random": 0.036,
-        "top12_avg_hits": 1.46,
-        "top12_edge_vs_random": -0.009,
-        "top18_avg_hits": 2.223,
-        "top18_edge_vs_random": 0.019
+        "top6_avg_hits": 0.769,
+        "top6_edge_vs_random": 0.034,
+        "top12_avg_hits": 1.456,
+        "top12_edge_vs_random": -0.013,
+        "top18_avg_hits": 2.221,
+        "top18_edge_vs_random": 0.017
       },
       "repeat_neighbor": {
         "rounds": 520,
-        "top6_avg_hits": 0.75,
-        "top6_edge_vs_random": 0.015,
-        "top12_avg_hits": 1.502,
-        "top12_edge_vs_random": 0.033,
-        "top18_avg_hits": 2.223,
-        "top18_edge_vs_random": 0.019
+        "top6_avg_hits": 0.752,
+        "top6_edge_vs_random": 0.017,
+        "top12_avg_hits": 1.504,
+        "top12_edge_vs_random": 0.035,
+        "top18_avg_hits": 2.225,
+        "top18_edge_vs_random": 0.021
       },
       "special_bridge": {
         "rounds": 520,
-        "top6_avg_hits": 0.731,
-        "top6_edge_vs_random": -0.004,
-        "top12_avg_hits": 1.49,
-        "top12_edge_vs_random": 0.021,
-        "top18_avg_hits": 2.196,
-        "top18_edge_vs_random": -0.008
+        "top6_avg_hits": 0.729,
+        "top6_edge_vs_random": -0.006,
+        "top12_avg_hits": 1.488,
+        "top12_edge_vs_random": 0.019,
+        "top18_avg_hits": 2.194,
+        "top18_edge_vs_random": -0.01
       },
       "ensemble": {
         "rounds": 520,
@@ -144,21 +351,34 @@
     }
   },
   "model_weights": {
-    "heat_short": 0.1681,
-    "heat_mid": 0.1765,
-    "heat_long": 0.1091,
-    "omission": 0.1399,
-    "pair": 0.1429,
-    "tail_zone": 0.1106,
-    "repeat_neighbor": 0.0833,
-    "special_bridge": 0.0696
+    "heat_short": 0.1515,
+    "heat_mid": 0.1913,
+    "heat_long": 0.1088,
+    "omission": 0.1474,
+    "pair": 0.1318,
+    "tail_zone": 0.1165,
+    "repeat_neighbor": 0.0832,
+    "special_bridge": 0.0693
   },
   "candidates": [
     {
-      "number": 5,
-      "score": 0.56846,
+      "number": 29,
+      "score": 0.59096,
       "confidence_index": 99.0,
-      "omission": 25,
+      "omission": 1,
+      "zone": "21-30",
+      "tail": 9,
+      "reasons": [
+        "近十期熱度高",
+        "中期趨勢強",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 5,
+      "score": 0.55796,
+      "confidence_index": 94.0,
+      "omission": 26,
       "zone": "01-10",
       "tail": 5,
       "reasons": [
@@ -168,103 +388,21 @@
       ]
     },
     {
-      "number": 29,
-      "score": 0.54352,
-      "confidence_index": 95.1,
-      "omission": 0,
-      "zone": "21-30",
-      "tail": 9,
-      "reasons": [
-        "近十期熱度高",
-        "中期趨勢強"
-      ]
-    },
-    {
-      "number": 11,
-      "score": 0.53611,
-      "confidence_index": 93.9,
-      "omission": 1,
-      "zone": "11-20",
-      "tail": 1,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 37,
-      "score": 0.52979,
-      "confidence_index": 92.9,
-      "omission": 8,
-      "zone": "31-40",
-      "tail": 7,
-      "reasons": [
-        "中期趨勢強",
-        "上期關聯搭配",
-        "特別號轉主號觀察"
-      ]
-    },
-    {
-      "number": 15,
-      "score": 0.50942,
-      "confidence_index": 89.7,
-      "omission": 23,
-      "zone": "11-20",
-      "tail": 5,
-      "reasons": [
-        "遺漏補償",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 49,
-      "score": 0.50607,
-      "confidence_index": 89.2,
-      "omission": 5,
-      "zone": "41-49",
-      "tail": 9,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
       "number": 25,
-      "score": 0.48833,
-      "confidence_index": 86.4,
-      "omission": 6,
+      "score": 0.53314,
+      "confidence_index": 90.2,
+      "omission": 7,
       "zone": "21-30",
       "tail": 5,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 41,
-      "score": 0.4843,
-      "confidence_index": 85.8,
-      "omission": 1,
-      "zone": "41-49",
-      "tail": 1,
-      "reasons": [
-        "上期關聯搭配",
-        "尾數區間補位"
-      ]
-    },
-    {
-      "number": 20,
-      "score": 0.48408,
-      "confidence_index": 85.7,
-      "omission": 5,
-      "zone": "11-20",
-      "tail": 0,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
       "number": 48,
-      "score": 0.48142,
-      "confidence_index": 85.3,
-      "omission": 3,
+      "score": 0.53167,
+      "confidence_index": 90.0,
+      "omission": 4,
       "zone": "41-49",
       "tail": 8,
       "reasons": [
@@ -273,111 +411,128 @@
       ]
     },
     {
-      "number": 35,
-      "score": 0.47451,
-      "confidence_index": 84.2,
-      "omission": 3,
-      "zone": "31-40",
-      "tail": 5,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 43,
-      "score": 0.46904,
-      "confidence_index": 83.4,
-      "omission": 13,
-      "zone": "41-49",
-      "tail": 3,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 47,
-      "score": 0.46578,
-      "confidence_index": 82.8,
-      "omission": 10,
-      "zone": "41-49",
-      "tail": 7,
-      "reasons": [
-        "中期趨勢強",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 26,
-      "score": 0.46275,
-      "confidence_index": 82.4,
-      "omission": 9,
-      "zone": "21-30",
-      "tail": 6,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
       "number": 12,
-      "score": 0.45929,
-      "confidence_index": 81.8,
-      "omission": 2,
+      "score": 0.52181,
+      "confidence_index": 88.5,
+      "omission": 3,
       "zone": "11-20",
       "tail": 2,
       "reasons": [
+        "近十期熱度高",
         "中期趨勢強",
         "上期關聯搭配"
       ]
     },
     {
-      "number": 7,
-      "score": 0.4543,
-      "confidence_index": 81.0,
-      "omission": 17,
-      "zone": "01-10",
-      "tail": 7,
+      "number": 15,
+      "score": 0.51713,
+      "confidence_index": 87.7,
+      "omission": 24,
+      "zone": "11-20",
+      "tail": 5,
+      "reasons": [
+        "遺漏補償",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 20,
+      "score": 0.5007,
+      "confidence_index": 85.2,
+      "omission": 6,
+      "zone": "11-20",
+      "tail": 0,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
-      "number": 30,
-      "score": 0.45291,
-      "confidence_index": 80.8,
-      "omission": 7,
-      "zone": "21-30",
-      "tail": 0,
+      "number": 45,
+      "score": 0.49744,
+      "confidence_index": 84.7,
+      "omission": 1,
+      "zone": "41-49",
+      "tail": 5,
       "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 37,
+      "score": 0.49358,
+      "confidence_index": 84.2,
+      "omission": 9,
+      "zone": "31-40",
+      "tail": 7,
+      "reasons": [
+        "中期趨勢強",
         "上期關聯搭配",
         "特別號轉主號觀察"
       ]
     },
     {
-      "number": 6,
-      "score": 0.44361,
-      "confidence_index": 79.4,
-      "omission": 5,
+      "number": 7,
+      "score": 0.49252,
+      "confidence_index": 84.0,
+      "omission": 18,
       "zone": "01-10",
-      "tail": 6,
-      "reasons": []
-    },
-    {
-      "number": 40,
-      "score": 0.43649,
-      "confidence_index": 78.2,
-      "omission": 6,
-      "zone": "31-40",
-      "tail": 0,
+      "tail": 7,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
-      "number": 1,
-      "score": 0.43387,
-      "confidence_index": 77.8,
-      "omission": 4,
+      "number": 49,
+      "score": 0.49089,
+      "confidence_index": 83.7,
+      "omission": 6,
+      "zone": "41-49",
+      "tail": 9,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 10,
+      "score": 0.48758,
+      "confidence_index": 83.2,
+      "omission": 1,
       "zone": "01-10",
+      "tail": 0,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 6,
+      "score": 0.47907,
+      "confidence_index": 81.9,
+      "omission": 6,
+      "zone": "01-10",
+      "tail": 6,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 11,
+      "score": 0.47852,
+      "confidence_index": 81.9,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 1,
+      "reasons": [
+        "近十期熱度高"
+      ]
+    },
+    {
+      "number": 41,
+      "score": 0.47305,
+      "confidence_index": 81.0,
+      "omission": 2,
+      "zone": "41-49",
       "tail": 1,
       "reasons": [
         "上期關聯搭配",
@@ -386,9 +541,9 @@
     },
     {
       "number": 22,
-      "score": 0.43339,
-      "confidence_index": 77.8,
-      "omission": 12,
+      "score": 0.46867,
+      "confidence_index": 80.4,
+      "omission": 13,
       "zone": "21-30",
       "tail": 2,
       "reasons": [
@@ -396,10 +551,89 @@
       ]
     },
     {
+      "number": 40,
+      "score": 0.4678,
+      "confidence_index": 80.2,
+      "omission": 7,
+      "zone": "31-40",
+      "tail": 0,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 43,
+      "score": 0.46699,
+      "confidence_index": 80.1,
+      "omission": 14,
+      "zone": "41-49",
+      "tail": 3,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 18,
+      "score": 0.46673,
+      "confidence_index": 80.1,
+      "omission": 3,
+      "zone": "11-20",
+      "tail": 8,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 1,
+      "score": 0.4667,
+      "confidence_index": 80.1,
+      "omission": 5,
+      "zone": "01-10",
+      "tail": 1,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 47,
+      "score": 0.46376,
+      "confidence_index": 79.6,
+      "omission": 0,
+      "zone": "41-49",
+      "tail": 7,
+      "reasons": [
+        "中期趨勢強"
+      ]
+    },
+    {
+      "number": 16,
+      "score": 0.4573,
+      "confidence_index": 78.6,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 6,
+      "reasons": [
+        "近十期熱度高",
+        "中期趨勢強"
+      ]
+    },
+    {
+      "number": 35,
+      "score": 0.45576,
+      "confidence_index": 78.4,
+      "omission": 4,
+      "zone": "31-40",
+      "tail": 5,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
       "number": 46,
-      "score": 0.42903,
-      "confidence_index": 77.1,
-      "omission": 6,
+      "score": 0.45345,
+      "confidence_index": 78.0,
+      "omission": 7,
       "zone": "41-49",
       "tail": 6,
       "reasons": [
@@ -407,21 +641,55 @@
       ]
     },
     {
+      "number": 4,
+      "score": 0.43515,
+      "confidence_index": 75.2,
+      "omission": 1,
+      "zone": "01-10",
+      "tail": 4,
+      "reasons": [
+        "尾數區間補位"
+      ]
+    },
+    {
       "number": 39,
-      "score": 0.42737,
-      "confidence_index": 76.8,
-      "omission": 2,
+      "score": 0.43339,
+      "confidence_index": 75.0,
+      "omission": 0,
       "zone": "31-40",
       "tail": 9,
+      "reasons": [
+        "近十期熱度高"
+      ]
+    },
+    {
+      "number": 30,
+      "score": 0.4325,
+      "confidence_index": 74.8,
+      "omission": 8,
+      "zone": "21-30",
+      "tail": 0,
+      "reasons": [
+        "上期關聯搭配",
+        "特別號轉主號觀察"
+      ]
+    },
+    {
+      "number": 26,
+      "score": 0.43139,
+      "confidence_index": 74.7,
+      "omission": 10,
+      "zone": "21-30",
+      "tail": 6,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
       "number": 33,
-      "score": 0.42175,
-      "confidence_index": 75.9,
-      "omission": 2,
+      "score": 0.43039,
+      "confidence_index": 74.5,
+      "omission": 3,
       "zone": "31-40",
       "tail": 3,
       "reasons": [
@@ -429,10 +697,21 @@
       ]
     },
     {
+      "number": 34,
+      "score": 0.42112,
+      "confidence_index": 73.1,
+      "omission": 3,
+      "zone": "31-40",
+      "tail": 4,
+      "reasons": [
+        "特別號轉主號觀察"
+      ]
+    },
+    {
       "number": 13,
-      "score": 0.41276,
-      "confidence_index": 74.5,
-      "omission": 6,
+      "score": 0.42022,
+      "confidence_index": 73.0,
+      "omission": 7,
       "zone": "11-20",
       "tail": 3,
       "reasons": [
@@ -441,159 +720,31 @@
     },
     {
       "number": 8,
-      "score": 0.40957,
-      "confidence_index": 74.0,
-      "omission": 8,
+      "score": 0.41381,
+      "confidence_index": 72.0,
+      "omission": 9,
       "zone": "01-10",
       "tail": 8,
       "reasons": [
         "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 18,
-      "score": 0.40306,
-      "confidence_index": 73.0,
-      "omission": 2,
-      "zone": "11-20",
-      "tail": 8,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 45,
-      "score": 0.40135,
-      "confidence_index": 72.7,
-      "omission": 0,
-      "zone": "41-49",
-      "tail": 5,
-      "reasons": [
-        "尾數區間補位"
-      ]
-    },
-    {
-      "number": 34,
-      "score": 0.39091,
-      "confidence_index": 71.1,
-      "omission": 2,
-      "zone": "31-40",
-      "tail": 4,
-      "reasons": [
-        "特別號轉主號觀察"
-      ]
-    },
-    {
-      "number": 28,
-      "score": 0.38617,
-      "confidence_index": 70.3,
-      "omission": 3,
-      "zone": "21-30",
-      "tail": 8,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 16,
-      "score": 0.37626,
-      "confidence_index": 68.8,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 6,
-      "reasons": [
-        "中期趨勢強"
       ]
     },
     {
       "number": 17,
-      "score": 0.37371,
-      "confidence_index": 68.4,
-      "omission": 16,
+      "score": 0.39931,
+      "confidence_index": 69.8,
+      "omission": 17,
       "zone": "11-20",
       "tail": 7,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 21,
-      "score": 0.37259,
-      "confidence_index": 68.2,
-      "omission": 11,
-      "zone": "21-30",
-      "tail": 1,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 27,
-      "score": 0.36749,
-      "confidence_index": 67.4,
-      "omission": 10,
-      "zone": "21-30",
-      "tail": 7,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 10,
-      "score": 0.36435,
-      "confidence_index": 66.9,
-      "omission": 0,
-      "zone": "01-10",
-      "tail": 0,
-      "reasons": []
-    },
-    {
-      "number": 2,
-      "score": 0.35987,
-      "confidence_index": 66.2,
-      "omission": 4,
-      "zone": "01-10",
-      "tail": 2,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 23,
-      "score": 0.35801,
-      "confidence_index": 65.9,
-      "omission": 1,
-      "zone": "21-30",
-      "tail": 3,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 38,
-      "score": 0.3548,
-      "confidence_index": 65.4,
-      "omission": 12,
-      "zone": "31-40",
-      "tail": 8,
-      "reasons": []
-    },
-    {
-      "number": 31,
-      "score": 0.35475,
-      "confidence_index": 65.4,
-      "omission": 9,
-      "zone": "31-40",
-      "tail": 1,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
       "number": 14,
-      "score": 0.35454,
-      "confidence_index": 65.3,
-      "omission": 7,
+      "score": 0.39378,
+      "confidence_index": 68.9,
+      "omission": 8,
       "zone": "11-20",
       "tail": 4,
       "reasons": [
@@ -601,21 +752,21 @@
       ]
     },
     {
-      "number": 19,
-      "score": 0.3505,
-      "confidence_index": 64.7,
-      "omission": 1,
-      "zone": "11-20",
-      "tail": 9,
+      "number": 38,
+      "score": 0.39088,
+      "confidence_index": 68.5,
+      "omission": 13,
+      "zone": "31-40",
+      "tail": 8,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
       "number": 24,
-      "score": 0.34152,
-      "confidence_index": 63.3,
-      "omission": 1,
+      "score": 0.3829,
+      "confidence_index": 67.3,
+      "omission": 2,
       "zone": "21-30",
       "tail": 4,
       "reasons": [
@@ -623,50 +774,105 @@
       ]
     },
     {
-      "number": 4,
-      "score": 0.34084,
-      "confidence_index": 63.2,
-      "omission": 0,
+      "number": 2,
+      "score": 0.38035,
+      "confidence_index": 66.9,
+      "omission": 5,
       "zone": "01-10",
-      "tail": 4,
-      "reasons": []
-    },
-    {
-      "number": 9,
-      "score": 0.32849,
-      "confidence_index": 61.3,
-      "omission": 4,
-      "zone": "01-10",
-      "tail": 9,
-      "reasons": []
-    },
-    {
-      "number": 44,
-      "score": 0.32768,
-      "confidence_index": 61.1,
-      "omission": 7,
-      "zone": "41-49",
-      "tail": 4,
+      "tail": 2,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
-      "number": 3,
-      "score": 0.32498,
-      "confidence_index": 60.7,
-      "omission": 10,
-      "zone": "01-10",
+      "number": 27,
+      "score": 0.37743,
+      "confidence_index": 66.4,
+      "omission": 11,
+      "zone": "21-30",
+      "tail": 7,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 28,
+      "score": 0.37126,
+      "confidence_index": 65.5,
+      "omission": 4,
+      "zone": "21-30",
+      "tail": 8,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 36,
+      "score": 0.35358,
+      "confidence_index": 62.8,
+      "omission": 1,
+      "zone": "31-40",
+      "tail": 6,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 19,
+      "score": 0.35251,
+      "confidence_index": 62.6,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 9,
+      "reasons": []
+    },
+    {
+      "number": 21,
+      "score": 0.34773,
+      "confidence_index": 61.9,
+      "omission": 12,
+      "zone": "21-30",
+      "tail": 1,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 23,
+      "score": 0.34417,
+      "confidence_index": 61.4,
+      "omission": 0,
+      "zone": "21-30",
       "tail": 3,
+      "reasons": []
+    },
+    {
+      "number": 9,
+      "score": 0.3249,
+      "confidence_index": 58.4,
+      "omission": 5,
+      "zone": "01-10",
+      "tail": 9,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 31,
+      "score": 0.32131,
+      "confidence_index": 57.9,
+      "omission": 10,
+      "zone": "31-40",
+      "tail": 1,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
       "number": 42,
-      "score": 0.28827,
-      "confidence_index": 54.9,
-      "omission": 13,
+      "score": 0.30327,
+      "confidence_index": 55.1,
+      "omission": 14,
       "zone": "41-49",
       "tail": 2,
       "reasons": [
@@ -674,19 +880,33 @@
       ]
     },
     {
-      "number": 36,
-      "score": 0.271,
-      "confidence_index": 52.2,
-      "omission": 0,
-      "zone": "31-40",
-      "tail": 6,
-      "reasons": []
+      "number": 44,
+      "score": 0.30195,
+      "confidence_index": 54.9,
+      "omission": 8,
+      "zone": "41-49",
+      "tail": 4,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 3,
+      "score": 0.29054,
+      "confidence_index": 53.2,
+      "omission": 11,
+      "zone": "01-10",
+      "tail": 3,
+      "reasons": [
+        "上期關聯搭配"
+      ]
     },
     {
       "number": 32,
-      "score": 0.25697,
+      "score": 0.26954,
       "confidence_index": 50.0,
-      "omission": 7,
+      "omission": 8,
       "zone": "31-40",
       "tail": 2,
       "reasons": [
@@ -697,9 +917,9 @@
   "special_candidates": [
     {
       "number": 30,
-      "score": 0.6418,
+      "score": 0.64257,
       "confidence_index": 99.0,
-      "omission": 2,
+      "omission": 3,
       "zone": "21-30",
       "tail": 0,
       "reasons": [
@@ -708,63 +928,117 @@
     },
     {
       "number": 34,
-      "score": 0.42058,
-      "confidence_index": 78.4,
-      "omission": 7,
+      "score": 0.55157,
+      "confidence_index": 90.5,
+      "omission": 8,
       "zone": "31-40",
       "tail": 4,
-      "reasons": []
-    },
-    {
-      "number": 37,
-      "score": 0.40366,
-      "confidence_index": 76.8,
-      "omission": 34,
-      "zone": "31-40",
-      "tail": 7,
-      "reasons": []
+      "reasons": [
+        "特別號短線熱"
+      ]
     },
     {
       "number": 31,
-      "score": 0.401,
-      "confidence_index": 76.5,
-      "omission": 6,
+      "score": 0.53199,
+      "confidence_index": 88.7,
+      "omission": 7,
       "zone": "31-40",
       "tail": 1,
-      "reasons": []
+      "reasons": [
+        "特別號短線熱"
+      ]
     },
     {
       "number": 2,
-      "score": 0.37294,
-      "confidence_index": 73.9,
-      "omission": 8,
+      "score": 0.50393,
+      "confidence_index": 86.1,
+      "omission": 9,
       "zone": "01-10",
       "tail": 2,
-      "reasons": []
+      "reasons": [
+        "特別號短線熱"
+      ]
     },
     {
       "number": 3,
-      "score": 0.36203,
-      "confidence_index": 72.9,
-      "omission": 5,
+      "score": 0.49303,
+      "confidence_index": 85.1,
+      "omission": 6,
       "zone": "01-10",
       "tail": 3,
-      "reasons": []
+      "reasons": [
+        "特別號短線熱"
+      ]
     },
     {
       "number": 38,
-      "score": 0.35921,
-      "confidence_index": 72.6,
-      "omission": 3,
+      "score": 0.4813,
+      "confidence_index": 84.0,
+      "omission": 4,
       "zone": "31-40",
       "tail": 8,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
+      "number": 41,
+      "score": 0.47155,
+      "confidence_index": 83.0,
+      "omission": 5,
+      "zone": "41-49",
+      "tail": 1,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
+      "number": 14,
+      "score": 0.46656,
+      "confidence_index": 82.6,
+      "omission": 1,
+      "zone": "11-20",
+      "tail": 4,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
+      "number": 1,
+      "score": 0.45876,
+      "confidence_index": 81.9,
+      "omission": 2,
+      "zone": "01-10",
+      "tail": 1,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
+      "number": 15,
+      "score": 0.45721,
+      "confidence_index": 81.7,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 5,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
+      "number": 37,
+      "score": 0.40434,
+      "confidence_index": 76.8,
+      "omission": 35,
+      "zone": "31-40",
+      "tail": 7,
       "reasons": []
     },
     {
       "number": 5,
       "score": 0.354,
       "confidence_index": 72.1,
-      "omission": 275,
+      "omission": 276,
       "zone": "01-10",
       "tail": 5,
       "reasons": [
@@ -772,37 +1046,10 @@
       ]
     },
     {
-      "number": 41,
-      "score": 0.34947,
-      "confidence_index": 71.7,
-      "omission": 4,
-      "zone": "41-49",
-      "tail": 1,
-      "reasons": []
-    },
-    {
-      "number": 14,
-      "score": 0.33555,
-      "confidence_index": 70.4,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 4,
-      "reasons": []
-    },
-    {
-      "number": 1,
-      "score": 0.32775,
-      "confidence_index": 69.7,
-      "omission": 1,
-      "zone": "01-10",
-      "tail": 1,
-      "reasons": []
-    },
-    {
       "number": 24,
-      "score": 0.32769,
+      "score": 0.32829,
       "confidence_index": 69.7,
-      "omission": 62,
+      "omission": 63,
       "zone": "21-30",
       "tail": 4,
       "reasons": [
@@ -811,45 +1058,45 @@
     },
     {
       "number": 10,
-      "score": 0.32413,
+      "score": 0.32481,
       "confidence_index": 69.4,
-      "omission": 32,
+      "omission": 33,
       "zone": "01-10",
       "tail": 0,
       "reasons": []
     },
     {
-      "number": 45,
-      "score": 0.30451,
-      "confidence_index": 67.5,
-      "omission": 17,
-      "zone": "41-49",
-      "tail": 5,
-      "reasons": []
-    },
-    {
       "number": 16,
-      "score": 0.30315,
-      "confidence_index": 67.4,
-      "omission": 163,
+      "score": 0.31238,
+      "confidence_index": 68.2,
+      "omission": 164,
       "zone": "11-20",
       "tail": 6,
       "reasons": []
     },
     {
+      "number": 45,
+      "score": 0.30524,
+      "confidence_index": 67.5,
+      "omission": 18,
+      "zone": "41-49",
+      "tail": 5,
+      "reasons": []
+    },
+    {
       "number": 47,
-      "score": 0.28035,
-      "confidence_index": 65.3,
-      "omission": 24,
+      "score": 0.28997,
+      "confidence_index": 66.1,
+      "omission": 25,
       "zone": "41-49",
       "tail": 7,
       "reasons": []
     },
     {
       "number": 39,
-      "score": 0.2803,
-      "confidence_index": 65.3,
-      "omission": 26,
+      "score": 0.28991,
+      "confidence_index": 66.1,
+      "omission": 27,
       "zone": "31-40",
       "tail": 9,
       "reasons": [
@@ -858,36 +1105,18 @@
     },
     {
       "number": 23,
-      "score": 0.27098,
-      "confidence_index": 64.4,
-      "omission": 183,
+      "score": 0.28015,
+      "confidence_index": 65.2,
+      "omission": 184,
       "zone": "21-30",
       "tail": 3,
       "reasons": []
     },
     {
-      "number": 46,
-      "score": 0.27009,
-      "confidence_index": 64.3,
-      "omission": 44,
-      "zone": "41-49",
-      "tail": 6,
-      "reasons": []
-    },
-    {
-      "number": 43,
-      "score": 0.26372,
-      "confidence_index": 63.7,
-      "omission": 37,
-      "zone": "41-49",
-      "tail": 3,
-      "reasons": []
-    },
-    {
       "number": 48,
-      "score": 0.26253,
+      "score": 0.26326,
       "confidence_index": 63.6,
-      "omission": 15,
+      "omission": 16,
       "zone": "41-49",
       "tail": 8,
       "reasons": [
@@ -895,111 +1124,127 @@
       ]
     },
     {
+      "number": 46,
+      "score": 0.26182,
+      "confidence_index": 63.5,
+      "omission": 45,
+      "zone": "41-49",
+      "tail": 6,
+      "reasons": []
+    },
+    {
       "number": 27,
-      "score": 0.25411,
+      "score": 0.25485,
       "confidence_index": 62.8,
-      "omission": 12,
+      "omission": 13,
       "zone": "21-30",
       "tail": 7,
       "reasons": []
     },
     {
-      "number": 26,
-      "score": 0.24289,
-      "confidence_index": 61.8,
-      "omission": 97,
-      "zone": "21-30",
-      "tail": 6,
-      "reasons": []
-    },
-    {
       "number": 6,
-      "score": 0.23984,
+      "score": 0.24049,
       "confidence_index": 61.5,
-      "omission": 46,
+      "omission": 47,
       "zone": "01-10",
       "tail": 6,
       "reasons": []
     },
     {
       "number": 40,
-      "score": 0.23553,
+      "score": 0.23603,
       "confidence_index": 61.1,
-      "omission": 99,
+      "omission": 100,
       "zone": "31-40",
       "tail": 0,
       "reasons": []
     },
     {
-      "number": 22,
-      "score": 0.23106,
-      "confidence_index": 60.7,
-      "omission": 20,
+      "number": 26,
+      "score": 0.23448,
+      "confidence_index": 60.9,
+      "omission": 98,
       "zone": "21-30",
-      "tail": 2,
+      "tail": 6,
       "reasons": []
     },
     {
       "number": 7,
-      "score": 0.22857,
-      "confidence_index": 60.4,
-      "omission": 18,
+      "score": 0.2293,
+      "confidence_index": 60.5,
+      "omission": 19,
       "zone": "01-10",
       "tail": 7,
       "reasons": []
     },
     {
       "number": 28,
-      "score": 0.22556,
+      "score": 0.22619,
       "confidence_index": 60.2,
-      "omission": 51,
+      "omission": 52,
       "zone": "21-30",
       "tail": 8,
       "reasons": []
     },
     {
       "number": 13,
-      "score": 0.22433,
-      "confidence_index": 60.0,
-      "omission": 22,
+      "score": 0.22504,
+      "confidence_index": 60.1,
+      "omission": 23,
       "zone": "11-20",
       "tail": 3,
       "reasons": []
     },
     {
-      "number": 25,
-      "score": 0.22423,
-      "confidence_index": 60.0,
-      "omission": 100,
+      "number": 22,
+      "score": 0.22223,
+      "confidence_index": 59.8,
+      "omission": 21,
       "zone": "21-30",
-      "tail": 5,
-      "reasons": [
-        "主號熱度轉特別號"
-      ]
+      "tail": 2,
+      "reasons": []
     },
     {
       "number": 35,
-      "score": 0.2165,
+      "score": 0.21714,
       "confidence_index": 59.3,
-      "omission": 50,
+      "omission": 51,
       "zone": "31-40",
       "tail": 5,
       "reasons": []
     },
     {
+      "number": 43,
+      "score": 0.21694,
+      "confidence_index": 59.3,
+      "omission": 38,
+      "zone": "41-49",
+      "tail": 3,
+      "reasons": []
+    },
+    {
+      "number": 25,
+      "score": 0.21581,
+      "confidence_index": 59.2,
+      "omission": 101,
+      "zone": "21-30",
+      "tail": 5,
+      "reasons": []
+    },
+    {
       "number": 49,
-      "score": 0.20165,
+      "score": 0.2021,
       "confidence_index": 57.9,
-      "omission": 116,
+      "omission": 117,
       "zone": "41-49",
       "tail": 9,
       "reasons": []
     },
     {
       "number": 12,
-      "score": 0.20062,
+      "score": 0.20122,
       "confidence_index": 57.8,
-      "omission": 59,
+      "omission": 60,
       "zone": "11-20",
       "tail": 2,
       "reasons": [
@@ -1008,144 +1253,135 @@
     },
     {
       "number": 8,
-      "score": 0.19802,
+      "score": 0.19873,
       "confidence_index": 57.6,
-      "omission": 25,
+      "omission": 26,
       "zone": "01-10",
       "tail": 8,
       "reasons": []
     },
     {
       "number": 42,
-      "score": 0.19723,
+      "score": 0.19791,
       "confidence_index": 57.5,
-      "omission": 33,
+      "omission": 34,
       "zone": "41-49",
       "tail": 2,
       "reasons": []
     },
     {
       "number": 36,
-      "score": 0.19619,
+      "score": 0.19683,
       "confidence_index": 57.4,
-      "omission": 48,
+      "omission": 49,
       "zone": "31-40",
       "tail": 6,
       "reasons": []
     },
     {
       "number": 44,
-      "score": 0.19556,
-      "confidence_index": 57.4,
-      "omission": 154,
+      "score": 0.1959,
+      "confidence_index": 57.3,
+      "omission": 155,
       "zone": "41-49",
       "tail": 4,
       "reasons": []
     },
     {
       "number": 33,
-      "score": 0.19465,
+      "score": 0.19523,
       "confidence_index": 57.3,
-      "omission": 71,
+      "omission": 72,
       "zone": "31-40",
       "tail": 3,
       "reasons": []
     },
     {
+      "number": 11,
+      "score": 0.19348,
+      "confidence_index": 57.1,
+      "omission": 11,
+      "zone": "11-20",
+      "tail": 1,
+      "reasons": []
+    },
+    {
       "number": 29,
-      "score": 0.19105,
+      "score": 0.19164,
       "confidence_index": 56.9,
-      "omission": 68,
+      "omission": 69,
       "zone": "21-30",
       "tail": 9,
       "reasons": []
     },
     {
-      "number": 11,
-      "score": 0.18382,
-      "confidence_index": 56.3,
-      "omission": 10,
-      "zone": "11-20",
-      "tail": 1,
-      "reasons": []
-    },
-    {
       "number": 18,
-      "score": 0.17265,
+      "score": 0.17337,
       "confidence_index": 55.2,
-      "omission": 21,
+      "omission": 22,
       "zone": "11-20",
       "tail": 8,
       "reasons": []
     },
     {
-      "number": 21,
-      "score": 0.16295,
-      "confidence_index": 54.3,
-      "omission": 29,
-      "zone": "21-30",
-      "tail": 1,
-      "reasons": []
-    },
-    {
       "number": 4,
-      "score": 0.16269,
+      "score": 0.16324,
       "confidence_index": 54.3,
-      "omission": 79,
+      "omission": 80,
       "zone": "01-10",
       "tail": 4,
       "reasons": []
     },
     {
       "number": 20,
-      "score": 0.16113,
+      "score": 0.16178,
       "confidence_index": 54.2,
-      "omission": 43,
+      "omission": 44,
       "zone": "11-20",
       "tail": 0,
       "reasons": []
     },
     {
       "number": 17,
-      "score": 0.15418,
+      "score": 0.15487,
       "confidence_index": 53.5,
-      "omission": 30,
+      "omission": 31,
       "zone": "11-20",
       "tail": 7,
       "reasons": []
     },
     {
-      "number": 15,
-      "score": 0.1522,
-      "confidence_index": 53.3,
-      "omission": 16,
-      "zone": "11-20",
-      "tail": 5,
-      "reasons": []
-    },
-    {
-      "number": 32,
-      "score": 0.13672,
-      "confidence_index": 51.9,
-      "omission": 80,
-      "zone": "31-40",
-      "tail": 2,
+      "number": 21,
+      "score": 0.15472,
+      "confidence_index": 53.5,
+      "omission": 30,
+      "zone": "21-30",
+      "tail": 1,
       "reasons": []
     },
     {
       "number": 19,
-      "score": 0.13666,
-      "confidence_index": 51.9,
-      "omission": 57,
+      "score": 0.14619,
+      "confidence_index": 52.7,
+      "omission": 58,
       "zone": "11-20",
       "tail": 9,
       "reasons": []
     },
     {
+      "number": 32,
+      "score": 0.13727,
+      "confidence_index": 51.9,
+      "omission": 81,
+      "zone": "31-40",
+      "tail": 2,
+      "reasons": []
+    },
+    {
       "number": 9,
-      "score": 0.11664,
+      "score": 0.11726,
       "confidence_index": 50.0,
-      "omission": 55,
+      "omission": 56,
       "zone": "01-10",
       "tail": 9,
       "reasons": []
@@ -1155,12 +1391,12 @@
     {
       "name": "建議組合1",
       "numbers": [
-        5,
-        11,
-        12,
-        20,
-        43,
-        49
+        10,
+        15,
+        25,
+        29,
+        37,
+        41
       ],
       "special": 30
     },
@@ -1169,9 +1405,9 @@
       "numbers": [
         5,
         7,
+        20,
         25,
         29,
-        37,
         48
       ],
       "special": 30
@@ -1179,36 +1415,36 @@
     {
       "name": "建議組合3",
       "numbers": [
-        5,
-        7,
+        12,
         15,
+        22,
         29,
-        35,
-        41
+        45,
+        49
       ],
       "special": 30
     },
     {
       "name": "建議組合4",
       "numbers": [
-        11,
+        6,
+        15,
         17,
-        30,
-        43,
-        47,
-        49
+        25,
+        40,
+        43
       ],
-      "special": 34
+      "special": 30
     },
     {
       "name": "建議組合5",
       "numbers": [
-        6,
-        20,
+        5,
+        11,
         22,
-        26,
-        29,
-        42
+        37,
+        42,
+        43
       ],
       "special": 30
     },
@@ -1216,10 +1452,10 @@
       "name": "建議組合6",
       "numbers": [
         5,
-        11,
+        12,
         20,
+        25,
         29,
-        37,
         48
       ],
       "special": 30
@@ -1230,16 +1466,16 @@
       "name": "最強單支",
       "hit_goal": 1,
       "numbers": [
-        5
+        29
       ],
-      "score_sum": 0.56846,
-      "avg_score": 0.56846,
+      "score_sum": 0.59096,
+      "avg_score": 0.59096,
       "theoretical_probability": 0.122449,
       "zones": {
-        "01-10": 1
+        "21-30": 1
       },
       "tails": {
-        "5": 1
+        "9": 1
       }
     },
     "two_hit_one": {
@@ -1249,8 +1485,8 @@
         5,
         29
       ],
-      "score_sum": 1.11198,
-      "avg_score": 0.55599,
+      "score_sum": 1.14892,
+      "avg_score": 0.57446,
       "theoretical_probability": 0.232143,
       "zones": {
         "01-10": 1,
@@ -1266,21 +1502,21 @@
       "hit_goal": 1,
       "numbers": [
         5,
-        11,
-        29
+        29,
+        48
       ],
-      "score_sum": 1.64809,
-      "avg_score": 0.54936,
+      "score_sum": 1.68059,
+      "avg_score": 0.5602,
       "theoretical_probability": 0.330167,
       "zones": {
         "01-10": 1,
-        "11-20": 1,
-        "21-30": 1
+        "21-30": 1,
+        "41-49": 1
       },
       "tails": {
         "5": 1,
-        "1": 1,
-        "9": 1
+        "9": 1,
+        "8": 1
       }
     },
     "five_hit_two": {
@@ -1288,26 +1524,25 @@
       "hit_goal": 2,
       "numbers": [
         5,
-        11,
-        20,
+        12,
+        25,
         29,
-        37
+        48
       ],
-      "score_sum": 2.66196,
-      "avg_score": 0.53239,
+      "score_sum": 2.73554,
+      "avg_score": 0.54711,
       "theoretical_probability": 0.10689,
       "zones": {
         "01-10": 1,
-        "11-20": 2,
-        "21-30": 1,
-        "31-40": 1
+        "11-20": 1,
+        "21-30": 2,
+        "41-49": 1
       },
       "tails": {
-        "5": 1,
-        "1": 1,
-        "0": 1,
+        "5": 2,
+        "2": 1,
         "9": 1,
-        "7": 1
+        "8": 1
       }
     },
     "nine_hit_three": {
@@ -1315,33 +1550,32 @@
       "hit_goal": 3,
       "numbers": [
         5,
-        11,
+        7,
+        12,
         20,
-        26,
+        25,
         29,
-        35,
         37,
-        43,
+        41,
         48
       ],
-      "score_sum": 4.54968,
-      "avg_score": 0.50552,
+      "score_sum": 4.69539,
+      "avg_score": 0.52171,
       "theoretical_probability": 0.066743,
       "zones": {
-        "01-10": 1,
+        "01-10": 2,
         "11-20": 2,
         "21-30": 2,
-        "31-40": 2,
+        "31-40": 1,
         "41-49": 2
       },
       "tails": {
         "5": 2,
-        "1": 1,
+        "7": 2,
+        "2": 1,
         "0": 1,
-        "6": 1,
         "9": 1,
-        "7": 1,
-        "3": 1,
+        "1": 1,
         "8": 1
       }
     },
@@ -1352,7 +1586,7 @@
         30
       ],
       "theoretical_probability": 0.020408,
-      "avg_score": 0.6418
+      "avg_score": 0.64257
     },
     "special_three_watch": {
       "name": "特別號3碼觀察",
@@ -1360,10 +1594,10 @@
       "numbers": [
         30,
         34,
-        37
+        31
       ],
       "theoretical_probability": 0.061224,
-      "avg_score": 0.48868
+      "avg_score": 0.57538
     }
   },
   "iron_laws": [
@@ -1377,5 +1611,5 @@
     "資料新鮮度：標示最新日期、理論應更新日期與落後天數"
   ],
   "disclaimer": "本系統為歷史統計與回測研究，不保證開獎命中或獲利，請量力而為。",
-  "official_prediction_status": "updated_pending"
+  "official_prediction_status": "inserted"
 }
