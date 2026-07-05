@@ -1,133 +1,157 @@
 {
-  "generated_at": "2026-07-01T14:05:14",
-  "total_periods": 1,
-  "settled_periods": 0,
+  "generated_at": "2026-07-06T07:25:03",
+  "total_periods": 2,
+  "settled_periods": 1,
   "pending_periods": 1,
   "periods": [
     {
-      "based_on_period": 115000066,
-      "based_on_date": "2026-06-30",
-      "target_period": 115000067,
-      "target_date": "2026-07-03",
+      "based_on_period": 115000067,
+      "based_on_date": "2026-07-03",
+      "target_period": 115000068,
+      "target_date": "2026-07-07",
       "top6": [
-        5,
-        29,
+        12,
+        16,
         11,
-        37,
-        15,
-        49
+        47,
+        20,
+        29
       ],
       "top12": [
-        5,
-        29,
+        12,
+        16,
         11,
-        37,
-        15,
-        49,
-        25,
-        41,
+        47,
         20,
+        29,
+        40,
+        6,
         48,
-        35,
-        43
+        39,
+        49,
+        10
       ],
       "top18": [
-        5,
-        29,
-        11,
-        37,
-        15,
-        49,
-        25,
-        41,
-        20,
-        48,
-        35,
-        43,
-        47,
-        26,
         12,
-        7,
-        30,
-        6
+        16,
+        11,
+        47,
+        20,
+        29,
+        40,
+        6,
+        48,
+        39,
+        49,
+        10,
+        4,
+        18,
+        37,
+        26,
+        17,
+        14
       ],
       "special_top3": [
-        30,
-        34,
-        37
+        31,
+        2,
+        24
       ],
       "suggested_sets": [
         {
           "name": "建議組合1",
           "numbers": [
-            5,
             11,
             12,
-            20,
-            43,
-            49
+            16,
+            29,
+            40,
+            47
           ],
-          "special": 30
+          "special": 31
         },
         {
           "name": "建議組合2",
           "numbers": [
-            5,
-            7,
-            25,
+            6,
+            12,
+            20,
             29,
-            37,
-            48
+            40,
+            47
           ],
-          "special": 30
+          "special": 31
         },
         {
           "name": "建議組合3",
           "numbers": [
-            5,
-            7,
-            15,
+            12,
+            16,
+            20,
             29,
-            35,
-            41
+            47,
+            48
           ],
-          "special": 30
+          "special": 31
         },
         {
           "name": "建議組合4",
           "numbers": [
-            11,
-            17,
-            30,
-            43,
-            47,
-            49
+            6,
+            12,
+            16,
+            29,
+            39,
+            47
           ],
-          "special": 34
+          "special": 31
         },
         {
           "name": "建議組合5",
           "numbers": [
-            6,
+            11,
+            12,
             20,
-            22,
-            26,
             29,
-            42
+            39,
+            47
           ],
-          "special": 30
+          "special": 31
         },
         {
           "name": "建議組合6",
           "numbers": [
-            5,
-            11,
+            12,
+            16,
             20,
-            29,
-            37,
+            39,
+            40,
+            47
+          ],
+          "special": 31
+        },
+        {
+          "name": "建議組合7",
+          "numbers": [
+            11,
+            12,
+            20,
+            40,
+            47,
             48
           ],
-          "special": 30
+          "special": 31
+        },
+        {
+          "name": "建議組合8",
+          "numbers": [
+            6,
+            11,
+            12,
+            16,
+            47,
+            48
+          ],
+          "special": 31
         }
       ],
       "strong_packs": {
@@ -135,83 +159,81 @@
           "name": "最強單支",
           "hit_goal": 1,
           "numbers": [
-            5
+            12
           ],
-          "score_sum": 0.56846,
-          "avg_score": 0.56846,
+          "score_sum": 0.55468,
+          "avg_score": 0.55468,
           "theoretical_probability": 0.122449,
           "zones": {
-            "01-10": 1
+            "11-20": 1
           },
           "tails": {
-            "5": 1
+            "2": 1
           }
         },
         "two_hit_one": {
           "name": "最強2中1",
           "hit_goal": 1,
           "numbers": [
-            5,
-            29
+            12,
+            16
           ],
-          "score_sum": 1.11198,
-          "avg_score": 0.55599,
+          "score_sum": 1.08184,
+          "avg_score": 0.54092,
           "theoretical_probability": 0.232143,
           "zones": {
-            "01-10": 1,
-            "21-30": 1
+            "11-20": 2
           },
           "tails": {
-            "5": 1,
-            "9": 1
+            "2": 1,
+            "6": 1
           }
         },
         "three_hit_one": {
           "name": "最強3中1",
           "hit_goal": 1,
           "numbers": [
-            5,
-            11,
-            29
+            12,
+            16,
+            47
           ],
-          "score_sum": 1.64809,
-          "avg_score": 0.54936,
+          "score_sum": 1.59013,
+          "avg_score": 0.53004,
           "theoretical_probability": 0.330167,
           "zones": {
-            "01-10": 1,
-            "11-20": 1,
-            "21-30": 1
+            "11-20": 2,
+            "41-49": 1
           },
           "tails": {
-            "5": 1,
-            "1": 1,
-            "9": 1
+            "2": 1,
+            "6": 1,
+            "7": 1
           }
         },
         "five_hit_two": {
           "name": "最強5中2",
           "hit_goal": 2,
           "numbers": [
-            5,
-            11,
-            20,
+            12,
+            16,
             29,
-            37
+            40,
+            47
           ],
-          "score_sum": 2.66196,
-          "avg_score": 0.53239,
+          "score_sum": 2.58857,
+          "avg_score": 0.51771,
           "theoretical_probability": 0.10689,
           "zones": {
-            "01-10": 1,
             "11-20": 2,
             "21-30": 1,
-            "31-40": 1
+            "31-40": 1,
+            "41-49": 1
           },
           "tails": {
-            "5": 1,
-            "1": 1,
-            "0": 1,
+            "2": 1,
+            "6": 1,
             "9": 1,
+            "0": 1,
             "7": 1
           }
         },
@@ -219,34 +241,33 @@
           "name": "最強9中3",
           "hit_goal": 3,
           "numbers": [
-            5,
+            6,
             11,
+            12,
+            16,
             20,
-            26,
             29,
-            35,
-            37,
-            43,
+            40,
+            47,
             48
           ],
-          "score_sum": 4.54968,
-          "avg_score": 0.50552,
+          "score_sum": 4.55134,
+          "avg_score": 0.5057,
           "theoretical_probability": 0.066743,
           "zones": {
             "01-10": 1,
-            "11-20": 2,
-            "21-30": 2,
-            "31-40": 2,
+            "11-20": 4,
+            "21-30": 1,
+            "31-40": 1,
             "41-49": 2
           },
           "tails": {
-            "5": 2,
+            "6": 2,
             "1": 1,
-            "0": 1,
-            "6": 1,
+            "2": 1,
+            "0": 2,
             "9": 1,
             "7": 1,
-            "3": 1,
             "8": 1
           }
         },
@@ -254,21 +275,21 @@
           "name": "特別號最強單支",
           "hit_goal": 1,
           "numbers": [
-            30
+            31
           ],
           "theoretical_probability": 0.020408,
-          "avg_score": 0.6418
+          "avg_score": 0.52771
         },
         "special_three_watch": {
           "name": "特別號3碼觀察",
           "hit_goal": 1,
           "numbers": [
-            30,
-            34,
-            37
+            31,
+            2,
+            24
           ],
           "theoretical_probability": 0.061224,
-          "avg_score": 0.48868
+          "avg_score": 0.48411
         }
       },
       "actual_period": null,
@@ -284,8 +305,538 @@
       "set_hits": [],
       "strong_pack_hits": {},
       "status": "pending",
-      "created_at": "2026-07-01T14:05:14",
+      "created_at": "2026-07-06T07:25:03",
       "settled_at": null
+    },
+    {
+      "based_on_period": 115000066,
+      "based_on_date": "2026-06-30",
+      "target_period": 115000067,
+      "target_date": "2026-07-03",
+      "top6": [
+        5,
+        15,
+        47,
+        7,
+        25,
+        22
+      ],
+      "top12": [
+        5,
+        15,
+        47,
+        7,
+        25,
+        22,
+        48,
+        11,
+        37,
+        17,
+        26,
+        43
+      ],
+      "top18": [
+        5,
+        15,
+        47,
+        7,
+        25,
+        22,
+        48,
+        11,
+        37,
+        17,
+        26,
+        43,
+        12,
+        29,
+        40,
+        16,
+        20,
+        49
+      ],
+      "special_top3": [
+        30,
+        37,
+        34
+      ],
+      "suggested_sets": [
+        {
+          "name": "建議組合1",
+          "numbers": [
+            5,
+            7,
+            15,
+            22,
+            47,
+            48
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合2",
+          "numbers": [
+            5,
+            15,
+            22,
+            26,
+            37,
+            47
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合3",
+          "numbers": [
+            5,
+            7,
+            15,
+            26,
+            40,
+            47
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合4",
+          "numbers": [
+            5,
+            11,
+            22,
+            25,
+            47,
+            48
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合5",
+          "numbers": [
+            5,
+            11,
+            15,
+            26,
+            47,
+            48
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合6",
+          "numbers": [
+            5,
+            11,
+            15,
+            22,
+            40,
+            47
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合7",
+          "numbers": [
+            5,
+            7,
+            15,
+            26,
+            37,
+            48
+          ],
+          "special": 30
+        },
+        {
+          "name": "建議組合8",
+          "numbers": [
+            5,
+            11,
+            15,
+            22,
+            37,
+            48
+          ],
+          "special": 30
+        }
+      ],
+      "strong_packs": {
+        "strong_single": {
+          "name": "最強單支",
+          "hit_goal": 1,
+          "numbers": [
+            5
+          ],
+          "score_sum": 0.68857,
+          "avg_score": 0.68857,
+          "theoretical_probability": 0.122449,
+          "zones": {
+            "01-10": 1
+          },
+          "tails": {
+            "5": 1
+          }
+        },
+        "two_hit_one": {
+          "name": "最強2中1",
+          "hit_goal": 1,
+          "numbers": [
+            5,
+            47
+          ],
+          "score_sum": 1.27361,
+          "avg_score": 0.63681,
+          "theoretical_probability": 0.232143,
+          "zones": {
+            "01-10": 1,
+            "41-49": 1
+          },
+          "tails": {
+            "5": 1,
+            "7": 1
+          }
+        },
+        "three_hit_one": {
+          "name": "最強3中1",
+          "hit_goal": 1,
+          "numbers": [
+            5,
+            15,
+            47
+          ],
+          "score_sum": 1.87411,
+          "avg_score": 0.6247,
+          "theoretical_probability": 0.330167,
+          "zones": {
+            "01-10": 1,
+            "11-20": 1,
+            "41-49": 1
+          },
+          "tails": {
+            "5": 2,
+            "7": 1
+          }
+        },
+        "five_hit_two": {
+          "name": "最強5中2",
+          "hit_goal": 2,
+          "numbers": [
+            5,
+            7,
+            15,
+            22,
+            47
+          ],
+          "score_sum": 2.94871,
+          "avg_score": 0.58974,
+          "theoretical_probability": 0.10689,
+          "zones": {
+            "01-10": 2,
+            "11-20": 1,
+            "21-30": 1,
+            "41-49": 1
+          },
+          "tails": {
+            "5": 2,
+            "7": 2,
+            "2": 1
+          }
+        },
+        "nine_hit_three": {
+          "name": "最強9中3",
+          "hit_goal": 3,
+          "numbers": [
+            5,
+            7,
+            11,
+            15,
+            22,
+            25,
+            37,
+            47,
+            48
+          ],
+          "score_sum": 4.99965,
+          "avg_score": 0.55552,
+          "theoretical_probability": 0.066743,
+          "zones": {
+            "01-10": 2,
+            "11-20": 2,
+            "21-30": 2,
+            "31-40": 1,
+            "41-49": 2
+          },
+          "tails": {
+            "5": 3,
+            "7": 3,
+            "1": 1,
+            "2": 1,
+            "8": 1
+          }
+        },
+        "special_single": {
+          "name": "特別號最強單支",
+          "hit_goal": 1,
+          "numbers": [
+            30
+          ],
+          "theoretical_probability": 0.020408,
+          "avg_score": 0.61009
+        },
+        "special_three_watch": {
+          "name": "特別號3碼觀察",
+          "hit_goal": 1,
+          "numbers": [
+            30,
+            37,
+            34
+          ],
+          "theoretical_probability": 0.061224,
+          "avg_score": 0.52453
+        }
+      },
+      "actual_period": 115000067,
+      "actual_date": "2026-07-03",
+      "actual_numbers": [
+        11,
+        16,
+        19,
+        23,
+        39,
+        47
+      ],
+      "actual_special": 15,
+      "top6_hits": 1,
+      "top12_hits": 2,
+      "top18_hits": 3,
+      "top12_hit_numbers": [
+        11,
+        47
+      ],
+      "special_top1_hit": 0,
+      "special_top3_hit": 0,
+      "set_hits": [
+        {
+          "name": "建議組合1",
+          "numbers": [
+            5,
+            7,
+            15,
+            22,
+            47,
+            48
+          ],
+          "special": 30,
+          "main_hits": 1,
+          "special_hit": 0,
+          "hit_numbers": [
+            47
+          ]
+        },
+        {
+          "name": "建議組合2",
+          "numbers": [
+            5,
+            15,
+            22,
+            26,
+            37,
+            47
+          ],
+          "special": 30,
+          "main_hits": 1,
+          "special_hit": 0,
+          "hit_numbers": [
+            47
+          ]
+        },
+        {
+          "name": "建議組合3",
+          "numbers": [
+            5,
+            7,
+            15,
+            26,
+            40,
+            47
+          ],
+          "special": 30,
+          "main_hits": 1,
+          "special_hit": 0,
+          "hit_numbers": [
+            47
+          ]
+        },
+        {
+          "name": "建議組合4",
+          "numbers": [
+            5,
+            11,
+            22,
+            25,
+            47,
+            48
+          ],
+          "special": 30,
+          "main_hits": 2,
+          "special_hit": 0,
+          "hit_numbers": [
+            11,
+            47
+          ]
+        },
+        {
+          "name": "建議組合5",
+          "numbers": [
+            5,
+            11,
+            15,
+            26,
+            47,
+            48
+          ],
+          "special": 30,
+          "main_hits": 2,
+          "special_hit": 0,
+          "hit_numbers": [
+            11,
+            47
+          ]
+        },
+        {
+          "name": "建議組合6",
+          "numbers": [
+            5,
+            11,
+            15,
+            22,
+            40,
+            47
+          ],
+          "special": 30,
+          "main_hits": 2,
+          "special_hit": 0,
+          "hit_numbers": [
+            11,
+            47
+          ]
+        },
+        {
+          "name": "建議組合7",
+          "numbers": [
+            5,
+            7,
+            15,
+            26,
+            37,
+            48
+          ],
+          "special": 30,
+          "main_hits": 0,
+          "special_hit": 0,
+          "hit_numbers": []
+        },
+        {
+          "name": "建議組合8",
+          "numbers": [
+            5,
+            11,
+            15,
+            22,
+            37,
+            48
+          ],
+          "special": 30,
+          "main_hits": 1,
+          "special_hit": 0,
+          "hit_numbers": [
+            11
+          ]
+        }
+      ],
+      "strong_pack_hits": {
+        "strong_single": {
+          "name": "最強單支",
+          "numbers": [
+            5
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        },
+        "two_hit_one": {
+          "name": "最強2中1",
+          "numbers": [
+            5,
+            47
+          ],
+          "hit_goal": 1,
+          "hits": 1,
+          "passed": true
+        },
+        "three_hit_one": {
+          "name": "最強3中1",
+          "numbers": [
+            5,
+            15,
+            47
+          ],
+          "hit_goal": 1,
+          "hits": 1,
+          "passed": true
+        },
+        "five_hit_two": {
+          "name": "最強5中2",
+          "numbers": [
+            5,
+            7,
+            15,
+            22,
+            47
+          ],
+          "hit_goal": 2,
+          "hits": 1,
+          "passed": false
+        },
+        "nine_hit_three": {
+          "name": "最強9中3",
+          "numbers": [
+            5,
+            7,
+            11,
+            15,
+            22,
+            25,
+            37,
+            47,
+            48
+          ],
+          "hit_goal": 3,
+          "hits": 2,
+          "passed": false
+        },
+        "special_single": {
+          "name": "特別號最強單支",
+          "numbers": [
+            30
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        },
+        "special_three_watch": {
+          "name": "特別號3碼觀察",
+          "numbers": [
+            30,
+            37,
+            34
+          ],
+          "hit_goal": 1,
+          "hits": 0,
+          "passed": false
+        }
+      },
+      "status": "settled",
+      "created_at": "2026-07-03T08:42:28",
+      "settled_at": "2026-07-06T07:13:43"
     }
   ]
 }

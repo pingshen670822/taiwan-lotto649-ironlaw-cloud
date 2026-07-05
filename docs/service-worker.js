@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lotto649-ironlaw-20260701140514';
+const CACHE_NAME = 'lotto649-ironlaw-20260706072503';
 const APP_SHELL = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const APP_SHELL = [
   './latest_battle_report.html',
   './latest_battle_report.md',
   './prediction_history.json',
+  './self_test_report.json',
   './system_health.json',
   './manifest.webmanifest'
 ];

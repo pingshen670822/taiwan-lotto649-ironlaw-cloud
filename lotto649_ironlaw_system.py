@@ -26,6 +26,7 @@ import urllib.request
 import zipfile
 from collections import Counter, defaultdict
 from datetime import datetime, time as clock_time, timedelta
+from itertools import combinations
 from pathlib import Path
 from statistics import mean
 from zoneinfo import ZoneInfo
@@ -47,6 +48,7 @@ BATTLE_MD = REPORT_DIR / "latest_battle_report.md"
 BATTLE_HTML = REPORT_DIR / "latest_battle_report.html"
 ENHANCED_BATTLE_HTML = REPORT_DIR / "大樂透最新強化戰報.html"
 HISTORY_JSON = REPORT_DIR / "prediction_history.json"
+SELF_TEST_JSON = REPORT_DIR / "self_test_report.json"
 
 API_BASE = "https://api.taiwanlottery.com/TLCAPIWeB"
 DOWNLOAD_API = f"{API_BASE}/Lottery/ResultDownload"
@@ -62,10 +64,17 @@ DEFAULT_MODEL_WEIGHTS = {
     "heat_short": 1.12,
     "heat_mid": 1.08,
     "heat_long": 0.78,
+    "bayes_global": 0.96,
+    "ewma_fast": 1.18,
+    "ewma_slow": 0.94,
     "omission": 0.92,
+    "gap_hazard": 1.05,
     "pair": 1.02,
+    "markov_transition": 1.10,
     "tail_zone": 0.72,
+    "chi_square_balance": 0.70,
     "repeat_neighbor": 0.52,
+    "mirror": 0.34,
     "special_bridge": 0.44,
 }
 
@@ -73,7 +82,10 @@ SPECIAL_MODEL_WEIGHTS = {
     "special_short": 1.12,
     "special_mid": 1.02,
     "special_long": 0.78,
+    "special_bayes": 0.96,
+    "special_ewma": 1.10,
     "special_omission": 0.92,
+    "special_gap_hazard": 0.92,
     "main_bridge": 0.46,
 }
 
@@ -745,6 +757,100 @@ def omission(draws: list[dict], field: str = "numbers") -> dict[int, int]:
     return {n: len(draws) if idx is None else end - idx for n, idx in last_seen.items()}
 
 
+def bayesian_frequency_scores(draws: list[dict], field: str = "numbers", alpha: float = 1.0, window: int | None = None) -> dict[int, float]:
+    sample = draws[-window:] if window else draws
+    counts = frequency(sample, field=field)
+    observations = (len(sample) * MAIN_DRAW_SIZE) if field == "numbers" else len(sample)
+    denominator = observations + alpha * NUMBER_MAX
+    values = {n: (counts.get(n, 0) + alpha) / denominator for n in range(1, NUMBER_MAX + 1)}
+    return normalize_map(values)
+
+
+def ewma_frequency_scores(draws: list[dict], field: str = "numbers", half_life: float = 18.0) -> dict[int, float]:
+    values = {n: 0.0 for n in range(1, NUMBER_MAX + 1)}
+    if not draws:
+        return values
+    decay = 0.5 ** (1.0 / max(half_life, 1.0))
+    weight = 1.0
+    for draw in reversed(draws):
+        nums = draw["numbers"] if field == "numbers" else [draw[field]]
+        for n in nums:
+            values[n] += weight
+        weight *= decay
+        if weight < 0.002:
+            break
+    return normalize_map(values)
+
+
+def number_gap_history(draws: list[dict], field: str = "numbers") -> dict[int, list[int]]:
+    seen_at = {n: None for n in range(1, NUMBER_MAX + 1)}
+    gaps = {n: [] for n in range(1, NUMBER_MAX + 1)}
+    for idx, draw in enumerate(draws):
+        nums = draw["numbers"] if field == "numbers" else [draw[field]]
+        for n in nums:
+            if seen_at[n] is not None:
+                gaps[n].append(idx - seen_at[n])
+            seen_at[n] = idx
+    return gaps
+
+
+def gap_hazard_scores(draws: list[dict], field: str = "numbers") -> dict[int, float]:
+    current = omission(draws, field=field)
+    gaps = number_gap_history(draws, field=field)
+    values = {}
+    for n in range(1, NUMBER_MAX + 1):
+        history = gaps.get(n) or []
+        if len(history) < 3:
+            expected_gap = NUMBER_MAX / (MAIN_DRAW_SIZE if field == "numbers" else 1)
+        else:
+            expected_gap = mean(history[-24:])
+        ratio = current[n] / max(expected_gap, 1.0)
+        values[n] = min(ratio, 2.5)
+    return normalize_map(values)
+
+
+def markov_transition_scores(draws: list[dict]) -> dict[int, float]:
+    if len(draws) < 3:
+        return {n: 0.0 for n in range(1, NUMBER_MAX + 1)}
+    last_numbers = set(draws[-1]["numbers"])
+    values = defaultdict(float)
+    for idx in range(len(draws) - 1):
+        current = set(draws[idx]["numbers"])
+        nxt = set(draws[idx + 1]["numbers"])
+        overlap = len(current & last_numbers)
+        if overlap:
+            for n in nxt:
+                values[n] += overlap
+    return normalize_map({n: values.get(n, 0.0) for n in range(1, NUMBER_MAX + 1)})
+
+
+def chi_square_balance_scores(draws: list[dict], window: int = 60) -> dict[int, float]:
+    sample = draws[-window:]
+    expected_zone = len(sample) * MAIN_DRAW_SIZE / 5
+    expected_tail = len(sample) * MAIN_DRAW_SIZE / 10
+    zone_counts = Counter(zone_label(n) for draw in sample for n in draw["numbers"])
+    tail_counts = Counter(n % 10 for draw in sample for n in draw["numbers"])
+    values = {}
+    for n in range(1, NUMBER_MAX + 1):
+        zone_gap = max(expected_zone - zone_counts[zone_label(n)], 0) / max(expected_zone, 1)
+        tail_gap = max(expected_tail - tail_counts[n % 10], 0) / max(expected_tail, 1)
+        values[n] = 0.58 * zone_gap + 0.42 * tail_gap
+    return normalize_map(values)
+
+
+def mirror_scores(draws: list[dict]) -> dict[int, float]:
+    recent = set(n for draw in draws[-6:] for n in draw["numbers"])
+    values = {}
+    for n in range(1, NUMBER_MAX + 1):
+        mirrors = {50 - n}
+        if n <= 25:
+            mirrors.add(n + 24)
+        else:
+            mirrors.add(n - 24)
+        values[n] = sum(1 for m in mirrors if 1 <= m <= NUMBER_MAX and m in recent)
+    return normalize_map(values)
+
+
 def zone_label(number: int) -> str:
     if number <= 10:
         return "01-10"
@@ -769,7 +875,11 @@ def component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, float]], di
         "heat_short": normalize_map({n: frequency(recent10).get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
         "heat_mid": normalize_map({n: frequency(recent50).get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
         "heat_long": normalize_map({n: frequency(draws[-720:]).get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
+        "bayes_global": bayesian_frequency_scores(draws, alpha=1.25, window=900),
+        "ewma_fast": ewma_frequency_scores(draws, half_life=14),
+        "ewma_slow": ewma_frequency_scores(draws, half_life=64),
         "omission": normalize_map(all_omission),
+        "gap_hazard": gap_hazard_scores(draws),
     }
 
     last_numbers = set(draws[-1]["numbers"])
@@ -781,6 +891,7 @@ def component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, float]], di
             for n in nums - last_numbers:
                 pair_scores[n] += overlap
     components["pair"] = normalize_map({n: pair_scores.get(n, 0) for n in range(1, NUMBER_MAX + 1)})
+    components["markov_transition"] = markov_transition_scores(draws)
 
     recent_zone = Counter(zone_label(n) for draw in recent20 for n in draw["numbers"])
     recent_tail = Counter(n % 10 for draw in recent20 for n in draw["numbers"])
@@ -792,6 +903,7 @@ def component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, float]], di
         tail_deficit = max(tail_expected - recent_tail[n % 10], 0) / max(tail_expected, 1)
         tail_zone_scores[n] = 0.55 * zone_deficit + 0.45 * tail_deficit
     components["tail_zone"] = normalize_map(tail_zone_scores)
+    components["chi_square_balance"] = chi_square_balance_scores(draws)
 
     repeat_neighbor = {}
     for n in range(1, NUMBER_MAX + 1):
@@ -804,6 +916,7 @@ def component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, float]], di
             score += 0.15
         repeat_neighbor[n] = score
     components["repeat_neighbor"] = normalize_map(repeat_neighbor)
+    components["mirror"] = mirror_scores(draws)
 
     special_recent = frequency(recent100, field="special")
     special_bridge = {n: special_recent.get(n, 0) for n in range(1, NUMBER_MAX + 1)}
@@ -814,12 +927,26 @@ def component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, float]], di
             reasons[n].append("近十期熱度高")
         if components["heat_mid"][n] >= 0.75:
             reasons[n].append("中期趨勢強")
+        if components["bayes_global"][n] >= 0.72:
+            reasons[n].append("Bayesian平滑高分")
+        if components["ewma_fast"][n] >= 0.72:
+            reasons[n].append("EWMA短週期上升")
+        if components["ewma_slow"][n] >= 0.72:
+            reasons[n].append("EWMA長週期穩定")
         if components["omission"][n] >= 0.78:
             reasons[n].append("遺漏補償")
+        if components["gap_hazard"][n] >= 0.72:
+            reasons[n].append("間隔hazard偏高")
         if components["pair"][n] >= 0.72:
             reasons[n].append("上期關聯搭配")
+        if components["markov_transition"][n] >= 0.72:
+            reasons[n].append("Markov轉移關聯")
         if components["tail_zone"][n] >= 0.68:
             reasons[n].append("尾數區間補位")
+        if components["chi_square_balance"][n] >= 0.70:
+            reasons[n].append("區間卡方回補")
+        if components["mirror"][n] >= 0.70:
+            reasons[n].append("鏡像關聯")
         if components["special_bridge"][n] >= 0.72:
             reasons[n].append("特別號轉主號觀察")
     return components, all_omission, reasons
@@ -835,14 +962,23 @@ def special_component_scores(draws: list[dict]) -> tuple[dict[str, dict[int, flo
         "special_short": normalize_map({n: frequency(recent10, field="special").get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
         "special_mid": normalize_map({n: frequency(recent50, field="special").get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
         "special_long": normalize_map({n: frequency(draws[-720:], field="special").get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
+        "special_bayes": bayesian_frequency_scores(draws, field="special", alpha=1.15, window=900),
+        "special_ewma": ewma_frequency_scores(draws, field="special", half_life=36),
         "special_omission": normalize_map(all_omission),
+        "special_gap_hazard": gap_hazard_scores(draws, field="special"),
         "main_bridge": normalize_map({n: main_recent.get(n, 0) for n in range(1, NUMBER_MAX + 1)}),
     }
     for n in range(1, NUMBER_MAX + 1):
         if components["special_short"][n] >= 0.75:
             reasons[n].append("特別號短線熱")
+        if components["special_bayes"][n] >= 0.72:
+            reasons[n].append("特別號Bayesian平滑")
+        if components["special_ewma"][n] >= 0.72:
+            reasons[n].append("特別號EWMA上升")
         if components["special_omission"][n] >= 0.78:
             reasons[n].append("特別號遺漏補償")
+        if components["special_gap_hazard"][n] >= 0.72:
+            reasons[n].append("特別號間隔hazard")
         if components["main_bridge"][n] >= 0.76:
             reasons[n].append("主號熱度轉特別號")
     return components, all_omission, reasons
@@ -887,18 +1023,22 @@ def failure_review(conn: sqlite3.Connection) -> dict:
         return {"has_review": False, "severity": "none", "actions": []}
     severity = "normal"
     actions = []
-    if settled["top12_hits"] == 0 and not settled["special_top3_hit"]:
+    top6_hits = int(settled["top6_hits"] or 0)
+    top12_hits = int(settled["top12_hits"] or 0)
+    special_top3_hit = int(settled["special_top3_hit"] or 0)
+    if top6_hits == 0 or (top12_hits <= 1 and not special_top3_hit):
         severity = "critical"
         actions = [
-            "降低短線熱號與上期關聯權重",
-            "提高中期均衡、遺漏補償、尾數區間分散",
-            "強牌組加入區間分散限制，避免集中同一段趨勢",
+            "強制降低短線熱號、上期關聯、長期鈍化模型",
+            "提高中期趨勢、gap hazard、EWMA慢週期、遺漏補償",
+            "主號與特別號都套用上一期失手號碼懲罰",
         ]
-    elif settled["top12_hits"] <= 1:
+    elif top6_hits <= 1 or top12_hits <= 2 or not special_top3_hit:
         severity = "warning"
         actions = [
-            "小幅降低短線追熱",
-            "提高中期趨勢與區間分散比重",
+            "降低上一期 Top6/Top12 未命中號碼的延續權重",
+            "提高中期趨勢、EWMA慢週期、gap hazard 與遺漏補償",
+            "特別號 Top3 失手時同步懲罰前次特別號候選",
         ]
     return {
         "has_review": True,
@@ -912,22 +1052,30 @@ def apply_failure_adjustment(weights: dict[str, float], review: dict) -> dict[st
     adjusted = dict(weights)
     if review.get("severity") == "critical":
         multipliers = {
-            "heat_short": 0.72,
-            "pair": 0.76,
+            "heat_short": 0.60,
+            "heat_long": 0.62,
+            "bayes_global": 0.70,
+            "pair": 0.62,
+            "markov_transition": 0.66,
             "repeat_neighbor": 0.72,
-            "heat_mid": 1.16,
-            "omission": 1.18,
-            "tail_zone": 1.18,
-            "heat_long": 1.04,
-            "special_bridge": 0.90,
+            "heat_mid": 1.20,
+            "ewma_slow": 1.16,
+            "gap_hazard": 1.18,
+            "omission": 1.16,
+            "mirror": 1.08,
+            "special_bridge": 0.82,
         }
     elif review.get("severity") == "warning":
         multipliers = {
-            "heat_short": 0.90,
-            "pair": 0.92,
-            "heat_mid": 1.08,
-            "tail_zone": 1.06,
-            "omission": 1.06,
+            "heat_short": 0.76,
+            "heat_long": 0.78,
+            "pair": 0.80,
+            "markov_transition": 0.84,
+            "heat_mid": 1.12,
+            "ewma_slow": 1.10,
+            "gap_hazard": 1.10,
+            "omission": 1.08,
+            "mirror": 1.04,
         }
     else:
         multipliers = {}
@@ -945,16 +1093,26 @@ def score_numbers(draws: list[dict], model_weights: dict[str, float], review: di
         weight = model_weights.get(name, 0) / total_weight
         for n in range(1, NUMBER_MAX + 1):
             score[n] += weight * values.get(n, 0)
-    long_freq = normalize_map({n: frequency(draws[-360:]).get(n, 0) for n in range(1, NUMBER_MAX + 1)})
+    consensus = defaultdict(float)
+    for name, values in components.items():
+        weight = model_weights.get(name, 0) / total_weight
+        for rank, n in enumerate(rank_values(values), start=1):
+            consensus[n] += weight * ((NUMBER_MAX + 1 - rank) / NUMBER_MAX)
+    consensus = normalize_map(dict(consensus))
+    overdue = normalize_map(all_omission)
     for n in range(1, NUMBER_MAX + 1):
-        score[n] = score[n] * 0.94 + long_freq[n] * 0.06
-    if review and review.get("severity") == "critical":
+        score[n] = score[n] * 0.86 + consensus[n] * 0.10 + overdue[n] * 0.04
+    if review and review.get("severity") in {"critical", "warning"}:
         settled = review.get("last_settled", {})
         actual_numbers = set(settled.get("actual_numbers") or [])
-        failed_numbers = set((settled.get("candidate_numbers") or [])[:12]) - actual_numbers
-        for n in failed_numbers:
-            score[n] *= 0.45
-            reasons[n].append("上期低命中懲罰")
+        previous = settled.get("candidate_numbers") or []
+        failed_top6 = set(previous[:6]) - actual_numbers
+        failed_top12 = set(previous[:12]) - actual_numbers
+        hard_penalty = 0.48 if review.get("severity") == "critical" else 0.62
+        soft_penalty = 0.68 if review.get("severity") == "critical" else 0.82
+        for n in failed_top12:
+            score[n] *= hard_penalty if n in failed_top6 else soft_penalty
+            reasons[n].append("上期失手降權")
 
     ranked = rank_values(score)
     max_score = max(score.values())
@@ -976,7 +1134,7 @@ def score_numbers(draws: list[dict], model_weights: dict[str, float], review: di
     return candidates
 
 
-def score_special_numbers(draws: list[dict]) -> list[dict]:
+def score_special_numbers(draws: list[dict], review: dict | None = None) -> list[dict]:
     components, all_omission, reasons = special_component_scores(draws)
     total_weight = sum(SPECIAL_MODEL_WEIGHTS.values()) or 1
     score = defaultdict(float)
@@ -984,6 +1142,15 @@ def score_special_numbers(draws: list[dict]) -> list[dict]:
         weight = SPECIAL_MODEL_WEIGHTS.get(name, 0) / total_weight
         for n in range(1, NUMBER_MAX + 1):
             score[n] += weight * values.get(n, 0)
+    if review and review.get("severity") in {"critical", "warning"}:
+        settled = review.get("last_settled", {})
+        actual_special = settled.get("actual_special")
+        previous_specials = settled.get("special_candidates") or []
+        if actual_special not in previous_specials[:3]:
+            penalty = 0.50 if review.get("severity") == "critical" else 0.66
+            for n in previous_specials[:3]:
+                score[n] *= penalty
+                reasons[n].append("上期特別號失手降權")
     ranked = rank_values(score)
     max_score = max(score.values())
     min_score = min(score.values())
@@ -1046,14 +1213,103 @@ def backtest(draws: list[dict], rounds: int = 520, top_sizes: tuple[int, ...] = 
     }
 
 
-def calibrated_weights(backtest_result: dict) -> dict[str, float]:
+def weighted_ensemble_backtest(draws: list[dict], model_weights: dict[str, float], rounds: int = 520, top_sizes: tuple[int, ...] = (6, 12, 18)) -> dict:
+    if len(draws) < 150:
+        return {"rounds": 0, "note": "資料不足，略過最終權重回測。"}
+    start = max(120, len(draws) - rounds - 1)
+    stats = {f"top{size}_hits": 0 for size in top_sizes} | {"rounds": 0}
+    for idx in range(start, len(draws) - 1):
+        train = draws[: idx + 1]
+        actual = set(draws[idx + 1]["numbers"])
+        ranking = strategy_rankings(train, model_weights=model_weights)["ensemble"]
+        stats["rounds"] += 1
+        for size in top_sizes:
+            stats[f"top{size}_hits"] += len(set(ranking[:size]) & actual)
+    random_expectation = {size: round(MAIN_DRAW_SIZE * size / NUMBER_MAX, 3) for size in top_sizes}
+    result = {"rounds": stats["rounds"], "random_expectation": random_expectation}
+    for size in top_sizes:
+        avg = stats[f"top{size}_hits"] / max(stats["rounds"], 1)
+        result[f"top{size}_avg_hits"] = round(avg, 3)
+        result[f"top{size}_edge_vs_random"] = round(avg - random_expectation[size], 3)
+    return result
+
+
+def edge_metric(backtest_result: dict, model_name: str, size: int) -> float:
     strategies = backtest_result.get("strategies", {})
-    weights = {}
-    for name in DEFAULT_MODEL_WEIGHTS:
-        edge = strategies.get(name, {}).get("top12_edge_vs_random", 0)
-        weights[name] = DEFAULT_MODEL_WEIGHTS[name] * (1 + max(min(edge, 0.30), -0.22))
-    total = sum(weights.values()) or 1
-    return {name: round(value / total, 4) for name, value in weights.items()}
+    return float(strategies.get(model_name, {}).get(f"top{size}_edge_vs_random", 0) or 0)
+
+
+def calibration_diagnostics(full_backtest: dict, recent_backtest: dict | None = None) -> dict:
+    recent_backtest = recent_backtest or full_backtest
+    models = {}
+    for name, base_weight in DEFAULT_MODEL_WEIGHTS.items():
+        full6 = edge_metric(full_backtest, name, 6)
+        full12 = edge_metric(full_backtest, name, 12)
+        full18 = edge_metric(full_backtest, name, 18)
+        recent6 = edge_metric(recent_backtest, name, 6)
+        recent12 = edge_metric(recent_backtest, name, 12)
+        recent18 = edge_metric(recent_backtest, name, 18)
+        edge_score = (
+            0.10 * full6
+            + 0.18 * full12
+            + 0.14 * full18
+            + 0.18 * recent6
+            + 0.26 * recent12
+            + 0.14 * recent18
+        )
+        votes = sum(edge > 0 for edge in [full6, full12, full18, recent6, recent12, recent18])
+        if edge_score >= 0.050:
+            multiplier = 1.65
+            tier = "promote"
+        elif edge_score >= 0.020:
+            multiplier = 1.28
+            tier = "support"
+        elif edge_score >= 0.000:
+            multiplier = 1.00
+            tier = "neutral"
+        elif edge_score >= -0.035:
+            multiplier = 0.55
+            tier = "shrink"
+        else:
+            multiplier = 0.24
+            tier = "quarantine"
+        if votes <= 1:
+            multiplier *= 0.55
+            tier = "quarantine"
+        elif votes == 2:
+            multiplier *= 0.78
+        models[name] = {
+            "base_weight": base_weight,
+            "edge_score": round(edge_score, 5),
+            "positive_votes": votes,
+            "tier": tier,
+            "multiplier": round(multiplier, 4),
+            "full_edges": {"top6": full6, "top12": full12, "top18": full18},
+            "recent_edges": {"top6": recent6, "top12": recent12, "top18": recent18},
+        }
+    return {
+        "method": "dual_window_edge_shrink_v3",
+        "full_rounds": full_backtest.get("rounds", 0),
+        "recent_rounds": recent_backtest.get("rounds", 0),
+        "models": models,
+    }
+
+
+def calibrated_weights(full_backtest: dict, recent_backtest: dict | None = None) -> dict[str, float]:
+    diagnostics = calibration_diagnostics(full_backtest, recent_backtest)
+    raw_weights = {}
+    for name, info in diagnostics["models"].items():
+        raw_weights[name] = DEFAULT_MODEL_WEIGHTS[name] * info["multiplier"]
+    total_raw = sum(raw_weights.values()) or 1.0
+    normalized = {name: value / total_raw for name, value in raw_weights.items()}
+    capped = {}
+    for name, value in normalized.items():
+        tier = diagnostics["models"][name]["tier"]
+        cap = 0.150 if tier in {"promote", "support"} else 0.095
+        floor = 0.010 if tier == "quarantine" else 0.018
+        capped[name] = min(max(value, floor), cap)
+    total = sum(capped.values()) or 1.0
+    return {name: round(value / total, 4) for name, value in capped.items()}
 
 
 def diversity_penalty(selected: list[int], candidate: int) -> float:
@@ -1066,6 +1322,44 @@ def diversity_penalty(selected: list[int], candidate: int) -> float:
         penalty += 0.020
     if sum(1 for n in selected if zone_label(n) == zone_label(candidate)) >= 2:
         penalty += 0.035
+    return penalty
+
+
+def historical_combo_profile(draws: list[dict], window: int = 720) -> dict:
+    sample = draws[-window:] if len(draws) > window else draws
+    sums = [sum(draw["numbers"]) for draw in sample]
+    odd_counts = [sum(1 for n in draw["numbers"] if n % 2) for draw in sample]
+    zone_modes = Counter(tuple(sorted(Counter(zone_label(n) for n in draw["numbers"]).items())) for draw in sample)
+    return {
+        "sum_mean": mean(sums),
+        "sum_std": max((sum((value - mean(sums)) ** 2 for value in sums) / len(sums)) ** 0.5, 1.0),
+        "odd_common": {count for count, _ in Counter(odd_counts).most_common(3)},
+        "zone_common": {item for item, _ in zone_modes.most_common(10)},
+    }
+
+
+def combo_penalty(numbers: list[int], profile: dict) -> float:
+    nums = sorted(numbers)
+    total = sum(nums)
+    z = abs(total - profile["sum_mean"]) / profile["sum_std"]
+    odd_count = sum(1 for n in nums if n % 2)
+    zones = Counter(zone_label(n) for n in nums)
+    tails = Counter(n % 10 for n in nums)
+    consecutive_pairs = sum(1 for a, b in zip(nums, nums[1:]) if b - a == 1)
+    penalty = 0.0
+    if z > 1.15:
+        penalty += (z - 1.15) * 0.22
+    if odd_count not in profile["odd_common"]:
+        penalty += 0.16
+    if max(zones.values()) >= 4:
+        penalty += 0.20
+    if max(tails.values()) >= 3:
+        penalty += 0.16
+    if consecutive_pairs > 2:
+        penalty += 0.15 * (consecutive_pairs - 2)
+    zone_key = tuple(sorted(zones.items()))
+    if zone_key not in profile["zone_common"]:
+        penalty += 0.04
     return penalty
 
 
@@ -1128,34 +1422,33 @@ def build_strong_prediction_packs(candidates: list[dict], special_candidates: li
     }
 
 
-def build_sets(candidates: list[dict], special_candidates: list[dict]) -> list[dict]:
-    top = [item["number"] for item in candidates[:24]]
-    overdue = [item["number"] for item in sorted(candidates, key=lambda x: (x["omission"], x["score"]), reverse=True)[:12]]
-    templates = [
-        [top[0], top[2], top[5], top[8], top[11], top[14]],
-        [top[1], top[3], top[6], top[9], overdue[0], overdue[2]],
-        [top[0], top[4], top[7], top[10], top[15], overdue[1]],
-        [top[2], top[5], top[12], top[16], overdue[3], overdue[4]],
-        [top[1], top[8], top[13], top[17], overdue[5], overdue[6]],
-        optimized_group(candidates, 6),
-    ]
+def build_sets(candidates: list[dict], special_candidates: list[dict], draws: list[dict]) -> list[dict]:
+    score_by_number = {item["number"]: item["score"] for item in candidates}
+    rank_bonus = {item["number"]: max(0, 28 - idx) / 28 for idx, item in enumerate(candidates[:28])}
+    profile = historical_combo_profile(draws)
+    pool = [item["number"] for item in candidates[:22]]
+    overdue_pool = [item["number"] for item in sorted(candidates, key=lambda x: (x["omission"], x["score"]), reverse=True)[:8]]
+    pool = sorted(set(pool + overdue_pool))
+    scored = []
+    for nums in combinations(pool, 6):
+        nums = sorted(nums)
+        raw = sum(score_by_number[n] for n in nums) + 0.035 * sum(rank_bonus.get(n, 0) for n in nums)
+        quality = raw - combo_penalty(nums, profile)
+        scored.append((quality, nums))
+    scored.sort(reverse=True, key=lambda item: item[0])
     sets = []
     seen = set()
-    for idx, numbers in enumerate(templates, start=1):
-        numbers = sorted(set(numbers))
-        if len(numbers) < 6:
-            for n in top:
-                if n not in numbers:
-                    numbers.append(n)
-                if len(numbers) == 6:
-                    break
-        numbers = sorted(numbers[:6])
+    for _, numbers in scored:
         key = tuple(numbers)
         if key in seen:
             continue
+        if any(len(set(numbers) & set(item["numbers"])) >= 5 for item in sets):
+            continue
         seen.add(key)
         special = next(item["number"] for item in special_candidates if item["number"] not in numbers)
-        sets.append({"name": f"建議組合{idx}", "numbers": numbers, "special": special})
+        sets.append({"name": f"建議組合{len(sets) + 1}", "numbers": numbers, "special": special})
+        if len(sets) >= 8:
+            break
     return sets
 
 
@@ -1166,16 +1459,19 @@ def analyze(conn: sqlite3.Connection) -> dict:
     latest = draws[-1]
     review = failure_review(conn)
     initial_backtest = backtest(draws)
-    weights = apply_failure_adjustment(calibrated_weights(initial_backtest), review)
+    recent_backtest = backtest(draws, rounds=180)
+    calibration = calibration_diagnostics(initial_backtest, recent_backtest)
+    weights = apply_failure_adjustment(calibrated_weights(initial_backtest, recent_backtest), review)
+    adaptive_backtest = weighted_ensemble_backtest(draws, weights)
     candidates = score_numbers(draws, weights, review)
-    special_candidates = score_special_numbers(draws)
+    special_candidates = score_special_numbers(draws, review)
     strong_packs = build_strong_prediction_packs(candidates, special_candidates)
-    suggested_sets = build_sets(candidates, special_candidates)
+    suggested_sets = build_sets(candidates, special_candidates, draws)
     health = history_health(conn)
     target_date = next_draw_date(latest["draw_date"])
     return {
         "system": "台灣大樂透鐵律預測系統",
-        "version": "lotto649_ironlaw_cloud_v1_20260701",
+        "version": "lotto649_ironlaw_cloud_v5_20260706_daily_self_heal",
         "generated_at": taipei_now().isoformat(timespec="seconds"),
         "history_info": health,
         "latest_draw": latest,
@@ -1184,19 +1480,34 @@ def analyze(conn: sqlite3.Connection) -> dict:
         "data_freshness": health.get("freshness", {}),
         "failure_review": review,
         "backtest": initial_backtest,
+        "recent_backtest": recent_backtest,
+        "adaptive_backtest": adaptive_backtest,
+        "calibration": calibration,
         "model_weights": weights,
         "candidates": candidates,
         "special_candidates": special_candidates,
         "suggested_sets": suggested_sets,
         "strong_prediction_packs": strong_packs,
+        "model_upgrade_notes": [
+            "v3改為雙回測校準：長期520期與近期180期同步評估",
+            "新增最終權重520期回測，最終綜合模型沒通過就不准輸出",
+            "v4新增失手回饋：Top6低命中或特別號失手會立刻觸發降權，不等爆掉才調整",
+            "v4新增特別號失手懲罰，前次特別號Top3沒中會同步降權",
+            "v5新增每日雲端全系統掃描：每天自動更新、檢測、失敗改跑全量修復並同步手機版",
+            "負邊際模型進入shrink/quarantine，不再平均分配權重拖累排序",
+            "高正邊際模型才進入support/promote，並設定權重上限避免單一模型過擬合",
+            "主號排序加入高權重模型共識分數與少量遺漏補償，降低單點噪音",
+            "保留Dirichlet/Bayesian、EWMA、Markov、gap hazard、卡方區間/尾數與組合搜尋",
+            "建議組合繼續使用候選池搜尋，加入總和、奇偶、區間、尾數、連號約束",
+        ],
         "iron_laws": [
             "資料先行：先建立 SQLite 與 CSV 全歷史資料庫，再產生候選號碼",
             "多窗口分析：近5、10、20、50、100期與長期資料同步評分",
             "強牌分層：單支、2中1、3中1、5中2、9中3，另列特別號層",
-            "上一期必結算：保留 Top6、Top12、Top18、強牌組與特別號命中",
+            "上一期必結算：保留 Top6、Top12、Top18、強牌組與特別號命中，低命中會觸發下一期回饋降權",
             "交叉驗證：年度官方檔與月查詢 API 互補",
             "戰報透明：輸出 latest_analysis.json、HTML、Markdown 與手機雲端版",
-            "不迷信單一模型：熱度、冷度、遺漏、關聯、尾數區間與回測共同決策",
+            "不迷信單一模型：熱度、Bayesian、EWMA、Markov、gap hazard、遺漏、關聯、尾數區間與雙回測校準共同決策",
             "資料新鮮度：標示最新日期、理論應更新日期與落後天數",
         ],
         "disclaimer": "本系統為歷史統計與回測研究，不保證開獎命中或獲利，請量力而為。",
@@ -1463,14 +1774,18 @@ def render_markdown(analysis: dict, history: dict) -> str:
         for action in review.get("actions", []):
             lines.append(f"- 改善：{action}")
     bt = analysis["backtest"]
+    recent_bt = analysis.get("recent_backtest") or {}
+    adaptive_bt = analysis.get("adaptive_backtest") or {}
     ensemble = bt.get("strategies", {}).get("ensemble", {})
     lines.extend(
         [
             "",
             "## 模型回測",
-            f"- 回測期數：{bt.get('rounds', 0)}",
+            f"- 基礎模組回測期數：{bt.get('rounds', 0)}，近期校準期數：{recent_bt.get('rounds', 0)}",
             f"- 隨機 Top12 期望命中：約 {bt.get('random_expectation', {}).get(12, 0)} 顆",
-            f"- 綜合模型 Top12 平均命中：{ensemble.get('top12_avg_hits', '-')}，對隨機差值 {ensemble.get('top12_edge_vs_random', '-')}",
+            f"- 舊基礎綜合 Top12：{ensemble.get('top12_avg_hits', '-')}，對隨機差值 {ensemble.get('top12_edge_vs_random', '-')}",
+            f"- v3最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
+            f"- v3最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
             "",
             "## 鐵律狀態",
         ]
@@ -1528,6 +1843,8 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
     else:
         review_html = "<section class=\"band\"><h2>上期結算檢討</h2><p>目前尚無已結算預測，首次建立後會從下一期開始累積。</p></section>"
     bt = analysis["backtest"]
+    recent_bt = analysis.get("recent_backtest") or {}
+    adaptive_bt = analysis.get("adaptive_backtest") or {}
     ensemble = bt.get("strategies", {}).get("ensemble", {})
     return f"""<!doctype html>
 <html lang="zh-Hant">
@@ -1630,9 +1947,11 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
 
     <section class="band">
       <h2>模型回測</h2>
-      <p>回測期數：{esc(bt.get('rounds', 0))}</p>
+      <p>基礎模組回測期數：{esc(bt.get('rounds', 0))} / 近期校準期數：{esc(recent_bt.get('rounds', 0))}</p>
       <p>隨機 Top12 期望命中：約 {esc(bt.get('random_expectation', {}).get(12, 0))} 顆</p>
-      <p>綜合模型 Top12 平均命中：{esc(ensemble.get('top12_avg_hits', '-'))}，對隨機差值 {esc(ensemble.get('top12_edge_vs_random', '-'))}</p>
+      <p>舊基礎綜合 Top12：{esc(ensemble.get('top12_avg_hits', '-'))}，對隨機差值 {esc(ensemble.get('top12_edge_vs_random', '-'))}</p>
+      <p>v3最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
+      <p>v3最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
     </section>
 
     <section class="band" id="history">
@@ -1708,6 +2027,7 @@ const APP_SHELL = [
   './latest_battle_report.html',
   './latest_battle_report.md',
   './prediction_history.json',
+  './self_test_report.json',
   './system_health.json',
   './manifest.webmanifest'
 ];
@@ -1751,35 +2071,174 @@ self.addEventListener('fetch', event => {{
     shutil.copytree(MOBILE_DIR, PAGES_DIR)
 
 
+def quality_gate(conn: sqlite3.Connection, analysis: dict, export_count: int, prediction_status: str) -> dict:
+    draws = load_draws(conn)
+    health = history_health(conn)
+    backtest_result = analysis.get("backtest") or {}
+    adaptive_backtest = analysis.get("adaptive_backtest") or {}
+    strategies = backtest_result.get("strategies") or {}
+    expected_strategies = set(DEFAULT_MODEL_WEIGHTS) | {"ensemble"}
+    expected_packs = {
+        "strong_single",
+        "two_hit_one",
+        "three_hit_one",
+        "five_hit_two",
+        "nine_hit_three",
+        "special_single",
+        "special_three_watch",
+    }
+    checks = []
+
+    def add_check(name: str, passed: bool, detail: str) -> None:
+        checks.append({"name": name, "passed": bool(passed), "detail": detail})
+
+    candidate_numbers = [item.get("number") for item in analysis.get("candidates", [])]
+    special_numbers = [item.get("number") for item in analysis.get("special_candidates", [])]
+    suggested_sets = analysis.get("suggested_sets") or []
+    strong_packs = analysis.get("strong_prediction_packs") or {}
+    model_weights = analysis.get("model_weights") or {}
+    calibration = analysis.get("calibration") or {}
+    recent_backtest = analysis.get("recent_backtest") or {}
+
+    add_check("database_minimum_history", len(draws) >= 2000, f"{len(draws)} draws loaded")
+    add_check("database_export_complete", export_count == len(draws), f"csv={export_count}, db={len(draws)}")
+    add_check("database_integrity", not health.get("invalid_rows") and not health.get("duplicate_dates"), "no invalid rows or duplicate dates")
+    add_check("database_freshness", health.get("freshness", {}).get("status") == "fresh", json.dumps(health.get("freshness", {}), ensure_ascii=False))
+    add_check("main_candidates_complete", len(candidate_numbers) == NUMBER_MAX and len(set(candidate_numbers)) == NUMBER_MAX, f"{len(candidate_numbers)} candidates")
+    add_check("main_candidates_valid", all(isinstance(n, int) and 1 <= n <= NUMBER_MAX for n in candidate_numbers), "all main candidates are 1-49")
+    add_check("special_candidates_complete", len(special_numbers) == NUMBER_MAX and len(set(special_numbers)) == NUMBER_MAX, f"{len(special_numbers)} candidates")
+    add_check("special_candidates_valid", all(isinstance(n, int) and 1 <= n <= NUMBER_MAX for n in special_numbers), "all special candidates are 1-49")
+    add_check("strategy_modules_present", expected_strategies.issubset(strategies.keys()), f"missing={sorted(expected_strategies - set(strategies.keys()))}")
+    add_check("backtest_depth", int(backtest_result.get("rounds") or 0) >= 300, f"rounds={backtest_result.get('rounds')}")
+    add_check("recent_backtest_depth", int(recent_backtest.get("rounds") or 0) >= 120, f"rounds={recent_backtest.get('rounds')}")
+    add_check("adaptive_calibration_present", calibration.get("method") == "dual_window_edge_shrink_v3", str(calibration.get("method")))
+    adaptive_edge12 = float(adaptive_backtest.get("top12_edge_vs_random") or -99)
+    adaptive_edge18 = float(adaptive_backtest.get("top18_edge_vs_random") or -99)
+    add_check("adaptive_ensemble_backtest", int(adaptive_backtest.get("rounds") or 0) >= 300 and adaptive_edge12 >= 0 and adaptive_edge18 >= 0, f"rounds={adaptive_backtest.get('rounds')}, top12_edge={adaptive_edge12}, top18_edge={adaptive_edge18}")
+    add_check("weights_complete", set(model_weights) == set(DEFAULT_MODEL_WEIGHTS), f"weights={sorted(model_weights.keys())}")
+    add_check("weights_normalized", 0.98 <= sum(float(v) for v in model_weights.values()) <= 1.02, f"sum={sum(float(v) for v in model_weights.values()):.4f}")
+    add_check("strong_packs_complete", expected_packs.issubset(strong_packs.keys()), f"missing={sorted(expected_packs - set(strong_packs.keys()))}")
+    add_check("suggested_sets_count", len(suggested_sets) >= 6, f"{len(suggested_sets)} sets")
+    valid_sets = True
+    for item in suggested_sets:
+        numbers = item.get("numbers") or []
+        special = item.get("special")
+        if len(numbers) != MAIN_DRAW_SIZE or len(set(numbers)) != MAIN_DRAW_SIZE:
+            valid_sets = False
+        if not all(isinstance(n, int) and 1 <= n <= NUMBER_MAX for n in numbers):
+            valid_sets = False
+        if not isinstance(special, int) or special < 1 or special > NUMBER_MAX or special in numbers:
+            valid_sets = False
+    add_check("suggested_sets_valid", valid_sets, "6 unique main numbers plus independent special number")
+    add_check("prediction_saved", prediction_status in {"inserted", "updated_pending", "preserved_settled"}, prediction_status)
+    workflow_path = BASE_DIR / ".github" / "workflows" / "update-mobile-cloud.yml"
+    workflow_text = workflow_path.read_text(encoding="utf-8") if workflow_path.exists() else ""
+    add_check(
+        "daily_cloud_self_heal_workflow",
+        "30 0 * * *" in workflow_text and "self-heal" in workflow_text.lower() and "--all" in workflow_text and "self_test_report.json" in workflow_text,
+        "daily schedule, repair rebuild, and self-test verification present",
+    )
+
+    required_files = [
+        CSV_PATH,
+        ANALYSIS_JSON,
+        HEALTH_JSON,
+        HISTORY_JSON,
+        BATTLE_MD,
+        BATTLE_HTML,
+        ENHANCED_BATTLE_HTML,
+        MOBILE_DIR / "index.html",
+        MOBILE_DIR / "manifest.webmanifest",
+        MOBILE_DIR / "service-worker.js",
+        PAGES_DIR / "index.html",
+        PAGES_DIR / "latest_analysis.json",
+        PAGES_DIR / "service-worker.js",
+        workflow_path,
+        BASE_DIR / "README.md",
+    ]
+    missing_files = [str(path.relative_to(BASE_DIR)) for path in required_files if not path.exists() or path.stat().st_size == 0]
+    add_check("report_artifacts_present", not missing_files, f"missing={missing_files}")
+
+    report = {
+        "system": analysis.get("system"),
+        "version": analysis.get("version"),
+        "generated_at": taipei_now().isoformat(timespec="seconds"),
+        "latest_period": analysis.get("latest_draw", {}).get("period"),
+        "latest_date": analysis.get("latest_draw", {}).get("draw_date"),
+        "target_period": analysis.get("target_period"),
+        "target_date": analysis.get("target_date"),
+        "passed": all(item["passed"] for item in checks),
+        "checks": checks,
+    }
+    SELF_TEST_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    for target_dir in [MOBILE_DIR, PAGES_DIR]:
+        if target_dir.exists():
+            shutil.copy2(SELF_TEST_JSON, target_dir / "self_test_report.json")
+    if not report["passed"]:
+        failed = [item for item in checks if not item["passed"]]
+        raise RuntimeError("自我檢測未通過：" + "; ".join(f"{item['name']}={item['detail']}" for item in failed[:5]))
+    return report
+
+
 def ensure_github_workflow() -> None:
     workflow_dir = BASE_DIR / ".github" / "workflows"
     workflow_dir.mkdir(parents=True, exist_ok=True)
     (workflow_dir / "update-mobile-cloud.yml").write_text(
-        """name: Update Lotto649 IronLaw Mobile Cloud
+        """name: Daily Lotto649 IronLaw Mobile Cloud Self-Heal
 
 on:
   schedule:
-    - cron: "30 14 * * 2,5"
+    - cron: "30 0 * * *"
+    - cron: "20 14 * * 2,5"
+    - cron: "10 15 * * 2,5"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: lotto649-mobile-cloud
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build database, prediction, reports, and mobile site
-        run: python lotto649_ironlaw_system.py --all
+      - name: Daily update, full scan, and self-heal
+        shell: bash
+        run: |
+          set -e
+          verify_self_test() {
+            python - <<'PY'
+          import json, pathlib, sys
+          report = json.loads(pathlib.Path("reports/self_test_report.json").read_text(encoding="utf-8"))
+          if not report.get("passed"):
+              print(json.dumps(report, ensure_ascii=False, indent=2))
+              sys.exit(1)
+          print("self test passed", report.get("latest_date"), "->", report.get("target_date"))
+          PY
+          }
+
+          if ! python lotto649_ironlaw_system.py --latest; then
+            echo "latest update failed, running full rebuild"
+            python lotto649_ironlaw_system.py --all
+          fi
+
+          if ! verify_self_test; then
+            echo "self test failed, running full rebuild repair"
+            python lotto649_ironlaw_system.py --all
+            verify_self_test
+          fi
       - name: Commit refreshed data
         run: |
           git config user.name "lotto649-ironlaw-bot"
           git config user.email "actions@github.com"
-          git add data reports mobile_cloud docs
+          git add data reports mobile_cloud docs .github/workflows/update-mobile-cloud.yml README.md lotto649_ironlaw_system.py
           git diff --cached --quiet || git commit -m "Update Lotto649 iron-law reports"
           git push
 """,
@@ -1798,6 +2257,11 @@ def write_readme() -> None:
 - 多窗口分析近 5、10、20、50、100 期與長期資料。
 - 強牌分層：最強單支、2中1、3中1、5中2、9中3，另列特別號單支與 3 碼觀察。
 - 每期會結算 Top6、Top12、Top18、建議組合、強牌組、特別號命中。
+- v3 模式加入 520 期 + 180 期雙回測校準，並追加最終權重 520 期回測；負邊際模型會降權或隔離。
+- v4 模式加入失手回饋：Top6低命中或特別號Top3失手會直接降權，不等下一次爆掉。
+- v5 模式加入每日雲端全系統掃描：每天自動更新、檢測，失敗會改跑全量重建修復並同步手機版。
+- 升級版保留 Bayesian/Dirichlet 平滑、EWMA 快慢週期、Markov 轉移、gap hazard、卡方區間/尾數平衡與組合搜尋。
+- 每次輸出前會跑自我檢測，檢測失敗就中止。
 - 輸出本機戰報與 `mobile_cloud` 雲端手機獨立版。
 
 ## 一鍵更新
@@ -1806,18 +2270,25 @@ def write_readme() -> None:
 python .\\lotto649_ironlaw_system.py --all
 ```
 
+離線重算既有資料庫：
+
+```powershell
+python .\\lotto649_ironlaw_system.py --analyze-only
+```
+
 完成後會產生：
 
 - `data/lotto649.sqlite`
 - `data/lotto649.csv`
 - `reports/latest_battle_report.html`
 - `reports/latest_analysis.json`
+- `reports/self_test_report.json`
 - `mobile_cloud/index.html`
 - `docs/index.html`
 
 ## 雲端手機獨立版
 
-把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會在台灣時間週二、週五晚間開獎後自動更新 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
+把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會每天台灣時間 08:30 做全系統掃描；週二、週五開獎後 22:20 與 23:10 追加更新。流程會驗證 `self_test_report.json`，失敗會自動改跑全量重建修復，通過後才提交 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
 
 ## 重要提醒
 
@@ -1833,9 +2304,14 @@ def run_update(args) -> dict:
     setup_logging()
     with sqlite3.connect(DB_PATH) as conn:
         init_db(conn)
-        run_id = start_run(conn, "all" if args.all else "latest")
+        run_type = "analyze_only" if args.analyze_only else "all" if args.all else "latest"
+        run_id = start_run(conn, run_type)
         try:
-            if args.all:
+            if args.analyze_only:
+                if not DB_PATH.exists():
+                    raise RuntimeError("找不到既有資料庫，無法離線重算")
+                message = "offline analysis rebuilt from existing database"
+            elif args.all:
                 backup_database()
                 imported = import_all_years(conn)
                 recent = import_recent_months(conn, 3)
@@ -1855,11 +2331,12 @@ def run_update(args) -> dict:
             build_mobile_cloud_site(analysis, reports)
             ensure_github_workflow()
             write_readme()
+            self_test = quality_gate(conn, analysis, export_count, prediction_status)
             finish_run(
                 conn,
                 run_id,
                 "success",
-                f"{message}; csv={export_count}; settled={settled_count}; prediction={prediction_status}",
+                f"{message}; csv={export_count}; settled={settled_count}; prediction={prediction_status}; self_test={self_test['passed']}",
             )
             return {
                 "analysis": analysis,
@@ -1867,6 +2344,7 @@ def run_update(args) -> dict:
                 "export_count": export_count,
                 "settled_count": settled_count,
                 "prediction_status": prediction_status,
+                "self_test": self_test,
             }
         except Exception as exc:
             finish_run(conn, run_id, "failed", str(exc))
@@ -1875,14 +2353,16 @@ def run_update(args) -> dict:
 
 def parse_args(argv: list[str] | None = None):
     parser = argparse.ArgumentParser(description="台灣大樂透鐵律預測系統")
-    parser.add_argument("--all", action="store_true", help="重建官方全歷史資料庫並產生戰報")
-    parser.add_argument("--latest", action="store_true", help="只更新最新資料並產生戰報")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--all", action="store_true", help="重建官方全歷史資料庫並產生戰報")
+    group.add_argument("--latest", action="store_true", help="只更新最新資料並產生戰報")
+    group.add_argument("--analyze-only", action="store_true", help="不連線，只用現有資料庫重算預測、戰報、手機雲端版與自我檢測")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
-    if not args.all and not args.latest:
+    if not args.all and not args.latest and not args.analyze_only:
         args.all = True
     result = run_update(args)
     analysis = result["analysis"]
@@ -1891,6 +2371,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"最新期別：{analysis['latest_draw']['period']} / 目標期別：{analysis['target_period']}")
     print(f"主號 Top6：{fmt_numbers([item['number'] for item in analysis['candidates'][:6]])}")
     print(f"特別號 Top3：{fmt_numbers([item['number'] for item in analysis['special_candidates'][:3]])}")
+    print(f"自我檢測：{'通過' if result['self_test']['passed'] else '未通過'}")
     print(f"手機雲端版：{MOBILE_DIR}")
     return 0
 
