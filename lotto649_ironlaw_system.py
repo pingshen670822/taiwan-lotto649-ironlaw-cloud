@@ -1472,7 +1472,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
     target_date = next_draw_date(latest["draw_date"])
     return {
         "system": "台灣大樂透鐵律預測系統",
-        "version": "lotto649_ironlaw_cloud_v7_20260706_strict_desktop_mobile_sync",
+        "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
         "generated_at": taipei_now().isoformat(timespec="seconds"),
         "history_info": health,
         "latest_draw": latest,
@@ -1497,6 +1497,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
             "v5新增每日雲端全系統掃描：每天自動更新、檢測、失敗改跑全量修復並同步手機版",
             "v6戰報規格對齊539：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出",
             "v7新增電腦版、手機版、GitHub Pages逐檔同步守門：不同步或未更新一律判定失敗",
+            "v8新增每3小時雲端自動檢測：發現資料、戰報或手機版不同步會自動全量修復並重新發布",
             "負邊際模型進入shrink/quarantine，不再平均分配權重拖累排序",
             "高正邊際模型才進入support/promote，並設定權重上限避免單一模型過擬合",
             "主號排序加入高權重模型共識分數與少量遺漏補償，降低單點噪音",
@@ -1768,7 +1769,7 @@ def render_markdown(analysis: dict, history: dict) -> str:
         f"- 最新本號：{fmt_numbers(latest['numbers'])} / 特別號 {latest['special']:02d}",
         f"- 目標期別：{analysis['target_period']}，預估開獎日：{analysis['target_date']}",
         f"- 資料新鮮度：{freshness.get('status')}，應有最新日 {freshness.get('expected_latest_date')}，落後 {freshness.get('lag_days')} 天",
-        f"- 發布等級：{review.get('severity', 'normal')} / v7 539戰報規格 + 每日同步守門",
+        f"- 發布等級：{review.get('severity', 'normal')} / v8 每3小時檢測 + 自動修復同步",
         f"- 風險等級：{'高' if review.get('severity') in {'critical', 'warning'} else '中'}",
         "- 提醒：本戰報是歷史統計與回測研究，不保證開出或獲利。",
         "",
@@ -1849,7 +1850,7 @@ def render_markdown(analysis: dict, history: dict) -> str:
         for key, pack_hit in (settled.get("strong_pack_hits") or {}).items():
             lines.append(f"- {pack_hit.get('name', key)}：命中 {pack_hit.get('hits')} / 目標 {pack_hit.get('hit_goal')} / {'達標' if pack_hit.get('passed') else '未達標'}")
     lines.extend(["", "## 雙軌模型對照（原始未調整對照滾動調整）"])
-    lines.append("- 舊基礎綜合與v7滾動權重已在本戰報回測摘要與latest_analysis.json完整保存。")
+    lines.append("- 舊基礎綜合與v8滾動權重已在本戰報回測摘要與latest_analysis.json完整保存。")
     lines.extend(["", "## 原始模型未調整排名"])
     base_rank = (analysis.get("backtest", {}).get("strategies", {}) or {})
     for name, info in sorted(base_rank.items())[:9]:
@@ -1864,8 +1865,8 @@ def render_markdown(analysis: dict, history: dict) -> str:
             f"- 基礎模組回測期數：{bt.get('rounds', 0)}，近期校準期數：{recent_bt.get('rounds', 0)}",
             f"- 隨機 Top12 期望命中：約 {bt.get('random_expectation', {}).get(12, 0)} 顆",
             f"- 舊基礎綜合 Top12：{ensemble.get('top12_avg_hits', '-')}，對隨機差值 {ensemble.get('top12_edge_vs_random', '-')}",
-            f"- v7最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
-            f"- v7最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
+            f"- v8最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
+            f"- v8最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
             "",
             "## 強牌實戰統計",
             f"- 已累積預測紀錄：{history['total_periods']} 期，已結算 {history['settled_periods']} 期。",
@@ -2170,8 +2171,8 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
       <p>基礎模組回測期數：{esc(bt.get('rounds', 0))} / 近期校準期數：{esc(recent_bt.get('rounds', 0))}</p>
       <p>隨機 Top12 期望命中：約 {esc(bt.get('random_expectation', {}).get(12, 0))} 顆</p>
       <p>舊基礎綜合 Top12：{esc(ensemble.get('top12_avg_hits', '-'))}，對隨機差值 {esc(ensemble.get('top12_edge_vs_random', '-'))}</p>
-      <p>v7最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
-      <p>v7最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
+      <p>v8最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
+      <p>v8最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
     </section>
 
     <section class="band">
@@ -2365,8 +2366,16 @@ def quality_gate(conn: sqlite3.Connection, analysis: dict, export_count: int, pr
     workflow_text = workflow_path.read_text(encoding="utf-8") if workflow_path.exists() else ""
     add_check(
         "daily_cloud_self_heal_workflow",
-        "30 0 * * *" in workflow_text and "self-heal" in workflow_text.lower() and "--all" in workflow_text and "self_test_report.json" in workflow_text,
-        "daily schedule, repair rebuild, and self-test verification present",
+        "0 */3 * * *" in workflow_text and "self-heal" in workflow_text.lower() and "--all" in workflow_text and "self_test_report.json" in workflow_text,
+        "3-hour schedule, repair rebuild, and self-test verification present",
+    )
+    add_check(
+        "three_hour_auto_repair_sync",
+        "0 */3 * * *" in workflow_text
+        and "latest update failed, running full rebuild" in workflow_text
+        and "self test failed, running full rebuild repair" in workflow_text
+        and "git push" in workflow_text,
+        "every 3 hours checks latest data, repairs failures, commits, and pushes synced reports",
     )
 
     required_files = [
@@ -2503,7 +2512,7 @@ def ensure_github_workflow() -> None:
 
 on:
   schedule:
-    - cron: "30 0 * * *"
+    - cron: "0 */3 * * *"
     - cron: "20 14 * * 2,5"
     - cron: "10 15 * * 2,5"
   workflow_dispatch:
@@ -2524,7 +2533,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Daily update, full scan, and self-heal
+      - name: Three-hour latest check, full scan, and self-heal
         shell: bash
         run: |
           set -e
@@ -2577,6 +2586,7 @@ def write_readme() -> None:
 - v5 模式加入每日雲端全系統掃描：每天自動更新、檢測，失敗會改跑全量重建修復並同步手機版。
 - v6 模式把大樂透戰報對齊 539 規格：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出。
 - v7 模式新增電腦版、手機版、GitHub Pages逐檔同步檢測；不同步或未更新會直接判定失敗。
+- v8 模式新增每3小時雲端自動檢測；發現資料、戰報或手機版不同步會自動全量修復並重新發布。
 - 升級版保留 Bayesian/Dirichlet 平滑、EWMA 快慢週期、Markov 轉移、gap hazard、卡方區間/尾數平衡與組合搜尋。
 - 每次輸出前會跑自我檢測，檢測失敗就中止。
 - 輸出本機戰報與 `mobile_cloud` 雲端手機獨立版。
@@ -2605,7 +2615,7 @@ python .\\lotto649_ironlaw_system.py --analyze-only
 
 ## 雲端手機獨立版
 
-把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會每天台灣時間 08:30 做全系統掃描；週二、週五開獎後 22:20 與 23:10 追加更新。流程會驗證 `self_test_report.json`，失敗會自動改跑全量重建修復，通過後才提交 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
+把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會每3小時自動檢測最新資料、電腦戰報、手機雲端版與 Pages 是否同步；週二、週五開獎後 22:20 與 23:10 追加更新。流程會驗證 `self_test_report.json`，失敗會自動改跑全量重建修復，通過後才提交 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
 
 ## 重要提醒
 

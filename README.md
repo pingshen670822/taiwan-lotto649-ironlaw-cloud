@@ -12,6 +12,7 @@
 - v5 模式加入每日雲端全系統掃描：每天自動更新、檢測，失敗會改跑全量重建修復並同步手機版。
 - v6 模式把大樂透戰報對齊 539 規格：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出。
 - v7 模式新增電腦版、手機版、GitHub Pages逐檔同步檢測；不同步或未更新會直接判定失敗。
+- v8 模式新增每3小時雲端自動檢測；發現資料、戰報或手機版不同步會自動全量修復並重新發布。
 - 升級版保留 Bayesian/Dirichlet 平滑、EWMA 快慢週期、Markov 轉移、gap hazard、卡方區間/尾數平衡與組合搜尋。
 - 每次輸出前會跑自我檢測，檢測失敗就中止。
 - 輸出本機戰報與 `mobile_cloud` 雲端手機獨立版。
@@ -40,7 +41,7 @@ python .\lotto649_ironlaw_system.py --analyze-only
 
 ## 雲端手機獨立版
 
-把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會每天台灣時間 08:30 做全系統掃描；週二、週五開獎後 22:20 與 23:10 追加更新。流程會驗證 `self_test_report.json`，失敗會自動改跑全量重建修復，通過後才提交 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
+把本資料夾放到 GitHub repo 後，啟用 GitHub Pages 與 Actions，Pages 發布來源設為 `main` 分支的 `/docs`。`.github/workflows/update-mobile-cloud.yml` 會每3小時自動檢測最新資料、電腦戰報、手機雲端版與 Pages 是否同步；週二、週五開獎後 22:20 與 23:10 追加更新。流程會驗證 `self_test_report.json`，失敗會自動改跑全量重建修復，通過後才提交 `data`、`reports`、`mobile_cloud` 與 `docs`。手機只需要打開 GitHub Pages 網址，不需要透過家裡電腦。
 
 ## 重要提醒
 

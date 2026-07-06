@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
-  "version": "lotto649_ironlaw_cloud_v7_20260706_strict_desktop_mobile_sync",
-  "generated_at": "2026-07-06T11:49:01",
+  "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
+  "generated_at": "2026-07-06T12:15:39",
   "latest_period": 115000067,
   "latest_date": "2026-07-03",
   "target_period": 115000068,
@@ -26,7 +26,7 @@
     {
       "name": "database_freshness",
       "passed": true,
-      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-03\", \"expected_latest_date\": \"2026-07-03\", \"lag_days\": 0, \"checked_at\": \"2026-07-06T11:49:01\"}"
+      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-03\", \"expected_latest_date\": \"2026-07-03\", \"lag_days\": 0, \"checked_at\": \"2026-07-06T12:15:39\"}"
     },
     {
       "name": "main_candidates_complete",
@@ -106,7 +106,12 @@
     {
       "name": "daily_cloud_self_heal_workflow",
       "passed": true,
-      "detail": "daily schedule, repair rebuild, and self-test verification present"
+      "detail": "3-hour schedule, repair rebuild, and self-test verification present"
+    },
+    {
+      "name": "three_hour_auto_repair_sync",
+      "passed": true,
+      "detail": "every 3 hours checks latest data, repairs failures, commits, and pushes synced reports"
     },
     {
       "name": "report_artifacts_present",
