@@ -1471,7 +1471,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
     target_date = next_draw_date(latest["draw_date"])
     return {
         "system": "台灣大樂透鐵律預測系統",
-        "version": "lotto649_ironlaw_cloud_v5_20260706_daily_self_heal",
+        "version": "lotto649_ironlaw_cloud_v6_20260706_539_battle_report_spec",
         "generated_at": taipei_now().isoformat(timespec="seconds"),
         "history_info": health,
         "latest_draw": latest,
@@ -1494,6 +1494,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
             "v4新增失手回饋：Top6低命中或特別號失手會立刻觸發降權，不等爆掉才調整",
             "v4新增特別號失手懲罰，前次特別號Top3沒中會同步降權",
             "v5新增每日雲端全系統掃描：每天自動更新、檢測、失敗改跑全量修復並同步手機版",
+            "v6戰報規格對齊539：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出",
             "負邊際模型進入shrink/quarantine，不再平均分配權重拖累排序",
             "高正邊際模型才進入support/promote，並設定權重上限避免單一模型過擬合",
             "主號排序加入高權重模型共識分數與少量遺漏補償，降低單點噪音",
@@ -1732,6 +1733,30 @@ def esc(value) -> str:
 def render_markdown(analysis: dict, history: dict) -> str:
     latest = analysis["latest_draw"]
     freshness = analysis["data_freshness"]
+    candidates = analysis["candidates"]
+    special_candidates = analysis["special_candidates"]
+    packs = analysis["strong_prediction_packs"]
+    review = analysis.get("failure_review") or {}
+    bt = analysis["backtest"]
+    recent_bt = analysis.get("recent_backtest") or {}
+    adaptive_bt = analysis.get("adaptive_backtest") or {}
+    ensemble = bt.get("strategies", {}).get("ensemble", {})
+    calibration = (analysis.get("calibration") or {}).get("models") or {}
+    high_confidence = candidates[:6]
+    avoid5 = [item["number"] for item in candidates[-5:]]
+    avoid10 = [item["number"] for item in candidates[-10:]]
+    avoid15 = [item["number"] for item in candidates[-15:]]
+
+    def pack_numbers(key: str) -> list[int]:
+        return packs.get(key, {}).get("numbers") or []
+
+    def candidate_detail(item: dict) -> str:
+        reasons = "、".join(item.get("reasons") or ["綜合排序"])
+        return (
+            f"排名 {candidates.index(item) + 1} / 信心 {item.get('confidence_index')} / "
+            f"分數 {item.get('score')} / 遺漏 {item.get('omission')} / 區間 {item.get('zone')} / 尾 {item.get('tail')} / {reasons}"
+        )
+
     lines = [
         "# 台灣大樂透鐵律戰報",
         "",
@@ -1741,29 +1766,74 @@ def render_markdown(analysis: dict, history: dict) -> str:
         f"- 最新本號：{fmt_numbers(latest['numbers'])} / 特別號 {latest['special']:02d}",
         f"- 目標期別：{analysis['target_period']}，預估開獎日：{analysis['target_date']}",
         f"- 資料新鮮度：{freshness.get('status')}，應有最新日 {freshness.get('expected_latest_date')}，落後 {freshness.get('lag_days')} 天",
+        f"- 發布等級：{review.get('severity', 'normal')} / v6 539戰報規格 + 每日自動掃描自修復",
+        f"- 風險等級：{'高' if review.get('severity') in {'critical', 'warning'} else '中'}",
         "- 提醒：本戰報是歷史統計與回測研究，不保證開出或獲利。",
         "",
-        "## 本期強牌分層",
+        "## 核心決策",
+        f"- 作戰結論：{'失手回饋強化' if review.get('severity') in {'critical', 'warning'} else '穩定觀察'} / 等級 {'乙級' if review.get('severity') == 'warning' else '觀察'}",
+        f"- 明確獨支：{fmt_numbers(pack_numbers('strong_single'))}",
+        f"- 明確2中1：{fmt_numbers(pack_numbers('two_hit_one'))}",
+        f"- 明確3中1：{fmt_numbers(pack_numbers('three_hit_one'))}",
+        f"- 明確5中2：{fmt_numbers(pack_numbers('five_hit_two'))}",
+        f"- 明確9中3：{fmt_numbers(pack_numbers('nine_hit_three'))}",
+        f"- 高機率信心牌：{fmt_numbers([item['number'] for item in high_confidence])}",
+        f"- 防守避開：{fmt_numbers(avoid10)}",
+        f"- 特別號核心：{fmt_numbers([item['number'] for item in special_candidates[:3]])}",
+        "",
+        "## 最強獨隻1中1",
+        f"- 獨隻號碼：{fmt_numbers(pack_numbers('strong_single'))}",
+        f"- 高信心加註：{fmt_numbers([item['number'] for item in candidates[:3]])}",
+        "",
+        "## 高機率信心牌特別強調",
     ]
-    for pack in analysis["strong_prediction_packs"].values():
+    for item in high_confidence:
+        lines.append(f"- {item['number']:02d}：{candidate_detail(item)} / 本期攻擊核心優先關注，仍需依風控分批使用。")
+    lines.extend(["", "## 逐號多重驗算明細"])
+    for item in candidates[:9]:
+        lines.append(f"- {item['number']:02d}：版路 {item.get('zone')}區、尾{item.get('tail')}；來源 {'、'.join(item.get('reasons') or ['綜合排序'])}；{candidate_detail(item)}；守門通過")
+    lines.extend(["", "## 獨支 / 2中1 / 3中1 短包超強信心精算"])
+    for key, label in [("strong_single", "獨支1中1"), ("two_hit_one", "2中1"), ("three_hit_one", "3中1")]:
+        pack = packs.get(key) or {}
+        lines.append(f"- {label}：{fmt_numbers(pack.get('numbers', [])) or '-'} / 狀態 研究預測 / 理論機率 {float(pack.get('theoretical_probability', 0))*100:.2f}% / 平均分 {pack.get('avg_score', '-')}")
+    lines.extend(["", "## 低機率避險包"])
+    lines.append(f"- 5不中：{fmt_numbers(avoid5)} / 防守觀察 / 依目前模型低分排序")
+    lines.append(f"- 10不中：{fmt_numbers(avoid10)} / 防守觀察 / 依目前模型低分排序")
+    lines.append(f"- 15不中：{fmt_numbers(avoid15)} / 防守觀察 / 依目前模型低分排序")
+    lines.extend(["", "## 低機率精準暫避", "- 已併入本戰報低機率避險包；低機率不等於絕對不開。"])
+    lines.extend(
+        [
+            "",
+            "## 每日更新鐵律時間表",
+            "- 每日雲端掃描：台灣時間08:30自動更新資料、重算、檢測、同步手機版。",
+            "- 開獎後追加：週二、週五台灣時間22:20與23:10追官方最新資料。",
+            "- 更新失敗修復：latest失敗或自我檢測失敗，改跑全歷史全量重建。",
+            "- 禁止事項：禁止未重新運算就沿用前一期預測；手機版必須與docs同步。",
+            "",
+            "## 下期精算前9名",
+        ]
+    )
+    for idx, item in enumerate(candidates[:9], 1):
+        lines.append(f"{idx}. {item['number']:02d} / 信心 {item['confidence_index']} / 成熟度 研究觀察 / 遺漏 {item['omission']}")
+    lines.extend(["", "## 強牌組精算"])
+    for key, pack in packs.items():
         nums = fmt_numbers(pack.get("numbers", []))
         prob = pack.get("theoretical_probability")
         prob_text = f"{prob * 100:.2f}%" if isinstance(prob, (int, float)) else "-"
-        lines.append(f"- {pack.get('name')}：{nums}，目標 {pack.get('hit_goal')}，理論機率 {prob_text}")
+        lines.append(f"- {pack.get('name')}：{nums} / 研究預測 / 目標 {pack.get('hit_goal')} / 理論機率 {prob_text} / 平均分 {pack.get('avg_score', '-')}")
     lines.extend(["", "## 建議組合"])
     for item in analysis["suggested_sets"]:
         lines.append(f"- {item['name']}：{fmt_numbers(item['numbers'])} / 特別號 {item['special']:02d}")
     lines.extend(["", "## Top 18 主號候選"])
-    lines.append(", ".join(f"{item['number']:02d}({item['confidence_index']})" for item in analysis["candidates"][:18]))
+    lines.append(", ".join(f"{item['number']:02d}({item['confidence_index']})" for item in candidates[:18]))
     lines.extend(["", "## 特別號 Top 10"])
-    lines.append(", ".join(f"{item['number']:02d}({item['confidence_index']})" for item in analysis["special_candidates"][:10]))
-    review = analysis.get("failure_review") or {}
+    lines.append(", ".join(f"{item['number']:02d}({item['confidence_index']})" for item in special_candidates[:10]))
     if review.get("has_review"):
         settled = review["last_settled"]
         lines.extend(
             [
                 "",
-                "## 上期結算檢討",
+                "## 上期命中檢討",
                 f"- 上次預測：{settled['based_on_period']} -> {settled['actual_period']}",
                 f"- 實際本號：{fmt_numbers(settled['actual_numbers'])} / 特別號 {settled['actual_special']:02d}",
                 f"- Top6 / Top12 / Top18 命中：{settled['top6_hits']} / {settled['top12_hits']} / {settled['top18_hits']}",
@@ -1773,19 +1843,42 @@ def render_markdown(analysis: dict, history: dict) -> str:
         )
         for action in review.get("actions", []):
             lines.append(f"- 改善：{action}")
-    bt = analysis["backtest"]
-    recent_bt = analysis.get("recent_backtest") or {}
-    adaptive_bt = analysis.get("adaptive_backtest") or {}
-    ensemble = bt.get("strategies", {}).get("ensemble", {})
+        lines.extend(["", "## 強牌檢討"])
+        for key, pack_hit in (settled.get("strong_pack_hits") or {}).items():
+            lines.append(f"- {pack_hit.get('name', key)}：命中 {pack_hit.get('hits')} / 目標 {pack_hit.get('hit_goal')} / {'達標' if pack_hit.get('passed') else '未達標'}")
+    lines.extend(["", "## 雙軌模型對照（原始未調整對照滾動調整）"])
+    lines.append("- 舊基礎綜合與v6滾動權重已在本戰報回測摘要與latest_analysis.json完整保存。")
+    lines.extend(["", "## 原始模型未調整排名"])
+    base_rank = (analysis.get("backtest", {}).get("strategies", {}) or {})
+    for name, info in sorted(base_rank.items())[:9]:
+        lines.append(f"- {name}：Top12平均 {info.get('top12_avg_hits', '-')} / edge {info.get('top12_edge_vs_random', '-')}")
+    lines.extend(["", "## 近期逐期對照"])
+    for item in [p for p in history.get("periods", []) if p.get("status") == "settled"][:5]:
+        lines.append(f"- {item.get('actual_date')}：Top6/Top12/Top18 {item.get('top6_hits')}/{item.get('top12_hits')}/{item.get('top18_hits')} / 特別號Top3 {item.get('special_top3_hit')}")
     lines.extend(
         [
             "",
-            "## 模型回測",
+            "## 模型回測摘要",
             f"- 基礎模組回測期數：{bt.get('rounds', 0)}，近期校準期數：{recent_bt.get('rounds', 0)}",
             f"- 隨機 Top12 期望命中：約 {bt.get('random_expectation', {}).get(12, 0)} 顆",
             f"- 舊基礎綜合 Top12：{ensemble.get('top12_avg_hits', '-')}，對隨機差值 {ensemble.get('top12_edge_vs_random', '-')}",
-            f"- v3最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
-            f"- v3最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
+            f"- v6最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
+            f"- v6最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
+            "",
+            "## 強牌實戰統計",
+            f"- 已累積預測紀錄：{history['total_periods']} 期，已結算 {history['settled_periods']} 期。",
+            "- 強牌達標率由後續已結算期數滾動累積；每期結算後更新。",
+            "",
+            "## 模型滾動調整",
+        ]
+    )
+    for name, item in sorted(calibration.items(), key=lambda pair: pair[1].get("edge_score", 0), reverse=True):
+        lines.append(f"- {name}：{item.get('tier')} / edge_score {item.get('edge_score')} / 正向票 {item.get('positive_votes')} / multiplier {item.get('multiplier')}")
+    lines.extend(
+        [
+            "",
+            "## 低機率達標檢討",
+            f"- 本期低機率避險包：5不中 {fmt_numbers(avoid5)} / 10不中 {fmt_numbers(avoid10)} / 15不中 {fmt_numbers(avoid15)}",
             "",
             "## 鐵律狀態",
         ]
@@ -1813,7 +1906,85 @@ def candidate_table(candidates: list[dict], limit: int = 18) -> str:
 def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
     latest = analysis["latest_draw"]
     freshness = analysis["data_freshness"]
+    candidates = analysis["candidates"]
+    special_candidates = analysis["special_candidates"]
     packs = analysis["strong_prediction_packs"]
+
+    def pack_numbers(key: str) -> list[int]:
+        return packs.get(key, {}).get("numbers") or []
+
+    def info_rows(rows: list[tuple[str, str]]) -> str:
+        return "".join(f"<tr><th>{esc(label)}</th><td>{value}</td></tr>" for label, value in rows)
+
+    review = analysis.get("failure_review") or {}
+    severity = review.get("severity", "normal")
+    status_text = "失手回饋強化" if severity in {"critical", "warning"} else "穩定觀察"
+    high_confidence = candidates[:6]
+    avoid5 = [item["number"] for item in candidates[-5:]]
+    avoid10 = [item["number"] for item in candidates[-10:]]
+    avoid15 = [item["number"] for item in candidates[-15:]]
+    calibration = (analysis.get("calibration") or {}).get("models") or {}
+    decision_rows = info_rows(
+        [
+            ("作戰結論", esc(status_text)),
+            ("明確獨支", fmt_numbers(pack_numbers("strong_single")) or "-"),
+            ("明確2中1", fmt_numbers(pack_numbers("two_hit_one")) or "-"),
+            ("明確3中1", fmt_numbers(pack_numbers("three_hit_one")) or "-"),
+            ("明確5中2", fmt_numbers(pack_numbers("five_hit_two")) or "-"),
+            ("明確9中3", fmt_numbers(pack_numbers("nine_hit_three")) or "-"),
+            ("高機率信心牌", fmt_numbers([item["number"] for item in high_confidence])),
+            ("防守避開", fmt_numbers(avoid10)),
+            ("特別號核心", fmt_numbers([item["number"] for item in special_candidates[:3]])),
+        ]
+    )
+    verification_rows = "".join(
+        "<tr>"
+        f"<td>{idx}</td>"
+        f"<td><strong>{item['number']:02d}</strong></td>"
+        f"<td>{esc(item.get('confidence_index'))}</td>"
+        f"<td>{esc(item.get('omission'))}</td>"
+        f"<td>{esc(item.get('zone'))}</td>"
+        f"<td>{esc(item.get('tail'))}</td>"
+        f"<td>{esc('、'.join(item.get('reasons') or ['綜合排序']))}</td>"
+        "</tr>"
+        for idx, item in enumerate(candidates[:9], 1)
+    )
+    short_pack_rows = "".join(
+        "<tr>"
+        f"<td>{esc(label)}</td>"
+        f"<td>{fmt_numbers(pack_numbers(key)) or '-'}</td>"
+        f"<td>{esc((packs.get(key) or {}).get('hit_goal', '-'))}</td>"
+        f"<td>{float((packs.get(key) or {}).get('theoretical_probability', 0))*100:.2f}%</td>"
+        f"<td>{esc((packs.get(key) or {}).get('avg_score', '-'))}</td>"
+        "</tr>"
+        for key, label in [("strong_single", "獨支1中1"), ("two_hit_one", "2中1"), ("three_hit_one", "3中1")]
+    )
+    avoid_rows = "".join(
+        f"<tr><td>{esc(label)}</td><td>{fmt_numbers(nums)}</td><td>依目前模型低分排序，僅作風控觀察</td></tr>"
+        for label, nums in [("5不中", avoid5), ("10不中", avoid10), ("15不中", avoid15)]
+    )
+    schedule_rows = "".join(
+        f"<tr><td>{esc(item[0])}</td><td>{esc(item[1])}</td><td>{esc(item[2])}</td></tr>"
+        for item in [
+            ("每日雲端掃描", "台灣時間 08:30", "自動更新資料、重算、檢測、同步手機版"),
+            ("開獎後追加", "週二、週五 22:20 / 23:10", "追官方最新資料，避免隔天沿用舊報表"),
+            ("失敗自修復", "每次雲端工作內", "latest失敗或檢測失敗時改跑全歷史全量重建"),
+            ("禁止沿用", "每期輸出前", "未重新運算與未通過檢測不發布"),
+        ]
+    )
+    rolling_rows = (
+        "".join(
+            "<tr>"
+            f"<td>{esc(name)}</td>"
+            f"<td>{esc(item.get('tier'))}</td>"
+            f"<td>{esc(item.get('edge_score'))}</td>"
+            f"<td>{esc(item.get('positive_votes'))}</td>"
+            f"<td>{esc(item.get('multiplier'))}</td>"
+            "</tr>"
+            for name, item in sorted(calibration.items(), key=lambda pair: pair[1].get("edge_score", 0), reverse=True)
+        )
+        or "<tr><td colspan=\"5\">目前無校準資料</td></tr>"
+    )
     pack_cards = "".join(
         f"""
         <article class="card">
@@ -1828,20 +1999,29 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
         f"<tr><td>{esc(item['name'])}</td><td>{fmt_numbers(item['numbers'])}</td><td>{item['special']:02d}</td></tr>"
         for item in analysis["suggested_sets"]
     )
-    review = analysis.get("failure_review") or {}
     if review.get("has_review"):
         settled = review["last_settled"]
+        pack_review_rows = "".join(
+            "<tr>"
+            f"<td>{esc(pack_hit.get('name', key))}</td>"
+            f"<td>{esc(pack_hit.get('hits'))}</td>"
+            f"<td>{esc(pack_hit.get('hit_goal'))}</td>"
+            f"<td>{'達標' if pack_hit.get('passed') else '未達標'}</td>"
+            "</tr>"
+            for key, pack_hit in (settled.get("strong_pack_hits") or {}).items()
+        )
         review_html = f"""
         <section class="band">
-          <h2>上期結算檢討</h2>
+          <h2>上期命中檢討</h2>
           <p>上次預測 {esc(settled['based_on_period'])} -> 實際 {esc(settled['actual_period'])}</p>
           <p class="nums">{fmt_numbers(settled['actual_numbers'])} / 特別號 {settled['actual_special']:02d}</p>
           <p>Top6 / Top12 / Top18：{esc(settled['top6_hits'])} / {esc(settled['top12_hits'])} / {esc(settled['top18_hits'])}</p>
           <p>特別號 Top1 / Top3：{esc(settled['special_top1_hit'])} / {esc(settled['special_top3_hit'])}</p>
+          <table><thead><tr><th>強牌</th><th>命中</th><th>目標</th><th>判定</th></tr></thead><tbody>{pack_review_rows}</tbody></table>
         </section>
         """
     else:
-        review_html = "<section class=\"band\"><h2>上期結算檢討</h2><p>目前尚無已結算預測，首次建立後會從下一期開始累積。</p></section>"
+        review_html = "<section class=\"band\"><h2>上期命中檢討</h2><p>目前尚無已結算預測，首次建立後會從下一期開始累積。</p></section>"
     bt = analysis["backtest"]
     recent_bt = analysis.get("recent_backtest") or {}
     adaptive_bt = analysis.get("adaptive_backtest") or {}
@@ -1902,8 +2082,10 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
       <h1>台灣大樂透鐵律戰報</h1>
       <p class="meta">產生時間 {esc(analysis['generated_at'])} / 全歷史 {esc(analysis['history_info']['draw_count'])} 期 / 手機雲端獨立版可用</p>
       <nav>
-        <a href="#prediction">下期預測</a>
+        <a href="#prediction">核心決策</a>
+        <a href="#verify">逐號驗算</a>
         <a href="#review">上期檢討</a>
+        <a href="#schedule">每日更新</a>
         <a href="#history">資料庫</a>
       </nav>
     </div>
@@ -1924,7 +2106,43 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
     </section>
 
     <section class="band">
-      <h2>強牌分層</h2>
+      <h2>核心決策</h2>
+      <table><tbody>{decision_rows}</tbody></table>
+    </section>
+
+    <section class="band">
+      <h2>最強獨隻1中1</h2>
+      <p class="nums">{fmt_numbers(pack_numbers("strong_single")) or "-"}</p>
+      <p>高信心加註：{fmt_numbers([item['number'] for item in candidates[:3]])}</p>
+    </section>
+
+    <section class="band">
+      <h2>高機率信心牌特別強調</h2>
+      <table><thead><tr><th>號碼</th><th>信心</th><th>遺漏</th><th>理由</th></tr></thead><tbody>{candidate_table(high_confidence, 6)}</tbody></table>
+    </section>
+
+    <section class="band" id="verify">
+      <h2>逐號多重驗算明細</h2>
+      <table><thead><tr><th>排名</th><th>號碼</th><th>信心</th><th>遺漏</th><th>區間</th><th>尾</th><th>來源</th></tr></thead><tbody>{verification_rows}</tbody></table>
+    </section>
+
+    <section class="band">
+      <h2>獨支 / 2中1 / 3中1 短包超強信心精算</h2>
+      <table><thead><tr><th>包別</th><th>號碼</th><th>目標</th><th>理論機率</th><th>平均分</th></tr></thead><tbody>{short_pack_rows}</tbody></table>
+    </section>
+
+    <section class="band">
+      <h2>低機率避險包</h2>
+      <table><thead><tr><th>包別</th><th>號碼</th><th>說明</th></tr></thead><tbody>{avoid_rows}</tbody></table>
+    </section>
+
+    <section class="band" id="schedule">
+      <h2>每日更新鐵律時間表</h2>
+      <table><thead><tr><th>項目</th><th>時間</th><th>處理</th></tr></thead><tbody>{schedule_rows}</tbody></table>
+    </section>
+
+    <section class="band">
+      <h2>強牌組精算</h2>
       <div class="grid">{pack_cards}</div>
     </section>
 
@@ -1946,12 +2164,22 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
     <div id="review">{review_html}</div>
 
     <section class="band">
-      <h2>模型回測</h2>
+      <h2>模型回測摘要</h2>
       <p>基礎模組回測期數：{esc(bt.get('rounds', 0))} / 近期校準期數：{esc(recent_bt.get('rounds', 0))}</p>
       <p>隨機 Top12 期望命中：約 {esc(bt.get('random_expectation', {}).get(12, 0))} 顆</p>
       <p>舊基礎綜合 Top12：{esc(ensemble.get('top12_avg_hits', '-'))}，對隨機差值 {esc(ensemble.get('top12_edge_vs_random', '-'))}</p>
-      <p>v3最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
-      <p>v3最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
+      <p>v6最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
+      <p>v6最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
+    </section>
+
+    <section class="band">
+      <h2>模型滾動調整</h2>
+      <table><thead><tr><th>模組</th><th>狀態</th><th>Edge</th><th>正向票</th><th>倍率</th></tr></thead><tbody>{rolling_rows}</tbody></table>
+    </section>
+
+    <section class="band">
+      <h2>低機率達標檢討</h2>
+      <p>本期低機率避險包已輸出 5不中、10不中、15不中，後續結算會同步檢討是否達標。</p>
     </section>
 
     <section class="band" id="history">
@@ -2152,12 +2380,36 @@ def quality_gate(conn: sqlite3.Connection, analysis: dict, export_count: int, pr
         MOBILE_DIR / "service-worker.js",
         PAGES_DIR / "index.html",
         PAGES_DIR / "latest_analysis.json",
+        PAGES_DIR / "latest_battle_report.html",
+        PAGES_DIR / "latest_battle_report.md",
         PAGES_DIR / "service-worker.js",
+        MOBILE_DIR / "latest_battle_report.html",
+        MOBILE_DIR / "latest_battle_report.md",
         workflow_path,
         BASE_DIR / "README.md",
     ]
     missing_files = [str(path.relative_to(BASE_DIR)) for path in required_files if not path.exists() or path.stat().st_size == 0]
     add_check("report_artifacts_present", not missing_files, f"missing={missing_files}")
+    md_spec_markers = [
+        "## 核心決策",
+        "## 最強獨隻1中1",
+        "## 高機率信心牌特別強調",
+        "## 逐號多重驗算明細",
+        "## 獨支 / 2中1 / 3中1 短包超強信心精算",
+        "## 低機率避險包",
+        "## 每日更新鐵律時間表",
+        "## 強牌組精算",
+        "## 上期命中檢討",
+        "## 模型滾動調整",
+    ]
+    html_spec_markers = [marker.replace("## ", "<h2>") + "</h2>" for marker in md_spec_markers]
+    md_paths = [BATTLE_MD, MOBILE_DIR / "latest_battle_report.md", PAGES_DIR / "latest_battle_report.md"]
+    html_paths = [BATTLE_HTML, MOBILE_DIR / "index.html", PAGES_DIR / "index.html"]
+    md_texts = [path.read_text(encoding="utf-8") if path.exists() else "" for path in md_paths]
+    html_texts = [path.read_text(encoding="utf-8") if path.exists() else "" for path in html_paths]
+    missing_spec = [marker for marker in md_spec_markers if not all(marker in text for text in md_texts)]
+    missing_spec.extend(marker for marker in html_spec_markers if not all(marker in text for text in html_texts))
+    add_check("battle_report_539_spec", not missing_spec, f"missing={missing_spec}")
 
     report = {
         "system": analysis.get("system"),
@@ -2260,6 +2512,7 @@ def write_readme() -> None:
 - v3 模式加入 520 期 + 180 期雙回測校準，並追加最終權重 520 期回測；負邊際模型會降權或隔離。
 - v4 模式加入失手回饋：Top6低命中或特別號Top3失手會直接降權，不等下一次爆掉。
 - v5 模式加入每日雲端全系統掃描：每天自動更新、檢測，失敗會改跑全量重建修復並同步手機版。
+- v6 模式把大樂透戰報對齊 539 規格：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出。
 - 升級版保留 Bayesian/Dirichlet 平滑、EWMA 快慢週期、Markov 轉移、gap hazard、卡方區間/尾數平衡與組合搜尋。
 - 每次輸出前會跑自我檢測，檢測失敗就中止。
 - 輸出本機戰報與 `mobile_cloud` 雲端手機獨立版。

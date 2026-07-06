@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
-  "version": "lotto649_ironlaw_cloud_v5_20260706_daily_self_heal",
-  "generated_at": "2026-07-06T07:25:03",
+  "version": "lotto649_ironlaw_cloud_v6_20260706_539_battle_report_spec",
+  "generated_at": "2026-07-06T10:28:13",
   "latest_period": 115000067,
   "latest_date": "2026-07-03",
   "target_period": 115000068,
@@ -26,7 +26,7 @@
     {
       "name": "database_freshness",
       "passed": true,
-      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-03\", \"expected_latest_date\": \"2026-07-03\", \"lag_days\": 0, \"checked_at\": \"2026-07-06T07:25:03\"}"
+      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-03\", \"expected_latest_date\": \"2026-07-03\", \"lag_days\": 0, \"checked_at\": \"2026-07-06T10:28:13\"}"
     },
     {
       "name": "main_candidates_complete",
@@ -110,6 +110,11 @@
     },
     {
       "name": "report_artifacts_present",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "battle_report_539_spec",
       "passed": true,
       "detail": "missing=[]"
     }
