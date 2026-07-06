@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import html
 import io
 import json
@@ -1471,7 +1472,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
     target_date = next_draw_date(latest["draw_date"])
     return {
         "system": "台灣大樂透鐵律預測系統",
-        "version": "lotto649_ironlaw_cloud_v6_20260706_539_battle_report_spec",
+        "version": "lotto649_ironlaw_cloud_v7_20260706_strict_desktop_mobile_sync",
         "generated_at": taipei_now().isoformat(timespec="seconds"),
         "history_info": health,
         "latest_draw": latest,
@@ -1495,6 +1496,7 @@ def analyze(conn: sqlite3.Connection) -> dict:
             "v4新增特別號失手懲罰，前次特別號Top3沒中會同步降權",
             "v5新增每日雲端全系統掃描：每天自動更新、檢測、失敗改跑全量修復並同步手機版",
             "v6戰報規格對齊539：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出",
+            "v7新增電腦版、手機版、GitHub Pages逐檔同步守門：不同步或未更新一律判定失敗",
             "負邊際模型進入shrink/quarantine，不再平均分配權重拖累排序",
             "高正邊際模型才進入support/promote，並設定權重上限避免單一模型過擬合",
             "主號排序加入高權重模型共識分數與少量遺漏補償，降低單點噪音",
@@ -1766,7 +1768,7 @@ def render_markdown(analysis: dict, history: dict) -> str:
         f"- 最新本號：{fmt_numbers(latest['numbers'])} / 特別號 {latest['special']:02d}",
         f"- 目標期別：{analysis['target_period']}，預估開獎日：{analysis['target_date']}",
         f"- 資料新鮮度：{freshness.get('status')}，應有最新日 {freshness.get('expected_latest_date')}，落後 {freshness.get('lag_days')} 天",
-        f"- 發布等級：{review.get('severity', 'normal')} / v6 539戰報規格 + 每日自動掃描自修復",
+        f"- 發布等級：{review.get('severity', 'normal')} / v7 539戰報規格 + 每日同步守門",
         f"- 風險等級：{'高' if review.get('severity') in {'critical', 'warning'} else '中'}",
         "- 提醒：本戰報是歷史統計與回測研究，不保證開出或獲利。",
         "",
@@ -1847,7 +1849,7 @@ def render_markdown(analysis: dict, history: dict) -> str:
         for key, pack_hit in (settled.get("strong_pack_hits") or {}).items():
             lines.append(f"- {pack_hit.get('name', key)}：命中 {pack_hit.get('hits')} / 目標 {pack_hit.get('hit_goal')} / {'達標' if pack_hit.get('passed') else '未達標'}")
     lines.extend(["", "## 雙軌模型對照（原始未調整對照滾動調整）"])
-    lines.append("- 舊基礎綜合與v6滾動權重已在本戰報回測摘要與latest_analysis.json完整保存。")
+    lines.append("- 舊基礎綜合與v7滾動權重已在本戰報回測摘要與latest_analysis.json完整保存。")
     lines.extend(["", "## 原始模型未調整排名"])
     base_rank = (analysis.get("backtest", {}).get("strategies", {}) or {})
     for name, info in sorted(base_rank.items())[:9]:
@@ -1862,8 +1864,8 @@ def render_markdown(analysis: dict, history: dict) -> str:
             f"- 基礎模組回測期數：{bt.get('rounds', 0)}，近期校準期數：{recent_bt.get('rounds', 0)}",
             f"- 隨機 Top12 期望命中：約 {bt.get('random_expectation', {}).get(12, 0)} 顆",
             f"- 舊基礎綜合 Top12：{ensemble.get('top12_avg_hits', '-')}，對隨機差值 {ensemble.get('top12_edge_vs_random', '-')}",
-            f"- v6最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
-            f"- v6最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
+            f"- v7最終權重 Top12：{adaptive_bt.get('top12_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top12_edge_vs_random', '-')}",
+            f"- v7最終權重 Top18：{adaptive_bt.get('top18_avg_hits', '-')}，對隨機差值 {adaptive_bt.get('top18_edge_vs_random', '-')}",
             "",
             "## 強牌實戰統計",
             f"- 已累積預測紀錄：{history['total_periods']} 期，已結算 {history['settled_periods']} 期。",
@@ -2168,8 +2170,8 @@ def render_html(analysis: dict, history: dict, markdown_text: str) -> str:
       <p>基礎模組回測期數：{esc(bt.get('rounds', 0))} / 近期校準期數：{esc(recent_bt.get('rounds', 0))}</p>
       <p>隨機 Top12 期望命中：約 {esc(bt.get('random_expectation', {}).get(12, 0))} 顆</p>
       <p>舊基礎綜合 Top12：{esc(ensemble.get('top12_avg_hits', '-'))}，對隨機差值 {esc(ensemble.get('top12_edge_vs_random', '-'))}</p>
-      <p>v6最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
-      <p>v6最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
+      <p>v7最終權重 Top12：{esc(adaptive_bt.get('top12_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top12_edge_vs_random', '-'))}</p>
+      <p>v7最終權重 Top18：{esc(adaptive_bt.get('top18_avg_hits', '-'))}，對隨機差值 {esc(adaptive_bt.get('top18_edge_vs_random', '-'))}</p>
     </section>
 
     <section class="band">
@@ -2411,6 +2413,60 @@ def quality_gate(conn: sqlite3.Connection, analysis: dict, export_count: int, pr
     missing_spec.extend(marker for marker in html_spec_markers if not all(marker in text for text in html_texts))
     add_check("battle_report_539_spec", not missing_spec, f"missing={missing_spec}")
 
+    def file_digest(path: Path) -> str:
+        if not path.exists() or path.stat().st_size == 0:
+            return "missing"
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
+    sync_pairs = [
+        ("analysis reports->mobile", ANALYSIS_JSON, MOBILE_DIR / "latest_analysis.json"),
+        ("analysis reports->pages", ANALYSIS_JSON, PAGES_DIR / "latest_analysis.json"),
+        ("battle md reports->mobile", BATTLE_MD, MOBILE_DIR / "latest_battle_report.md"),
+        ("battle md reports->pages", BATTLE_MD, PAGES_DIR / "latest_battle_report.md"),
+        ("battle html reports->mobile", BATTLE_HTML, MOBILE_DIR / "latest_battle_report.html"),
+        ("battle html reports->pages", BATTLE_HTML, PAGES_DIR / "latest_battle_report.html"),
+        ("battle html reports->mobile index", BATTLE_HTML, MOBILE_DIR / "index.html"),
+        ("battle html reports->pages index", BATTLE_HTML, PAGES_DIR / "index.html"),
+        ("history reports->mobile", HISTORY_JSON, MOBILE_DIR / "prediction_history.json"),
+        ("history reports->pages", HISTORY_JSON, PAGES_DIR / "prediction_history.json"),
+        ("health reports->mobile", HEALTH_JSON, MOBILE_DIR / "system_health.json"),
+        ("health reports->pages", HEALTH_JSON, PAGES_DIR / "system_health.json"),
+        ("mobile index->pages index", MOBILE_DIR / "index.html", PAGES_DIR / "index.html"),
+        ("mobile version->pages version", MOBILE_DIR / "version.json", PAGES_DIR / "version.json"),
+        ("mobile manifest->pages manifest", MOBILE_DIR / "manifest.webmanifest", PAGES_DIR / "manifest.webmanifest"),
+        ("mobile service worker->pages service worker", MOBILE_DIR / "service-worker.js", PAGES_DIR / "service-worker.js"),
+        ("mobile offline->pages offline", MOBILE_DIR / "offline.html", PAGES_DIR / "offline.html"),
+    ]
+    sync_mismatches = [
+        label
+        for label, left, right in sync_pairs
+        if file_digest(left) == "missing" or file_digest(right) == "missing" or file_digest(left) != file_digest(right)
+    ]
+    add_check("computer_mobile_pages_sync", not sync_mismatches, f"mismatches={sync_mismatches}")
+
+    expected_version = {
+        "version": analysis.get("version"),
+        "latest_period": analysis.get("latest_draw", {}).get("period"),
+        "latest_date": analysis.get("latest_draw", {}).get("draw_date"),
+        "target_period": analysis.get("target_period"),
+        "target_date": analysis.get("target_date"),
+    }
+    version_sources = {
+        "mobile": MOBILE_DIR / "version.json",
+        "pages": PAGES_DIR / "version.json",
+    }
+    version_mismatches = []
+    for label, path in version_sources.items():
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            version_mismatches.append(f"{label}: {exc}")
+            continue
+        for key, expected in expected_version.items():
+            if payload.get(key) != expected:
+                version_mismatches.append(f"{label}.{key}={payload.get(key)!r} expected {expected!r}")
+    add_check("published_version_consistency", not version_mismatches, f"mismatches={version_mismatches}")
+
     report = {
         "system": analysis.get("system"),
         "version": analysis.get("version"),
@@ -2426,6 +2482,13 @@ def quality_gate(conn: sqlite3.Connection, analysis: dict, export_count: int, pr
     for target_dir in [MOBILE_DIR, PAGES_DIR]:
         if target_dir.exists():
             shutil.copy2(SELF_TEST_JSON, target_dir / "self_test_report.json")
+    self_test_sync_mismatches = [
+        str((target_dir / "self_test_report.json").relative_to(BASE_DIR))
+        for target_dir in [MOBILE_DIR, PAGES_DIR]
+        if file_digest(SELF_TEST_JSON) != file_digest(target_dir / "self_test_report.json")
+    ]
+    if self_test_sync_mismatches:
+        raise RuntimeError("自我檢測報告同步失敗：" + ", ".join(self_test_sync_mismatches))
     if not report["passed"]:
         failed = [item for item in checks if not item["passed"]]
         raise RuntimeError("自我檢測未通過：" + "; ".join(f"{item['name']}={item['detail']}" for item in failed[:5]))
@@ -2513,6 +2576,7 @@ def write_readme() -> None:
 - v4 模式加入失手回饋：Top6低命中或特別號Top3失手會直接降權，不等下一次爆掉。
 - v5 模式加入每日雲端全系統掃描：每天自動更新、檢測，失敗會改跑全量重建修復並同步手機版。
 - v6 模式把大樂透戰報對齊 539 規格：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出。
+- v7 模式新增電腦版、手機版、GitHub Pages逐檔同步檢測；不同步或未更新會直接判定失敗。
 - 升級版保留 Bayesian/Dirichlet 平滑、EWMA 快慢週期、Markov 轉移、gap hazard、卡方區間/尾數平衡與組合搜尋。
 - 每次輸出前會跑自我檢測，檢測失敗就中止。
 - 輸出本機戰報與 `mobile_cloud` 雲端手機獨立版。

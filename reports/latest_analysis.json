@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
-  "version": "lotto649_ironlaw_cloud_v6_20260706_539_battle_report_spec",
-  "generated_at": "2026-07-06T10:28:13",
+  "version": "lotto649_ironlaw_cloud_v7_20260706_strict_desktop_mobile_sync",
+  "generated_at": "2026-07-06T11:49:01",
   "history_info": {
     "status": "ready",
     "draw_count": 2149,
@@ -17,9 +17,9 @@
       "latest_date": "2026-07-03",
       "expected_latest_date": "2026-07-03",
       "lag_days": 0,
-      "checked_at": "2026-07-06T10:28:13"
+      "checked_at": "2026-07-06T11:49:01"
     },
-    "generated_at": "2026-07-06T10:28:13"
+    "generated_at": "2026-07-06T11:49:01"
   },
   "latest_draw": {
     "period": 115000067,
@@ -45,7 +45,7 @@
     "latest_date": "2026-07-03",
     "expected_latest_date": "2026-07-03",
     "lag_days": 0,
-    "checked_at": "2026-07-06T10:28:13"
+    "checked_at": "2026-07-06T11:49:01"
   },
   "failure_review": {
     "has_review": true,
@@ -2213,6 +2213,7 @@
     "v4新增特別號失手懲罰，前次特別號Top3沒中會同步降權",
     "v5新增每日雲端全系統掃描：每天自動更新、檢測、失敗改跑全量修復並同步手機版",
     "v6戰報規格對齊539：核心決策、逐號驗算、短包強牌、低機率避險、每日更新鐵律、模型滾動調整完整輸出",
+    "v7新增電腦版、手機版、GitHub Pages逐檔同步守門：不同步或未更新一律判定失敗",
     "負邊際模型進入shrink/quarantine，不再平均分配權重拖累排序",
     "高正邊際模型才進入support/promote，並設定權重上限避免單一模型過擬合",
     "主號排序加入高權重模型共識分數與少量遺漏補償，降低單點噪音",
