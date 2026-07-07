@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-08T04:58:34",
+  "generated_at": "2026-07-08T05:09:30",
   "latest_period": 115000068,
   "latest_date": "2026-07-07",
   "target_period": 115000069,
@@ -26,7 +26,7 @@
     {
       "name": "database_freshness",
       "passed": true,
-      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-07\", \"expected_latest_date\": \"2026-07-07\", \"lag_days\": 0, \"checked_at\": \"2026-07-08T04:58:34\"}"
+      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-07\", \"expected_latest_date\": \"2026-07-07\", \"lag_days\": 0, \"checked_at\": \"2026-07-08T05:09:30\"}"
     },
     {
       "name": "main_candidates_complete",
