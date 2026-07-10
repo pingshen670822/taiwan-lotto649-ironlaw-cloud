@@ -1,51 +1,51 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-10T16:53:15",
+  "generated_at": "2026-07-11T00:38:45",
   "history_info": {
     "status": "ready",
-    "draw_count": 2150,
+    "draw_count": 2151,
     "first_period": 96000001,
     "first_date": "2007-01-02",
-    "latest_period": 115000068,
-    "latest_date": "2026-07-07",
+    "latest_period": 115000069,
+    "latest_date": "2026-07-10",
     "official_download_range_note": "台灣彩券官方年度下載與月查詢 API 可取得範圍",
     "duplicate_dates": [],
     "invalid_rows": [],
     "freshness": {
       "status": "fresh",
-      "latest_date": "2026-07-07",
-      "expected_latest_date": "2026-07-07",
+      "latest_date": "2026-07-10",
+      "expected_latest_date": "2026-07-10",
       "lag_days": 0,
-      "checked_at": "2026-07-10T16:53:15"
+      "checked_at": "2026-07-11T00:38:45"
     },
-    "generated_at": "2026-07-10T16:53:15"
+    "generated_at": "2026-07-11T00:38:45"
   },
   "latest_draw": {
-    "period": 115000068,
-    "draw_date": "2026-07-07",
+    "period": 115000069,
+    "draw_date": "2026-07-10",
     "numbers": [
-      8,
-      13,
+      3,
+      4,
       15,
       18,
-      19,
-      42
+      29,
+      49
     ],
-    "special": 37,
-    "sales_amount": 224127000,
+    "special": 13,
+    "sales_amount": 219565350,
     "sales_count": null,
-    "prize_total": 616468418,
+    "prize_total": 663295704,
     "source": "taiwanlottery_lotto649_result_2026-07"
   },
-  "target_period": 115000069,
-  "target_date": "2026-07-10",
+  "target_period": 115000070,
+  "target_date": "2026-07-14",
   "data_freshness": {
     "status": "fresh",
-    "latest_date": "2026-07-07",
-    "expected_latest_date": "2026-07-07",
+    "latest_date": "2026-07-10",
+    "expected_latest_date": "2026-07-10",
     "lag_days": 0,
-    "checked_at": "2026-07-10T16:53:15"
+    "checked_at": "2026-07-11T00:38:45"
   },
   "failure_review": {
     "has_review": true,
@@ -56,88 +56,85 @@
       "主號與特別號都套用上一期失手號碼懲罰"
     ],
     "last_settled": {
-      "based_on_period": 115000067,
-      "target_period": 115000068,
-      "actual_period": 115000068,
-      "actual_date": "2026-07-07",
+      "based_on_period": 115000068,
+      "target_period": 115000069,
+      "actual_period": 115000069,
+      "actual_date": "2026-07-10",
       "actual_numbers": [
-        8,
-        13,
+        3,
+        4,
         15,
         18,
+        29,
+        49
+      ],
+      "actual_special": 13,
+      "candidate_numbers": [
+        5,
+        7,
+        25,
+        22,
+        17,
+        37,
+        43,
+        26,
+        14,
+        4,
+        27,
+        18,
+        35,
+        21,
+        38,
+        28,
         19,
+        1,
+        48,
+        23,
+        40,
+        45,
+        41,
+        2,
+        32,
+        33,
+        39,
+        6,
+        13,
+        31,
+        30,
+        9,
+        24,
+        15,
+        3,
+        49,
+        34,
+        36,
+        10,
+        46,
+        8,
+        12,
+        20,
+        16,
+        11,
+        47,
+        29,
+        44,
         42
       ],
-      "actual_special": 37,
-      "candidate_numbers": [
-        12,
-        16,
-        11,
-        47,
-        20,
-        29,
-        40,
-        6,
-        48,
-        39,
-        49,
-        10,
-        4,
-        18,
-        37,
-        26,
-        17,
-        14,
-        5,
-        27,
-        23,
-        43,
-        13,
-        38,
-        28,
-        22,
-        7,
-        45,
-        25,
-        15,
-        35,
-        21,
-        1,
-        33,
-        41,
-        19,
-        24,
-        8,
-        42,
-        46,
-        2,
-        36,
-        32,
-        3,
-        30,
-        34,
-        9,
-        31,
-        44
-      ],
       "special_candidates": [
-        31,
-        2,
-        24,
+        37,
+        30,
+        34,
         3,
         41,
         38,
-        30,
         5,
         14,
         15,
-        10,
         1,
+        10,
         16,
-        34,
         46,
         45,
-        37,
         40,
         23,
         49,
@@ -148,34 +145,37 @@
         27,
         33,
         6,
-        8,
         13,
+        8,
         48,
         42,
         22,
-        44,
         35,
+        44,
         7,
+        31,
         43,
         25,
-        29,
         12,
+        29,
+        24,
         36,
         4,
         11,
         18,
         21,
-        9,
         19,
         32,
+        9,
         20,
+        2,
         17
       ],
       "strong_pack_hits": {
         "strong_single": {
           "name": "最強單支",
           "numbers": [
-            12
+            5
           ],
           "hit_goal": 1,
           "hits": 0,
@@ -184,8 +184,8 @@
         "two_hit_one": {
           "name": "最強2中1",
           "numbers": [
-            12,
-            16
+            5,
+            7
           ],
           "hit_goal": 1,
           "hits": 0,
@@ -194,9 +194,9 @@
         "three_hit_one": {
           "name": "最強3中1",
           "numbers": [
-            12,
-            16,
-            47
+            5,
+            7,
+            22
           ],
           "hit_goal": 1,
           "hits": 0,
@@ -205,11 +205,11 @@
         "five_hit_two": {
           "name": "最強5中2",
           "numbers": [
-            12,
-            16,
-            29,
-            40,
-            47
+            5,
+            7,
+            22,
+            25,
+            43
           ],
           "hit_goal": 2,
           "hits": 0,
@@ -218,15 +218,15 @@
         "nine_hit_three": {
           "name": "最強9中3",
           "numbers": [
-            6,
-            11,
-            12,
-            16,
-            20,
-            29,
-            40,
-            47,
-            48
+            5,
+            7,
+            14,
+            17,
+            22,
+            25,
+            26,
+            37,
+            43
           ],
           "hit_goal": 3,
           "hits": 0,
@@ -235,7 +235,7 @@
         "special_single": {
           "name": "特別號最強單支",
           "numbers": [
-            31
+            37
           ],
           "hit_goal": 1,
           "hits": 0,
@@ -244,9 +244,9 @@
         "special_three_watch": {
           "name": "特別號3碼觀察",
           "numbers": [
-            31,
-            2,
-            24
+            37,
+            30,
+            34
           ],
           "hit_goal": 1,
           "hits": 0,
@@ -254,8 +254,8 @@
         }
       },
       "top6_hits": 0,
-      "top12_hits": 0,
-      "top18_hits": 1,
+      "top12_hits": 2,
+      "top18_hits": 2,
       "special_top1_hit": 0,
       "special_top3_hit": 0
     }
@@ -270,19 +270,19 @@
     "strategies": {
       "heat_short": {
         "rounds": 520,
-        "top6_avg_hits": 0.754,
-        "top6_edge_vs_random": 0.019,
-        "top12_avg_hits": 1.44,
-        "top12_edge_vs_random": -0.029,
+        "top6_avg_hits": 0.758,
+        "top6_edge_vs_random": 0.023,
+        "top12_avg_hits": 1.444,
+        "top12_edge_vs_random": -0.025,
         "top18_avg_hits": 2.14,
         "top18_edge_vs_random": -0.064
       },
       "heat_mid": {
         "rounds": 520,
-        "top6_avg_hits": 0.827,
-        "top6_edge_vs_random": 0.092,
-        "top12_avg_hits": 1.527,
-        "top12_edge_vs_random": 0.058,
+        "top6_avg_hits": 0.829,
+        "top6_edge_vs_random": 0.094,
+        "top12_avg_hits": 1.529,
+        "top12_edge_vs_random": 0.06,
         "top18_avg_hits": 2.302,
         "top18_edge_vs_random": 0.098
       },
@@ -290,60 +290,60 @@
         "rounds": 520,
         "top6_avg_hits": 0.654,
         "top6_edge_vs_random": -0.081,
-        "top12_avg_hits": 1.373,
-        "top12_edge_vs_random": -0.096,
-        "top18_avg_hits": 2.123,
-        "top18_edge_vs_random": -0.081
+        "top12_avg_hits": 1.377,
+        "top12_edge_vs_random": -0.092,
+        "top18_avg_hits": 2.127,
+        "top18_edge_vs_random": -0.077
       },
       "bayes_global": {
         "rounds": 520,
         "top6_avg_hits": 0.702,
         "top6_edge_vs_random": -0.033,
-        "top12_avg_hits": 1.41,
-        "top12_edge_vs_random": -0.059,
-        "top18_avg_hits": 2.133,
-        "top18_edge_vs_random": -0.071
+        "top12_avg_hits": 1.412,
+        "top12_edge_vs_random": -0.057,
+        "top18_avg_hits": 2.135,
+        "top18_edge_vs_random": -0.069
       },
       "ewma_fast": {
         "rounds": 520,
-        "top6_avg_hits": 0.783,
-        "top6_edge_vs_random": 0.048,
-        "top12_avg_hits": 1.5,
-        "top12_edge_vs_random": 0.031,
-        "top18_avg_hits": 2.179,
-        "top18_edge_vs_random": -0.025
+        "top6_avg_hits": 0.787,
+        "top6_edge_vs_random": 0.052,
+        "top12_avg_hits": 1.504,
+        "top12_edge_vs_random": 0.035,
+        "top18_avg_hits": 2.181,
+        "top18_edge_vs_random": -0.023
       },
       "ewma_slow": {
         "rounds": 520,
-        "top6_avg_hits": 0.775,
-        "top6_edge_vs_random": 0.04,
-        "top12_avg_hits": 1.488,
-        "top12_edge_vs_random": 0.019,
+        "top6_avg_hits": 0.777,
+        "top6_edge_vs_random": 0.042,
+        "top12_avg_hits": 1.49,
+        "top12_edge_vs_random": 0.021,
         "top18_avg_hits": 2.219,
         "top18_edge_vs_random": 0.015
       },
       "omission": {
         "rounds": 520,
-        "top6_avg_hits": 0.767,
-        "top6_edge_vs_random": 0.032,
-        "top12_avg_hits": 1.448,
-        "top12_edge_vs_random": -0.021,
-        "top18_avg_hits": 2.179,
-        "top18_edge_vs_random": -0.025
+        "top6_avg_hits": 0.763,
+        "top6_edge_vs_random": 0.028,
+        "top12_avg_hits": 1.446,
+        "top12_edge_vs_random": -0.023,
+        "top18_avg_hits": 2.175,
+        "top18_edge_vs_random": -0.029
       },
       "gap_hazard": {
         "rounds": 520,
-        "top6_avg_hits": 0.754,
-        "top6_edge_vs_random": 0.019,
-        "top12_avg_hits": 1.475,
-        "top12_edge_vs_random": 0.006,
-        "top18_avg_hits": 2.196,
-        "top18_edge_vs_random": -0.008
+        "top6_avg_hits": 0.752,
+        "top6_edge_vs_random": 0.017,
+        "top12_avg_hits": 1.471,
+        "top12_edge_vs_random": 0.002,
+        "top18_avg_hits": 2.194,
+        "top18_edge_vs_random": -0.01
       },
       "pair": {
         "rounds": 520,
-        "top6_avg_hits": 0.673,
-        "top6_edge_vs_random": -0.062,
+        "top6_avg_hits": 0.671,
+        "top6_edge_vs_random": -0.064,
         "top12_avg_hits": 1.379,
         "top12_edge_vs_random": -0.09,
         "top18_avg_hits": 2.162,
@@ -351,21 +351,21 @@
       },
       "markov_transition": {
         "rounds": 520,
-        "top6_avg_hits": 0.713,
-        "top6_edge_vs_random": -0.022,
-        "top12_avg_hits": 1.429,
-        "top12_edge_vs_random": -0.04,
-        "top18_avg_hits": 2.167,
-        "top18_edge_vs_random": -0.037
+        "top6_avg_hits": 0.712,
+        "top6_edge_vs_random": -0.023,
+        "top12_avg_hits": 1.427,
+        "top12_edge_vs_random": -0.042,
+        "top18_avg_hits": 2.165,
+        "top18_edge_vs_random": -0.039
       },
       "tail_zone": {
         "rounds": 520,
-        "top6_avg_hits": 0.769,
-        "top6_edge_vs_random": 0.034,
-        "top12_avg_hits": 1.454,
-        "top12_edge_vs_random": -0.015,
-        "top18_avg_hits": 2.221,
-        "top18_edge_vs_random": 0.017
+        "top6_avg_hits": 0.771,
+        "top6_edge_vs_random": 0.036,
+        "top12_avg_hits": 1.458,
+        "top12_edge_vs_random": -0.011,
+        "top18_avg_hits": 2.225,
+        "top18_edge_vs_random": 0.021
       },
       "chi_square_balance": {
         "rounds": 520,
@@ -373,8 +373,8 @@
         "top6_edge_vs_random": -0.0,
         "top12_avg_hits": 1.45,
         "top12_edge_vs_random": -0.019,
-        "top18_avg_hits": 2.2,
-        "top18_edge_vs_random": -0.004
+        "top18_avg_hits": 2.202,
+        "top18_edge_vs_random": -0.002
       },
       "repeat_neighbor": {
         "rounds": 520,
@@ -382,17 +382,17 @@
         "top6_edge_vs_random": 0.017,
         "top12_avg_hits": 1.504,
         "top12_edge_vs_random": 0.035,
-        "top18_avg_hits": 2.223,
-        "top18_edge_vs_random": 0.019
+        "top18_avg_hits": 2.221,
+        "top18_edge_vs_random": 0.017
       },
       "mirror": {
         "rounds": 520,
-        "top6_avg_hits": 0.687,
-        "top6_edge_vs_random": -0.048,
-        "top12_avg_hits": 1.458,
-        "top12_edge_vs_random": -0.011,
-        "top18_avg_hits": 2.235,
-        "top18_edge_vs_random": 0.031
+        "top6_avg_hits": 0.688,
+        "top6_edge_vs_random": -0.047,
+        "top12_avg_hits": 1.46,
+        "top12_edge_vs_random": -0.009,
+        "top18_avg_hits": 2.238,
+        "top18_edge_vs_random": 0.034
       },
       "special_bridge": {
         "rounds": 520,
@@ -405,12 +405,12 @@
       },
       "ensemble": {
         "rounds": 520,
-        "top6_avg_hits": 0.752,
-        "top6_edge_vs_random": 0.017,
+        "top6_avg_hits": 0.754,
+        "top6_edge_vs_random": 0.019,
         "top12_avg_hits": 1.475,
         "top12_edge_vs_random": 0.006,
-        "top18_avg_hits": 2.21,
-        "top18_edge_vs_random": 0.006
+        "top18_avg_hits": 2.208,
+        "top18_edge_vs_random": 0.004
       }
     }
   },
@@ -424,30 +424,30 @@
     "strategies": {
       "heat_short": {
         "rounds": 180,
-        "top6_avg_hits": 0.661,
-        "top6_edge_vs_random": -0.074,
-        "top12_avg_hits": 1.472,
-        "top12_edge_vs_random": 0.003,
-        "top18_avg_hits": 2.144,
-        "top18_edge_vs_random": -0.06
+        "top6_avg_hits": 0.672,
+        "top6_edge_vs_random": -0.063,
+        "top12_avg_hits": 1.483,
+        "top12_edge_vs_random": 0.014,
+        "top18_avg_hits": 2.139,
+        "top18_edge_vs_random": -0.065
       },
       "heat_mid": {
         "rounds": 180,
-        "top6_avg_hits": 0.85,
-        "top6_edge_vs_random": 0.115,
-        "top12_avg_hits": 1.517,
-        "top12_edge_vs_random": 0.048,
-        "top18_avg_hits": 2.378,
-        "top18_edge_vs_random": 0.174
+        "top6_avg_hits": 0.861,
+        "top6_edge_vs_random": 0.126,
+        "top12_avg_hits": 1.528,
+        "top12_edge_vs_random": 0.059,
+        "top18_avg_hits": 2.383,
+        "top18_edge_vs_random": 0.179
       },
       "heat_long": {
         "rounds": 180,
         "top6_avg_hits": 0.678,
         "top6_edge_vs_random": -0.057,
-        "top12_avg_hits": 1.35,
-        "top12_edge_vs_random": -0.119,
-        "top18_avg_hits": 2.111,
-        "top18_edge_vs_random": -0.093
+        "top12_avg_hits": 1.361,
+        "top12_edge_vs_random": -0.108,
+        "top18_avg_hits": 2.122,
+        "top18_edge_vs_random": -0.082
       },
       "bayes_global": {
         "rounds": 180,
@@ -460,71 +460,71 @@
       },
       "ewma_fast": {
         "rounds": 180,
-        "top6_avg_hits": 0.717,
-        "top6_edge_vs_random": -0.018,
-        "top12_avg_hits": 1.461,
-        "top12_edge_vs_random": -0.008,
+        "top6_avg_hits": 0.728,
+        "top6_edge_vs_random": -0.007,
+        "top12_avg_hits": 1.467,
+        "top12_edge_vs_random": -0.002,
         "top18_avg_hits": 2.183,
         "top18_edge_vs_random": -0.021
       },
       "ewma_slow": {
         "rounds": 180,
-        "top6_avg_hits": 0.711,
-        "top6_edge_vs_random": -0.024,
-        "top12_avg_hits": 1.472,
-        "top12_edge_vs_random": 0.003,
-        "top18_avg_hits": 2.272,
-        "top18_edge_vs_random": 0.068
+        "top6_avg_hits": 0.717,
+        "top6_edge_vs_random": -0.018,
+        "top12_avg_hits": 1.467,
+        "top12_edge_vs_random": -0.002,
+        "top18_avg_hits": 2.267,
+        "top18_edge_vs_random": 0.063
       },
       "omission": {
         "rounds": 180,
-        "top6_avg_hits": 0.839,
-        "top6_edge_vs_random": 0.104,
+        "top6_avg_hits": 0.833,
+        "top6_edge_vs_random": 0.098,
         "top12_avg_hits": 1.483,
         "top12_edge_vs_random": 0.014,
-        "top18_avg_hits": 2.189,
-        "top18_edge_vs_random": -0.015
+        "top18_avg_hits": 2.183,
+        "top18_edge_vs_random": -0.021
       },
       "gap_hazard": {
         "rounds": 180,
-        "top6_avg_hits": 0.833,
-        "top6_edge_vs_random": 0.098,
-        "top12_avg_hits": 1.55,
-        "top12_edge_vs_random": 0.081,
-        "top18_avg_hits": 2.2,
-        "top18_edge_vs_random": -0.004
+        "top6_avg_hits": 0.828,
+        "top6_edge_vs_random": 0.093,
+        "top12_avg_hits": 1.544,
+        "top12_edge_vs_random": 0.075,
+        "top18_avg_hits": 2.194,
+        "top18_edge_vs_random": -0.01
       },
       "pair": {
         "rounds": 180,
-        "top6_avg_hits": 0.717,
-        "top6_edge_vs_random": -0.018,
-        "top12_avg_hits": 1.383,
-        "top12_edge_vs_random": -0.086,
-        "top18_avg_hits": 2.211,
-        "top18_edge_vs_random": 0.007
+        "top6_avg_hits": 0.706,
+        "top6_edge_vs_random": -0.029,
+        "top12_avg_hits": 1.367,
+        "top12_edge_vs_random": -0.102,
+        "top18_avg_hits": 2.194,
+        "top18_edge_vs_random": -0.01
       },
       "markov_transition": {
         "rounds": 180,
-        "top6_avg_hits": 0.7,
-        "top6_edge_vs_random": -0.035,
-        "top12_avg_hits": 1.428,
-        "top12_edge_vs_random": -0.041,
-        "top18_avg_hits": 2.144,
-        "top18_edge_vs_random": -0.06
+        "top6_avg_hits": 0.694,
+        "top6_edge_vs_random": -0.041,
+        "top12_avg_hits": 1.411,
+        "top12_edge_vs_random": -0.058,
+        "top18_avg_hits": 2.133,
+        "top18_edge_vs_random": -0.071
       },
       "tail_zone": {
         "rounds": 180,
-        "top6_avg_hits": 0.767,
-        "top6_edge_vs_random": 0.032,
-        "top12_avg_hits": 1.389,
-        "top12_edge_vs_random": -0.08,
-        "top18_avg_hits": 2.228,
-        "top18_edge_vs_random": 0.024
+        "top6_avg_hits": 0.772,
+        "top6_edge_vs_random": 0.037,
+        "top12_avg_hits": 1.394,
+        "top12_edge_vs_random": -0.075,
+        "top18_avg_hits": 2.233,
+        "top18_edge_vs_random": 0.029
       },
       "chi_square_balance": {
         "rounds": 180,
-        "top6_avg_hits": 0.711,
-        "top6_edge_vs_random": -0.024,
+        "top6_avg_hits": 0.717,
+        "top6_edge_vs_random": -0.018,
         "top12_avg_hits": 1.45,
         "top12_edge_vs_random": -0.019,
         "top18_avg_hits": 2.228,
@@ -534,26 +534,26 @@
         "rounds": 180,
         "top6_avg_hits": 0.722,
         "top6_edge_vs_random": -0.013,
-        "top12_avg_hits": 1.494,
-        "top12_edge_vs_random": 0.025,
-        "top18_avg_hits": 2.239,
-        "top18_edge_vs_random": 0.035
+        "top12_avg_hits": 1.489,
+        "top12_edge_vs_random": 0.02,
+        "top18_avg_hits": 2.228,
+        "top18_edge_vs_random": 0.024
       },
       "mirror": {
         "rounds": 180,
         "top6_avg_hits": 0.772,
         "top6_edge_vs_random": 0.037,
-        "top12_avg_hits": 1.5,
-        "top12_edge_vs_random": 0.031,
-        "top18_avg_hits": 2.211,
-        "top18_edge_vs_random": 0.007
+        "top12_avg_hits": 1.494,
+        "top12_edge_vs_random": 0.025,
+        "top18_avg_hits": 2.217,
+        "top18_edge_vs_random": 0.013
       },
       "special_bridge": {
         "rounds": 180,
-        "top6_avg_hits": 0.744,
-        "top6_edge_vs_random": 0.009,
-        "top12_avg_hits": 1.483,
-        "top12_edge_vs_random": 0.014,
+        "top6_avg_hits": 0.739,
+        "top6_edge_vs_random": 0.004,
+        "top12_avg_hits": 1.489,
+        "top12_edge_vs_random": 0.02,
         "top18_avg_hits": 2.133,
         "top18_edge_vs_random": -0.071
       },
@@ -563,8 +563,8 @@
         "top6_edge_vs_random": -0.041,
         "top12_avg_hits": 1.439,
         "top12_edge_vs_random": -0.03,
-        "top18_avg_hits": 2.25,
-        "top18_edge_vs_random": 0.046
+        "top18_avg_hits": 2.239,
+        "top18_edge_vs_random": 0.035
       }
     }
   },
@@ -575,12 +575,12 @@
       "12": 1.469,
       "18": 2.204
     },
-    "top6_avg_hits": 0.74,
-    "top6_edge_vs_random": 0.005,
-    "top12_avg_hits": 1.506,
-    "top12_edge_vs_random": 0.037,
-    "top18_avg_hits": 2.238,
-    "top18_edge_vs_random": 0.034
+    "top6_avg_hits": 0.763,
+    "top6_edge_vs_random": 0.028,
+    "top12_avg_hits": 1.494,
+    "top12_edge_vs_random": 0.025,
+    "top18_avg_hits": 2.235,
+    "top18_edge_vs_random": 0.031
   },
   "calibration": {
     "method": "dual_window_edge_shrink_v3",
@@ -589,65 +589,65 @@
     "models": {
       "heat_short": {
         "base_weight": 1.12,
-        "edge_score": -0.03322,
+        "edge_score": -0.02796,
         "positive_votes": 2,
         "tier": "shrink",
         "multiplier": 0.429,
         "full_edges": {
-          "top6": 0.019,
-          "top12": -0.029,
+          "top6": 0.023,
+          "top12": -0.025,
           "top18": -0.064
         },
         "recent_edges": {
-          "top6": -0.074,
-          "top12": 0.003,
-          "top18": -0.06
+          "top6": -0.063,
+          "top12": 0.014,
+          "top18": -0.065
         }
       },
       "heat_mid": {
         "base_weight": 1.08,
-        "edge_score": 0.0909,
+        "edge_score": 0.097,
         "positive_votes": 6,
         "tier": "promote",
         "multiplier": 1.65,
         "full_edges": {
-          "top6": 0.092,
-          "top12": 0.058,
+          "top6": 0.094,
+          "top12": 0.06,
           "top18": 0.098
         },
         "recent_edges": {
-          "top6": 0.115,
-          "top12": 0.048,
-          "top18": 0.174
+          "top6": 0.126,
+          "top12": 0.059,
+          "top18": 0.179
         }
       },
       "heat_long": {
         "base_weight": 0.78,
-        "edge_score": -0.09094,
+        "edge_score": -0.08526,
         "positive_votes": 0,
         "tier": "quarantine",
         "multiplier": 0.132,
         "full_edges": {
           "top6": -0.081,
-          "top12": -0.096,
-          "top18": -0.081
+          "top12": -0.092,
+          "top18": -0.077
         },
         "recent_edges": {
           "top6": -0.057,
-          "top12": -0.119,
-          "top18": -0.093
+          "top12": -0.108,
+          "top18": -0.082
         }
       },
       "bayes_global": {
         "base_weight": 0.96,
-        "edge_score": -0.04178,
+        "edge_score": -0.04114,
         "positive_votes": 0,
         "tier": "quarantine",
         "multiplier": 0.132,
         "full_edges": {
           "top6": -0.033,
-          "top12": -0.059,
-          "top18": -0.071
+          "top12": -0.057,
+          "top18": -0.069
         },
         "recent_edges": {
           "top6": -0.046,
@@ -657,177 +657,177 @@
       },
       "ewma_fast": {
         "base_weight": 1.18,
-        "edge_score": -0.00138,
+        "edge_score": 0.00356,
         "positive_votes": 2,
-        "tier": "shrink",
-        "multiplier": 0.429,
+        "tier": "neutral",
+        "multiplier": 0.78,
         "full_edges": {
-          "top6": 0.048,
-          "top12": 0.031,
-          "top18": -0.025
+          "top6": 0.052,
+          "top12": 0.035,
+          "top18": -0.023
         },
         "recent_edges": {
-          "top6": -0.018,
-          "top12": -0.008,
+          "top6": -0.007,
+          "top12": -0.002,
           "top18": -0.021
         }
       },
       "ewma_slow": {
         "base_weight": 0.94,
-        "edge_score": 0.0155,
-        "positive_votes": 5,
+        "edge_score": 0.01514,
+        "positive_votes": 4,
         "tier": "neutral",
         "multiplier": 1.0,
         "full_edges": {
-          "top6": 0.04,
-          "top12": 0.019,
+          "top6": 0.042,
+          "top12": 0.021,
           "top18": 0.015
         },
         "recent_edges": {
-          "top6": -0.024,
-          "top12": 0.003,
-          "top18": 0.068
+          "top6": -0.018,
+          "top12": -0.002,
+          "top18": 0.063
         }
       },
       "omission": {
         "base_weight": 0.92,
-        "edge_score": 0.01618,
+        "edge_score": 0.01294,
         "positive_votes": 3,
         "tier": "neutral",
         "multiplier": 1.0,
         "full_edges": {
-          "top6": 0.032,
-          "top12": -0.021,
-          "top18": -0.025
+          "top6": 0.028,
+          "top12": -0.023,
+          "top18": -0.029
         },
         "recent_edges": {
-          "top6": 0.104,
+          "top6": 0.098,
           "top12": 0.014,
-          "top18": -0.015
+          "top18": -0.021
         }
       },
       "gap_hazard": {
         "base_weight": 1.05,
-        "edge_score": 0.04,
+        "edge_score": 0.0355,
         "positive_votes": 4,
         "tier": "support",
         "multiplier": 1.28,
         "full_edges": {
-          "top6": 0.019,
-          "top12": 0.006,
-          "top18": -0.008
+          "top6": 0.017,
+          "top12": 0.002,
+          "top18": -0.01
         },
         "recent_edges": {
-          "top6": 0.098,
-          "top12": 0.081,
-          "top18": -0.004
+          "top6": 0.093,
+          "top12": 0.075,
+          "top18": -0.01
         }
       },
       "pair": {
         "base_weight": 1.02,
-        "edge_score": -0.0529,
-        "positive_votes": 1,
-        "tier": "quarantine",
-        "multiplier": 0.132,
-        "full_edges": {
-          "top6": -0.062,
-          "top12": -0.09,
-          "top18": -0.042
-        },
-        "recent_edges": {
-          "top6": -0.018,
-          "top12": -0.086,
-          "top18": 0.007
-        }
-      },
-      "markov_transition": {
-        "base_weight": 1.1,
-        "edge_score": -0.03994,
+        "edge_score": -0.06162,
         "positive_votes": 0,
         "tier": "quarantine",
         "multiplier": 0.132,
         "full_edges": {
-          "top6": -0.022,
-          "top12": -0.04,
-          "top18": -0.037
+          "top6": -0.064,
+          "top12": -0.09,
+          "top18": -0.042
         },
         "recent_edges": {
-          "top6": -0.035,
-          "top12": -0.041,
-          "top18": -0.06
+          "top6": -0.029,
+          "top12": -0.102,
+          "top18": -0.01
+        }
+      },
+      "markov_transition": {
+        "base_weight": 1.1,
+        "edge_score": -0.04772,
+        "positive_votes": 0,
+        "tier": "quarantine",
+        "multiplier": 0.132,
+        "full_edges": {
+          "top6": -0.023,
+          "top12": -0.042,
+          "top18": -0.039
+        },
+        "recent_edges": {
+          "top6": -0.041,
+          "top12": -0.058,
+          "top18": -0.071
         }
       },
       "tail_zone": {
         "base_weight": 0.72,
-        "edge_score": -0.0086,
+        "edge_score": -0.00422,
         "positive_votes": 4,
         "tier": "shrink",
         "multiplier": 0.55,
         "full_edges": {
-          "top6": 0.034,
-          "top12": -0.015,
-          "top18": 0.017
+          "top6": 0.036,
+          "top12": -0.011,
+          "top18": 0.021
         },
         "recent_edges": {
-          "top6": 0.032,
-          "top12": -0.08,
-          "top18": 0.024
+          "top6": 0.037,
+          "top12": -0.075,
+          "top18": 0.029
         }
       },
       "chi_square_balance": {
         "base_weight": 0.7,
-        "edge_score": -0.00988,
+        "edge_score": -0.00852,
         "positive_votes": 1,
         "tier": "quarantine",
         "multiplier": 0.3025,
         "full_edges": {
           "top6": 0.0,
           "top12": -0.019,
-          "top18": -0.004
+          "top18": -0.002
         },
         "recent_edges": {
-          "top6": -0.024,
+          "top6": -0.018,
           "top12": -0.019,
           "top18": 0.024
         }
       },
       "repeat_neighbor": {
         "base_weight": 0.52,
-        "edge_score": 0.01972,
+        "edge_score": 0.0166,
         "positive_votes": 5,
         "tier": "neutral",
         "multiplier": 1.0,
         "full_edges": {
           "top6": 0.017,
           "top12": 0.035,
-          "top18": 0.019
+          "top18": 0.017
         },
         "recent_edges": {
           "top6": -0.013,
-          "top12": 0.025,
-          "top18": 0.035
+          "top12": 0.02,
+          "top18": 0.024
         }
       },
       "mirror": {
         "base_weight": 0.34,
-        "edge_score": 0.01326,
+        "edge_score": 0.01342,
         "positive_votes": 4,
         "tier": "neutral",
         "multiplier": 1.0,
         "full_edges": {
-          "top6": -0.048,
-          "top12": -0.011,
-          "top18": 0.031
+          "top6": -0.047,
+          "top12": -0.009,
+          "top18": 0.034
         },
         "recent_edges": {
           "top6": 0.037,
-          "top12": 0.031,
-          "top18": 0.007
+          "top12": 0.025,
+          "top18": 0.013
         }
       },
       "special_bridge": {
         "base_weight": 0.44,
-        "edge_score": -0.00178,
+        "edge_score": -0.00112,
         "positive_votes": 3,
         "tier": "shrink",
         "multiplier": 0.55,
@@ -837,36 +837,338 @@
           "top18": -0.006
         },
         "recent_edges": {
-          "top6": 0.009,
-          "top12": 0.014,
+          "top6": 0.004,
+          "top12": 0.02,
           "top18": -0.071
         }
       }
     }
   },
   "model_weights": {
-    "heat_short": 0.0389,
-    "heat_mid": 0.1992,
-    "heat_long": 0.0086,
-    "bayes_global": 0.012,
-    "ewma_fast": 0.0684,
-    "ewma_slow": 0.1219,
-    "omission": 0.1219,
-    "gap_hazard": 0.1959,
-    "pair": 0.0112,
-    "markov_transition": 0.0129,
-    "tail_zone": 0.0534,
-    "chi_square_balance": 0.0286,
-    "repeat_neighbor": 0.0506,
-    "mirror": 0.0496,
-    "special_bridge": 0.0268
+    "heat_short": 0.0362,
+    "heat_mid": 0.1947,
+    "heat_long": 0.008,
+    "bayes_global": 0.0112,
+    "ewma_fast": 0.1028,
+    "ewma_slow": 0.1192,
+    "omission": 0.1192,
+    "gap_hazard": 0.1915,
+    "pair": 0.0105,
+    "markov_transition": 0.0121,
+    "tail_zone": 0.0498,
+    "chi_square_balance": 0.0266,
+    "repeat_neighbor": 0.047,
+    "mirror": 0.0462,
+    "special_bridge": 0.025
   },
   "candidates": [
     {
-      "number": 5,
-      "score": 0.67632,
+      "number": 48,
+      "score": 0.54594,
       "confidence_index": 99.0,
-      "omission": 27,
+      "omission": 6,
+      "zone": "41-49",
+      "tail": 8,
+      "reasons": [
+        "中期趨勢強",
+        "EWMA長週期穩定",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 47,
+      "score": 0.51602,
+      "confidence_index": 95.2,
+      "omission": 2,
+      "zone": "41-49",
+      "tail": 7,
+      "reasons": [
+        "中期趨勢強",
+        "EWMA長週期穩定",
+        "上期關聯搭配",
+        "尾數區間補位",
+        "鏡像關聯"
+      ]
+    },
+    {
+      "number": 12,
+      "score": 0.50693,
+      "confidence_index": 94.1,
+      "omission": 5,
+      "zone": "11-20",
+      "tail": 2,
+      "reasons": [
+        "中期趨勢強",
+        "EWMA長週期穩定",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 40,
+      "score": 0.50138,
+      "confidence_index": 93.4,
+      "omission": 9,
+      "zone": "31-40",
+      "tail": 0,
+      "reasons": [
+        "上期關聯搭配",
+        "區間卡方回補",
+        "鏡像關聯"
+      ]
+    },
+    {
+      "number": 29,
+      "score": 0.4925,
+      "confidence_index": 92.3,
+      "omission": 0,
+      "zone": "21-30",
+      "tail": 9,
+      "reasons": [
+        "近十期熱度高",
+        "中期趨勢強",
+        "Bayesian平滑高分",
+        "EWMA短週期上升",
+        "EWMA長週期穩定"
+      ]
+    },
+    {
+      "number": 20,
+      "score": 0.47765,
+      "confidence_index": 90.4,
+      "omission": 8,
+      "zone": "11-20",
+      "tail": 0,
+      "reasons": [
+        "Bayesian平滑高分",
+        "EWMA長週期穩定",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 16,
+      "score": 0.47456,
+      "confidence_index": 90.0,
+      "omission": 2,
+      "zone": "11-20",
+      "tail": 6,
+      "reasons": [
+        "中期趨勢強",
+        "EWMA短週期上升",
+        "EWMA長週期穩定",
+        "上期關聯搭配",
+        "Markov轉移關聯"
+      ]
+    },
+    {
+      "number": 11,
+      "score": 0.4606,
+      "confidence_index": 88.2,
+      "omission": 2,
+      "zone": "11-20",
+      "tail": 1,
+      "reasons": [
+        "EWMA長週期穩定",
+        "上期關聯搭配",
+        "Markov轉移關聯"
+      ]
+    },
+    {
+      "number": 6,
+      "score": 0.44902,
+      "confidence_index": 86.8,
+      "omission": 8,
+      "zone": "01-10",
+      "tail": 6,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 18,
+      "score": 0.44689,
+      "confidence_index": 86.5,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 8,
+      "reasons": [
+        "近十期熱度高",
+        "中期趨勢強",
+        "Bayesian平滑高分",
+        "EWMA短週期上升",
+        "EWMA長週期穩定"
+      ]
+    },
+    {
+      "number": 4,
+      "score": 0.43971,
+      "confidence_index": 85.6,
+      "omission": 0,
+      "zone": "01-10",
+      "tail": 4,
+      "reasons": [
+        "中期趨勢強",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 39,
+      "score": 0.4297,
+      "confidence_index": 84.3,
+      "omission": 2,
+      "zone": "31-40",
+      "tail": 9,
+      "reasons": [
+        "EWMA長週期穩定",
+        "上期關聯搭配",
+        "鏡像關聯"
+      ]
+    },
+    {
+      "number": 10,
+      "score": 0.39941,
+      "confidence_index": 80.5,
+      "omission": 3,
+      "zone": "01-10",
+      "tail": 0,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位",
+        "區間卡方回補"
+      ]
+    },
+    {
+      "number": 28,
+      "score": 0.39628,
+      "confidence_index": 80.1,
+      "omission": 6,
+      "zone": "21-30",
+      "tail": 8,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 35,
+      "score": 0.37968,
+      "confidence_index": 78.0,
+      "omission": 6,
+      "zone": "31-40",
+      "tail": 5,
+      "reasons": [
+        "上期關聯搭配",
+        "Markov轉移關聯",
+        "尾數區間補位",
+        "鏡像關聯"
+      ]
+    },
+    {
+      "number": 1,
+      "score": 0.3702,
+      "confidence_index": 76.8,
+      "omission": 7,
+      "zone": "01-10",
+      "tail": 1,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位",
+        "區間卡方回補"
+      ]
+    },
+    {
+      "number": 38,
+      "score": 0.36123,
+      "confidence_index": 75.7,
+      "omission": 15,
+      "zone": "31-40",
+      "tail": 8,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 19,
+      "score": 0.35944,
+      "confidence_index": 75.5,
+      "omission": 1,
+      "zone": "11-20",
+      "tail": 9,
+      "reasons": [
+        "Bayesian平滑高分",
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 21,
+      "score": 0.35688,
+      "confidence_index": 75.2,
+      "omission": 14,
+      "zone": "21-30",
+      "tail": 1,
+      "reasons": [
+        "上期關聯搭配",
+        "鏡像關聯"
+      ]
+    },
+    {
+      "number": 49,
+      "score": 0.34821,
+      "confidence_index": 74.1,
+      "omission": 0,
+      "zone": "41-49",
+      "tail": 9,
+      "reasons": [
+        "Bayesian平滑高分"
+      ]
+    },
+    {
+      "number": 23,
+      "score": 0.34356,
+      "confidence_index": 73.5,
+      "omission": 2,
+      "zone": "21-30",
+      "tail": 3,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 45,
+      "score": 0.33774,
+      "confidence_index": 72.7,
+      "omission": 3,
+      "zone": "41-49",
+      "tail": 5,
+      "reasons": [
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 15,
+      "score": 0.32164,
+      "confidence_index": 70.7,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 5,
+      "reasons": []
+    },
+    {
+      "number": 43,
+      "score": 0.31665,
+      "confidence_index": 70.1,
+      "omission": 16,
+      "zone": "41-49",
+      "tail": 3,
+      "reasons": [
+        "上期關聯搭配",
+        "上期失手降權"
+      ]
+    },
+    {
+      "number": 5,
+      "score": 0.31599,
+      "confidence_index": 70.0,
+      "omission": 28,
       "zone": "01-10",
       "tail": 5,
       "reasons": [
@@ -878,244 +1180,49 @@
       ]
     },
     {
-      "number": 7,
-      "score": 0.61075,
-      "confidence_index": 92.3,
-      "omission": 19,
-      "zone": "01-10",
-      "tail": 7,
-      "reasons": [
-        "Bayesian平滑高分",
-        "間隔hazard偏高",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 25,
-      "score": 0.57785,
-      "confidence_index": 88.9,
-      "omission": 8,
-      "zone": "21-30",
-      "tail": 5,
-      "reasons": [
-        "EWMA長週期穩定",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 22,
-      "score": 0.57317,
-      "confidence_index": 88.4,
-      "omission": 14,
-      "zone": "21-30",
-      "tail": 2,
-      "reasons": [
-        "間隔hazard偏高",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 17,
-      "score": 0.53075,
-      "confidence_index": 84.1,
-      "omission": 18,
-      "zone": "11-20",
-      "tail": 7,
-      "reasons": [
-        "間隔hazard偏高",
-        "上期關聯搭配",
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 37,
-      "score": 0.51352,
-      "confidence_index": 82.3,
-      "omission": 10,
+      "number": 33,
+      "score": 0.31418,
+      "confidence_index": 69.8,
+      "omission": 5,
       "zone": "31-40",
-      "tail": 7,
-      "reasons": [
-        "上期關聯搭配",
-        "特別號轉主號觀察"
-      ]
-    },
-    {
-      "number": 43,
-      "score": 0.50408,
-      "confidence_index": 81.4,
-      "omission": 15,
-      "zone": "41-49",
       "tail": 3,
       "reasons": [
+        "Bayesian平滑高分",
         "上期關聯搭配",
         "Markov轉移關聯"
       ]
     },
     {
       "number": 26,
-      "score": 0.47245,
-      "confidence_index": 78.1,
-      "omission": 11,
+      "score": 0.30951,
+      "confidence_index": 69.2,
+      "omission": 12,
       "zone": "21-30",
       "tail": 6,
       "reasons": [
         "Bayesian平滑高分",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 14,
-      "score": 0.45203,
-      "confidence_index": 76.0,
-      "omission": 9,
-      "zone": "11-20",
-      "tail": 4,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 4,
-      "score": 0.43247,
-      "confidence_index": 74.0,
-      "omission": 2,
-      "zone": "01-10",
-      "tail": 4,
-      "reasons": [
         "上期關聯搭配",
-        "尾數區間補位",
-        "區間卡方回補"
-      ]
-    },
-    {
-      "number": 27,
-      "score": 0.42365,
-      "confidence_index": 73.1,
-      "omission": 12,
-      "zone": "21-30",
-      "tail": 7,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 18,
-      "score": 0.41014,
-      "confidence_index": 71.7,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 8,
-      "reasons": [
-        "近十期熱度高",
-        "Bayesian平滑高分",
-        "EWMA長週期穩定"
-      ]
-    },
-    {
-      "number": 35,
-      "score": 0.40008,
-      "confidence_index": 70.7,
-      "omission": 5,
-      "zone": "31-40",
-      "tail": 5,
-      "reasons": [
-        "上期關聯搭配",
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 21,
-      "score": 0.38344,
-      "confidence_index": 69.0,
-      "omission": 13,
-      "zone": "21-30",
-      "tail": 1,
-      "reasons": [
-        "上期關聯搭配",
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 38,
-      "score": 0.37543,
-      "confidence_index": 68.2,
-      "omission": 14,
-      "zone": "31-40",
-      "tail": 8,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 28,
-      "score": 0.37338,
-      "confidence_index": 68.0,
-      "omission": 5,
-      "zone": "21-30",
-      "tail": 8,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 19,
-      "score": 0.36631,
-      "confidence_index": 67.2,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 9,
-      "reasons": [
-        "近十期熱度高",
-        "Bayesian平滑高分"
-      ]
-    },
-    {
-      "number": 1,
-      "score": 0.36112,
-      "confidence_index": 66.7,
-      "omission": 6,
-      "zone": "01-10",
-      "tail": 1,
-      "reasons": [
-        "上期關聯搭配",
-        "Markov轉移關聯",
-        "尾數區間補位",
-        "區間卡方回補"
-      ]
-    },
-    {
-      "number": 48,
-      "score": 0.35228,
-      "confidence_index": 65.8,
-      "omission": 5,
-      "zone": "41-49",
-      "tail": 8,
-      "reasons": [
-        "中期趨勢強",
-        "EWMA長週期穩定",
-        "上期關聯搭配",
-        "Markov轉移關聯",
         "上期失手降權"
       ]
     },
     {
-      "number": 23,
-      "score": 0.35154,
-      "confidence_index": 65.7,
+      "number": 13,
+      "score": 0.3092,
+      "confidence_index": 69.2,
       "omission": 1,
-      "zone": "21-30",
+      "zone": "11-20",
       "tail": 3,
       "reasons": [
         "上期關聯搭配"
       ]
     },
     {
-      "number": 40,
-      "score": 0.33857,
-      "confidence_index": 64.4,
-      "omission": 8,
-      "zone": "31-40",
-      "tail": 0,
+      "number": 27,
+      "score": 0.30712,
+      "confidence_index": 68.9,
+      "omission": 13,
+      "zone": "21-30",
+      "tail": 7,
       "reasons": [
         "上期關聯搭配",
         "鏡像關聯",
@@ -1123,22 +1230,22 @@
       ]
     },
     {
-      "number": 45,
-      "score": 0.33845,
-      "confidence_index": 64.4,
-      "omission": 2,
-      "zone": "41-49",
-      "tail": 5,
+      "number": 32,
+      "score": 0.3034,
+      "confidence_index": 68.4,
+      "omission": 10,
+      "zone": "31-40",
+      "tail": 2,
       "reasons": [
         "上期關聯搭配",
-        "尾數區間補位"
+        "鏡像關聯"
       ]
     },
     {
       "number": 41,
-      "score": 0.32833,
-      "confidence_index": 63.3,
-      "omission": 3,
+      "score": 0.30214,
+      "confidence_index": 68.3,
+      "omission": 4,
       "zone": "41-49",
       "tail": 1,
       "reasons": [
@@ -1150,91 +1257,74 @@
     },
     {
       "number": 2,
-      "score": 0.31754,
-      "confidence_index": 62.2,
-      "omission": 6,
-      "zone": "01-10",
-      "tail": 2,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 32,
-      "score": 0.31122,
-      "confidence_index": 61.6,
-      "omission": 9,
-      "zone": "31-40",
-      "tail": 2,
-      "reasons": [
-        "上期關聯搭配",
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 33,
-      "score": 0.31093,
-      "confidence_index": 61.6,
-      "omission": 4,
-      "zone": "31-40",
-      "tail": 3,
-      "reasons": [
-        "Bayesian平滑高分",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 39,
-      "score": 0.31055,
-      "confidence_index": 61.5,
-      "omission": 1,
-      "zone": "31-40",
-      "tail": 9,
-      "reasons": [
-        "近十期熱度高",
-        "EWMA長週期穩定",
-        "上期關聯搭配",
-        "鏡像關聯",
-        "上期失手降權"
-      ]
-    },
-    {
-      "number": 6,
-      "score": 0.31015,
-      "confidence_index": 61.5,
+      "score": 0.29647,
+      "confidence_index": 67.5,
       "omission": 7,
       "zone": "01-10",
-      "tail": 6,
+      "tail": 2,
       "reasons": [
         "上期關聯搭配",
+        "區間卡方回補"
+      ]
+    },
+    {
+      "number": 14,
+      "score": 0.28832,
+      "confidence_index": 66.5,
+      "omission": 10,
+      "zone": "11-20",
+      "tail": 4,
+      "reasons": [
         "上期失手降權"
       ]
     },
     {
-      "number": 13,
-      "score": 0.30873,
-      "confidence_index": 61.3,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 3,
-      "reasons": []
+      "number": 25,
+      "score": 0.28678,
+      "confidence_index": 66.3,
+      "omission": 9,
+      "zone": "21-30",
+      "tail": 5,
+      "reasons": [
+        "EWMA長週期穩定",
+        "間隔hazard偏高",
+        "上期關聯搭配",
+        "Markov轉移關聯",
+        "上期失手降權"
+      ]
     },
     {
       "number": 31,
-      "score": 0.29316,
-      "confidence_index": 59.7,
-      "omission": 11,
+      "score": 0.28212,
+      "confidence_index": 65.7,
+      "omission": 12,
       "zone": "31-40",
       "tail": 1,
       "reasons": [
-        "上期關聯搭配"
+        "上期關聯搭配",
+        "尾數區間補位"
+      ]
+    },
+    {
+      "number": 7,
+      "score": 0.27773,
+      "confidence_index": 65.2,
+      "omission": 20,
+      "zone": "01-10",
+      "tail": 7,
+      "reasons": [
+        "Bayesian平滑高分",
+        "間隔hazard偏高",
+        "上期關聯搭配",
+        "尾數區間補位",
+        "上期失手降權"
       ]
     },
     {
       "number": 30,
-      "score": 0.29173,
-      "confidence_index": 59.6,
-      "omission": 9,
+      "score": 0.27509,
+      "confidence_index": 64.8,
+      "omission": 10,
       "zone": "21-30",
       "tail": 0,
       "reasons": [
@@ -1244,215 +1334,132 @@
       ]
     },
     {
-      "number": 9,
-      "score": 0.29148,
-      "confidence_index": 59.6,
-      "omission": 6,
-      "zone": "01-10",
-      "tail": 9,
-      "reasons": [
-        "上期關聯搭配",
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 24,
-      "score": 0.29,
-      "confidence_index": 59.4,
-      "omission": 3,
-      "zone": "21-30",
-      "tail": 4,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 15,
-      "score": 0.28928,
-      "confidence_index": 59.3,
-      "omission": 0,
-      "zone": "11-20",
-      "tail": 5,
-      "reasons": [
-        "鏡像關聯"
-      ]
-    },
-    {
-      "number": 3,
-      "score": 0.28433,
-      "confidence_index": 58.8,
-      "omission": 12,
-      "zone": "01-10",
-      "tail": 3,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 49,
-      "score": 0.28429,
-      "confidence_index": 58.8,
-      "omission": 7,
-      "zone": "41-49",
-      "tail": 9,
-      "reasons": [
-        "上期關聯搭配",
-        "上期失手降權"
-      ]
-    },
-    {
       "number": 34,
-      "score": 0.28145,
-      "confidence_index": 58.5,
-      "omission": 4,
+      "score": 0.26472,
+      "confidence_index": 63.5,
+      "omission": 5,
       "zone": "31-40",
       "tail": 4,
       "reasons": [
         "上期關聯搭配",
         "鏡像關聯"
+      ]
+    },
+    {
+      "number": 22,
+      "score": 0.26323,
+      "confidence_index": 63.4,
+      "omission": 15,
+      "zone": "21-30",
+      "tail": 2,
+      "reasons": [
+        "間隔hazard偏高",
+        "上期關聯搭配",
+        "上期失手降權"
       ]
     },
     {
       "number": 36,
-      "score": 0.28029,
-      "confidence_index": 58.4,
-      "omission": 2,
+      "score": 0.26019,
+      "confidence_index": 63.0,
+      "omission": 3,
       "zone": "31-40",
       "tail": 6,
       "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 10,
-      "score": 0.27487,
-      "confidence_index": 57.9,
-      "omission": 2,
-      "zone": "01-10",
-      "tail": 0,
-      "reasons": [
         "上期關聯搭配",
-        "尾數區間補位",
-        "區間卡方回補",
-        "上期失手降權"
+        "Markov轉移關聯"
       ]
     },
     {
-      "number": 46,
-      "score": 0.26795,
-      "confidence_index": 57.2,
-      "omission": 8,
-      "zone": "41-49",
-      "tail": 6,
-      "reasons": [
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 8,
-      "score": 0.26105,
-      "confidence_index": 56.5,
-      "omission": 0,
-      "zone": "01-10",
-      "tail": 8,
-      "reasons": [
-        "Bayesian平滑高分"
-      ]
-    },
-    {
-      "number": 12,
-      "score": 0.25052,
-      "confidence_index": 55.4,
+      "number": 24,
+      "score": 0.25448,
+      "confidence_index": 62.3,
       "omission": 4,
-      "zone": "11-20",
-      "tail": 2,
+      "zone": "21-30",
+      "tail": 4,
       "reasons": [
-        "近十期熱度高",
-        "中期趨勢強",
-        "EWMA短週期上升",
-        "EWMA長週期穩定",
         "上期關聯搭配"
       ]
     },
     {
-      "number": 20,
-      "score": 0.23887,
-      "confidence_index": 54.2,
-      "omission": 7,
+      "number": 17,
+      "score": 0.25311,
+      "confidence_index": 62.1,
+      "omission": 19,
       "zone": "11-20",
-      "tail": 0,
+      "tail": 7,
       "reasons": [
-        "Bayesian平滑高分",
-        "EWMA長週期穩定",
-        "上期關聯搭配",
-        "Markov轉移關聯",
+        "間隔hazard偏高",
+        "鏡像關聯",
         "上期失手降權"
       ]
     },
     {
-      "number": 16,
-      "score": 0.23424,
-      "confidence_index": 53.7,
-      "omission": 1,
-      "zone": "11-20",
-      "tail": 6,
+      "number": 9,
+      "score": 0.24952,
+      "confidence_index": 61.6,
+      "omission": 7,
+      "zone": "01-10",
+      "tail": 9,
       "reasons": [
-        "近十期熱度高",
-        "中期趨勢強",
-        "EWMA短週期上升",
-        "EWMA長週期穩定",
-        "上期關聯搭配"
-      ]
-    },
-    {
-      "number": 11,
-      "score": 0.23344,
-      "confidence_index": 53.6,
-      "omission": 1,
-      "zone": "11-20",
-      "tail": 1,
-      "reasons": [
-        "近十期熱度高",
-        "EWMA長週期穩定",
         "上期關聯搭配",
-        "Markov轉移關聯",
         "鏡像關聯"
       ]
     },
     {
-      "number": 47,
-      "score": 0.22812,
-      "confidence_index": 53.1,
-      "omission": 1,
+      "number": 46,
+      "score": 0.24649,
+      "confidence_index": 61.2,
+      "omission": 9,
       "zone": "41-49",
+      "tail": 6,
+      "reasons": [
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 37,
+      "score": 0.2457,
+      "confidence_index": 61.1,
+      "omission": 11,
+      "zone": "31-40",
       "tail": 7,
       "reasons": [
-        "中期趨勢強",
-        "EWMA長週期穩定",
         "上期關聯搭配",
+        "特別號轉主號觀察",
         "上期失手降權"
       ]
     },
     {
-      "number": 29,
-      "score": 0.228,
-      "confidence_index": 53.1,
-      "omission": 2,
-      "zone": "21-30",
-      "tail": 9,
+      "number": 8,
+      "score": 0.23676,
+      "confidence_index": 60.0,
+      "omission": 1,
+      "zone": "01-10",
+      "tail": 8,
       "reasons": [
-        "近十期熱度高",
-        "中期趨勢強",
         "Bayesian平滑高分",
-        "EWMA短週期上升",
-        "EWMA長週期穩定"
+        "上期關聯搭配"
+      ]
+    },
+    {
+      "number": 42,
+      "score": 0.192,
+      "confidence_index": 54.4,
+      "omission": 1,
+      "zone": "41-49",
+      "tail": 2,
+      "reasons": [
+        "上期關聯搭配",
+        "區間卡方回補",
+        "鏡像關聯"
       ]
     },
     {
       "number": 44,
-      "score": 0.22558,
-      "confidence_index": 52.8,
-      "omission": 9,
+      "score": 0.18999,
+      "confidence_index": 54.1,
+      "omission": 10,
       "zone": "41-49",
       "tail": 4,
       "reasons": [
@@ -1462,61 +1469,44 @@
       ]
     },
     {
-      "number": 42,
-      "score": 0.19803,
+      "number": 3,
+      "score": 0.15731,
       "confidence_index": 50.0,
       "omission": 0,
-      "zone": "41-49",
-      "tail": 2,
-      "reasons": [
-        "區間卡方回補",
-        "鏡像關聯"
-      ]
+      "zone": "01-10",
+      "tail": 3,
+      "reasons": []
     }
   ],
   "special_candidates": [
     {
-      "number": 37,
-      "score": 0.65051,
+      "number": 31,
+      "score": 0.52185,
       "confidence_index": 99.0,
-      "omission": 0,
-      "zone": "31-40",
-      "tail": 7,
-      "reasons": [
-        "特別號短線熱",
-        "特別號Bayesian平滑",
-        "特別號EWMA上升"
-      ]
-    },
-    {
-      "number": 30,
-      "score": 0.60376,
-      "confidence_index": 94.4,
-      "omission": 4,
-      "zone": "21-30",
-      "tail": 0,
-      "reasons": [
-        "特別號短線熱",
-        "特別號EWMA上升"
-      ]
-    },
-    {
-      "number": 34,
-      "score": 0.53421,
-      "confidence_index": 87.7,
       "omission": 9,
       "zone": "31-40",
-      "tail": 4,
+      "tail": 1,
       "reasons": [
         "特別號短線熱",
-        "特別號EWMA上升"
+        "特別號Bayesian平滑"
+      ]
+    },
+    {
+      "number": 13,
+      "score": 0.48379,
+      "confidence_index": 94.0,
+      "omission": 0,
+      "zone": "11-20",
+      "tail": 3,
+      "reasons": [
+        "特別號短線熱"
       ]
     },
     {
       "number": 3,
-      "score": 0.44104,
-      "confidence_index": 78.6,
-      "omission": 7,
+      "score": 0.45307,
+      "confidence_index": 89.9,
+      "omission": 8,
       "zone": "01-10",
       "tail": 3,
       "reasons": [
@@ -1524,10 +1514,23 @@
       ]
     },
     {
+      "number": 24,
+      "score": 0.45031,
+      "confidence_index": 89.5,
+      "omission": 65,
+      "zone": "21-30",
+      "tail": 4,
+      "reasons": [
+        "特別號Bayesian平滑",
+        "特別號間隔hazard",
+        "主號熱度轉特別號"
+      ]
+    },
+    {
       "number": 41,
-      "score": 0.41795,
-      "confidence_index": 76.3,
-      "omission": 6,
+      "score": 0.42365,
+      "confidence_index": 86.0,
+      "omission": 7,
       "zone": "41-49",
       "tail": 1,
       "reasons": [
@@ -1537,9 +1540,9 @@
     },
     {
       "number": 38,
-      "score": 0.40229,
-      "confidence_index": 74.8,
-      "omission": 5,
+      "score": 0.40862,
+      "confidence_index": 84.0,
+      "omission": 6,
       "zone": "31-40",
       "tail": 8,
       "reasons": [
@@ -1547,10 +1550,21 @@
       ]
     },
     {
+      "number": 15,
+      "score": 0.39877,
+      "confidence_index": 82.7,
+      "omission": 2,
+      "zone": "11-20",
+      "tail": 5,
+      "reasons": [
+        "特別號短線熱"
+      ]
+    },
+    {
       "number": 5,
-      "score": 0.39523,
-      "confidence_index": 74.1,
-      "omission": 277,
+      "score": 0.39858,
+      "confidence_index": 82.7,
+      "omission": 278,
       "zone": "01-10",
       "tail": 5,
       "reasons": [
@@ -1560,9 +1574,9 @@
     },
     {
       "number": 14,
-      "score": 0.39364,
-      "confidence_index": 74.0,
-      "omission": 2,
+      "score": 0.39238,
+      "confidence_index": 81.9,
+      "omission": 3,
       "zone": "11-20",
       "tail": 4,
       "reasons": [
@@ -1570,21 +1584,10 @@
       ]
     },
     {
-      "number": 15,
-      "score": 0.38927,
-      "confidence_index": 73.5,
-      "omission": 1,
-      "zone": "11-20",
-      "tail": 5,
-      "reasons": [
-        "特別號短線熱"
-      ]
-    },
-    {
       "number": 1,
-      "score": 0.3773,
-      "confidence_index": 72.4,
-      "omission": 3,
+      "score": 0.38184,
+      "confidence_index": 80.5,
+      "omission": 4,
       "zone": "01-10",
       "tail": 1,
       "reasons": [
@@ -1593,9 +1596,9 @@
     },
     {
       "number": 10,
-      "score": 0.37497,
-      "confidence_index": 72.1,
-      "omission": 34,
+      "score": 0.37865,
+      "confidence_index": 80.0,
+      "omission": 35,
       "zone": "01-10",
       "tail": 0,
       "reasons": [
@@ -1604,9 +1607,9 @@
     },
     {
       "number": 16,
-      "score": 0.36425,
-      "confidence_index": 71.1,
-      "omission": 165,
+      "score": 0.36587,
+      "confidence_index": 78.3,
+      "omission": 166,
       "zone": "11-20",
       "tail": 6,
       "reasons": [
@@ -1615,38 +1618,54 @@
     },
     {
       "number": 46,
-      "score": 0.33561,
-      "confidence_index": 68.3,
-      "omission": 46,
+      "score": 0.33621,
+      "confidence_index": 74.4,
+      "omission": 47,
       "zone": "41-49",
       "tail": 6,
       "reasons": []
     },
     {
-      "number": 45,
-      "score": 0.33262,
-      "confidence_index": 68.0,
-      "omission": 19,
-      "zone": "41-49",
-      "tail": 5,
-      "reasons": []
-    },
-    {
       "number": 40,
-      "score": 0.32524,
-      "confidence_index": 67.3,
-      "omission": 101,
+      "score": 0.32955,
+      "confidence_index": 73.5,
+      "omission": 102,
       "zone": "31-40",
       "tail": 0,
+      "reasons": [
+        "特別號間隔hazard"
+      ]
+    },
+    {
+      "number": 37,
+      "score": 0.32777,
+      "confidence_index": 73.3,
+      "omission": 1,
+      "zone": "31-40",
+      "tail": 7,
+      "reasons": [
+        "特別號短線熱",
+        "特別號Bayesian平滑",
+        "特別號EWMA上升",
+        "上期特別號失手降權"
+      ]
+    },
+    {
+      "number": 49,
+      "score": 0.32408,
+      "confidence_index": 72.8,
+      "omission": 119,
+      "zone": "41-49",
+      "tail": 9,
       "reasons": [
         "特別號間隔hazard"
       ]
     },
     {
       "number": 23,
-      "score": 0.32078,
-      "confidence_index": 66.9,
-      "omission": 185,
+      "score": 0.32284,
+      "confidence_index": 72.6,
+      "omission": 186,
       "zone": "21-30",
       "tail": 3,
       "reasons": [
@@ -1654,39 +1673,61 @@
       ]
     },
     {
-      "number": 49,
-      "score": 0.31521,
-      "confidence_index": 66.3,
-      "omission": 118,
-      "zone": "41-49",
-      "tail": 9,
+      "number": 2,
+      "score": 0.31285,
+      "confidence_index": 71.3,
+      "omission": 11,
+      "zone": "01-10",
+      "tail": 2,
       "reasons": [
-        "特別號間隔hazard"
+        "特別號Bayesian平滑"
       ]
     },
     {
       "number": 47,
-      "score": 0.30873,
-      "confidence_index": 65.7,
-      "omission": 26,
+      "score": 0.31136,
+      "confidence_index": 71.1,
+      "omission": 27,
       "zone": "41-49",
       "tail": 7,
       "reasons": []
     },
     {
+      "number": 30,
+      "score": 0.30523,
+      "confidence_index": 70.3,
+      "omission": 5,
+      "zone": "21-30",
+      "tail": 0,
+      "reasons": [
+        "特別號短線熱",
+        "特別號EWMA上升",
+        "上期特別號失手降權"
+      ]
+    },
+    {
       "number": 28,
-      "score": 0.30613,
-      "confidence_index": 65.4,
-      "omission": 53,
+      "score": 0.30418,
+      "confidence_index": 70.2,
+      "omission": 54,
       "zone": "21-30",
       "tail": 8,
       "reasons": []
     },
     {
+      "number": 45,
+      "score": 0.30355,
+      "confidence_index": 70.1,
+      "omission": 20,
+      "zone": "41-49",
+      "tail": 5,
+      "reasons": []
+    },
+    {
       "number": 26,
-      "score": 0.29716,
-      "confidence_index": 64.6,
-      "omission": 99,
+      "score": 0.3013,
+      "confidence_index": 69.8,
+      "omission": 100,
       "zone": "21-30",
       "tail": 6,
       "reasons": [
@@ -1694,10 +1735,19 @@
       ]
     },
     {
+      "number": 27,
+      "score": 0.29686,
+      "confidence_index": 69.2,
+      "omission": 15,
+      "zone": "21-30",
+      "tail": 7,
+      "reasons": []
+    },
+    {
       "number": 39,
-      "score": 0.29384,
-      "confidence_index": 64.2,
-      "omission": 28,
+      "score": 0.29543,
+      "confidence_index": 69.0,
+      "omission": 29,
       "zone": "31-40",
       "tail": 9,
       "reasons": [
@@ -1705,55 +1755,46 @@
       ]
     },
     {
-      "number": 27,
-      "score": 0.29175,
-      "confidence_index": 64.0,
-      "omission": 14,
-      "zone": "21-30",
-      "tail": 7,
-      "reasons": []
-    },
-    {
       "number": 33,
-      "score": 0.29066,
-      "confidence_index": 63.9,
-      "omission": 73,
+      "score": 0.29499,
+      "confidence_index": 69.0,
+      "omission": 74,
       "zone": "31-40",
-      "tail": 3,
-      "reasons": []
-    },
-    {
-      "number": 6,
-      "score": 0.29019,
-      "confidence_index": 63.9,
-      "omission": 48,
-      "zone": "01-10",
-      "tail": 6,
-      "reasons": []
-    },
-    {
-      "number": 13,
-      "score": 0.28473,
-      "confidence_index": 63.3,
-      "omission": 24,
-      "zone": "11-20",
       "tail": 3,
       "reasons": []
     },
     {
       "number": 8,
-      "score": 0.28248,
-      "confidence_index": 63.1,
-      "omission": 27,
+      "score": 0.2879,
+      "confidence_index": 68.0,
+      "omission": 28,
       "zone": "01-10",
       "tail": 8,
       "reasons": []
     },
     {
+      "number": 6,
+      "score": 0.28709,
+      "confidence_index": 67.9,
+      "omission": 49,
+      "zone": "01-10",
+      "tail": 6,
+      "reasons": []
+    },
+    {
+      "number": 42,
+      "score": 0.2835,
+      "confidence_index": 67.4,
+      "omission": 36,
+      "zone": "41-49",
+      "tail": 2,
+      "reasons": []
+    },
+    {
       "number": 48,
-      "score": 0.28083,
-      "confidence_index": 63.0,
-      "omission": 17,
+      "score": 0.28306,
+      "confidence_index": 67.4,
+      "omission": 18,
       "zone": "41-49",
       "tail": 8,
       "reasons": [
@@ -1761,37 +1802,19 @@
       ]
     },
     {
-      "number": 42,
-      "score": 0.27654,
-      "confidence_index": 62.5,
-      "omission": 35,
-      "zone": "41-49",
-      "tail": 2,
-      "reasons": []
-    },
-    {
       "number": 22,
-      "score": 0.27057,
-      "confidence_index": 62.0,
-      "omission": 22,
+      "score": 0.275,
+      "confidence_index": 66.3,
+      "omission": 23,
       "zone": "21-30",
       "tail": 2,
       "reasons": []
     },
     {
-      "number": 35,
-      "score": 0.26543,
-      "confidence_index": 61.5,
-      "omission": 52,
-      "zone": "31-40",
-      "tail": 5,
-      "reasons": []
-    },
-    {
       "number": 44,
-      "score": 0.26536,
-      "confidence_index": 61.5,
-      "omission": 156,
+      "score": 0.27161,
+      "confidence_index": 65.9,
+      "omission": 157,
       "zone": "41-49",
       "tail": 4,
       "reasons": [
@@ -1799,50 +1822,55 @@
       ]
     },
     {
+      "number": 35,
+      "score": 0.26969,
+      "confidence_index": 65.6,
+      "omission": 53,
+      "zone": "31-40",
+      "tail": 5,
+      "reasons": []
+    },
+    {
       "number": 7,
-      "score": 0.2602,
-      "confidence_index": 61.0,
-      "omission": 20,
+      "score": 0.26416,
+      "confidence_index": 64.9,
+      "omission": 21,
       "zone": "01-10",
       "tail": 7,
       "reasons": []
     },
     {
-      "number": 31,
-      "score": 0.25988,
-      "confidence_index": 60.9,
-      "omission": 8,
-      "zone": "31-40",
-      "tail": 1,
-      "reasons": [
-        "特別號短線熱",
-        "特別號Bayesian平滑",
-        "上期特別號失手降權"
-      ]
-    },
-    {
       "number": 43,
-      "score": 0.25167,
-      "confidence_index": 60.1,
-      "omission": 39,
+      "score": 0.25697,
+      "confidence_index": 63.9,
+      "omission": 40,
       "zone": "41-49",
       "tail": 3,
       "reasons": []
     },
     {
+      "number": 29,
+      "score": 0.25491,
+      "confidence_index": 63.6,
+      "omission": 71,
+      "zone": "21-30",
+      "tail": 9,
+      "reasons": []
+    },
+    {
       "number": 25,
-      "score": 0.24971,
-      "confidence_index": 59.9,
-      "omission": 102,
+      "score": 0.25224,
+      "confidence_index": 63.3,
+      "omission": 103,
       "zone": "21-30",
       "tail": 5,
       "reasons": []
     },
     {
       "number": 12,
-      "score": 0.24871,
-      "confidence_index": 59.8,
-      "omission": 61,
+      "score": 0.24999,
+      "confidence_index": 63.0,
+      "omission": 62,
       "zone": "11-20",
       "tail": 2,
       "reasons": [
@@ -1850,60 +1878,37 @@
       ]
     },
     {
-      "number": 29,
-      "score": 0.24635,
-      "confidence_index": 59.6,
-      "omission": 70,
-      "zone": "21-30",
-      "tail": 9,
-      "reasons": []
-    },
-    {
-      "number": 24,
-      "score": 0.22366,
-      "confidence_index": 57.4,
-      "omission": 64,
-      "zone": "21-30",
-      "tail": 4,
-      "reasons": [
-        "特別號Bayesian平滑",
-        "特別號間隔hazard",
-        "主號熱度轉特別號",
-        "上期特別號失手降權"
-      ]
-    },
-    {
       "number": 36,
-      "score": 0.21569,
-      "confidence_index": 56.6,
-      "omission": 50,
+      "score": 0.22037,
+      "confidence_index": 59.1,
+      "omission": 51,
       "zone": "31-40",
       "tail": 6,
       "reasons": []
     },
     {
       "number": 4,
-      "score": 0.20288,
-      "confidence_index": 55.4,
-      "omission": 81,
+      "score": 0.21213,
+      "confidence_index": 58.0,
+      "omission": 82,
       "zone": "01-10",
       "tail": 4,
       "reasons": []
     },
     {
       "number": 11,
-      "score": 0.19496,
-      "confidence_index": 54.6,
-      "omission": 12,
+      "score": 0.19777,
+      "confidence_index": 56.1,
+      "omission": 13,
       "zone": "11-20",
       "tail": 1,
       "reasons": []
     },
     {
       "number": 18,
-      "score": 0.18965,
-      "confidence_index": 54.1,
-      "omission": 23,
+      "score": 0.19714,
+      "confidence_index": 56.0,
+      "omission": 24,
       "zone": "11-20",
       "tail": 8,
       "reasons": [
@@ -1911,69 +1916,69 @@
       ]
     },
     {
-      "number": 21,
-      "score": 0.17907,
-      "confidence_index": 53.0,
-      "omission": 31,
-      "zone": "21-30",
-      "tail": 1,
-      "reasons": []
+      "number": 34,
+      "score": 0.19349,
+      "confidence_index": 55.5,
+      "omission": 10,
+      "zone": "31-40",
+      "tail": 4,
+      "reasons": [
+        "特別號EWMA上升",
+        "上期特別號失手降權"
+      ]
     },
     {
       "number": 19,
-      "score": 0.17743,
-      "confidence_index": 52.9,
-      "omission": 59,
+      "score": 0.18101,
+      "confidence_index": 53.9,
+      "omission": 60,
       "zone": "11-20",
       "tail": 9,
       "reasons": []
     },
     {
+      "number": 21,
+      "score": 0.17948,
+      "confidence_index": 53.7,
+      "omission": 32,
+      "zone": "21-30",
+      "tail": 1,
+      "reasons": []
+    },
+    {
       "number": 32,
-      "score": 0.16985,
-      "confidence_index": 52.1,
-      "omission": 82,
+      "score": 0.17522,
+      "confidence_index": 53.1,
+      "omission": 83,
       "zone": "31-40",
       "tail": 2,
       "reasons": []
     },
     {
       "number": 9,
-      "score": 0.16628,
-      "confidence_index": 51.8,
-      "omission": 57,
+      "score": 0.17193,
+      "confidence_index": 52.7,
+      "omission": 58,
       "zone": "01-10",
       "tail": 9,
       "reasons": []
     },
     {
-      "number": 20,
-      "score": 0.15464,
-      "confidence_index": 50.7,
-      "omission": 45,
+      "number": 17,
+      "score": 0.15274,
+      "confidence_index": 50.1,
+      "omission": 33,
       "zone": "11-20",
-      "tail": 0,
+      "tail": 7,
       "reasons": []
     },
     {
-      "number": 2,
-      "score": 0.15336,
-      "confidence_index": 50.5,
-      "omission": 10,
-      "zone": "01-10",
-      "tail": 2,
-      "reasons": [
-        "特別號Bayesian平滑",
-        "上期特別號失手降權"
-      ]
-    },
-    {
-      "number": 17,
-      "score": 0.14786,
+      "number": 20,
+      "score": 0.15191,
       "confidence_index": 50.0,
-      "omission": 32,
+      "omission": 46,
       "zone": "11-20",
-      "tail": 7,
+      "tail": 0,
       "reasons": []
     }
   ],
@@ -1981,98 +1986,98 @@
     {
       "name": "建議組合1",
       "numbers": [
-        5,
-        7,
-        14,
-        22,
-        25,
-        37
+        6,
+        12,
+        29,
+        40,
+        47,
+        48
       ],
-      "special": 30
+      "special": 31
     },
     {
       "name": "建議組合2",
       "numbers": [
-        5,
-        7,
-        22,
-        25,
-        26,
-        43
+        12,
+        16,
+        20,
+        29,
+        47,
+        48
       ],
-      "special": 37
+      "special": 31
     },
     {
       "name": "建議組合3",
       "numbers": [
-        5,
-        7,
-        17,
-        22,
-        25,
-        38
+        11,
+        12,
+        20,
+        40,
+        47,
+        48
       ],
-      "special": 37
+      "special": 31
     },
     {
       "name": "建議組合4",
       "numbers": [
-        5,
-        17,
-        22,
-        25,
-        26,
-        37
+        4,
+        20,
+        29,
+        40,
+        47,
+        48
       ],
-      "special": 30
+      "special": 31
     },
     {
       "name": "建議組合5",
       "numbers": [
-        5,
-        7,
-        18,
-        22,
-        37,
-        43
+        4,
+        11,
+        12,
+        29,
+        40,
+        48
       ],
-      "special": 30
+      "special": 31
     },
     {
       "name": "建議組合6",
       "numbers": [
-        5,
-        7,
-        14,
-        17,
-        22,
-        43
+        11,
+        16,
+        29,
+        40,
+        47,
+        48
       ],
-      "special": 37
+      "special": 31
     },
     {
       "name": "建議組合7",
       "numbers": [
-        5,
-        7,
+        11,
+        12,
         18,
-        25,
-        26,
-        37
+        29,
+        47,
+        48
       ],
-      "special": 30
+      "special": 31
     },
     {
       "name": "建議組合8",
       "numbers": [
-        5,
-        7,
-        17,
-        22,
-        26,
-        35
+        4,
+        12,
+        16,
+        29,
+        40,
+        47
       ],
-      "special": 37
+      "special": 31
     }
   ],
   "strong_prediction_packs": {
@@ -2080,134 +2085,139 @@
       "name": "最強單支",
       "hit_goal": 1,
       "numbers": [
-        5
+        48
       ],
-      "score_sum": 0.67632,
-      "avg_score": 0.67632,
+      "score_sum": 0.54594,
+      "avg_score": 0.54594,
       "theoretical_probability": 0.122449,
       "zones": {
-        "01-10": 1
+        "41-49": 1
       },
       "tails": {
-        "5": 1
+        "8": 1
       }
     },
     "two_hit_one": {
       "name": "最強2中1",
       "hit_goal": 1,
       "numbers": [
-        5,
-        7
+        12,
+        48
       ],
-      "score_sum": 1.28707,
-      "avg_score": 0.64353,
+      "score_sum": 1.05287,
+      "avg_score": 0.52643,
       "theoretical_probability": 0.232143,
       "zones": {
-        "01-10": 2
+        "11-20": 1,
+        "41-49": 1
       },
       "tails": {
-        "5": 1,
-        "7": 1
+        "2": 1,
+        "8": 1
       }
     },
     "three_hit_one": {
       "name": "最強3中1",
       "hit_goal": 1,
       "numbers": [
-        5,
-        7,
-        22
+        12,
+        40,
+        48
       ],
-      "score_sum": 1.86024,
-      "avg_score": 0.62008,
+      "score_sum": 1.55425,
+      "avg_score": 0.51808,
       "theoretical_probability": 0.330167,
       "zones": {
-        "01-10": 2,
-        "21-30": 1
+        "11-20": 1,
+        "31-40": 1,
+        "41-49": 1
       },
       "tails": {
-        "5": 1,
-        "7": 1,
-        "2": 1
+        "2": 1,
+        "0": 1,
+        "8": 1
       }
     },
     "five_hit_two": {
       "name": "最強5中2",
       "hit_goal": 2,
       "numbers": [
-        5,
-        7,
-        22,
-        25,
-        43
+        12,
+        29,
+        40,
+        47,
+        48
       ],
-      "score_sum": 2.94217,
-      "avg_score": 0.58843,
+      "score_sum": 2.56277,
+      "avg_score": 0.51255,
       "theoretical_probability": 0.10689,
       "zones": {
-        "01-10": 2,
-        "21-30": 2,
-        "41-49": 1
+        "11-20": 1,
+        "21-30": 1,
+        "31-40": 1,
+        "41-49": 2
       },
       "tails": {
-        "5": 2,
-        "7": 1,
         "2": 1,
-        "3": 1
+        "9": 1,
+        "0": 1,
+        "7": 1,
+        "8": 1
       }
     },
     "nine_hit_three": {
       "name": "最強9中3",
       "hit_goal": 3,
       "numbers": [
-        5,
-        7,
-        14,
-        17,
-        22,
-        25,
-        26,
-        37,
-        43
+        4,
+        6,
+        12,
+        16,
+        20,
+        29,
+        40,
+        47,
+        48
       ],
-      "score_sum": 4.91092,
-      "avg_score": 0.54566,
+      "score_sum": 4.40371,
+      "avg_score": 0.4893,
       "theoretical_probability": 0.066743,
       "zones": {
         "01-10": 2,
-        "11-20": 2,
-        "21-30": 3,
+        "11-20": 3,
+        "21-30": 1,
         "31-40": 1,
-        "41-49": 1
+        "41-49": 2
       },
       "tails": {
-        "5": 2,
-        "7": 3,
         "4": 1,
+        "6": 2,
         "2": 1,
-        "6": 1,
-        "3": 1
+        "0": 2,
+        "9": 1,
+        "7": 1,
+        "8": 1
       }
     },
     "special_single": {
       "name": "特別號最強單支",
       "hit_goal": 1,
       "numbers": [
-        37
+        31
       ],
       "theoretical_probability": 0.020408,
-      "avg_score": 0.65051
+      "avg_score": 0.52185
     },
     "special_three_watch": {
       "name": "特別號3碼觀察",
       "hit_goal": 1,
       "numbers": [
-        37,
-        30,
-        34
+        31,
+        13,
+        3
       ],
       "theoretical_probability": 0.061224,
-      "avg_score": 0.59616
+      "avg_score": 0.48624
     }
   },
   "model_upgrade_notes": [
@@ -2236,5 +2246,5 @@
     "資料新鮮度：標示最新日期、理論應更新日期與落後天數"
   ],
   "disclaimer": "本系統為歷史統計與回測研究，不保證開獎命中或獲利，請量力而為。",
-  "official_prediction_status": "updated_pending"
+  "official_prediction_status": "inserted"
 }

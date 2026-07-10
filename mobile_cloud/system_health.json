@@ -1,19 +1,19 @@
 {
   "status": "ready",
-  "draw_count": 2150,
+  "draw_count": 2151,
   "first_period": 96000001,
   "first_date": "2007-01-02",
-  "latest_period": 115000068,
-  "latest_date": "2026-07-07",
+  "latest_period": 115000069,
+  "latest_date": "2026-07-10",
   "official_download_range_note": "台灣彩券官方年度下載與月查詢 API 可取得範圍",
   "duplicate_dates": [],
   "invalid_rows": [],
   "freshness": {
     "status": "fresh",
-    "latest_date": "2026-07-07",
-    "expected_latest_date": "2026-07-07",
+    "latest_date": "2026-07-10",
+    "expected_latest_date": "2026-07-10",
     "lag_days": 0,
-    "checked_at": "2026-07-10T16:53:15"
+    "checked_at": "2026-07-11T00:38:45"
   },
-  "generated_at": "2026-07-10T16:53:15"
+  "generated_at": "2026-07-11T00:38:45"
 }

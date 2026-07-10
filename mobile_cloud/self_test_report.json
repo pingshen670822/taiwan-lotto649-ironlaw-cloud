@@ -1,22 +1,22 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-10T16:53:15",
-  "latest_period": 115000068,
-  "latest_date": "2026-07-07",
-  "target_period": 115000069,
-  "target_date": "2026-07-10",
+  "generated_at": "2026-07-11T00:38:45",
+  "latest_period": 115000069,
+  "latest_date": "2026-07-10",
+  "target_period": 115000070,
+  "target_date": "2026-07-14",
   "passed": true,
   "checks": [
     {
       "name": "database_minimum_history",
       "passed": true,
-      "detail": "2150 draws loaded"
+      "detail": "2151 draws loaded"
     },
     {
       "name": "database_export_complete",
       "passed": true,
-      "detail": "csv=2150, db=2150"
+      "detail": "csv=2151, db=2151"
     },
     {
       "name": "database_integrity",
@@ -26,7 +26,7 @@
     {
       "name": "database_freshness",
       "passed": true,
-      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-07\", \"expected_latest_date\": \"2026-07-07\", \"lag_days\": 0, \"checked_at\": \"2026-07-10T16:53:15\"}"
+      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-10\", \"expected_latest_date\": \"2026-07-10\", \"lag_days\": 0, \"checked_at\": \"2026-07-11T00:38:45\"}"
     },
     {
       "name": "main_candidates_complete",
@@ -71,7 +71,7 @@
     {
       "name": "adaptive_ensemble_backtest",
       "passed": true,
-      "detail": "rounds=520, top12_edge=0.037, top18_edge=0.034"
+      "detail": "rounds=520, top12_edge=0.025, top18_edge=0.031"
     },
     {
       "name": "weights_complete",
@@ -81,7 +81,7 @@
     {
       "name": "weights_normalized",
       "passed": true,
-      "detail": "sum=0.9999"
+      "detail": "sum=1.0000"
     },
     {
       "name": "strong_packs_complete",
@@ -101,7 +101,7 @@
     {
       "name": "prediction_saved",
       "passed": true,
-      "detail": "updated_pending"
+      "detail": "inserted"
     },
     {
       "name": "daily_cloud_self_heal_workflow",
