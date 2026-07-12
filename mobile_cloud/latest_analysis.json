@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-13T02:10:40",
+  "generated_at": "2026-07-13T07:38:57",
   "history_info": {
     "status": "ready",
     "draw_count": 2151,
@@ -17,9 +17,9 @@
       "latest_date": "2026-07-10",
       "expected_latest_date": "2026-07-10",
       "lag_days": 0,
-      "checked_at": "2026-07-13T02:10:40"
+      "checked_at": "2026-07-13T07:38:57"
     },
-    "generated_at": "2026-07-13T02:10:40"
+    "generated_at": "2026-07-13T07:38:57"
   },
   "latest_draw": {
     "period": 115000069,
@@ -45,7 +45,7 @@
     "latest_date": "2026-07-10",
     "expected_latest_date": "2026-07-10",
     "lag_days": 0,
-    "checked_at": "2026-07-13T02:10:40"
+    "checked_at": "2026-07-13T07:38:57"
   },
   "failure_review": {
     "has_review": true,
