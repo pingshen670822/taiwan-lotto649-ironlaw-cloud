@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透鐵律預測系統",
   "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-15T02:16:49",
+  "generated_at": "2026-07-15T02:48:32",
   "history_info": {
     "status": "ready",
     "draw_count": 2152,
@@ -17,9 +17,9 @@
       "latest_date": "2026-07-14",
       "expected_latest_date": "2026-07-14",
       "lag_days": 0,
-      "checked_at": "2026-07-15T02:16:49"
+      "checked_at": "2026-07-15T02:48:32"
     },
-    "generated_at": "2026-07-15T02:16:49"
+    "generated_at": "2026-07-15T02:48:32"
   },
   "latest_draw": {
     "period": 115000070,
@@ -45,7 +45,7 @@
     "latest_date": "2026-07-14",
     "expected_latest_date": "2026-07-14",
     "lag_days": 0,
-    "checked_at": "2026-07-15T02:16:49"
+    "checked_at": "2026-07-15T02:48:32"
   },
   "failure_review": {
     "has_review": true,
@@ -2241,5 +2241,5 @@
     "資料新鮮度：標示最新日期、理論應更新日期與落後天數"
   ],
   "disclaimer": "本系統為歷史統計與回測研究，不保證開獎命中或獲利，請量力而為。",
-  "official_prediction_status": "inserted"
+  "official_prediction_status": "updated_pending"
 }
