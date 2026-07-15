@@ -1,137 +1,70 @@
 {
-  "system": "台灣大樂透鐵律預測系統",
-  "version": "lotto649_ironlaw_cloud_v8_20260706_three_hour_self_heal_sync",
-  "generated_at": "2026-07-15T07:38:41",
+  "system": "台灣大樂透新世代鐵律預測系統",
+  "generated_at": "2026-07-15",
+  "passed": true,
   "latest_period": 115000070,
   "latest_date": "2026-07-14",
-  "target_period": 115000071,
   "target_date": "2026-07-17",
-  "passed": true,
   "checks": [
     {
-      "name": "database_minimum_history",
+      "name": "official_history_complete",
       "passed": true,
-      "detail": "2152 draws loaded"
+      "detail": "2152 draws"
     },
     {
-      "name": "database_export_complete",
+      "name": "official_history_latest",
       "passed": true,
-      "detail": "csv=2152, db=2152"
+      "detail": "115000070 2026-07-14"
     },
     {
-      "name": "database_integrity",
+      "name": "release_gate",
       "passed": true,
-      "detail": "no invalid rows or duplicate dates"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須同時通過前段命中與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.295e-05, \"special_edge\": 8.546e-05, \"main_avg_hits\": 1.5096, \"main_random_hits\": 1.4694, \"special_avg_hits\": 0.0712, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.11727416}"
     },
     {
-      "name": "database_freshness",
+      "name": "walk_forward_520",
       "passed": true,
-      "detail": "{\"status\": \"fresh\", \"latest_date\": \"2026-07-14\", \"expected_latest_date\": \"2026-07-14\", \"lag_days\": 0, \"checked_at\": \"2026-07-15T07:38:41\"}"
+      "detail": "520"
     },
     {
-      "name": "main_candidates_complete",
+      "name": "main_hit_edge",
       "passed": true,
-      "detail": "49 candidates"
+      "detail": "1.5096 > 1.4694"
     },
     {
-      "name": "main_candidates_valid",
+      "name": "special_hit_edge",
       "passed": true,
-      "detail": "all main candidates are 1-49"
+      "detail": "0.0712 > 0.0612"
     },
     {
-      "name": "special_candidates_complete",
+      "name": "no_model_monopoly",
       "passed": true,
-      "detail": "49 candidates"
+      "detail": "0.11727416"
     },
     {
-      "name": "special_candidates_valid",
+      "name": "candidate_49",
       "passed": true,
-      "detail": "all special candidates are 1-49"
+      "detail": "main/special 49"
     },
     {
-      "name": "strategy_modules_present",
+      "name": "suggested_sets",
       "passed": true,
-      "detail": "missing=[]"
+      "detail": "8 valid sets"
     },
     {
-      "name": "backtest_depth",
+      "name": "artifacts_complete",
       "passed": true,
-      "detail": "rounds=520"
+      "detail": "all report and cloud files"
     },
     {
-      "name": "recent_backtest_depth",
+      "name": "report_cloud_sync",
       "passed": true,
-      "detail": "rounds=180"
+      "detail": "byte-identical"
     },
     {
-      "name": "adaptive_calibration_present",
+      "name": "independent_branding",
       "passed": true,
-      "detail": "dual_window_edge_shrink_v3"
-    },
-    {
-      "name": "adaptive_ensemble_backtest",
-      "passed": true,
-      "detail": "rounds=520, top12_edge=0.018, top18_edge=0.059"
-    },
-    {
-      "name": "weights_complete",
-      "passed": true,
-      "detail": "weights=['bayes_global', 'chi_square_balance', 'ewma_fast', 'ewma_slow', 'gap_hazard', 'heat_long', 'heat_mid', 'heat_short', 'markov_transition', 'mirror', 'omission', 'pair', 'repeat_neighbor', 'special_bridge', 'tail_zone']"
-    },
-    {
-      "name": "weights_normalized",
-      "passed": true,
-      "detail": "sum=1.0000"
-    },
-    {
-      "name": "strong_packs_complete",
-      "passed": true,
-      "detail": "missing=[]"
-    },
-    {
-      "name": "suggested_sets_count",
-      "passed": true,
-      "detail": "8 sets"
-    },
-    {
-      "name": "suggested_sets_valid",
-      "passed": true,
-      "detail": "6 unique main numbers plus independent special number"
-    },
-    {
-      "name": "prediction_saved",
-      "passed": true,
-      "detail": "updated_pending"
-    },
-    {
-      "name": "daily_cloud_self_heal_workflow",
-      "passed": true,
-      "detail": "3-hour schedule, repair rebuild, and self-test verification present"
-    },
-    {
-      "name": "three_hour_auto_repair_sync",
-      "passed": true,
-      "detail": "every 3 hours checks latest data, repairs failures, commits, and pushes synced reports"
-    },
-    {
-      "name": "report_artifacts_present",
-      "passed": true,
-      "detail": "missing=[]"
-    },
-    {
-      "name": "battle_report_539_spec",
-      "passed": true,
-      "detail": "missing=[]"
-    },
-    {
-      "name": "computer_mobile_pages_sync",
-      "passed": true,
-      "detail": "mismatches=[]"
-    },
-    {
-      "name": "published_version_consistency",
-      "passed": true,
-      "detail": "mismatches=[]"
+      "detail": "{}"
     }
   ]
 }
