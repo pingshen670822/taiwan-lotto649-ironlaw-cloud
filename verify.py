@@ -18,14 +18,15 @@ def main():
     add("candidate_49",len(analysis["main_rank"])==49 and len(analysis["special_rank"])==49,"main/special 49")
     add("suggested_sets",len(analysis["suggested_sets"])==8 and all(len(set(x))==6 for x in analysis["suggested_sets"]),"8 valid sets")
     required=["index.html","latest_battle_report.html","latest_analysis.json","prediction_history.json","version.json","style.css","app.js","service-worker.js","manifest.webmanifest"]
-    add("artifacts_complete",all((ROOT/base/x).exists() for base in ("reports","site","docs") for x in required),"all report and cloud files")
-    add("report_cloud_sync",all(sha(ROOT/"reports"/x)==sha(ROOT/"site"/x)==sha(ROOT/"docs"/x) for x in required),"byte-identical")
+    cloud_bases=(ROOT/"reports",ROOT/"site",ROOT/"docs",ROOT/"mobile_cloud",ROOT/"docs/mobile_cloud")
+    add("artifacts_complete",all((base/x).exists() for base in cloud_bases for x in required),"desktop, site, Pages and independent mobile files")
+    add("report_cloud_sync",all(len({sha(base/x) for base in cloud_bases})==1 for x in required),"all five destinations byte-identical")
     banned=["天天樂","tiantianle","Fantasy","California"]
     files=[ROOT/"engine.py",ROOT/"update.py",ROOT/"report.py",ROOT/"README.md",ROOT/"site/index.html",ROOT/"reports/latest_analysis.json"]
     found={term:[str(p.relative_to(ROOT)) for p in files if p.exists() and term.lower() in p.read_text(encoding="utf-8").lower()] for term in banned}
     found={k:v for k,v in found.items() if v}; add("independent_branding",not found,json.dumps(found,ensure_ascii=False))
     report={"system":analysis["system"],"generated_at":analysis["generated_at"],"passed":all(x["passed"] for x in checks),"latest_period":draws[-1].period,"latest_date":draws[-1].draw_date,"target_date":analysis["target_date"],"checks":checks}
     text=json.dumps(report,ensure_ascii=False,indent=2)
-    for base in ("reports","site","docs"): (ROOT/base/"self_test_report.json").write_text(text,encoding="utf-8")
+    for base in cloud_bases: (base/"self_test_report.json").write_text(text,encoding="utf-8")
     print(text); return 0 if report["passed"] else 1
 if __name__=="__main__": sys.exit(main())

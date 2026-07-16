@@ -1,7 +1,8 @@
 from __future__ import annotations
 import csv,json,urllib.parse,urllib.request
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from engine import ROOT,load_draws,analyze
 from report import build_reports
 
@@ -47,6 +48,7 @@ def settle_and_save(result: dict):
 
 def main():
     count=update_current_month(); draws=load_draws(); result=analyze(draws)
+    result["generated_at"]=datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
     if not result["release_gate"]["passed"]: raise RuntimeError("release gate failed; reports and cloud were not overwritten")
     history=settle_and_save(result); build_reports(result,history)
     print(json.dumps({"draws":count,"latest":result["latest_draw"],"target":result["target_date"],"gate":result["release_gate"]},ensure_ascii=False,indent=2))

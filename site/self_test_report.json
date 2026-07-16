@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-07-15",
+  "generated_at": "2026-07-16T13:48:25+08:00",
   "passed": true,
   "latest_period": 115000070,
   "latest_date": "2026-07-14",
@@ -54,12 +54,12 @@
     {
       "name": "artifacts_complete",
       "passed": true,
-      "detail": "all report and cloud files"
+      "detail": "desktop, site, Pages and independent mobile files"
     },
     {
       "name": "report_cloud_sync",
       "passed": true,
-      "detail": "byte-identical"
+      "detail": "all five destinations byte-identical"
     },
     {
       "name": "independent_branding",

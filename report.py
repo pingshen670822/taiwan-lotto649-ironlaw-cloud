@@ -2,10 +2,13 @@ from __future__ import annotations
 import hashlib,html,json,shutil
 from collections import defaultdict
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from engine import ROOT
 
 REPORTS=ROOT/"reports"; SITE=ROOT/"site"; DOCS=ROOT/"docs"
+MOBILE=ROOT/"mobile_cloud"; DOCS_MOBILE=DOCS/"mobile_cloud"
+TAIPEI=ZoneInfo("Asia/Taipei")
 def e(x): return html.escape(str(x))
 def balls(nums,kind=""): return "".join(f'<span class="ball {kind}">{int(n):02d}</span>' for n in nums)
 def table(head,rows,empty="目前沒有已結算資料"):
@@ -32,7 +35,7 @@ def monthly_rows(history):
     return out
 
 def build_reports(a,history):
-    REPORTS.mkdir(exist_ok=True); SITE.mkdir(exist_ok=True); DOCS.mkdir(exist_ok=True)
+    for base in (REPORTS,SITE,DOCS,MOBILE,DOCS_MOBILE): base.mkdir(parents=True,exist_ok=True)
     cand=a["main_rank"][:18]; bt=a["backtest"]
     candidate_rows=[[x["rank"],balls([x["number"]]),f'{x["probability"]*100:.3f}%'] for x in cand]
     model_rows=[[e(n),f'{bt["main"]["weights"][n]*100:.2f}%',f'{bt["main"]["model_avg_hits"][n]:.3f}',f'{bt["main"]["model_logloss"][n]:.6f}'] for n in bt["main"]["names"]]
@@ -53,6 +56,6 @@ def build_reports(a,history):
 <p class="notice">{e(a['notice'])}</p></main><footer>資料基準 {a['latest_draw']['date']}・目標 {a['target_date']}・核心 {a['engine']}</footer><script src="app.js"></script></body></html>'''
     css='''*{box-sizing:border-box}body{margin:0;background:#fff7ea;color:#281916;font-family:system-ui,"Noto Sans TC",sans-serif}header{padding:30px 16px;text-align:center;color:#fff;background:linear-gradient(135deg,#611017,#b72b22)}header h1{margin:0}nav{position:sticky;top:0;z-index:5;display:flex;overflow:auto;background:#fff;box-shadow:0 3px 14px #0002}nav button{min-width:105px;flex:1;padding:14px 8px;border:0;background:#fff;font-weight:800}nav button.on{color:#971923;border-bottom:4px solid #971923}main{max-width:1050px;margin:auto;padding:18px}.tab{display:none}.tab.active{display:block}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cards article,.pack,.set{background:#fff;border-radius:16px;padding:16px;margin:10px 0;box-shadow:0 4px 18px #5d1b1015}.cards b,.cards strong,.cards small{display:block;margin:5px}.pass{color:#087348}.pack{border-left:6px solid #ac7a1f}.low{border-color:#596576}.specialpack{border-color:#d08a00}.ball{display:inline-grid;place-items:center;width:39px;height:39px;margin:4px;border-radius:50%;background:#a71c23;color:white;font-weight:900}.actual{background:#087348}.avoid{background:#596576}.specialball,.special{background:#d08a00}.special{display:inline-block;padding:8px;color:#fff;border-radius:10px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:10px;border-bottom:1px solid #ead7c4;text-align:left}.notice,footer{text-align:center;padding:18px;color:#6b5049}@media(max-width:680px){.cards{grid-template-columns:1fr}.ball{width:34px;height:34px;margin:3px}th,td{min-width:90px;font-size:14px}}'''
     js='''document.querySelectorAll('nav button').forEach((b,i)=>{if(!i)b.classList.add('on');b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));document.getElementById(b.dataset.tab).classList.add('active');b.classList.add('on')}});if('serviceWorker'in navigator)navigator.serviceWorker.register('service-worker.js');'''
-    analysis=json.dumps(a,ensure_ascii=False,indent=2); version={"updated_at":datetime.now().isoformat(timespec="seconds"),"latest_period":a["latest_draw"]["period"],"hash":hashlib.sha256(analysis.encode()).hexdigest()[:16]}
-    for base in (REPORTS,SITE,DOCS):
+    analysis=json.dumps(a,ensure_ascii=False,indent=2); version={"updated_at":datetime.now(TAIPEI).isoformat(timespec="seconds"),"latest_period":a["latest_draw"]["period"],"hash":hashlib.sha256(analysis.encode()).hexdigest()[:16]}
+    for base in (REPORTS,SITE,DOCS,MOBILE,DOCS_MOBILE):
         (base/"index.html").write_text(html_text,encoding="utf-8"); (base/"latest_battle_report.html").write_text(html_text,encoding="utf-8"); (base/"latest_analysis.json").write_text(analysis,encoding="utf-8"); (base/"prediction_history.json").write_text(json.dumps(history,ensure_ascii=False,indent=2),encoding="utf-8"); (base/"version.json").write_text(json.dumps(version,ensure_ascii=False,indent=2),encoding="utf-8"); (base/"style.css").write_text(css,encoding="utf-8"); (base/"app.js").write_text(js,encoding="utf-8"); (base/"manifest.webmanifest").write_text(json.dumps({"name":"台灣大樂透新世代鐵律戰報","short_name":"大樂透戰報","start_url":"./","display":"standalone","theme_color":"#86151b","background_color":"#fff7ea"},ensure_ascii=False),encoding="utf-8"); (base/"service-worker.js").write_text("const C='tw649-new-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(['./','index.html','style.css','app.js']))));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))))",encoding="utf-8")

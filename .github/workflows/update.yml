@@ -27,5 +27,5 @@ jobs:
         run: |
           git config user.name "tw649-new-engine-bot"
           git config user.email "actions@github.com"
-          git add data reports site docs
+          git add data reports site docs mobile_cloud
           git diff --cached --quiet || (git commit -m "大樂透新核心開獎後自動更新" && git push)
