@@ -1,459 +1,459 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_online_ensemble_v2",
-  "generated_at": "2026-07-17T21:00:34+08:00",
+  "generated_at": "2026-07-21T09:02:33+08:00",
   "history": {
-    "count": 2152,
+    "count": 2153,
     "first": "2007-01-02",
-    "latest": "2026-07-14",
-    "latest_period": 115000070
+    "latest": "2026-07-17",
+    "latest_period": 115000071
   },
   "latest_draw": {
-    "period": 115000070,
-    "date": "2026-07-14",
+    "period": 115000071,
+    "date": "2026-07-17",
     "main": [
-      10,
-      25,
-      34,
-      36,
-      45,
-      46
+      1,
+      6,
+      12,
+      14,
+      17,
+      26
     ],
-    "special": 7
+    "special": 24
   },
-  "target_date": "2026-07-17",
+  "target_date": "2026-07-21",
   "main_rank": [
     {
       "rank": 1,
       "number": 29,
-      "probability": 0.134214
+      "probability": 0.131254
     },
     {
       "rank": 2,
       "number": 25,
-      "probability": 0.129745
+      "probability": 0.130029
     },
     {
       "rank": 3,
-      "number": 18,
-      "probability": 0.12918
+      "number": 12,
+      "probability": 0.129192
     },
     {
       "rank": 4,
       "number": 16,
-      "probability": 0.128818
+      "probability": 0.128544
     },
     {
       "rank": 5,
-      "number": 39,
-      "probability": 0.127753
+      "number": 18,
+      "probability": 0.128335
     },
     {
       "rank": 6,
-      "number": 4,
-      "probability": 0.127217
+      "number": 6,
+      "probability": 0.126661
     },
     {
       "rank": 7,
       "number": 11,
-      "probability": 0.127192
+      "probability": 0.126392
     },
     {
       "rank": 8,
-      "number": 10,
-      "probability": 0.126418
+      "number": 39,
+      "probability": 0.126315
     },
     {
       "rank": 9,
-      "number": 19,
-      "probability": 0.125653
+      "number": 10,
+      "probability": 0.125874
     },
     {
       "rank": 10,
-      "number": 49,
-      "probability": 0.125601
+      "number": 19,
+      "probability": 0.125829
     },
     {
       "rank": 11,
-      "number": 12,
-      "probability": 0.125563
+      "number": 26,
+      "probability": 0.12579
     },
     {
       "rank": 12,
-      "number": 20,
-      "probability": 0.125503
+      "number": 4,
+      "probability": 0.125435
     },
     {
       "rank": 13,
-      "number": 48,
-      "probability": 0.125478
+      "number": 36,
+      "probability": 0.124901
     },
     {
       "rank": 14,
-      "number": 36,
-      "probability": 0.125402
+      "number": 20,
+      "probability": 0.124616
     },
     {
       "rank": 15,
-      "number": 15,
-      "probability": 0.124668
+      "number": 45,
+      "probability": 0.12435
     },
     {
       "rank": 16,
-      "number": 47,
-      "probability": 0.124092
+      "number": 48,
+      "probability": 0.1243
     },
     {
       "rank": 17,
-      "number": 45,
-      "probability": 0.123673
+      "number": 49,
+      "probability": 0.124258
     },
     {
       "rank": 18,
-      "number": 26,
-      "probability": 0.12342
+      "number": 47,
+      "probability": 0.124035
     },
     {
       "rank": 19,
-      "number": 23,
-      "probability": 0.12315
+      "number": 14,
+      "probability": 0.123938
     },
     {
       "rank": 20,
-      "number": 6,
-      "probability": 0.123013
+      "number": 23,
+      "probability": 0.122893
     },
     {
       "rank": 21,
-      "number": 37,
-      "probability": 0.122952
+      "number": 1,
+      "probability": 0.122457
     },
     {
       "rank": 22,
-      "number": 34,
-      "probability": 0.122859
+      "number": 13,
+      "probability": 0.122296
     },
     {
       "rank": 23,
-      "number": 40,
-      "probability": 0.122823
+      "number": 17,
+      "probability": 0.12204
     },
     {
       "rank": 24,
-      "number": 13,
-      "probability": 0.122422
+      "number": 46,
+      "probability": 0.121981
     },
     {
       "rank": 25,
-      "number": 35,
-      "probability": 0.122254
+      "number": 34,
+      "probability": 0.121955
     },
     {
       "rank": 26,
-      "number": 28,
-      "probability": 0.122029
+      "number": 33,
+      "probability": 0.121939
     },
     {
       "rank": 27,
-      "number": 22,
-      "probability": 0.121942
+      "number": 37,
+      "probability": 0.121867
     },
     {
       "rank": 28,
-      "number": 46,
-      "probability": 0.121749
+      "number": 22,
+      "probability": 0.121856
     },
     {
       "rank": 29,
-      "number": 14,
-      "probability": 0.121195
+      "number": 28,
+      "probability": 0.12174
     },
     {
       "rank": 30,
-      "number": 33,
-      "probability": 0.120258
+      "number": 15,
+      "probability": 0.12158
     },
     {
       "rank": 31,
-      "number": 41,
-      "probability": 0.120253
+      "number": 40,
+      "probability": 0.121273
     },
     {
       "rank": 32,
-      "number": 8,
-      "probability": 0.120203
+      "number": 41,
+      "probability": 0.121003
     },
     {
       "rank": 33,
-      "number": 7,
-      "probability": 0.120088
+      "number": 35,
+      "probability": 0.120954
     },
     {
       "rank": 34,
-      "number": 24,
-      "probability": 0.11982
+      "number": 7,
+      "probability": 0.120311
     },
     {
       "rank": 35,
-      "number": 3,
-      "probability": 0.119726
+      "number": 24,
+      "probability": 0.119992
     },
     {
       "rank": 36,
-      "number": 43,
-      "probability": 0.11958
+      "number": 8,
+      "probability": 0.119988
     },
     {
       "rank": 37,
-      "number": 5,
-      "probability": 0.119426
+      "number": 43,
+      "probability": 0.119631
     },
     {
       "rank": 38,
-      "number": 32,
-      "probability": 0.119142
+      "number": 27,
+      "probability": 0.119572
     },
     {
       "rank": 39,
-      "number": 27,
-      "probability": 0.119105
+      "number": 3,
+      "probability": 0.118946
     },
     {
       "rank": 40,
-      "number": 21,
-      "probability": 0.118904
+      "number": 2,
+      "probability": 0.118887
     },
     {
       "rank": 41,
-      "number": 2,
-      "probability": 0.118771
+      "number": 5,
+      "probability": 0.118742
     },
     {
       "rank": 42,
-      "number": 42,
-      "probability": 0.118607
+      "number": 32,
+      "probability": 0.118585
     },
     {
       "rank": 43,
-      "number": 1,
-      "probability": 0.11852
+      "number": 21,
+      "probability": 0.117938
     },
     {
       "rank": 44,
       "number": 30,
-      "probability": 0.117891
+      "probability": 0.117826
     },
     {
       "rank": 45,
-      "number": 17,
-      "probability": 0.117822
+      "number": 38,
+      "probability": 0.117583
     },
     {
       "rank": 46,
-      "number": 38,
-      "probability": 0.117614
+      "number": 42,
+      "probability": 0.117527
     },
     {
       "rank": 47,
       "number": 9,
-      "probability": 0.117213
+      "probability": 0.117165
     },
     {
       "rank": 48,
-      "number": 44,
-      "probability": 0.115798
+      "number": 31,
+      "probability": 0.116605
     },
     {
       "rank": 49,
-      "number": 31,
-      "probability": 0.115283
+      "number": 44,
+      "probability": 0.114818
     }
   ],
   "special_rank": [
     {
       "rank": 1,
       "number": 30,
-      "probability": 0.025966
+      "probability": 0.025809
     },
     {
       "rank": 2,
-      "number": 34,
-      "probability": 0.024777
+      "number": 37,
+      "probability": 0.024176
     },
     {
       "rank": 3,
-      "number": 37,
-      "probability": 0.024311
+      "number": 34,
+      "probability": 0.023941
     },
     {
       "rank": 4,
-      "number": 13,
-      "probability": 0.023629
+      "number": 7,
+      "probability": 0.023443
     },
     {
       "rank": 5,
-      "number": 31,
-      "probability": 0.022871
+      "number": 24,
+      "probability": 0.023143
     },
     {
       "rank": 6,
-      "number": 7,
-      "probability": 0.022713
+      "number": 13,
+      "probability": 0.022693
     },
     {
       "rank": 7,
-      "number": 15,
-      "probability": 0.022098
+      "number": 31,
+      "probability": 0.022041
     },
     {
       "rank": 8,
-      "number": 2,
-      "probability": 0.021957
+      "number": 15,
+      "probability": 0.021985
     },
     {
       "rank": 9,
-      "number": 1,
-      "probability": 0.021742
+      "number": 2,
+      "probability": 0.021967
     },
     {
       "rank": 10,
-      "number": 3,
-      "probability": 0.021523
+      "number": 38,
+      "probability": 0.021783
     },
     {
       "rank": 11,
-      "number": 38,
-      "probability": 0.02138
+      "number": 47,
+      "probability": 0.021767
     },
     {
       "rank": 12,
-      "number": 14,
-      "probability": 0.02137
+      "number": 1,
+      "probability": 0.021638
     },
     {
       "rank": 13,
-      "number": 45,
-      "probability": 0.021356
+      "number": 3,
+      "probability": 0.021452
     },
     {
       "rank": 14,
-      "number": 47,
-      "probability": 0.021277
+      "number": 45,
+      "probability": 0.021308
     },
     {
       "rank": 15,
       "number": 27,
-      "probability": 0.021103
+      "probability": 0.021063
     },
     {
       "rank": 16,
       "number": 10,
-      "probability": 0.021035
+      "probability": 0.021017
     },
     {
       "rank": 17,
-      "number": 41,
-      "probability": 0.020934
+      "number": 14,
+      "probability": 0.020862
     },
     {
       "rank": 18,
       "number": 8,
-      "probability": 0.020886
+      "probability": 0.020857
     },
     {
       "rank": 19,
-      "number": 48,
-      "probability": 0.020819
+      "number": 46,
+      "probability": 0.020786
     },
     {
       "rank": 20,
-      "number": 46,
-      "probability": 0.020804
+      "number": 48,
+      "probability": 0.020778
     },
     {
       "rank": 21,
       "number": 28,
-      "probability": 0.020606
+      "probability": 0.020591
     },
     {
       "rank": 22,
-      "number": 24,
-      "probability": 0.020501
+      "number": 22,
+      "probability": 0.020396
     },
     {
       "rank": 23,
       "number": 42,
-      "probability": 0.020298
+      "probability": 0.020212
     },
     {
       "rank": 24,
       "number": 11,
-      "probability": 0.02016
+      "probability": 0.020121
     },
     {
       "rank": 25,
-      "number": 22,
-      "probability": 0.019937
+      "number": 41,
+      "probability": 0.020069
     },
     {
       "rank": 26,
       "number": 21,
-      "probability": 0.01989
+      "probability": 0.019911
     },
     {
       "rank": 27,
-      "number": 43,
-      "probability": 0.01981
+      "number": 39,
+      "probability": 0.01991
     },
     {
       "rank": 28,
-      "number": 6,
-      "probability": 0.019786
+      "number": 43,
+      "probability": 0.019792
     },
     {
       "rank": 29,
-      "number": 35,
-      "probability": 0.019642
+      "number": 6,
+      "probability": 0.019773
     },
     {
       "rank": 30,
-      "number": 39,
-      "probability": 0.019406
+      "number": 35,
+      "probability": 0.019634
     },
     {
       "rank": 31,
       "number": 12,
-      "probability": 0.01933
+      "probability": 0.019322
     },
     {
       "rank": 32,
       "number": 18,
-      "probability": 0.019284
+      "probability": 0.019266
     },
     {
       "rank": 33,
       "number": 36,
-      "probability": 0.019263
+      "probability": 0.019259
     },
     {
       "rank": 34,
       "number": 33,
-      "probability": 0.019256
+      "probability": 0.019253
     },
     {
       "rank": 35,
       "number": 17,
-      "probability": 0.019238
+      "probability": 0.0191
     },
     {
       "rank": 36,
       "number": 26,
-      "probability": 0.018991
+      "probability": 0.018997
     },
     {
       "rank": 37,
       "number": 49,
-      "probability": 0.018966
+      "probability": 0.018971
     },
     {
       "rank": 38,
@@ -462,58 +462,58 @@
     },
     {
       "rank": 39,
-      "number": 4,
-      "probability": 0.018785
+      "number": 19,
+      "probability": 0.018752
     },
     {
       "rank": 40,
-      "number": 9,
-      "probability": 0.018774
+      "number": 4,
+      "probability": 0.018748
     },
     {
       "rank": 41,
-      "number": 19,
-      "probability": 0.018754
+      "number": 20,
+      "probability": 0.018724
     },
     {
       "rank": 42,
-      "number": 20,
-      "probability": 0.018736
+      "number": 25,
+      "probability": 0.018721
     },
     {
       "rank": 43,
-      "number": 25,
-      "probability": 0.018717
+      "number": 9,
+      "probability": 0.018638
     },
     {
       "rank": 44,
       "number": 32,
-      "probability": 0.01854
+      "probability": 0.018541
     },
     {
       "rank": 45,
       "number": 44,
-      "probability": 0.018483
+      "probability": 0.018485
     },
     {
       "rank": 46,
-      "number": 29,
-      "probability": 0.01848
+      "number": 16,
+      "probability": 0.018479
     },
     {
       "rank": 47,
-      "number": 16,
-      "probability": 0.018478
+      "number": 29,
+      "probability": 0.018476
     },
     {
       "rank": 48,
       "number": 23,
-      "probability": 0.018286
+      "probability": 0.018291
     },
     {
       "rank": 49,
       "number": 5,
-      "probability": 0.01815
+      "probability": 0.018154
     }
   ],
   "packs": {
@@ -527,59 +527,59 @@
     "三中一": [
       29,
       25,
-      18
+      12
     ],
     "五中二": [
       29,
       25,
-      18,
+      12,
       16,
-      39
+      18
     ],
     "九中三": [
       29,
       25,
-      18,
+      12,
       16,
-      39,
-      4,
+      18,
+      6,
       11,
-      10,
-      19
+      39,
+      10
     ],
     "主攻12碼": [
       29,
       25,
-      18,
+      12,
       16,
-      39,
-      4,
+      18,
+      6,
       11,
+      39,
       10,
       19,
-      49,
-      12,
-      20
+      26,
+      4
     ],
     "防守18碼": [
       29,
       25,
-      18,
+      12,
       16,
-      39,
-      4,
+      18,
+      6,
       11,
+      39,
       10,
       19,
-      49,
-      12,
-      20,
-      48,
+      26,
+      4,
       36,
-      15,
-      47,
+      20,
       45,
-      26
+      48,
+      49,
+      47
     ]
   },
   "special_packs": {
@@ -588,38 +588,38 @@
     ],
     "三碼觀察": [
       30,
-      34,
-      37
+      37,
+      34
     ]
   },
   "avoid": {
     "五不中": [
       9,
-      17,
-      31,
-      38,
-      44
-    ],
-    "十不中": [
-      1,
-      2,
-      9,
-      17,
-      21,
-      30,
       31,
       38,
       42,
       44
     ],
+    "十不中": [
+      2,
+      5,
+      9,
+      21,
+      30,
+      31,
+      32,
+      38,
+      42,
+      44
+    ],
     "十五不中": [
-      1,
       2,
       3,
       5,
+      8,
       9,
-      17,
       21,
+      24,
       27,
       30,
       31,
@@ -632,16 +632,8 @@
   },
   "suggested_sets": [
     [
-      4,
-      16,
-      18,
-      25,
-      29,
-      39
-    ],
-    [
-      10,
-      11,
+      6,
+      12,
       16,
       18,
       25,
@@ -650,50 +642,58 @@
     [
       11,
       12,
-      18,
-      25,
-      29,
-      39
-    ],
-    [
-      11,
       16,
-      20,
       25,
       29,
       39
     ],
     [
-      4,
+      10,
       11,
+      12,
       18,
+      25,
+      29
+    ],
+    [
+      12,
+      18,
+      19,
+      25,
+      29,
+      39
+    ],
+    [
+      10,
+      12,
+      16,
       19,
       25,
       29
     ],
     [
-      16,
-      18,
-      19,
-      25,
-      29,
-      49
-    ],
-    [
-      12,
-      16,
-      18,
-      25,
-      29,
-      48
-    ],
-    [
       10,
+      16,
       18,
-      19,
       25,
       29,
       39
+    ],
+    [
+      11,
+      16,
+      18,
+      25,
+      26,
+      29
+    ],
+    [
+      4,
+      12,
+      16,
+      25,
+      26,
+      29
     ]
   ],
   "backtest": {
@@ -713,895 +713,888 @@
         "regime_slope"
       ],
       "weights": {
-        "bayes_24": 0.09710201,
-        "bayes_60": 0.10846749,
-        "bayes_150": 0.08622118,
-        "bayes_360": 0.05686625,
-        "ewma_8": 0.07768796,
-        "ewma_21": 0.08620957,
-        "ewma_55": 0.08240975,
-        "ewma_144": 0.0843854,
-        "empirical_hazard": 0.10691951,
-        "conditional_pair": 0.11727416,
-        "regime_slope": 0.09645671
+        "bayes_24": 0.09651796,
+        "bayes_60": 0.10779196,
+        "bayes_150": 0.08721197,
+        "bayes_360": 0.05974309,
+        "ewma_8": 0.07753021,
+        "ewma_21": 0.08734061,
+        "ewma_55": 0.08186807,
+        "ewma_144": 0.0839043,
+        "empirical_hazard": 0.10427366,
+        "conditional_pair": 0.11424153,
+        "regime_slope": 0.09957664
       },
       "model_logloss": {
-        "bayes_24": 0.37329105,
-        "bayes_60": 0.37260997,
-        "bayes_150": 0.37231399,
-        "bayes_360": 0.37254134,
-        "ewma_8": 0.39974774,
-        "ewma_21": 0.38082646,
-        "ewma_55": 0.37494289,
-        "ewma_144": 0.37310664,
-        "empirical_hazard": 0.37587251,
-        "conditional_pair": 0.37472996,
-        "regime_slope": 0.3730623
+        "bayes_24": 0.37327897,
+        "bayes_60": 0.37257697,
+        "bayes_150": 0.37229783,
+        "bayes_360": 0.37253304,
+        "ewma_8": 0.39977065,
+        "ewma_21": 0.38076283,
+        "ewma_55": 0.37489383,
+        "ewma_144": 0.37308423,
+        "empirical_hazard": 0.37589573,
+        "conditional_pair": 0.37477459,
+        "regime_slope": 0.37302867
       },
       "model_avg_hits": {
         "bayes_24": 1.5,
-        "bayes_60": 1.5135,
+        "bayes_60": 1.5173,
         "bayes_150": 1.4827,
-        "bayes_360": 1.375,
+        "bayes_360": 1.3788,
         "ewma_8": 1.5077,
         "ewma_21": 1.4615,
-        "ewma_55": 1.4788,
-        "ewma_144": 1.4558,
-        "empirical_hazard": 1.4596,
-        "conditional_pair": 1.4981,
+        "ewma_55": 1.4808,
+        "ewma_144": 1.4577,
+        "empirical_hazard": 1.4577,
+        "conditional_pair": 1.4942,
         "regime_slope": 1.4231
       },
-      "ensemble_logloss": 0.37185913,
+      "ensemble_logloss": 0.37185653,
       "uniform_logloss": 0.37177618,
-      "logloss_edge": -8.295e-05,
-      "avg_hits": 1.5096,
+      "logloss_edge": -8.035e-05,
+      "avg_hits": 1.5077,
       "rows": [
-        {
-          "period": 111000017,
-          "date": "2022-02-06",
-          "hit": 0,
-          "brier": 0.10792527279255672,
-          "logloss": 0.3739494302654509
-        },
         {
           "period": 111000018,
           "date": "2022-02-07",
           "hit": 1,
-          "brier": 0.10757072146317183,
-          "logloss": 0.37228704934257834
+          "brier": 0.10782113420886132,
+          "logloss": 0.3734779008314022
         },
         {
           "period": 111000019,
           "date": "2022-02-08",
           "hit": 3,
-          "brier": 0.10689677204160404,
-          "logloss": 0.36918714158124033
+          "brier": 0.10681966538153975,
+          "logloss": 0.3688119326413646
         },
         {
           "period": 111000020,
           "date": "2022-02-09",
-          "hit": 3,
-          "brier": 0.10695250300036906,
-          "logloss": 0.3694152421365572
+          "hit": 2,
+          "brier": 0.10686998227805221,
+          "logloss": 0.369024023615819
         },
         {
           "period": 111000021,
           "date": "2022-02-10",
           "hit": 2,
-          "brier": 0.1072029724513109,
-          "logloss": 0.37060457724881674
+          "brier": 0.1072367290862831,
+          "logloss": 0.370730791985298
         },
         {
           "period": 111000022,
           "date": "2022-02-11",
           "hit": 2,
-          "brier": 0.10754929111798506,
-          "logloss": 0.3722637289419845
+          "brier": 0.10752083876165475,
+          "logloss": 0.3721256455702373
         },
         {
           "period": 111000023,
           "date": "2022-02-15",
-          "hit": 2,
-          "brier": 0.10710802337026848,
-          "logloss": 0.37016563499394955
+          "hit": 3,
+          "brier": 0.10696549434680225,
+          "logloss": 0.3695131734873641
         },
         {
           "period": 111000024,
           "date": "2022-02-18",
           "hit": 1,
-          "brier": 0.1083532993178022,
-          "logloss": 0.37598917216380257
+          "brier": 0.10835220127338734,
+          "logloss": 0.3759819327584763
         },
         {
           "period": 111000025,
           "date": "2022-02-22",
           "hit": 1,
-          "brier": 0.10758707053411584,
-          "logloss": 0.37235092570380524
+          "brier": 0.10757244673889593,
+          "logloss": 0.37227873589399474
         },
         {
           "period": 111000026,
           "date": "2022-02-25",
           "hit": 2,
-          "brier": 0.10706700121478281,
-          "logloss": 0.3699735167503838
+          "brier": 0.10707927914358976,
+          "logloss": 0.37003576186932463
         },
         {
           "period": 111000027,
           "date": "2022-03-01",
           "hit": 0,
-          "brier": 0.10798498763417096,
-          "logloss": 0.37421624568355444
+          "brier": 0.10800456077912117,
+          "logloss": 0.3743085099078907
         },
         {
           "period": 111000028,
           "date": "2022-03-04",
           "hit": 1,
-          "brier": 0.10734813682325084,
-          "logloss": 0.3712821330549966
+          "brier": 0.10732516299703872,
+          "logloss": 0.3711786552471575
         },
         {
           "period": 111000029,
           "date": "2022-03-08",
           "hit": 1,
-          "brier": 0.10758001301730112,
-          "logloss": 0.37233573097562545
+          "brier": 0.10754122703103382,
+          "logloss": 0.37215632321964454
         },
         {
           "period": 111000030,
           "date": "2022-03-11",
           "hit": 1,
-          "brier": 0.10745854081726988,
-          "logloss": 0.37176395108969296
+          "brier": 0.10748112289553854,
+          "logloss": 0.3718681874866033
         },
         {
           "period": 111000031,
           "date": "2022-03-15",
           "hit": 1,
-          "brier": 0.1078081114075358,
-          "logloss": 0.3734044896977788
+          "brier": 0.10779507767308645,
+          "logloss": 0.37334572437111885
         },
         {
           "period": 111000032,
           "date": "2022-03-18",
-          "hit": 5,
-          "brier": 0.10661897615842358,
-          "logloss": 0.3679074353267762
+          "hit": 4,
+          "brier": 0.10662601947703886,
+          "logloss": 0.3679375967614422
         },
         {
           "period": 111000033,
           "date": "2022-03-22",
           "hit": 2,
-          "brier": 0.10701546680977171,
-          "logloss": 0.3697424364752928
+          "brier": 0.10700430021835715,
+          "logloss": 0.3696891097001698
         },
         {
           "period": 111000034,
           "date": "2022-03-25",
           "hit": 0,
-          "brier": 0.10762458778858001,
-          "logloss": 0.3725155140741989
+          "brier": 0.1076239260252305,
+          "logloss": 0.37250997499128835
         },
         {
           "period": 111000035,
           "date": "2022-03-29",
           "hit": 1,
-          "brier": 0.1071631059088149,
-          "logloss": 0.37040854522810784
+          "brier": 0.10717171717316896,
+          "logloss": 0.3704488775170698
         },
         {
           "period": 111000036,
           "date": "2022-04-01",
           "hit": 0,
-          "brier": 0.10794111774701265,
-          "logloss": 0.37402632798819363
+          "brier": 0.10795843781343617,
+          "logloss": 0.374107994119089
         },
         {
           "period": 111000037,
           "date": "2022-04-05",
-          "hit": 1,
-          "brier": 0.1073331561751217,
-          "logloss": 0.3711669519164345
+          "hit": 2,
+          "brier": 0.10733089393581256,
+          "logloss": 0.37115832872727716
         },
         {
           "period": 111000038,
           "date": "2022-04-08",
-          "hit": 3,
-          "brier": 0.10728541236932011,
-          "logloss": 0.37097422533283886
+          "hit": 2,
+          "brier": 0.10729026412417332,
+          "logloss": 0.3709973754338244
         },
         {
           "period": 111000039,
           "date": "2022-04-12",
           "hit": 1,
-          "brier": 0.10740791865773676,
-          "logloss": 0.37152253610779473
+          "brier": 0.1073889328264181,
+          "logloss": 0.37143314862830695
         },
         {
           "period": 111000040,
           "date": "2022-04-15",
           "hit": 1,
-          "brier": 0.1072144945410638,
-          "logloss": 0.37063900121902627
+          "brier": 0.10720434489018073,
+          "logloss": 0.3705890806076948
         },
         {
           "period": 111000041,
           "date": "2022-04-19",
           "hit": 2,
-          "brier": 0.10758688379017459,
-          "logloss": 0.37238689162190863
+          "brier": 0.10758047811107468,
+          "logloss": 0.3723578527355337
         },
         {
           "period": 111000042,
           "date": "2022-04-22",
           "hit": 0,
-          "brier": 0.10808387026663392,
-          "logloss": 0.37473231568650084
+          "brier": 0.10808423219848795,
+          "logloss": 0.37473449677692705
         },
         {
           "period": 111000043,
           "date": "2022-04-26",
           "hit": 2,
-          "brier": 0.10755289280668709,
-          "logloss": 0.3722334563446508
+          "brier": 0.10758291489964016,
+          "logloss": 0.3723737592841076
         },
         {
           "period": 111000044,
           "date": "2022-04-29",
           "hit": 2,
-          "brier": 0.1074750351673544,
-          "logloss": 0.3719079709907839
+          "brier": 0.10747892564153906,
+          "logloss": 0.37192992846066936
         },
         {
           "period": 111000045,
           "date": "2022-05-03",
           "hit": 3,
-          "brier": 0.10679660888007105,
-          "logloss": 0.3687500280705087
+          "brier": 0.1067941345213626,
+          "logloss": 0.36873828737003556
         },
         {
           "period": 111000046,
           "date": "2022-05-06",
           "hit": 2,
-          "brier": 0.10770322949265469,
-          "logloss": 0.3729151380065836
+          "brier": 0.1077052567226295,
+          "logloss": 0.37292510128353823
         },
         {
           "period": 111000047,
           "date": "2022-05-10",
           "hit": 1,
-          "brier": 0.10773952503426992,
-          "logloss": 0.37306902035953105
+          "brier": 0.10774114371792134,
+          "logloss": 0.3730760134914703
         },
         {
           "period": 111000048,
           "date": "2022-05-13",
           "hit": 1,
-          "brier": 0.10746430741689258,
-          "logloss": 0.37179090320943475
+          "brier": 0.10746733851568767,
+          "logloss": 0.37180555561508916
         },
         {
           "period": 111000049,
           "date": "2022-05-17",
           "hit": 0,
-          "brier": 0.10786855285748159,
-          "logloss": 0.37367625069416893
+          "brier": 0.10786863055094227,
+          "logloss": 0.37367583641500607
         },
         {
           "period": 111000050,
           "date": "2022-05-20",
           "hit": 1,
-          "brier": 0.10744259143501131,
-          "logloss": 0.3717003648459607
+          "brier": 0.10744673978301922,
+          "logloss": 0.3717198782983071
         },
         {
           "period": 111000051,
           "date": "2022-05-24",
           "hit": 1,
-          "brier": 0.10769314454615812,
-          "logloss": 0.37289084786916465
+          "brier": 0.1077026785842824,
+          "logloss": 0.37293642439048846
         },
         {
           "period": 111000052,
           "date": "2022-05-27",
           "hit": 1,
-          "brier": 0.10753445485780841,
-          "logloss": 0.37216942732353936
+          "brier": 0.10754278157993459,
+          "logloss": 0.3722109927106523
         },
         {
           "period": 111000053,
           "date": "2022-05-31",
           "hit": 1,
-          "brier": 0.10765738206356014,
-          "logloss": 0.3727164786028149
+          "brier": 0.10767294515914974,
+          "logloss": 0.37278862487337133
         },
         {
           "period": 111000054,
           "date": "2022-06-03",
           "hit": 2,
-          "brier": 0.1073086679711097,
-          "logloss": 0.3711220200381142
+          "brier": 0.10732190193643165,
+          "logloss": 0.3711810969491073
         },
         {
           "period": 111000055,
           "date": "2022-06-07",
           "hit": 3,
-          "brier": 0.10691568232939451,
-          "logloss": 0.3692821784636785
+          "brier": 0.10689815684968293,
+          "logloss": 0.3692013685097192
         },
         {
           "period": 111000056,
           "date": "2022-06-10",
           "hit": 0,
-          "brier": 0.10799574731628006,
-          "logloss": 0.37427376484247377
+          "brier": 0.10799445035426708,
+          "logloss": 0.37426706951228805
         },
         {
           "period": 111000057,
           "date": "2022-06-14",
           "hit": 1,
-          "brier": 0.10760123997369712,
-          "logloss": 0.3724376945781571
+          "brier": 0.10761478250218191,
+          "logloss": 0.3725000627582396
         },
         {
           "period": 111000058,
           "date": "2022-06-17",
           "hit": 2,
-          "brier": 0.10751582206186316,
-          "logloss": 0.37206368727534744
+          "brier": 0.10751390846138045,
+          "logloss": 0.37205481150456493
         },
         {
           "period": 111000059,
           "date": "2022-06-21",
           "hit": 0,
-          "brier": 0.1074885123106943,
-          "logloss": 0.37190509963949886
+          "brier": 0.1074876717032782,
+          "logloss": 0.3719011613142691
         },
         {
           "period": 111000060,
           "date": "2022-06-24",
           "hit": 2,
-          "brier": 0.10733054551566235,
-          "logloss": 0.3712156949869028
+          "brier": 0.10731968996525941,
+          "logloss": 0.3711672721982716
         },
         {
           "period": 111000061,
           "date": "2022-06-28",
           "hit": 2,
-          "brier": 0.10750654084353772,
-          "logloss": 0.37200212416438444
+          "brier": 0.10750573690231881,
+          "logloss": 0.37199738267060234
         },
         {
           "period": 111000062,
           "date": "2022-07-01",
           "hit": 2,
-          "brier": 0.1071863803479985,
-          "logloss": 0.37051809445783945
+          "brier": 0.10719744382965282,
+          "logloss": 0.37056864462785144
         },
         {
           "period": 111000063,
           "date": "2022-07-05",
           "hit": 1,
-          "brier": 0.10749062920529945,
-          "logloss": 0.3719151285422897
+          "brier": 0.10749559602320745,
+          "logloss": 0.3719384345485395
         },
         {
           "period": 111000064,
           "date": "2022-07-08",
           "hit": 1,
-          "brier": 0.10776276024591695,
-          "logloss": 0.3731843834906294
+          "brier": 0.10776492071147309,
+          "logloss": 0.3731953628828565
         },
         {
           "period": 111000065,
           "date": "2022-07-12",
           "hit": 3,
-          "brier": 0.10708668748630133,
-          "logloss": 0.37005619279204355
+          "brier": 0.10708802026546932,
+          "logloss": 0.3700624999002325
         },
         {
           "period": 111000066,
           "date": "2022-07-15",
           "hit": 3,
-          "brier": 0.10700569404731883,
-          "logloss": 0.3696675089255824
+          "brier": 0.10700961075867202,
+          "logloss": 0.3696847432051207
         },
         {
           "period": 111000067,
           "date": "2022-07-19",
           "hit": 2,
-          "brier": 0.10728713436324952,
-          "logloss": 0.3710244964147662
+          "brier": 0.10729933797713252,
+          "logloss": 0.3710797449938608
         },
         {
           "period": 111000068,
           "date": "2022-07-22",
           "hit": 1,
-          "brier": 0.10786504749318393,
-          "logloss": 0.373688955051451
+          "brier": 0.1078659418197245,
+          "logloss": 0.3736927635170173
         },
         {
           "period": 111000069,
           "date": "2022-07-26",
           "hit": 1,
-          "brier": 0.1074693115354266,
-          "logloss": 0.3718960108461064
+          "brier": 0.10747729532350488,
+          "logloss": 0.3719324406439403
         },
         {
           "period": 111000070,
           "date": "2022-07-29",
           "hit": 1,
-          "brier": 0.10755338877602791,
-          "logloss": 0.37222064986406445
+          "brier": 0.1075479272590344,
+          "logloss": 0.3721950733136272
         },
         {
           "period": 111000071,
           "date": "2022-08-02",
           "hit": 1,
-          "brier": 0.10714610502630263,
-          "logloss": 0.37040342361405326
+          "brier": 0.10715347271535597,
+          "logloss": 0.37043490781755967
         },
         {
           "period": 111000072,
           "date": "2022-08-05",
           "hit": 3,
-          "brier": 0.10732366069816066,
-          "logloss": 0.3711763624668363
+          "brier": 0.10731001643297902,
+          "logloss": 0.3711124701924933
         },
         {
           "period": 111000073,
           "date": "2022-08-09",
           "hit": 3,
-          "brier": 0.10714204063168942,
-          "logloss": 0.3702913016767459
+          "brier": 0.10714379876178551,
+          "logloss": 0.3702997957985708
         },
         {
           "period": 111000074,
           "date": "2022-08-12",
           "hit": 3,
-          "brier": 0.10718198238068133,
-          "logloss": 0.37050978834052795
+          "brier": 0.10717594349008214,
+          "logloss": 0.37048093307478264
         },
         {
           "period": 111000075,
           "date": "2022-08-16",
           "hit": 2,
-          "brier": 0.10735299705366626,
-          "logloss": 0.3713372128014953
+          "brier": 0.10735263609248288,
+          "logloss": 0.3713353169896401
         },
         {
           "period": 111000076,
           "date": "2022-08-19",
           "hit": 2,
-          "brier": 0.10707770888311884,
-          "logloss": 0.370019671554904
+          "brier": 0.10707770679440386,
+          "logloss": 0.3700191112990071
         },
         {
           "period": 111000077,
           "date": "2022-08-23",
           "hit": 0,
-          "brier": 0.10821021463647157,
-          "logloss": 0.3753257161087052
+          "brier": 0.10820778092921811,
+          "logloss": 0.375314082025939
         },
         {
           "period": 111000078,
           "date": "2022-08-26",
           "hit": 2,
-          "brier": 0.1073495302889888,
-          "logloss": 0.3712529415651147
+          "brier": 0.10735630714140657,
+          "logloss": 0.37128387543639857
         },
         {
           "period": 111000079,
           "date": "2022-08-30",
           "hit": 0,
-          "brier": 0.10788420090277297,
-          "logloss": 0.3737579270768703
+          "brier": 0.10788264713341127,
+          "logloss": 0.373750322161443
         },
         {
           "period": 111000080,
           "date": "2022-09-02",
           "hit": 2,
-          "brier": 0.10764761609318535,
-          "logloss": 0.37267292099065535
+          "brier": 0.10764328554733625,
+          "logloss": 0.37265208189995125
         },
         {
           "period": 111000081,
           "date": "2022-09-06",
           "hit": 0,
-          "brier": 0.10800917709645426,
-          "logloss": 0.3743457444256239
+          "brier": 0.10800546129465113,
+          "logloss": 0.37432810193173605
         },
         {
           "period": 111000082,
           "date": "2022-09-09",
           "hit": 0,
-          "brier": 0.10775215382511442,
-          "logloss": 0.37315789220787465
+          "brier": 0.10774665350450022,
+          "logloss": 0.3731312048575364
         },
         {
           "period": 111000083,
           "date": "2022-09-13",
           "hit": 2,
-          "brier": 0.10739029954609058,
-          "logloss": 0.37148998634955577
+          "brier": 0.10739134634373253,
+          "logloss": 0.37149513469291456
         },
         {
           "period": 111000084,
           "date": "2022-09-16",
           "hit": 1,
-          "brier": 0.10783263340925037,
-          "logloss": 0.37357547730301266
+          "brier": 0.10783070035054235,
+          "logloss": 0.37356515717154626
         },
         {
           "period": 111000085,
           "date": "2022-09-20",
           "hit": 3,
-          "brier": 0.10743067495985514,
-          "logloss": 0.37166903982708804
+          "brier": 0.10742367845312781,
+          "logloss": 0.37163710112548876
         },
         {
           "period": 111000086,
           "date": "2022-09-23",
           "hit": 0,
-          "brier": 0.10757958821062219,
-          "logloss": 0.3723350695708544
+          "brier": 0.1075781147084109,
+          "logloss": 0.37232792354461797
         },
         {
           "period": 111000087,
           "date": "2022-09-27",
           "hit": 2,
-          "brier": 0.10744690640589603,
-          "logloss": 0.37175447096939157
+          "brier": 0.10745095046485247,
+          "logloss": 0.37177287353248495
         },
         {
           "period": 111000088,
           "date": "2022-09-30",
           "hit": 2,
-          "brier": 0.10744996000357983,
-          "logloss": 0.371743010063598
+          "brier": 0.10745389527230925,
+          "logloss": 0.3717617394090337
         },
         {
           "period": 111000089,
           "date": "2022-10-04",
           "hit": 1,
-          "brier": 0.10726268124304697,
-          "logloss": 0.37089918880846917
+          "brier": 0.10726402562662335,
+          "logloss": 0.3709050986670825
         },
         {
           "period": 111000090,
           "date": "2022-10-07",
           "hit": 0,
-          "brier": 0.10739297757833632,
-          "logloss": 0.3714528012407662
+          "brier": 0.10738401067590317,
+          "logloss": 0.37141111083454864
         },
         {
           "period": 111000091,
           "date": "2022-10-11",
           "hit": 0,
-          "brier": 0.10786201297929246,
-          "logloss": 0.37365627333074686
+          "brier": 0.10787292635156775,
+          "logloss": 0.3737077676549092
         },
         {
           "period": 111000092,
           "date": "2022-10-14",
           "hit": 0,
-          "brier": 0.10784326679927249,
-          "logloss": 0.3735720767145278
+          "brier": 0.10784421980318364,
+          "logloss": 0.37357682358969296
         },
         {
           "period": 111000093,
           "date": "2022-10-18",
           "hit": 1,
-          "brier": 0.10781642619176741,
-          "logloss": 0.3734562676447105
+          "brier": 0.10781447685729541,
+          "logloss": 0.37344636772312995
         },
         {
           "period": 111000094,
           "date": "2022-10-21",
           "hit": 1,
-          "brier": 0.10740222536386314,
-          "logloss": 0.3715234942078045
+          "brier": 0.10740201663024719,
+          "logloss": 0.3715222421317638
         },
         {
           "period": 111000095,
           "date": "2022-10-25",
           "hit": 4,
-          "brier": 0.1070196242180119,
-          "logloss": 0.3697815279829118
+          "brier": 0.1070192717550227,
+          "logloss": 0.3697794879640213
         },
         {
           "period": 111000096,
           "date": "2022-10-28",
           "hit": 3,
-          "brier": 0.1072485263475569,
-          "logloss": 0.37081567231983137
+          "brier": 0.10725004348430098,
+          "logloss": 0.37082290828189174
         },
         {
           "period": 111000097,
           "date": "2022-11-01",
           "hit": 2,
-          "brier": 0.10738340982897598,
-          "logloss": 0.37142989476050275
+          "brier": 0.10738449685008447,
+          "logloss": 0.37143455902234573
         },
         {
           "period": 111000098,
           "date": "2022-11-04",
           "hit": 4,
-          "brier": 0.10695646555878444,
-          "logloss": 0.36945526738594053
+          "brier": 0.10695102624891134,
+          "logloss": 0.369430241141849
         },
         {
           "period": 111000099,
           "date": "2022-11-08",
           "hit": 1,
-          "brier": 0.10728914057069663,
-          "logloss": 0.3709933221363224
+          "brier": 0.10728896893927167,
+          "logloss": 0.3709925561337327
         },
         {
           "period": 111000100,
           "date": "2022-11-11",
           "hit": 1,
-          "brier": 0.10754806427525732,
-          "logloss": 0.3721940890210256
+          "brier": 0.10754833467252382,
+          "logloss": 0.3721950618276921
         },
         {
           "period": 111000101,
           "date": "2022-11-15",
           "hit": 1,
-          "brier": 0.10738089773826981,
-          "logloss": 0.3713928332189304
+          "brier": 0.10738489879278712,
+          "logloss": 0.3714108251577898
         },
         {
           "period": 111000102,
           "date": "2022-11-18",
           "hit": 1,
-          "brier": 0.10719248946377882,
-          "logloss": 0.3705288438866426
+          "brier": 0.10719631168224729,
+          "logloss": 0.3705460515242881
         },
         {
           "period": 111000103,
           "date": "2022-11-22",
           "hit": 2,
-          "brier": 0.10730490338447723,
-          "logloss": 0.3710645839436397
+          "brier": 0.10729922750345637,
+          "logloss": 0.3710386056506198
         },
         {
           "period": 111000104,
           "date": "2022-11-25",
           "hit": 0,
-          "brier": 0.1076791222767538,
-          "logloss": 0.37278663714902405
+          "brier": 0.10767736591467278,
+          "logloss": 0.37277833303493174
         },
         {
           "period": 111000105,
           "date": "2022-11-29",
           "hit": 2,
-          "brier": 0.10767462755289975,
-          "logloss": 0.37282373001065455
+          "brier": 0.10767583021488245,
+          "logloss": 0.37282955513760213
         },
         {
           "period": 111000106,
           "date": "2022-12-02",
           "hit": 0,
-          "brier": 0.10834211415555733,
-          "logloss": 0.3759467613312247
+          "brier": 0.10833894938897218,
+          "logloss": 0.37593162212341913
         },
         {
           "period": 111000107,
           "date": "2022-12-06",
           "hit": 1,
-          "brier": 0.10742423101906028,
-          "logloss": 0.3716096589100374
+          "brier": 0.10741729691309913,
+          "logloss": 0.3715773326958678
         },
         {
           "period": 111000108,
           "date": "2022-12-09",
           "hit": 2,
-          "brier": 0.1075905422656224,
-          "logloss": 0.3723962195743252
+          "brier": 0.10759280763282635,
+          "logloss": 0.3724069474369024
         },
         {
           "period": 111000109,
           "date": "2022-12-13",
           "hit": 0,
-          "brier": 0.10853975441179628,
-          "logloss": 0.37687885767302187
+          "brier": 0.10853623128603414,
+          "logloss": 0.37686236249177946
         },
         {
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "brier": 0.10752060262272205,
-          "logloss": 0.37205895109415144
+          "brier": 0.107517817894645,
+          "logloss": 0.37204630962317753
         },
         {
           "period": 111000111,
           "date": "2022-12-20",
           "hit": 0,
-          "brier": 0.10784674911633313,
-          "logloss": 0.37359876915436274
+          "brier": 0.10784916519560278,
+          "logloss": 0.3736096208887521
         },
         {
           "period": 111000112,
           "date": "2022-12-23",
           "hit": 1,
-          "brier": 0.10754010066426686,
-          "logloss": 0.3721665500069512
+          "brier": 0.1075461079408364,
+          "logloss": 0.3721945432698274
         },
         {
           "period": 111000113,
           "date": "2022-12-27",
           "hit": 2,
-          "brier": 0.10747708027622663,
-          "logloss": 0.3718680512995145
+          "brier": 0.1074713857621579,
+          "logloss": 0.3718416818146909
         },
         {
           "period": 111000114,
           "date": "2022-12-30",
           "hit": 0,
-          "brier": 0.10792197151839591,
-          "logloss": 0.37394421385210047
+          "brier": 0.10792092329376325,
+          "logloss": 0.37393987432303155
         },
         {
           "period": 112000001,
           "date": "2023-01-03",
           "hit": 1,
-          "brier": 0.10780663595342119,
-          "logloss": 0.3734202428361279
+          "brier": 0.10780913223748219,
+          "logloss": 0.3734316608207282
         },
         {
           "period": 112000002,
           "date": "2023-01-06",
           "hit": 1,
-          "brier": 0.1075082457184645,
-          "logloss": 0.3720072754778886
+          "brier": 0.10751016189957026,
+          "logloss": 0.37201616065847753
         },
         {
           "period": 112000003,
           "date": "2023-01-10",
-          "hit": 2,
-          "brier": 0.10752224139507796,
-          "logloss": 0.37208181749948843
+          "hit": 1,
+          "brier": 0.10752011283698712,
+          "logloss": 0.37207160772838005
         },
         {
           "period": 112000004,
           "date": "2023-01-13",
           "hit": 1,
-          "brier": 0.10737554144844239,
-          "logloss": 0.3714009913994367
+          "brier": 0.10737364243500037,
+          "logloss": 0.3713920709944844
         },
         {
           "period": 112000005,
           "date": "2023-01-17",
           "hit": 4,
-          "brier": 0.10698755158329536,
-          "logloss": 0.3695848812196071
+          "brier": 0.10698847509230765,
+          "logloss": 0.3695892728417177
         },
         {
           "period": 112000006,
           "date": "2023-01-20",
           "hit": 1,
-          "brier": 0.10772727436303468,
-          "logloss": 0.37304011586141067
+          "brier": 0.1077262387537814,
+          "logloss": 0.3730357202011675
         },
         {
           "period": 112000007,
           "date": "2023-01-21",
           "hit": 3,
-          "brier": 0.10712649019383788,
-          "logloss": 0.37025837489990415
+          "brier": 0.10712317757382929,
+          "logloss": 0.3702435913019623
         },
         {
           "period": 112000008,
           "date": "2023-01-22",
           "hit": 1,
-          "brier": 0.10751551294156361,
-          "logloss": 0.37203428502805974
+          "brier": 0.10751674175020191,
+          "logloss": 0.37204043994952135
         },
         {
           "period": 112000009,
           "date": "2023-01-23",
           "hit": 3,
-          "brier": 0.10737061064696102,
-          "logloss": 0.3713921975049888
+          "brier": 0.10736864635493563,
+          "logloss": 0.37138337407847627
         },
         {
           "period": 112000010,
           "date": "2023-01-24",
           "hit": 1,
-          "brier": 0.10765268327821165,
-          "logloss": 0.37268250623120186
+          "brier": 0.10765075382759354,
+          "logloss": 0.37267345066442165
         },
         {
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 2,
-          "brier": 0.10719408109954193,
-          "logloss": 0.37057137512882227
+          "brier": 0.10718972770146984,
+          "logloss": 0.3705511199585534
         },
         {
           "period": 112000012,
           "date": "2023-01-26",
           "hit": 1,
-          "brier": 0.1074596829504616,
-          "logloss": 0.37179578867859187
+          "brier": 0.10745304164507587,
+          "logloss": 0.37176531856911543
         },
         {
           "period": 112000013,
           "date": "2023-01-27",
           "hit": 0,
-          "brier": 0.10817037577096701,
-          "logloss": 0.3751182275634191
+          "brier": 0.10817319401574148,
+          "logloss": 0.37513177485805355
         },
         {
           "period": 112000014,
           "date": "2023-01-28",
           "hit": 1,
-          "brier": 0.10756610308605517,
-          "logloss": 0.37229095529033923
+          "brier": 0.10756654804373293,
+          "logloss": 0.3722934961010828
         },
         {
           "period": 112000015,
           "date": "2023-01-29",
           "hit": 1,
-          "brier": 0.10762902754836445,
-          "logloss": 0.3725906614397092
+          "brier": 0.10762908060481594,
+          "logloss": 0.37259107024310706
         },
         {
           "period": 112000016,
           "date": "2023-01-30",
           "hit": 2,
-          "brier": 0.10729462622205369,
-          "logloss": 0.3710529400099949
+          "brier": 0.10729039701899173,
+          "logloss": 0.37103383811777213
         },
         {
           "period": 112000017,
           "date": "2023-01-31",
           "hit": 1,
-          "brier": 0.10773345858554631,
-          "logloss": 0.37306541212822597
+          "brier": 0.10773530653484009,
+          "logloss": 0.37307400736657104
         },
         {
           "period": 112000018,
           "date": "2023-02-01",
           "hit": 1,
-          "brier": 0.10720152065370088,
-          "logloss": 0.3706387362033238
+          "brier": 0.10720319366615425,
+          "logloss": 0.37064681175106295
         },
         {
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 3,
-          "brier": 0.10722775498717074,
-          "logloss": 0.37073185307108864
+          "brier": 0.10723210339692923,
+          "logloss": 0.3707519050844972
         },
         {
           "period": 112000020,
           "date": "2023-02-03",
           "hit": 0,
-          "brier": 0.10797744181032137,
-          "logloss": 0.3741888765015323
+          "brier": 0.10797774845756701,
+          "logloss": 0.3741901058388923
         },
         {
           "period": 112000021,
           "date": "2023-02-04",
           "hit": 1,
-          "brier": 0.10741866333368305,
-          "logloss": 0.37161549101653274
+          "brier": 0.1074177285136552,
+          "logloss": 0.37161089151832644
         },
         {
           "period": 112000022,
           "date": "2023-02-05",
           "hit": 3,
-          "brier": 0.107406798375959,
-          "logloss": 0.3715526046085097
+          "brier": 0.1074080762654763,
+          "logloss": 0.3715585838039284
         },
         {
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 2,
-          "brier": 0.10772825210812773,
-          "logloss": 0.3730540573978345
+          "brier": 0.10772430648901227,
+          "logloss": 0.37303560129433155
         },
         {
           "period": 112000024,
@@ -2945,7 +2938,7 @@
           "date": "2024-10-25",
           "hit": 1,
           "brier": 0.10713574976153908,
-          "logloss": 0.3703167113350617
+          "logloss": 0.37031671133506167
         },
         {
           "period": 113000100,
@@ -3273,7 +3266,7 @@
           "period": 114000028,
           "date": "2025-02-18",
           "hit": 1,
-          "brier": 0.10738131691895526,
+          "brier": 0.10738131691895529,
           "logloss": 0.3714205182783785
         },
         {
@@ -3875,7 +3868,7 @@
           "period": 114000114,
           "date": "2025-12-16",
           "hit": 2,
-          "brier": 0.10760477493503504,
+          "brier": 0.10760477493503505,
           "logloss": 0.372471157127053
         },
         {
@@ -4128,7 +4121,7 @@
           "date": "2026-03-03",
           "hit": 1,
           "brier": 0.1075180516850319,
-          "logloss": 0.3720448033184046
+          "logloss": 0.37204480331840456
         },
         {
           "period": 115000033,
@@ -4395,6 +4388,13 @@
           "hit": 1,
           "brier": 0.10771947076760839,
           "logloss": 0.3729732556227388
+        },
+        {
+          "period": 115000071,
+          "date": "2026-07-17",
+          "hit": 1,
+          "brier": 0.10767712342320929,
+          "logloss": 0.37278012662778554
         }
       ]
     },
@@ -4412,26 +4412,26 @@
         "empirical_hazard"
       ],
       "weights": {
-        "bayes_24": 0.12625349,
-        "bayes_60": 0.11995545,
-        "bayes_150": 0.12718039,
-        "bayes_360": 0.11969203,
-        "ewma_8": 0.05640621,
-        "ewma_21": 0.0989782,
-        "ewma_55": 0.12123129,
-        "ewma_144": 0.12278814,
-        "empirical_hazard": 0.10751481
+        "bayes_24": 0.12629427,
+        "bayes_60": 0.12008763,
+        "bayes_150": 0.12710407,
+        "bayes_360": 0.11969862,
+        "ewma_8": 0.05622496,
+        "ewma_21": 0.09895415,
+        "ewma_55": 0.12122587,
+        "ewma_144": 0.12274126,
+        "empirical_hazard": 0.10766917
       },
       "model_logloss": {
-        "bayes_24": 0.10040335,
-        "bayes_60": 0.10012241,
-        "bayes_150": 0.09972557,
-        "bayes_360": 0.1000052,
-        "ewma_8": 0.14390211,
-        "ewma_21": 0.11302698,
-        "ewma_55": 0.10285205,
-        "ewma_144": 0.10060717,
-        "empirical_hazard": 0.10120286
+        "bayes_24": 0.10042415,
+        "bayes_60": 0.10013608,
+        "bayes_150": 0.09971998,
+        "bayes_360": 0.0999986,
+        "ewma_8": 0.14406145,
+        "ewma_21": 0.11307586,
+        "ewma_55": 0.10285667,
+        "ewma_144": 0.10060071,
+        "empirical_hazard": 0.10116877
       },
       "model_avg_hits": {
         "bayes_24": 0.0558,
@@ -4444,857 +4444,850 @@
         "ewma_144": 0.0712,
         "empirical_hazard": 0.0692
       },
-      "ensemble_logloss": 0.09953793,
+      "ensemble_logloss": 0.09953778,
       "uniform_logloss": 0.09962339,
-      "logloss_edge": 8.546e-05,
+      "logloss_edge": 8.561e-05,
       "avg_hits": 0.0712,
       "rows": [
-        {
-          "period": 111000017,
-          "date": "2022-02-06",
-          "hit": 0,
-          "brier": 0.019989491862514995,
-          "logloss": 0.09948982998085061
-        },
         {
           "period": 111000018,
           "date": "2022-02-07",
           "hit": 0,
-          "brier": 0.020006157435568203,
-          "logloss": 0.09993223540919899
+          "brier": 0.020002846142103573,
+          "logloss": 0.09982079077843457
         },
         {
           "period": 111000019,
           "date": "2022-02-08",
           "hit": 0,
-          "brier": 0.019964084840092135,
-          "logloss": 0.09889605845841187
+          "brier": 0.019966298553762106,
+          "logloss": 0.09893951640754561
         },
         {
           "period": 111000020,
           "date": "2022-02-09",
           "hit": 0,
-          "brier": 0.020018021424033375,
-          "logloss": 0.10023122474228674
+          "brier": 0.020016299591198532,
+          "logloss": 0.10018083800709719
         },
         {
           "period": 111000021,
           "date": "2022-02-10",
           "hit": 0,
-          "brier": 0.02005596975998136,
-          "logloss": 0.10122463895212266
+          "brier": 0.02005862268599571,
+          "logloss": 0.1012889323584579
         },
         {
           "period": 111000022,
           "date": "2022-02-11",
           "hit": 0,
-          "brier": 0.020064419362219723,
-          "logloss": 0.10146493672599029
+          "brier": 0.020064453502612746,
+          "logloss": 0.10146240269281669
         },
         {
           "period": 111000023,
           "date": "2022-02-15",
           "hit": 0,
-          "brier": 0.019953658246896253,
-          "logloss": 0.09864723170726238
+          "brier": 0.01995330412719796,
+          "logloss": 0.09863677515120953
         },
         {
           "period": 111000024,
           "date": "2022-02-18",
           "hit": 0,
-          "brier": 0.019994320798776114,
-          "logloss": 0.0996353727999926
+          "brier": 0.01999420734228457,
+          "logloss": 0.09963008021400484
         },
         {
           "period": 111000025,
           "date": "2022-02-22",
           "hit": 0,
-          "brier": 0.020002733322648042,
-          "logloss": 0.09984380603532896
+          "brier": 0.0200025414819415,
+          "logloss": 0.09983658355595887
         },
         {
           "period": 111000026,
           "date": "2022-02-25",
           "hit": 0,
-          "brier": 0.020086798749371765,
-          "logloss": 0.10208243850018885
+          "brier": 0.020087204514349245,
+          "logloss": 0.1020914511929626
         },
         {
           "period": 111000027,
           "date": "2022-03-01",
           "hit": 0,
-          "brier": 0.019942855967988758,
-          "logloss": 0.0983949588287446
+          "brier": 0.01994163566767311,
+          "logloss": 0.09836532180353809
         },
         {
           "period": 111000028,
           "date": "2022-03-04",
           "hit": 0,
-          "brier": 0.02002770313468835,
-          "logloss": 0.10049100131229356
+          "brier": 0.020028079008388114,
+          "logloss": 0.10049963575581437
         },
         {
           "period": 111000029,
           "date": "2022-03-08",
           "hit": 0,
-          "brier": 0.019971717911329682,
-          "logloss": 0.09908215974898904
+          "brier": 0.01997082966361452,
+          "logloss": 0.09905950892749428
         },
         {
           "period": 111000030,
           "date": "2022-03-11",
           "hit": 0,
-          "brier": 0.019981678753722087,
-          "logloss": 0.09932444803291846
+          "brier": 0.019981579041229134,
+          "logloss": 0.09932097342308001
         },
         {
           "period": 111000031,
           "date": "2022-03-15",
           "hit": 0,
-          "brier": 0.019969314830123402,
-          "logloss": 0.09902148154423056
+          "brier": 0.019969588876715846,
+          "logloss": 0.09902718193432035
         },
         {
           "period": 111000032,
           "date": "2022-03-18",
           "hit": 0,
-          "brier": 0.020031810938138803,
-          "logloss": 0.10058823924815687
+          "brier": 0.020032168021633632,
+          "logloss": 0.1005963164055093
         },
         {
           "period": 111000033,
           "date": "2022-03-22",
           "hit": 0,
-          "brier": 0.019911216200422296,
-          "logloss": 0.09765097145792781
+          "brier": 0.019909430975951468,
+          "logloss": 0.09760950870212917
         },
         {
           "period": 111000034,
           "date": "2022-03-25",
           "hit": 0,
-          "brier": 0.01994442461730221,
-          "logloss": 0.09841575538969086
+          "brier": 0.01994421162081249,
+          "logloss": 0.09840976665894333
         },
         {
           "period": 111000035,
           "date": "2022-03-29",
           "hit": 0,
-          "brier": 0.0199738991550006,
-          "logloss": 0.09911659491220394
+          "brier": 0.01997524058444353,
+          "logloss": 0.09914823277567239
         },
         {
           "period": 111000036,
           "date": "2022-04-01",
           "hit": 0,
-          "brier": 0.02006825247578001,
-          "logloss": 0.10155587305782068
+          "brier": 0.020068748359831825,
+          "logloss": 0.10156832561544137
         },
         {
           "period": 111000037,
           "date": "2022-04-05",
           "hit": 0,
-          "brier": 0.01996416907333976,
-          "logloss": 0.09889167858173835
+          "brier": 0.019963797950947458,
+          "logloss": 0.09888207833100107
         },
         {
           "period": 111000038,
           "date": "2022-04-08",
           "hit": 0,
-          "brier": 0.02004093758603231,
-          "logloss": 0.10082905404906778
+          "brier": 0.02004137762731459,
+          "logloss": 0.10083998088154483
         },
         {
           "period": 111000039,
           "date": "2022-04-12",
           "hit": 0,
-          "brier": 0.02003076434396518,
-          "logloss": 0.10056436778913304
+          "brier": 0.020031372233655104,
+          "logloss": 0.10057966246582688
         },
         {
           "period": 111000040,
           "date": "2022-04-15",
           "hit": 0,
-          "brier": 0.020003634430607306,
-          "logloss": 0.09987195109096969
+          "brier": 0.020004013984516622,
+          "logloss": 0.0998811338665516
         },
         {
           "period": 111000041,
           "date": "2022-04-19",
           "hit": 0,
-          "brier": 0.019929618437389118,
-          "logloss": 0.0980762313324655
+          "brier": 0.019929569478662673,
+          "logloss": 0.09807470592240737
         },
         {
           "period": 111000042,
           "date": "2022-04-22",
           "hit": 1,
-          "brier": 0.019868090673413778,
-          "logloss": 0.09669027682169465
+          "brier": 0.019866776592264435,
+          "logloss": 0.09666129985555164
         },
         {
           "period": 111000043,
           "date": "2022-04-26",
           "hit": 0,
-          "brier": 0.01990693315046794,
-          "logloss": 0.09754251138524074
+          "brier": 0.019906584686783087,
+          "logloss": 0.09753410005904353
         },
         {
           "period": 111000044,
           "date": "2022-04-29",
           "hit": 0,
-          "brier": 0.019985871425666088,
-          "logloss": 0.09940649649482347
+          "brier": 0.01998610936551292,
+          "logloss": 0.09941176656127229
         },
         {
           "period": 111000045,
           "date": "2022-05-03",
           "hit": 0,
-          "brier": 0.01995879997167872,
-          "logloss": 0.0987496748946775
+          "brier": 0.019958511034489,
+          "logloss": 0.09874221042072656
         },
         {
           "period": 111000046,
           "date": "2022-05-06",
           "hit": 0,
-          "brier": 0.01991104402283646,
-          "logloss": 0.09763300217973306
+          "brier": 0.01991027707567266,
+          "logloss": 0.09761507959905576
         },
         {
           "period": 111000047,
           "date": "2022-05-10",
           "hit": 0,
-          "brier": 0.020081909410377387,
-          "logloss": 0.10192484222386461
+          "brier": 0.020082225573354755,
+          "logloss": 0.10193303447560093
         },
         {
           "period": 111000048,
           "date": "2022-05-13",
           "hit": 1,
-          "brier": 0.019838916136347116,
-          "logloss": 0.09605731850632444
+          "brier": 0.01983843259235788,
+          "logloss": 0.09604681855797025
         },
         {
           "period": 111000049,
           "date": "2022-05-17",
           "hit": 1,
-          "brier": 0.01986107563053185,
-          "logloss": 0.0965224005664906
+          "brier": 0.019860910871858845,
+          "logloss": 0.09651848521424
         },
         {
           "period": 111000050,
           "date": "2022-05-20",
           "hit": 0,
-          "brier": 0.0200161629041644,
-          "logloss": 0.1001580147079712
+          "brier": 0.02001642800298456,
+          "logloss": 0.10016421124209805
         },
         {
           "period": 111000051,
           "date": "2022-05-24",
           "hit": 0,
-          "brier": 0.020042855681511845,
-          "logloss": 0.1008538078693152
+          "brier": 0.020043148141119658,
+          "logloss": 0.1008609456412109
         },
         {
           "period": 111000052,
           "date": "2022-05-27",
           "hit": 0,
-          "brier": 0.019987153390843313,
-          "logloss": 0.09943730420834278
+          "brier": 0.019987183188738714,
+          "logloss": 0.0994376404232884
         },
         {
           "period": 111000053,
           "date": "2022-05-31",
           "hit": 0,
-          "brier": 0.020047692579993663,
-          "logloss": 0.1009894516384506
+          "brier": 0.020048174013302614,
+          "logloss": 0.10100180568888675
         },
         {
           "period": 111000054,
           "date": "2022-06-03",
           "hit": 0,
-          "brier": 0.020038629934294894,
-          "logloss": 0.10075938809647898
+          "brier": 0.020038515781541665,
+          "logloss": 0.10075602120820963
         },
         {
           "period": 111000055,
           "date": "2022-06-07",
           "hit": 0,
-          "brier": 0.019923068627939466,
-          "logloss": 0.09791322921475554
+          "brier": 0.019923064188543654,
+          "logloss": 0.09791281018276074
         },
         {
           "period": 111000056,
           "date": "2022-06-10",
           "hit": 0,
-          "brier": 0.0200839126142164,
-          "logloss": 0.10198849316013697
+          "brier": 0.02008404804694472,
+          "logloss": 0.10199191926507631
         },
         {
           "period": 111000057,
           "date": "2022-06-14",
           "hit": 0,
-          "brier": 0.019975732928959444,
-          "logloss": 0.09916710169674132
+          "brier": 0.019975493022503954,
+          "logloss": 0.09916093634595509
         },
         {
           "period": 111000058,
           "date": "2022-06-17",
           "hit": 0,
-          "brier": 0.020049479455532166,
-          "logloss": 0.10104795729437126
+          "brier": 0.020049466022182896,
+          "logloss": 0.10104720394801775
         },
         {
           "period": 111000059,
           "date": "2022-06-21",
           "hit": 0,
-          "brier": 0.020023482791317628,
-          "logloss": 0.10037445256720037
+          "brier": 0.020023721253428748,
+          "logloss": 0.10038034512704132
         },
         {
           "period": 111000060,
           "date": "2022-06-24",
           "hit": 0,
-          "brier": 0.019968160885736694,
-          "logloss": 0.09899030776781352
+          "brier": 0.019968230552659033,
+          "logloss": 0.09899177692499166
         },
         {
           "period": 111000061,
           "date": "2022-06-28",
           "hit": 0,
-          "brier": 0.019992790712896093,
-          "logloss": 0.09958863246084765
+          "brier": 0.0199927917128716,
+          "logloss": 0.09958835791351972
         },
         {
           "period": 111000062,
           "date": "2022-07-01",
           "hit": 0,
-          "brier": 0.019978617638474826,
-          "logloss": 0.09923952024600807
+          "brier": 0.01997871710476626,
+          "logloss": 0.0992416968371348
         },
         {
           "period": 111000063,
           "date": "2022-07-05",
           "hit": 0,
-          "brier": 0.019904112423423437,
-          "logloss": 0.09748543712141977
+          "brier": 0.0199039016435519,
+          "logloss": 0.09748045063232401
         },
         {
           "period": 111000064,
           "date": "2022-07-08",
           "hit": 0,
-          "brier": 0.02003793415721245,
-          "logloss": 0.10074317478361332
+          "brier": 0.020038159111746265,
+          "logloss": 0.10074882352944614
         },
         {
           "period": 111000065,
           "date": "2022-07-12",
           "hit": 0,
-          "brier": 0.020061762168937024,
-          "logloss": 0.1013878675010253
+          "brier": 0.020061802167260535,
+          "logloss": 0.10138872022243675
         },
         {
           "period": 111000066,
           "date": "2022-07-15",
           "hit": 0,
-          "brier": 0.01999917924445519,
-          "logloss": 0.09975383151099292
+          "brier": 0.019999203223271086,
+          "logloss": 0.09975421031918347
         },
         {
           "period": 111000067,
           "date": "2022-07-19",
           "hit": 0,
-          "brier": 0.019962981322328422,
-          "logloss": 0.09886205479409446
+          "brier": 0.01996320487128314,
+          "logloss": 0.09886724001349918
         },
         {
           "period": 111000068,
           "date": "2022-07-22",
           "hit": 0,
-          "brier": 0.01997747121229797,
-          "logloss": 0.09921243054392223
+          "brier": 0.01997760176320285,
+          "logloss": 0.09921544133579849
         },
         {
           "period": 111000069,
           "date": "2022-07-26",
           "hit": 0,
-          "brier": 0.02005898412103397,
-          "logloss": 0.10131280867434357
+          "brier": 0.020059011936199148,
+          "logloss": 0.10131336079888928
         },
         {
           "period": 111000070,
           "date": "2022-07-29",
           "hit": 0,
-          "brier": 0.020067712319243917,
-          "logloss": 0.10155684100511173
+          "brier": 0.020067770484122237,
+          "logloss": 0.10155825290067787
         },
         {
           "period": 111000071,
           "date": "2022-08-02",
           "hit": 0,
-          "brier": 0.02001612836867516,
-          "logloss": 0.10019602039475584
+          "brier": 0.020016120268727493,
+          "logloss": 0.10019568574852689
         },
         {
           "period": 111000072,
           "date": "2022-08-05",
           "hit": 0,
-          "brier": 0.01999387153338956,
-          "logloss": 0.09962822397474642
+          "brier": 0.019993822973356157,
+          "logloss": 0.09962685680893008
         },
         {
           "period": 111000073,
           "date": "2022-08-09",
           "hit": 0,
-          "brier": 0.019929239306036996,
-          "logloss": 0.09807181023404912
+          "brier": 0.019928913283600753,
+          "logloss": 0.09806410408108265
         },
         {
           "period": 111000074,
           "date": "2022-08-12",
           "hit": 0,
-          "brier": 0.0199313461571881,
-          "logloss": 0.09811819130877303
+          "brier": 0.01993136980484047,
+          "logloss": 0.09811862341397203
         },
         {
           "period": 111000075,
           "date": "2022-08-16",
           "hit": 0,
-          "brier": 0.01999309343250169,
-          "logloss": 0.09959966237042402
+          "brier": 0.019993047171463975,
+          "logloss": 0.09959833434277503
         },
         {
           "period": 111000076,
           "date": "2022-08-19",
           "hit": 0,
-          "brier": 0.019993419568289365,
-          "logloss": 0.0996113471507252
+          "brier": 0.019993476841832204,
+          "logloss": 0.09961264506600008
         },
         {
           "period": 111000077,
           "date": "2022-08-23",
           "hit": 1,
-          "brier": 0.01983002408365083,
-          "logloss": 0.09587355001730764
+          "brier": 0.019829849019105693,
+          "logloss": 0.09586976034272822
         },
         {
           "period": 111000078,
           "date": "2022-08-26",
           "hit": 1,
-          "brier": 0.019748294157794003,
-          "logloss": 0.09421718466627839
+          "brier": 0.019748166451046253,
+          "logloss": 0.09421458654576496
         },
         {
           "period": 111000079,
           "date": "2022-08-30",
           "hit": 0,
-          "brier": 0.02001918835123116,
-          "logloss": 0.10023315201191625
+          "brier": 0.020019316102313386,
+          "logloss": 0.10023620276238651
         },
         {
           "period": 111000080,
           "date": "2022-09-02",
           "hit": 0,
-          "brier": 0.02000368995912836,
-          "logloss": 0.09984642701415822
+          "brier": 0.020003625567988043,
+          "logloss": 0.09984461488854542
         },
         {
           "period": 111000081,
           "date": "2022-09-06",
           "hit": 0,
-          "brier": 0.019955693235824995,
-          "logloss": 0.09866331069187949
+          "brier": 0.019955694240931552,
+          "logloss": 0.09866311513965453
         },
         {
           "period": 111000082,
           "date": "2022-09-09",
           "hit": 0,
-          "brier": 0.020079684526192066,
-          "logloss": 0.1018608382153993
+          "brier": 0.02007985318275905,
+          "logloss": 0.10186531607429708
         },
         {
           "period": 111000083,
           "date": "2022-09-13",
           "hit": 1,
-          "brier": 0.019903192916248126,
-          "logloss": 0.0974499239578127
+          "brier": 0.019903047399421496,
+          "logloss": 0.09744646582486044
         },
         {
           "period": 111000084,
           "date": "2022-09-16",
           "hit": 0,
-          "brier": 0.020098684255366938,
-          "logloss": 0.10240338081758633
+          "brier": 0.020098706097028976,
+          "logloss": 0.10240385306006884
         },
         {
           "period": 111000085,
           "date": "2022-09-20",
           "hit": 0,
-          "brier": 0.01998443933644014,
-          "logloss": 0.09937613623866984
+          "brier": 0.019984564234992477,
+          "logloss": 0.0993790764487506
         },
         {
           "period": 111000086,
           "date": "2022-09-23",
           "hit": 0,
-          "brier": 0.019962432877371924,
-          "logloss": 0.09883925334132589
+          "brier": 0.01996240791824151,
+          "logloss": 0.0988385155774973
         },
         {
           "period": 111000087,
           "date": "2022-09-27",
           "hit": 0,
-          "brier": 0.0199516679260469,
-          "logloss": 0.09858033062914195
+          "brier": 0.019951617486029357,
+          "logloss": 0.09857900241224885
         },
         {
           "period": 111000088,
           "date": "2022-09-30",
           "hit": 0,
-          "brier": 0.019967358571800493,
-          "logloss": 0.09895804849199957
+          "brier": 0.019967457700471404,
+          "logloss": 0.09896033365368116
         },
         {
           "period": 111000089,
           "date": "2022-10-04",
           "hit": 0,
-          "brier": 0.020000456712487503,
-          "logloss": 0.09976738418283049
+          "brier": 0.020000263385695372,
+          "logloss": 0.0997623550698263
         },
         {
           "period": 111000090,
           "date": "2022-10-07",
           "hit": 0,
-          "brier": 0.02004581175572706,
-          "logloss": 0.10094912220523607
+          "brier": 0.020045849725511076,
+          "logloss": 0.10094999791187759
         },
         {
           "period": 111000091,
           "date": "2022-10-11",
           "hit": 0,
-          "brier": 0.019964002788605398,
-          "logloss": 0.09887775363572293
+          "brier": 0.01996388373079545,
+          "logloss": 0.09887474725035263
         },
         {
           "period": 111000092,
           "date": "2022-10-14",
           "hit": 0,
-          "brier": 0.020030481164315772,
-          "logloss": 0.10054869571938597
+          "brier": 0.02003041184361492,
+          "logloss": 0.10054676558385732
         },
         {
           "period": 111000093,
           "date": "2022-10-18",
           "hit": 0,
-          "brier": 0.02002139876352734,
-          "logloss": 0.10031827590407315
+          "brier": 0.020021354001103164,
+          "logloss": 0.10031701604993709
         },
         {
           "period": 111000094,
           "date": "2022-10-21",
           "hit": 0,
-          "brier": 0.020013785463859755,
-          "logloss": 0.10012484984543797
+          "brier": 0.020013766879521614,
+          "logloss": 0.10012426784045711
         },
         {
           "period": 111000095,
           "date": "2022-10-25",
           "hit": 0,
-          "brier": 0.02000430363637441,
-          "logloss": 0.09988258913080661
+          "brier": 0.02000432581900925,
+          "logloss": 0.09988305059274935
         },
         {
           "period": 111000096,
           "date": "2022-10-28",
           "hit": 0,
-          "brier": 0.019981074884282468,
-          "logloss": 0.0993024286054842
+          "brier": 0.019981107349451705,
+          "logloss": 0.0993031170934925
         },
         {
           "period": 111000097,
           "date": "2022-11-01",
           "hit": 0,
-          "brier": 0.019902807380675104,
-          "logloss": 0.09745639153685208
+          "brier": 0.019902672986879512,
+          "logloss": 0.09745326662977438
         },
         {
           "period": 111000098,
           "date": "2022-11-04",
           "hit": 0,
-          "brier": 0.020081557433434292,
-          "logloss": 0.1019253727951325
+          "brier": 0.02008165279068448,
+          "logloss": 0.10192789238916321
         },
         {
           "period": 111000099,
           "date": "2022-11-08",
           "hit": 0,
-          "brier": 0.019983890122613313,
-          "logloss": 0.0993758024031474
+          "brier": 0.01998398356385792,
+          "logloss": 0.0993780401375697
         },
         {
           "period": 111000100,
           "date": "2022-11-11",
           "hit": 0,
-          "brier": 0.019967349475549994,
-          "logloss": 0.09896674441371922
+          "brier": 0.019967336805050646,
+          "logloss": 0.09896635043346122
         },
         {
           "period": 111000101,
           "date": "2022-11-15",
           "hit": 0,
-          "brier": 0.020061463836432036,
-          "logloss": 0.10137737640597576
+          "brier": 0.020061475406756325,
+          "logloss": 0.10137757751014562
         },
         {
           "period": 111000102,
           "date": "2022-11-18",
           "hit": 0,
-          "brier": 0.020031986203970918,
-          "logloss": 0.1006013918566877
+          "brier": 0.020032073755375513,
+          "logloss": 0.10060361227888352
         },
         {
           "period": 111000103,
           "date": "2022-11-22",
           "hit": 0,
-          "brier": 0.02007569649817094,
-          "logloss": 0.10177816955030011
+          "brier": 0.020075852718871894,
+          "logloss": 0.10178241423010774
         },
         {
           "period": 111000104,
           "date": "2022-11-25",
           "hit": 0,
-          "brier": 0.019993127549817004,
-          "logloss": 0.09961298046555392
+          "brier": 0.019993131509761217,
+          "logloss": 0.09961301521674339
         },
         {
           "period": 111000105,
           "date": "2022-11-29",
           "hit": 0,
-          "brier": 0.02008372979079386,
-          "logloss": 0.10200534786134684
+          "brier": 0.020083820506937352,
+          "logloss": 0.10200780560019246
         },
         {
           "period": 111000106,
           "date": "2022-12-02",
           "hit": 0,
-          "brier": 0.019993224262191335,
-          "logloss": 0.09962061498287611
+          "brier": 0.019993121896143575,
+          "logloss": 0.0996180102184109
         },
         {
           "period": 111000107,
           "date": "2022-12-06",
           "hit": 0,
-          "brier": 0.02003832201685359,
-          "logloss": 0.10077826235106808
+          "brier": 0.020038227316000218,
+          "logloss": 0.10077571303705318
         },
         {
           "period": 111000108,
           "date": "2022-12-09",
           "hit": 0,
-          "brier": 0.019994329588151224,
-          "logloss": 0.09965176106721448
+          "brier": 0.019994307463378616,
+          "logloss": 0.09965116954326535
         },
         {
           "period": 111000109,
           "date": "2022-12-13",
           "hit": 1,
-          "brier": 0.01990764775429019,
-          "logloss": 0.0975797460939639
+          "brier": 0.019907571269697773,
+          "logloss": 0.09757794556645345
         },
         {
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "brier": 0.019957968918991514,
-          "logloss": 0.09875317343017262
+          "brier": 0.019957892304116168,
+          "logloss": 0.09875129026111705
         },
         {
           "period": 111000111,
           "date": "2022-12-20",
           "hit": 0,
-          "brier": 0.01998506599729242,
-          "logloss": 0.09940765787213733
+          "brier": 0.019985118503498638,
+          "logloss": 0.0994088844573542
         },
         {
           "period": 111000112,
           "date": "2022-12-23",
           "hit": 0,
-          "brier": 0.020003649333444205,
-          "logloss": 0.0998687021771265
+          "brier": 0.020003654819047076,
+          "logloss": 0.099868752780103
         },
         {
           "period": 111000113,
           "date": "2022-12-27",
           "hit": 0,
-          "brier": 0.020001232611595757,
-          "logloss": 0.09981041636518193
+          "brier": 0.020001179968099827,
+          "logloss": 0.09980901175415759
         },
         {
           "period": 111000114,
           "date": "2022-12-30",
           "hit": 0,
-          "brier": 0.020056886526618346,
-          "logloss": 0.1012619802503694
+          "brier": 0.020056909893190027,
+          "logloss": 0.10126251896877142
         },
         {
           "period": 112000001,
           "date": "2023-01-03",
           "hit": 1,
-          "brier": 0.019868445013540577,
-          "logloss": 0.09670149191034465
+          "brier": 0.01986821446009224,
+          "logloss": 0.09669639684572841
         },
         {
           "period": 112000002,
           "date": "2023-01-06",
           "hit": 0,
-          "brier": 0.019996229503920198,
-          "logloss": 0.09967882404771776
+          "brier": 0.019996136584444033,
+          "logloss": 0.09967639584500507
         },
         {
           "period": 112000003,
           "date": "2023-01-10",
           "hit": 0,
-          "brier": 0.01998393320932671,
-          "logloss": 0.09937263274144027
+          "brier": 0.01998398734451353,
+          "logloss": 0.09937386097579604
         },
         {
           "period": 112000004,
           "date": "2023-01-13",
           "hit": 0,
-          "brier": 0.020089788788369117,
-          "logloss": 0.10216386672610975
+          "brier": 0.020089851168870042,
+          "logloss": 0.10216550971653499
         },
         {
           "period": 112000005,
           "date": "2023-01-17",
           "hit": 0,
-          "brier": 0.02003131032600412,
-          "logloss": 0.10058509255721226
+          "brier": 0.020031328982014675,
+          "logloss": 0.10058549105892282
         },
         {
           "period": 112000006,
           "date": "2023-01-20",
           "hit": 0,
-          "brier": 0.02002756914096821,
-          "logloss": 0.10048161794277533
+          "brier": 0.02002757840645471,
+          "logloss": 0.10048172902363578
         },
         {
           "period": 112000007,
           "date": "2023-01-21",
           "hit": 0,
-          "brier": 0.019903240944784083,
-          "logloss": 0.09747493370038167
+          "brier": 0.019903052539449902,
+          "logloss": 0.09747059309452374
         },
         {
           "period": 112000008,
           "date": "2023-01-22",
           "hit": 0,
-          "brier": 0.020004301228415514,
-          "logloss": 0.09988964656004992
+          "brier": 0.020004366838883108,
+          "logloss": 0.09989122895321487
         },
         {
           "period": 112000009,
           "date": "2023-01-23",
           "hit": 0,
-          "brier": 0.020065997001873278,
-          "logloss": 0.1015120547202621
+          "brier": 0.020066162716877976,
+          "logloss": 0.10151649984107448
         },
         {
           "period": 112000010,
           "date": "2023-01-24",
           "hit": 0,
-          "brier": 0.02002940016373206,
-          "logloss": 0.10053439127420981
+          "brier": 0.020029377331623358,
+          "logloss": 0.10053370057299146
         },
         {
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 0,
-          "brier": 0.020070472627355004,
-          "logloss": 0.10163121101853391
+          "brier": 0.020070510004438272,
+          "logloss": 0.1016321052863257
         },
         {
           "period": 112000012,
           "date": "2023-01-26",
           "hit": 0,
-          "brier": 0.02000973728214205,
-          "logloss": 0.10003611993007969
+          "brier": 0.02000966742333946,
+          "logloss": 0.10003426741493474
         },
         {
           "period": 112000013,
           "date": "2023-01-27",
           "hit": 0,
-          "brier": 0.0200576656858734,
-          "logloss": 0.1012953182550169
+          "brier": 0.020057723628914916,
+          "logloss": 0.10129681104645545
         },
         {
           "period": 112000014,
           "date": "2023-01-28",
           "hit": 0,
-          "brier": 0.02003754320595159,
-          "logloss": 0.10076385981015691
+          "brier": 0.02003757677765068,
+          "logloss": 0.10076468840022776
         },
         {
           "period": 112000015,
           "date": "2023-01-29",
           "hit": 0,
-          "brier": 0.019951968556925784,
-          "logloss": 0.09861984437999255
+          "brier": 0.019951996530860033,
+          "logloss": 0.0986204671017885
         },
         {
           "period": 112000016,
           "date": "2023-01-30",
           "hit": 0,
-          "brier": 0.020057739752858898,
-          "logloss": 0.10130132035780458
+          "brier": 0.020057721603608438,
+          "logloss": 0.1013007784764445
         },
         {
           "period": 112000017,
           "date": "2023-01-31",
           "hit": 0,
-          "brier": 0.019994216195758516,
-          "logloss": 0.09965117909203311
+          "brier": 0.019994274267840517,
+          "logloss": 0.09965258860470544
         },
         {
           "period": 112000018,
           "date": "2023-02-01",
           "hit": 0,
-          "brier": 0.020062664531735493,
-          "logloss": 0.10144084705417046
+          "brier": 0.02006268295286827,
+          "logloss": 0.10144131452017255
         },
         {
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 1,
-          "brier": 0.019902175359205795,
-          "logloss": 0.0974674038672783
+          "brier": 0.019902253863185403,
+          "logloss": 0.0974691527586131
         },
         {
           "period": 112000020,
           "date": "2023-02-03",
           "hit": 0,
-          "brier": 0.02000534527788397,
-          "logloss": 0.09993011244016423
+          "brier": 0.020005455099056862,
+          "logloss": 0.09993287275854625
         },
         {
           "period": 112000021,
           "date": "2023-02-04",
           "hit": 0,
-          "brier": 0.01998908651137829,
-          "logloss": 0.09951791216035584
+          "brier": 0.019989065589384843,
+          "logloss": 0.09951735959329316
         },
         {
           "period": 112000022,
           "date": "2023-02-05",
           "hit": 0,
-          "brier": 0.020014946120810433,
-          "logloss": 0.1001729714583454
+          "brier": 0.020015035820531313,
+          "logloss": 0.1001752481013138
         },
         {
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 0,
-          "brier": 0.01996471444123695,
-          "logloss": 0.09892087615939443
+          "brier": 0.019964666133322095,
+          "logloss": 0.09891968715247959
         },
         {
           "period": 112000024,
@@ -5630,7 +5623,7 @@
           "date": "2023-07-25",
           "hit": 0,
           "brier": 0.01994953071682105,
-          "logloss": 0.09854001898858793
+          "logloss": 0.09854001898858795
         },
         {
           "period": 112000072,
@@ -7233,7 +7226,7 @@
           "date": "2025-07-01",
           "hit": 0,
           "brier": 0.01995675918412574,
-          "logloss": 0.09870321736981988
+          "logloss": 0.09870321736981987
         },
         {
           "period": 114000067,
@@ -8088,6 +8081,13 @@
           "hit": 0,
           "brier": 0.01999698018567323,
           "logloss": 0.09968552152585139
+        },
+        {
+          "period": 115000071,
+          "date": "2026-07-17",
+          "hit": 0,
+          "brier": 0.019990975433199994,
+          "logloss": 0.09952926247101848
         }
       ]
     }
@@ -8095,13 +8095,13 @@
   "release_gate": {
     "passed": true,
     "rule": "520期走步驗證須同時通過前段命中與機率校準，且不得由單一模型壟斷",
-    "main_edge": -8.295e-05,
-    "special_edge": 8.546e-05,
-    "main_avg_hits": 1.5096,
+    "main_edge": -8.035e-05,
+    "special_edge": 8.561e-05,
+    "main_avg_hits": 1.5077,
     "main_random_hits": 1.4694,
     "special_avg_hits": 0.0712,
     "special_random_hits": 0.0612,
-    "max_main_weight": 0.11727416
+    "max_main_weight": 0.11424153
   },
   "notice": "開獎為隨機事件；模型只做可驗證的機率排序，不保證中獎。"
 }
