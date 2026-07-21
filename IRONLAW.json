@@ -1,0 +1,15 @@
+{
+  "system": "台灣大樂透新世代鐵律預測系統",
+  "version": 1,
+  "automatic_update_locked": true,
+  "rules_must_not_be_removed": true,
+  "official_draw_source_required": true,
+  "draw_validation_required": true,
+  "settlement_before_new_prediction": true,
+  "full_recalculation_after_new_draw": true,
+  "desktop_mobile_pages_sync_required": true,
+  "failed_validation_must_not_publish": true,
+  "last_valid_report_must_be_preserved": true,
+  "draw_polling_taipei": "Tuesday and Friday 21:25-22:30 every 5 minutes",
+  "background_health_check": "every 3 hours"
+}

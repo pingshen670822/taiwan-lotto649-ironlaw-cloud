@@ -23,6 +23,10 @@ jobs:
         run: python update.py
       - name: 發布前完整檢測
         run: python verify.py
+      - name: 自動更新鐵律不可缺少
+        run: |
+          test -f IRONLAW.json
+          python -c "import json; x=json.load(open('IRONLAW.json',encoding='utf-8')); assert x['automatic_update_locked'] and x['failed_validation_must_not_publish'] and x['last_valid_report_must_be_preserved']"
       - name: 同步手機雲端
         run: |
           git config user.name "tw649-new-engine-bot"
