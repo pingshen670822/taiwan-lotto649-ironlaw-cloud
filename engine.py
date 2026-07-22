@@ -141,6 +141,22 @@ def final_scores(draws: list[Draw], bt: dict, special=False) -> np.ndarray:
     prior=np.full(N,(1 if special else 6)/N)
     return .20*raw+.80*prior
 
+def latest_module_review(draws: list[Draw], current_backtest: dict, special: bool=False) -> list[dict]:
+    """用最後一期以前資料重建各模型預測，再以最後一期實開逐一追責。"""
+    if len(draws)<521: return []
+    training=draws[:-1]; actual=np.zeros(N)
+    actual[(draws[-1].special-1 if special else np.array(draws[-1].main)-1)]=1
+    models=model_suite(training,special); previous=walk_forward(training,520,special)
+    k=3 if special else 12; random_hits=k*(1 if special else 6)/49
+    rows=[]
+    for name,pred in models.items():
+        top=(np.argsort(pred)[::-1][:k]+1).tolist(); top1=top[0]
+        hit_numbers=sorted((np.flatnonzero(actual)+1)[np.isin(np.flatnonzero(actual)+1,top)].tolist())
+        before=float(previous["weights"].get(name,0)); after=float(current_backtest["weights"].get(name,0))
+        avg=float(current_backtest["model_avg_hits"].get(name,0)); failed=(not hit_numbers) or avg<random_hits
+        rows.append({"model":name,"prediction_basis_period":draws[-2].period,"evaluated_period":draws[-1].period,"top1":top1,"top1_hit":bool(actual[top1-1]),"top_candidates":top,"hit_count":len(hit_numbers),"hit_numbers":hit_numbers,"logloss":round(logloss(pred,actual),8),"weight_before":round(before,8),"weight_after":round(after,8),"weight_change":round(after-before,8),"action":"失敗降權／重新校準" if failed and after<=before else ("失敗但受權重上限約束，列入下期監控" if failed else "通過，依滾動成績調整")})
+    return rows
+
 def shape_ok(nums: tuple[int,...]) -> bool:
     odd=sum(n%2 for n in nums); low=sum(n<=24 for n in nums); zones=Counter((n-1)//10 for n in nums)
     return 2<=odd<=4 and 2<=low<=4 and max(zones.values())<=3 and 80<=sum(nums)<=220

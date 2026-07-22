@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_online_ensemble_v2",
-  "generated_at": "2026-07-22T09:25:07+08:00",
+  "generated_at": "2026-07-22T10:23:45+08:00",
   "history": {
     "count": 2154,
     "first": "2007-01-02",
@@ -985,14 +985,14 @@
           "date": "2022-05-24",
           "hit": 1,
           "brier": 0.10770597271456894,
-          "logloss": 0.37295195380454255
+          "logloss": 0.3729519538045425
         },
         {
           "period": 111000052,
           "date": "2022-05-27",
           "hit": 1,
           "brier": 0.10754727841904124,
-          "logloss": 0.3722323126292586
+          "logloss": 0.3722323126292585
         },
         {
           "period": 111000053,
@@ -1006,7 +1006,7 @@
           "date": "2022-06-03",
           "hit": 2,
           "brier": 0.10732724965023331,
-          "logloss": 0.37120417833132013
+          "logloss": 0.3712041783313202
         },
         {
           "period": 111000055,
@@ -1307,7 +1307,7 @@
           "date": "2022-11-01",
           "hit": 2,
           "brier": 0.10738560842552164,
-          "logloss": 0.37143981837155193
+          "logloss": 0.371439818371552
         },
         {
           "period": 111000098,
@@ -1502,7 +1502,7 @@
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 2,
-          "brier": 0.10718912466027664,
+          "brier": 0.10718912466027665,
           "logloss": 0.37054819177788145
         },
         {
@@ -1558,7 +1558,7 @@
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 3,
-          "brier": 0.10723338059811074,
+          "brier": 0.10723338059811073,
           "logloss": 0.37075780279465703
         },
         {
@@ -1586,7 +1586,7 @@
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 2,
-          "brier": 0.10772351621874272,
+          "brier": 0.10772351621874271,
           "logloss": 0.37303185366646235
         },
         {
@@ -1628,7 +1628,7 @@
           "period": 112000029,
           "date": "2023-02-28",
           "hit": 1,
-          "brier": 0.10723873933079398,
+          "brier": 0.10723873933079399,
           "logloss": 0.3707741389936115
         },
         {
@@ -2182,7 +2182,7 @@
           "date": "2023-12-01",
           "hit": 1,
           "brier": 0.10756643095497079,
-          "logloss": 0.3722790746097959
+          "logloss": 0.372279074609796
         },
         {
           "period": 112000109,
@@ -2195,7 +2195,7 @@
           "period": 112000110,
           "date": "2023-12-08",
           "hit": 0,
-          "brier": 0.10780147859809446,
+          "brier": 0.10780147859809444,
           "logloss": 0.37335187522844293
         },
         {
@@ -2217,7 +2217,7 @@
           "date": "2023-12-19",
           "hit": 1,
           "brier": 0.10704887464142687,
-          "logloss": 0.36986428295800644
+          "logloss": 0.36986428295800655
         },
         {
           "period": 112000114,
@@ -2294,7 +2294,7 @@
           "date": "2024-01-26",
           "hit": 3,
           "brier": 0.10684371208131875,
-          "logloss": 0.3689468405434731
+          "logloss": 0.36894684054347315
         },
         {
           "period": 113000009,
@@ -2678,7 +2678,7 @@
           "period": 113000063,
           "date": "2024-06-21",
           "hit": 1,
-          "brier": 0.10781324585562803,
+          "brier": 0.107813245855628,
           "logloss": 0.3734495639356334
         },
         {
@@ -2875,7 +2875,7 @@
           "date": "2024-09-27",
           "hit": 1,
           "brier": 0.10771077669062351,
-          "logloss": 0.372958491553249
+          "logloss": 0.37295849155324895
         },
         {
           "period": 113000092,
@@ -2931,7 +2931,7 @@
           "date": "2024-10-25",
           "hit": 1,
           "brier": 0.10713574976153908,
-          "logloss": 0.3703167113350617
+          "logloss": 0.37031671133506167
         },
         {
           "period": 113000100,
@@ -3127,7 +3127,7 @@
           "date": "2025-01-26",
           "hit": 0,
           "brier": 0.10800627880712219,
-          "logloss": 0.374339789197632
+          "logloss": 0.37433978919763194
         },
         {
           "period": 114000010,
@@ -3210,7 +3210,7 @@
           "period": 114000021,
           "date": "2025-02-07",
           "hit": 1,
-          "brier": 0.10793659255060602,
+          "brier": 0.10793659255060603,
           "logloss": 0.37401766712715134
         },
         {
@@ -3225,7 +3225,7 @@
           "date": "2025-02-09",
           "hit": 2,
           "brier": 0.10744891759802454,
-          "logloss": 0.37176014771453536
+          "logloss": 0.3717601477145354
         },
         {
           "period": 114000024,
@@ -3400,7 +3400,7 @@
           "date": "2025-04-29",
           "hit": 3,
           "brier": 0.10696769247672708,
-          "logloss": 0.36956010927912286
+          "logloss": 0.3695601092791228
         },
         {
           "period": 114000049,
@@ -3463,7 +3463,7 @@
           "date": "2025-05-30",
           "hit": 1,
           "brier": 0.10794315265984863,
-          "logloss": 0.37405293781715016
+          "logloss": 0.3740529378171501
         },
         {
           "period": 114000058,
@@ -3547,7 +3547,7 @@
           "date": "2025-07-11",
           "hit": 3,
           "brier": 0.10694270341807707,
-          "logloss": 0.3693840576080294
+          "logloss": 0.36938405760802934
         },
         {
           "period": 114000070,
@@ -3861,7 +3861,7 @@
           "period": 114000114,
           "date": "2025-12-16",
           "hit": 2,
-          "brier": 0.10760477493503504,
+          "brier": 0.10760477493503505,
           "logloss": 0.372471157127053
         },
         {
@@ -4093,7 +4093,7 @@
           "date": "2026-02-28",
           "hit": 1,
           "brier": 0.10774762825944725,
-          "logloss": 0.3731479464875942
+          "logloss": 0.3731479464875943
         },
         {
           "period": 115000030,
@@ -4337,7 +4337,7 @@
           "period": 115000064,
           "date": "2026-06-23",
           "hit": 3,
-          "brier": 0.10701560648374708,
+          "brier": 0.10701560648374711,
           "logloss": 0.3697356232533067
         },
         {
@@ -4394,7 +4394,7 @@
           "date": "2026-07-21",
           "hit": 1,
           "brier": 0.10769120147267128,
-          "logloss": 0.3728416141161216
+          "logloss": 0.37284161411612166
         }
       ]
     },
@@ -4629,7 +4629,7 @@
           "date": "2022-04-29",
           "hit": 0,
           "brier": 0.019986033282408923,
-          "logloss": 0.09940976999908258
+          "logloss": 0.09940976999908256
         },
         {
           "period": 111000045,
@@ -5090,7 +5090,7 @@
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "brier": 0.019958044218056192,
+          "brier": 0.019958044218056196,
           "logloss": 0.09875498370768292
         },
         {
@@ -5280,7 +5280,7 @@
           "date": "2023-02-07",
           "hit": 0,
           "brier": 0.01996465110159874,
-          "logloss": 0.09891934025413229
+          "logloss": 0.0989193402541323
         },
         {
           "period": 112000024,
@@ -5616,7 +5616,7 @@
           "date": "2023-07-25",
           "hit": 0,
           "brier": 0.01994953071682105,
-          "logloss": 0.09854001898858793
+          "logloss": 0.09854001898858795
         },
         {
           "period": 112000072,
@@ -5819,7 +5819,7 @@
           "date": "2023-11-03",
           "hit": 0,
           "brier": 0.020006826989389367,
-          "logloss": 0.09991184546475738
+          "logloss": 0.0999118454647574
         },
         {
           "period": 112000101,
@@ -6659,7 +6659,7 @@
           "date": "2024-11-12",
           "hit": 0,
           "brier": 0.019902347924697528,
-          "logloss": 0.09744657620822317
+          "logloss": 0.09744657620822315
         },
         {
           "period": 113000105,
@@ -6911,7 +6911,7 @@
           "date": "2025-02-08",
           "hit": 0,
           "brier": 0.02002069924526416,
-          "logloss": 0.10030665147185304
+          "logloss": 0.10030665147185307
         },
         {
           "period": 114000023,
@@ -6946,7 +6946,7 @@
           "date": "2025-02-14",
           "hit": 0,
           "brier": 0.02000839633186917,
-          "logloss": 0.09999386611340581
+          "logloss": 0.0999938661134058
         },
         {
           "period": 114000028,
@@ -7219,7 +7219,7 @@
           "date": "2025-07-01",
           "hit": 0,
           "brier": 0.01995675918412574,
-          "logloss": 0.09870321736981988
+          "logloss": 0.09870321736981987
         },
         {
           "period": 114000067,
@@ -7240,7 +7240,7 @@
           "date": "2025-07-11",
           "hit": 0,
           "brier": 0.020035702512224092,
-          "logloss": 0.10068154129916926
+          "logloss": 0.10068154129916924
         },
         {
           "period": 114000070,
@@ -8103,5 +8103,511 @@
     "special_random_hits": 0.0612,
     "max_main_weight": 0.11553843
   },
-  "notice": "開獎為隨機事件；模型只做可驗證的機率排序，不保證中獎。"
+  "notice": "開獎為隨機事件；模型只做可驗證的機率排序，不保證中獎。",
+  "module_review": {
+    "main": [
+      {
+        "model": "bayes_24",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 29,
+        "top1_hit": false,
+        "top_candidates": [
+          29,
+          16,
+          12,
+          18,
+          25,
+          4,
+          28,
+          48,
+          10,
+          20,
+          36,
+          37
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.37973958,
+        "weight_before": 0.09651796,
+        "weight_after": 0.0942073,
+        "weight_change": -0.00231066,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "bayes_60",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 48,
+        "top1_hit": false,
+        "top_candidates": [
+          48,
+          16,
+          12,
+          47,
+          18,
+          25,
+          29,
+          11,
+          6,
+          28,
+          49,
+          37
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.3801527,
+        "weight_before": 0.10779196,
+        "weight_after": 0.1113961,
+        "weight_change": 0.00360414,
+        "action": "失敗但受權重上限約束，列入下期監控"
+      },
+      {
+        "model": "bayes_150",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 25,
+        "top1_hit": false,
+        "top_candidates": [
+          25,
+          39,
+          20,
+          16,
+          11,
+          45,
+          18,
+          29,
+          41,
+          24,
+          22,
+          48
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.37217528,
+        "weight_before": 0.08721197,
+        "weight_after": 0.0867905,
+        "weight_change": -0.00042147,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "bayes_360",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 33,
+        "top1_hit": false,
+        "top_candidates": [
+          33,
+          39,
+          26,
+          40,
+          25,
+          6,
+          20,
+          38,
+          49,
+          34,
+          7,
+          29
+        ],
+        "hit_count": 1,
+        "hit_numbers": [
+          26
+        ],
+        "logloss": 0.36595261,
+        "weight_before": 0.05974309,
+        "weight_after": 0.06166989,
+        "weight_change": 0.0019268,
+        "action": "失敗但受權重上限約束，列入下期監控"
+      },
+      {
+        "model": "ewma_8",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 29,
+        "top1_hit": false,
+        "top_candidates": [
+          29,
+          18,
+          12,
+          16,
+          4,
+          19,
+          36,
+          25,
+          10,
+          1,
+          11,
+          6
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.40057179,
+        "weight_before": 0.07753021,
+        "weight_after": 0.07787619,
+        "weight_change": 0.00034598,
+        "action": "失敗但受權重上限約束，列入下期監控"
+      },
+      {
+        "model": "ewma_21",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 29,
+        "top1_hit": false,
+        "top_candidates": [
+          29,
+          12,
+          16,
+          18,
+          25,
+          4,
+          39,
+          11,
+          6,
+          10,
+          47,
+          19
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.39992219,
+        "weight_before": 0.08734061,
+        "weight_after": 0.08514486,
+        "weight_change": -0.00219575,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "ewma_55",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 25,
+        "top1_hit": false,
+        "top_candidates": [
+          25,
+          39,
+          29,
+          16,
+          12,
+          18,
+          11,
+          47,
+          20,
+          6,
+          48,
+          4
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.38182032,
+        "weight_before": 0.08186807,
+        "weight_after": 0.08139657,
+        "weight_change": -0.0004715,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "ewma_144",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 25,
+        "top1_hit": false,
+        "top_candidates": [
+          25,
+          39,
+          29,
+          26,
+          11,
+          20,
+          18,
+          6,
+          40,
+          7,
+          33,
+          49
+        ],
+        "hit_count": 1,
+        "hit_numbers": [
+          26
+        ],
+        "logloss": 0.36899146,
+        "weight_before": 0.0839043,
+        "weight_after": 0.08342529,
+        "weight_change": -0.00047901,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "empirical_hazard",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 41,
+        "top1_hit": false,
+        "top_candidates": [
+          41,
+          31,
+          25,
+          33,
+          46,
+          3,
+          30,
+          19,
+          11,
+          2,
+          16,
+          45
+        ],
+        "hit_count": 2,
+        "hit_numbers": [
+          2,
+          46
+        ],
+        "logloss": 0.38328994,
+        "weight_before": 0.10427366,
+        "weight_after": 0.10524473,
+        "weight_change": 0.00097107,
+        "action": "失敗但受權重上限約束，列入下期監控"
+      },
+      {
+        "model": "conditional_pair",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 26,
+        "top1_hit": true,
+        "top_candidates": [
+          26,
+          10,
+          25,
+          34,
+          6,
+          14,
+          46,
+          12,
+          45,
+          36,
+          17,
+          40
+        ],
+        "hit_count": 2,
+        "hit_numbers": [
+          26,
+          46
+        ],
+        "logloss": 0.36766784,
+        "weight_before": 0.11424153,
+        "weight_after": 0.11553843,
+        "weight_change": 0.0012969,
+        "action": "通過，依滾動成績調整"
+      },
+      {
+        "model": "regime_slope",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 29,
+        "top1_hit": false,
+        "top_candidates": [
+          29,
+          16,
+          18,
+          4,
+          12,
+          10,
+          6,
+          39,
+          20,
+          26,
+          28,
+          19
+        ],
+        "hit_count": 1,
+        "hit_numbers": [
+          26
+        ],
+        "logloss": 0.37866394,
+        "weight_before": 0.09957664,
+        "weight_after": 0.09731015,
+        "weight_change": -0.00226649,
+        "action": "失敗降權／重新校準"
+      }
+    ],
+    "special": [
+      {
+        "model": "bayes_24",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 30,
+        "top1_hit": false,
+        "top_candidates": [
+          30,
+          15,
+          7
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.09481957,
+        "weight_before": 0.12629427,
+        "weight_after": 0.12594114,
+        "weight_change": -0.00035313,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "bayes_60",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 30,
+        "top1_hit": false,
+        "top_candidates": [
+          30,
+          37,
+          34
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10095819,
+        "weight_before": 0.12008763,
+        "weight_after": 0.1197518,
+        "weight_change": -0.00033583,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "bayes_150",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 37,
+        "top1_hit": false,
+        "top_candidates": [
+          37,
+          34,
+          30
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10321055,
+        "weight_before": 0.12710407,
+        "weight_after": 0.12680275,
+        "weight_change": -0.00030132,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "bayes_360",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 24,
+        "top1_hit": false,
+        "top_candidates": [
+          24,
+          31,
+          27
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10023774,
+        "weight_before": 0.11969862,
+        "weight_after": 0.12179735,
+        "weight_change": 0.00209873,
+        "action": "失敗但受權重上限約束，列入下期監控"
+      },
+      {
+        "model": "ewma_8",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 30,
+        "top1_hit": false,
+        "top_candidates": [
+          30,
+          7,
+          24
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.09791129,
+        "weight_before": 0.05622496,
+        "weight_after": 0.05598376,
+        "weight_change": -0.0002412,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "ewma_21",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 30,
+        "top1_hit": false,
+        "top_candidates": [
+          30,
+          37,
+          34
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10000643,
+        "weight_before": 0.09895415,
+        "weight_after": 0.09859153,
+        "weight_change": -0.00036262,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "ewma_55",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 30,
+        "top1_hit": false,
+        "top_candidates": [
+          30,
+          37,
+          34
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.1044973,
+        "weight_before": 0.12122587,
+        "weight_after": 0.12096322,
+        "weight_change": -0.00026265,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "ewma_144",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 37,
+        "top1_hit": false,
+        "top_candidates": [
+          37,
+          34,
+          30
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10354415,
+        "weight_before": 0.12274126,
+        "weight_after": 0.12255454,
+        "weight_change": -0.00018672,
+        "action": "失敗降權／重新校準"
+      },
+      {
+        "model": "empirical_hazard",
+        "prediction_basis_period": 115000071,
+        "evaluated_period": 115000072,
+        "top1": 2,
+        "top1_hit": false,
+        "top_candidates": [
+          2,
+          7,
+          24
+        ],
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.10696534,
+        "weight_before": 0.10766917,
+        "weight_after": 0.10761391,
+        "weight_change": -5.526e-05,
+        "action": "失敗降權／重新校準"
+      }
+    ]
+  },
+  "calculation_integrity": {
+    "official_rows": 2154,
+    "latest_period_used": 115000072,
+    "prediction_target": "2026-07-24",
+    "future_data_used": false,
+    "previous_prediction_rewritten": false,
+    "strongest_single_count": 1,
+    "rule": "只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼"
+  }
 }

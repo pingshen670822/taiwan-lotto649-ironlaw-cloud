@@ -3,7 +3,7 @@ import csv,json,urllib.parse,urllib.request
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
-from engine import ROOT,load_draws,analyze
+from engine import ROOT,load_draws,analyze,latest_module_review
 from report import build_reports
 
 API="https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result"
@@ -49,6 +49,8 @@ def settle_and_save(result: dict):
 def main():
     count=update_current_month(); draws=load_draws(); result=analyze(draws)
     result["generated_at"]=datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
+    result["module_review"]={"main":latest_module_review(draws,result["backtest"]["main"],False),"special":latest_module_review(draws,result["backtest"]["special"],True)}
+    result["calculation_integrity"]={"official_rows":len(draws),"latest_period_used":draws[-1].period,"prediction_target":result["target_date"],"future_data_used":False,"previous_prediction_rewritten":False,"strongest_single_count":len(result["packs"]["最強單支"]),"rule":"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼"}
     if not result["release_gate"]["passed"]: raise RuntimeError("release gate failed; reports and cloud were not overwritten")
     history=settle_and_save(result); build_reports(result,history)
     print(json.dumps({"draws":count,"latest":result["latest_draw"],"target":result["target_date"],"gate":result["release_gate"]},ensure_ascii=False,indent=2))

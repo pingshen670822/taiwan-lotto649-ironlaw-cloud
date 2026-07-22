@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-07-22T09:25:07+08:00",
+  "generated_at": "2026-07-22T10:23:45+08:00",
   "passed": true,
   "latest_period": 115000072,
   "latest_date": "2026-07-21",
@@ -52,6 +52,21 @@
       "detail": "8 valid sets"
     },
     {
+      "name": "strongest_single_exactly_one",
+      "passed": true,
+      "detail": "number=[29]"
+    },
+    {
+      "name": "every_module_reviewed",
+      "passed": true,
+      "detail": "main=11/11, special=9/9"
+    },
+    {
+      "name": "no_fake_or_future_data",
+      "passed": true,
+      "detail": "{\"official_rows\": 2154, \"latest_period_used\": 115000072, \"prediction_target\": \"2026-07-24\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼\"}"
+    },
+    {
       "name": "artifacts_complete",
       "passed": true,
       "detail": "desktop, site, Pages and independent mobile files"
@@ -69,7 +84,7 @@
     {
       "name": "automatic_update_ironlaw",
       "passed": true,
-      "detail": "9/9 locked rules present"
+      "detail": "11/11 locked rules present"
     }
   ]
 }
