@@ -98,6 +98,21 @@ def brier(p: np.ndarray,y: np.ndarray) -> float: return float(np.mean((p-y)**2))
 def logloss(p: np.ndarray,y: np.ndarray) -> float:
     p=np.clip(p,1e-6,1-1e-6); return float(-np.mean(y*np.log(p)+(1-y)*np.log(1-p)))
 
+def rolling_quality(hits: list[int], losses: list[float], expected: float, uniform_loss: float) -> tuple[float,dict]:
+    windows=(20,60,120); hit_means=[]; loss_means=[]
+    for size in windows:
+        hit_means.append(statistics.mean(hits[-size:]))
+        loss_means.append(statistics.mean(losses[-size:]))
+    streak=0
+    for value in reversed(hits):
+        if value: break
+        streak+=1
+    hit_score=.50*hit_means[0]+.30*hit_means[1]+.20*hit_means[2]
+    loss_score=.50*loss_means[0]+.30*loss_means[1]+.20*loss_means[2]
+    instability=float(np.std(hit_means))
+    quality=hit_score-expected-6*max(0,loss_score-uniform_loss)-.18*instability-.035*min(streak,5)
+    return quality,{"hit20":round(hit_means[0],4),"hit60":round(hit_means[1],4),"hit120":round(hit_means[2],4),"loss20":round(loss_means[0],8),"loss60":round(loss_means[1],8),"loss120":round(loss_means[2],8),"zero_hit_streak":streak,"quality":round(quality,8)}
+
 def walk_forward(draws: list[Draw], rounds: int=520, special: bool=False) -> dict:
     start=max(360,len(draws)-rounds); names=list(model_suite(draws[:start],special))
     losses={n:[] for n in names}; hits={n:[] for n in names}; ensemble_rows=[]
@@ -111,12 +126,11 @@ def walk_forward(draws: list[Draw], rounds: int=520, special: bool=False) -> dic
             uniform_ll=logloss(np.full(N,(1 if special else 6)/N),actual)
             quality=[]
             for n in names:
-                recent_hits=statistics.mean(hits[n][-120:])
-                recent_loss=statistics.mean(losses[n][-120:])
-                quality.append(recent_hits-expected-8*max(0,recent_loss-uniform_ll))
-            q=np.array(quality); weights=np.exp(2.2*(q-q.max())); weights/=weights.sum()
+                qvalue,_=rolling_quality(hits[n],losses[n],expected,uniform_ll)
+                quality.append(qvalue)
+            q=np.array(quality); weights=np.exp(3.0*(q-q.max())); weights/=weights.sum()
             for _ in range(3):
-                weights=np.minimum(weights,.30); weights/=weights.sum()
+                weights=np.minimum(weights,.25); weights/=weights.sum()
         raw_ensemble=np.average(preds,axis=0,weights=weights)
         # Lottery signals are weak: shrink aggressively toward the fair-draw prior while preserving rank.
         prior=np.full(N,(1 if special else 6)/N)
@@ -132,7 +146,9 @@ def walk_forward(draws: list[Draw], rounds: int=520, special: bool=False) -> dic
         y=np.zeros(N); y[(d.special-1 if special else np.array(d.main)-1)]=1; actuals.append(y)
     uniform_loss=statistics.mean(logloss(uniform,y) for y in actuals)
     ensemble_loss=statistics.mean(r["logloss"] for r in ensemble_rows)
-    return {"rounds":len(ensemble_rows),"names":names,"weights":{n:round(float(w),8) for n,w in zip(names,weights)},"model_logloss":{n:round(statistics.mean(v),8) for n,v in losses.items()},"model_avg_hits":{n:round(statistics.mean(hits[n]),4) for n in names},"ensemble_logloss":round(ensemble_loss,8),"uniform_logloss":round(uniform_loss,8),"logloss_edge":round(uniform_loss-ensemble_loss,8),"avg_hits":round(statistics.mean(r["hit"] for r in ensemble_rows),4),"rows":ensemble_rows}
+    expected=(3 if special else 12)*(1 if special else 6)/49
+    diagnostics={n:rolling_quality(hits[n],losses[n],expected,uniform_loss)[1] for n in names}
+    return {"rounds":len(ensemble_rows),"names":names,"weights":{n:round(float(w),8) for n,w in zip(names,weights)},"weight_diagnostics":diagnostics,"model_logloss":{n:round(statistics.mean(v),8) for n,v in losses.items()},"model_avg_hits":{n:round(statistics.mean(hits[n]),4) for n in names},"ensemble_logloss":round(ensemble_loss,8),"uniform_logloss":round(uniform_loss,8),"logloss_edge":round(uniform_loss-ensemble_loss,8),"avg_hits":round(statistics.mean(r["hit"] for r in ensemble_rows),4),"rows":ensemble_rows}
 
 def final_scores(draws: list[Draw], bt: dict, special=False) -> np.ndarray:
     models=model_suite(draws,special); names=bt["names"]

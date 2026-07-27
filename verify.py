@@ -26,6 +26,8 @@ def main():
     add("main_hit_edge",analysis["release_gate"]["main_avg_hits"]>analysis["release_gate"]["main_random_hits"],f"{analysis['release_gate']['main_avg_hits']} > {analysis['release_gate']['main_random_hits']}")
     add("special_hit_edge",analysis["release_gate"]["special_avg_hits"]>analysis["release_gate"]["special_random_hits"],f"{analysis['release_gate']['special_avg_hits']} > {analysis['release_gate']['special_random_hits']}")
     add("no_model_monopoly",analysis["release_gate"]["max_main_weight"]<=.30,str(analysis["release_gate"]["max_main_weight"]))
+    logic=analysis.get("weight_logic",{})
+    add("multi_horizon_failure_adaptive_weights",logic.get("windows")==[20,60,120] and logic.get("failure_streak_penalty") is True and logic.get("stability_penalty") is True and logic.get("single_model_cap")==.25,json.dumps(logic,ensure_ascii=False))
     add("candidate_49",len(analysis["main_rank"])==49 and len(analysis["special_rank"])==49,"main/special 49")
     add("suggested_sets",len(analysis["suggested_sets"])==8 and all(len(set(x))==6 for x in analysis["suggested_sets"]),"8 valid sets")
     add("strongest_single_exactly_one",len(analysis["packs"]["最強單支"])==1,f"number={analysis['packs']['最強單支']}")

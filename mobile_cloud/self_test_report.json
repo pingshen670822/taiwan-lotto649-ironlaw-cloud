@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-07-27T09:49:54+08:00",
+  "generated_at": "2026-07-27T12:01:09+08:00",
   "passed": true,
   "latest_period": 115000073,
   "latest_date": "2026-07-24",
@@ -19,7 +19,7 @@
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須同時通過前段命中與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.611e-05, \"special_edge\": 8.015e-05, \"main_avg_hits\": 1.5096, \"main_random_hits\": 1.4694, \"special_avg_hits\": 0.0712, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.12025464}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須同時通過前段命中與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.108e-05, \"special_edge\": 8.698e-05, \"main_avg_hits\": 1.5096, \"main_random_hits\": 1.4694, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.15911254}"
     },
     {
       "name": "walk_forward_520",
@@ -34,12 +34,17 @@
     {
       "name": "special_hit_edge",
       "passed": true,
-      "detail": "0.0712 > 0.0612"
+      "detail": "0.0788 > 0.0612"
     },
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.12025464"
+      "detail": "0.15911254"
+    },
+    {
+      "name": "multi_horizon_failure_adaptive_weights",
+      "passed": true,
+      "detail": "{\"windows\": [20, 60, 120], \"hit_weights\": [0.5, 0.3, 0.2], \"failure_streak_penalty\": true, \"stability_penalty\": true, \"single_model_cap\": 0.25, \"reason\": \"近期命中偏低後轉換為多時間尺度汰弱留強；最近20期優先，兼顧60與120期，連續零命中及不穩定模型立即降權\"}"
     },
     {
       "name": "candidate_49",

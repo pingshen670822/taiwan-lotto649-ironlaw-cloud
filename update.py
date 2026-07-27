@@ -48,6 +48,8 @@ def settle_and_save(result: dict):
 
 def main():
     count=update_current_month(); draws=load_draws(); result=analyze(draws)
+    result["engine"]="cleanroom_multi_horizon_failure_adaptive_v3"
+    result["weight_logic"]={"windows":[20,60,120],"hit_weights":[0.50,0.30,0.20],"failure_streak_penalty":True,"stability_penalty":True,"single_model_cap":0.25,"reason":"近期命中偏低後轉換為多時間尺度汰弱留強；最近20期優先，兼顧60與120期，連續零命中及不穩定模型立即降權"}
     result["generated_at"]=datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
     result["module_review"]={"main":latest_module_review(draws,result["backtest"]["main"],False),"special":latest_module_review(draws,result["backtest"]["special"],True)}
     result["calculation_integrity"]={"official_rows":len(draws),"latest_period_used":draws[-1].period,"prediction_target":result["target_date"],"future_data_used":False,"previous_prediction_rewritten":False,"strongest_single_count":len(result["packs"]["最強單支"]),"rule":"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼"}
