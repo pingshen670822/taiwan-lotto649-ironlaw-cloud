@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-07-28T16:05:05+08:00",
+  "generated_at": "2026-07-29T07:15:40+08:00",
   "passed": true,
   "latest_period": 115000074,
   "latest_date": "2026-07-28",
@@ -19,7 +19,7 @@
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.624e-05, \"special_edge\": 8.698e-05, \"main_avg_hits\": 1.1712, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6654, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.16250718}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.437e-05, \"special_edge\": 8.951e-05, \"main_avg_hits\": 1.1731, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6596, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.17985269}"
     },
     {
       "name": "walk_forward_520",
@@ -29,7 +29,7 @@
     {
       "name": "main_hit_edge",
       "passed": true,
-      "detail": "1.1712 > 1.102"
+      "detail": "1.1731 > 1.102"
     },
     {
       "name": "special_hit_edge",
@@ -39,7 +39,7 @@
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.16250718"
+      "detail": "0.17985269"
     },
     {
       "name": "top9_boundary_adaptive_weights",
@@ -54,7 +54,7 @@
     {
       "name": "every_draw_rank_boundary_audit",
       "passed": true,
-      "detail": "recent=20; periods_with_spill=8; next_rotation=2"
+      "detail": "recent=20; periods_with_spill=8; next_rotation=0"
     },
     {
       "name": "candidate_49",
@@ -79,7 +79,7 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2155, \"latest_period_used\": 115000073, \"prediction_target\": \"2026-07-28\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2156, \"latest_period_used\": 115000074, \"prediction_target\": \"2026-07-31\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",

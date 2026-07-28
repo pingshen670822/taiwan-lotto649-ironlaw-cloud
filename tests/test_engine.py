@@ -29,7 +29,8 @@ class EngineTest(unittest.TestCase):
         self.assertEqual(bt["rank_cutoff"],9)
         self.assertEqual(bt["spill_range"],[10,15])
         self.assertEqual(len(bt["rows"]),30)
-        self.assertTrue(all(len(x["actual_ranks"])==6 for x in bt["rows"]))
+        self.assertEqual(len(bt["recent_rank_audit"]),20)
+        self.assertTrue(all(len(x["actual_ranks"])==6 for x in bt["recent_rank_audit"]))
         self.assertIn(bt["rank_fusion_share"],engine.RANK_BLEND_CHOICES)
     def test_boundary_rotation_responds_to_failure(self):
         import numpy as np
