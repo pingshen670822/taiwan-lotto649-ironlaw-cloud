@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-07-29T05:54:52+08:00",
+  "generated_at": "2026-07-28T16:05:05+08:00",
   "passed": true,
   "latest_period": 115000074,
   "latest_date": "2026-07-28",
@@ -19,7 +19,7 @@
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須同時通過前段命中與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.278e-05, \"special_edge\": 8.951e-05, \"main_avg_hits\": 1.5096, \"main_random_hits\": 1.4694, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.1575338}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.624e-05, \"special_edge\": 8.698e-05, \"main_avg_hits\": 1.1712, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6654, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.16250718}"
     },
     {
       "name": "walk_forward_520",
@@ -29,7 +29,7 @@
     {
       "name": "main_hit_edge",
       "passed": true,
-      "detail": "1.5096 > 1.4694"
+      "detail": "1.1712 > 1.102"
     },
     {
       "name": "special_hit_edge",
@@ -39,12 +39,22 @@
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.1575338"
+      "detail": "0.16250718"
     },
     {
-      "name": "multi_horizon_failure_adaptive_weights",
+      "name": "top9_boundary_adaptive_weights",
       "passed": true,
-      "detail": "{\"windows\": [20, 60, 120], \"hit_weights\": [0.5, 0.3, 0.2], \"failure_streak_penalty\": true, \"stability_penalty\": true, \"single_model_cap\": 0.25, \"reason\": \"近期命中偏低後轉換為多時間尺度汰弱留強；最近20期優先，兼顧60與120期，連續零命中及不穩定模型立即降權\"}"
+      "detail": "{\"windows\": [20, 60, 120], \"hit_weights\": [0.5, 0.3, 0.2], \"target_cutoff\": 9, \"spill_range\": [10, 15], \"spill_penalty\": 0.16, \"adaptive_rank_fusion\": true, \"adaptive_boundary_rotation\": true, \"boundary_rotation_cooldown_draws\": 2, \"candidate_failure_tenure\": true, \"latest_draw_weight_recalculation\": true, \"failure_streak_penalty\": true, \"stability_penalty\": true, \"single_model_cap\": 0.25, \"reason\": \"所有主號模組統一改以前9碼命中為訓練目標；實開落在第10–15名視為邊界外溢失敗並扣分。連續失效時撤換長期佔位未中的第4–9名候選，將第10–15名高共識候選升入前9，且至少維持兩期觀察，避免一次命中就過早撤銷修正。發布前再納入最新一期立即重算權重。\"}"
+    },
+    {
+      "name": "top9_training_target",
+      "passed": true,
+      "detail": "cutoff=9; spill=[10, 15]"
+    },
+    {
+      "name": "every_draw_rank_boundary_audit",
+      "passed": true,
+      "detail": "recent=20; periods_with_spill=8; next_rotation=2"
     },
     {
       "name": "candidate_49",
@@ -59,7 +69,7 @@
     {
       "name": "strongest_single_exactly_one",
       "passed": true,
-      "detail": "number=[29]"
+      "detail": "number=[26]"
     },
     {
       "name": "every_module_reviewed",
@@ -69,7 +79,7 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2156, \"latest_period_used\": 115000074, \"prediction_target\": \"2026-07-31\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼\"}"
+      "detail": "{\"official_rows\": 2155, \"latest_period_used\": 115000073, \"prediction_target\": \"2026-07-28\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",
@@ -89,7 +99,7 @@
     {
       "name": "automatic_update_ironlaw",
       "passed": true,
-      "detail": "11/11 locked rules present"
+      "detail": "19/19 locked rules present"
     }
   ]
 }

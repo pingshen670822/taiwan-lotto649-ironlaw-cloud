@@ -19,4 +19,24 @@ class EngineTest(unittest.TestCase):
         sets=engine.build_sets(np.linspace(.05,.2,49))
         self.assertEqual(len(sets),8)
         self.assertTrue(all(len(set(x))==6 for x in sets))
+    def test_rank_boundary(self):
+        import numpy as np
+        score=np.arange(1,50,dtype=float)
+        actual=np.zeros(49); actual[[48,39,34,33,30,0]]=1
+        self.assertEqual(engine.rank_positions(score,actual),[1,10,15,16,19,49])
+    def test_top9_walk_forward_contract(self):
+        bt=engine.walk_forward(self.draws,30,False)
+        self.assertEqual(bt["rank_cutoff"],9)
+        self.assertEqual(bt["spill_range"],[10,15])
+        self.assertEqual(len(bt["rows"]),30)
+        self.assertTrue(all(len(x["actual_ranks"])==6 for x in bt["rows"]))
+        self.assertIn(bt["rank_fusion_share"],engine.RANK_BLEND_CHOICES)
+    def test_boundary_rotation_responds_to_failure(self):
+        import numpy as np
+        score=np.arange(1,50,dtype=float)
+        adjusted,meta=engine.apply_boundary_rotation(score,np.zeros(49,dtype=int),[0]*20,[1]*20,0)
+        self.assertEqual(meta["count"],3)
+        self.assertEqual(meta["cooldown_after"],2)
+        self.assertTrue(set(meta["promoted"]).issubset(set(range(35,41))))
+        self.assertNotEqual((np.argsort(score)[::-1][:9]+1).tolist(),(np.argsort(adjusted)[::-1][:9]+1).tolist())
 if __name__=="__main__": unittest.main()
