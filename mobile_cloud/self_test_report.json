@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-08-04T05:57:31+08:00",
+  "generated_at": "2026-08-04T07:53:52+08:00",
   "passed": true,
   "latest_period": 115000075,
   "latest_date": "2026-07-31",
@@ -19,7 +19,7 @@
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -9.07e-05, \"special_edge\": 9.314e-05, \"main_avg_hits\": 1.1692, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6731, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.17118317}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -8.043e-05, \"special_edge\": 9.314e-05, \"main_avg_hits\": 1.1788, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6923, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.17118317}"
     },
     {
       "name": "walk_forward_520",
@@ -29,7 +29,7 @@
     {
       "name": "main_hit_edge",
       "passed": true,
-      "detail": "1.1692 > 1.102"
+      "detail": "1.1788 > 1.102"
     },
     {
       "name": "special_hit_edge",
@@ -42,9 +42,9 @@
       "detail": "0.17118317"
     },
     {
-      "name": "top9_boundary_adaptive_weights",
+      "name": "top9_precision_compression_v6",
       "passed": true,
-      "detail": "{\"windows\": [20, 60, 120], \"hit_weights\": [0.5, 0.3, 0.2], \"target_cutoff\": 9, \"spill_range\": [10, 15], \"spill_penalty\": 0.16, \"adaptive_rank_fusion\": true, \"adaptive_boundary_rotation\": true, \"boundary_rotation_cooldown_draws\": 2, \"candidate_failure_tenure\": true, \"latest_draw_weight_recalculation\": true, \"failure_streak_penalty\": true, \"stability_penalty\": true, \"single_model_cap\": 0.25, \"reason\": \"所有主號模組統一改以前9碼命中為訓練目標；實開落在第10–15名視為邊界外溢失敗並扣分。連續失效時撤換長期佔位未中的第4–9名候選，將第10–15名高共識候選升入前9，且至少維持兩期觀察，避免一次命中就過早撤銷修正。發布前再納入最新一期立即重算權重。\"}"
+      "detail": "{\"windows\": [20, 60, 120], \"hit_weights\": [0.5, 0.3, 0.2], \"target_cutoff\": 9, \"spill_range\": [10, 15], \"spill_penalty\": 0.16, \"rank_fusion_share\": 0.25, \"probability_fusion_share\": 0.75, \"boundary_shift_count\": 4, \"previous_draw_overlap_cap\": 3, \"latest_draw_weight_recalculation\": true, \"failure_streak_penalty\": true, \"stability_penalty\": true, \"single_model_cap\": 0.25, \"external_method_walk_forward_gate\": true, \"reason\": \"所有主號模組統一以前9碼命中為訓練目標；校準機率分數占75%、跨模型順位占25%，固定將邊界4席做無穿越壓縮，並限制前9碼最多沿用上期3席。這組規則是520期逐期走步測試勝出組合；任何外部分析法若未優於既有基準，一律不得進入正式預測。\"}"
     },
     {
       "name": "top9_training_target",
@@ -54,7 +54,17 @@
     {
       "name": "every_draw_rank_boundary_audit",
       "passed": true,
-      "detail": "recent=20; periods_with_spill=9; next_rotation=1"
+      "detail": "recent=20; periods_with_spill=8; next_rotation=4"
+    },
+    {
+      "name": "production_policy_locked",
+      "passed": true,
+      "detail": "{\"rank_share\": 0.25, \"boundary_shift\": 4, \"previous_draw_cap\": 3}"
+    },
+    {
+      "name": "v6_walk_forward_improves_v5",
+      "passed": true,
+      "detail": "{\"prior_v5_avg520\": 1.1692, \"v6_avg520\": 1.1788, \"prior_v5_recent20\": 1.15, \"v6_recent20\": 1.35, \"v6_first400\": 1.1825, \"v6_last120\": 1.1667, \"random_avg520\": 1.102}"
     },
     {
       "name": "candidate_49",
@@ -72,6 +82,11 @@
       "detail": "number=[26]"
     },
     {
+      "name": "strongest_multilogic_evidence",
+      "passed": true,
+      "detail": "{\"label\": \"唯一超高信心強烈推薦（系統內相對最高）\", \"number\": 26, \"count\": 1, \"final_rank\": 1, \"model_count\": 11, \"model_top9_support\": 9, \"model_top15_support\": 11, \"model_rank_evidence\": {\"bayes_24\": 4, \"bayes_60\": 9, \"bayes_150\": 10, \"bayes_360\": 3, \"ewma_8\": 2, \"ewma_21\": 2, \"ewma_55\": 5, \"ewma_144\": 2, \"empirical_hazard\": 14, \"conditional_pair\": 3, \"regime_slope\": 4}, \"logic_checks\": {\"final_rank_is_1\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"walk_forward_beats_random\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"warning\": \"超高信心指本系統內多模型相對共識，不代表開獎保證。\"}"
+    },
+    {
       "name": "every_module_reviewed",
       "passed": true,
       "detail": "main=11/11, special=9/9"
@@ -79,7 +94,12 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2157, \"latest_period_used\": 115000075, \"prediction_target\": \"2026-08-04\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算與模型追責，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2157, \"latest_period_used\": 115000075, \"prediction_target\": \"2026-08-04\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+    },
+    {
+      "name": "previous_draw_overlap_capped",
+      "passed": true,
+      "detail": "{\"official_rows\": 2157, \"latest_period_used\": 115000075, \"prediction_target\": \"2026-08-04\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",
@@ -99,7 +119,7 @@
     {
       "name": "automatic_update_ironlaw",
       "passed": true,
-      "detail": "19/19 locked rules present"
+      "detail": "36/36 locked rules present"
     }
   ]
 }

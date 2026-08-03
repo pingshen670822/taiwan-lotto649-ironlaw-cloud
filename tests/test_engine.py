@@ -32,12 +32,14 @@ class EngineTest(unittest.TestCase):
         self.assertEqual(len(bt["recent_rank_audit"]),20)
         self.assertTrue(all(len(x["actual_ranks"])==6 for x in bt["recent_rank_audit"]))
         self.assertIn(bt["rank_fusion_share"],engine.RANK_BLEND_CHOICES)
-    def test_boundary_rotation_responds_to_failure(self):
+    def test_production_precision_compression(self):
         import numpy as np
         score=np.arange(1,50,dtype=float)
-        adjusted,meta=engine.apply_boundary_rotation(score,np.zeros(49,dtype=int),[0]*20,[1]*20,0)
-        self.assertEqual(meta["count"],3)
-        self.assertEqual(meta["cooldown_after"],2)
-        self.assertTrue(set(meta["promoted"]).issubset(set(range(35,41))))
+        adjusted,meta=engine.apply_production_policy(score,(41,42,43,44,45,46))
+        self.assertEqual(meta["count"],4)
+        self.assertEqual(meta["rank_share"],.25)
+        self.assertEqual(meta["repeat_cap"],3)
+        top=(np.argsort(adjusted)[::-1][:9]+1).tolist()
+        self.assertLessEqual(len(set(top)&{41,42,43,44,45,46}),3)
         self.assertNotEqual((np.argsort(score)[::-1][:9]+1).tolist(),(np.argsort(adjusted)[::-1][:9]+1).tolist())
 if __name__=="__main__": unittest.main()
