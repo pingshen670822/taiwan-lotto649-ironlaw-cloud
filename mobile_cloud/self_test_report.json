@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-08-14T22:28:18+08:00",
+  "generated_at": "2026-08-14T22:58:29+08:00",
   "passed": true,
   "latest_period": 115000079,
   "latest_date": "2026-08-14",
@@ -14,7 +14,7 @@
     {
       "name": "official_history_latest",
       "passed": true,
-      "detail": "actual=115000079 2026-08-14; expected>=2026-08-11"
+      "detail": "actual=115000079 2026-08-14; expected>=2026-08-14"
     },
     {
       "name": "release_gate",
