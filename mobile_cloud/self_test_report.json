@@ -1,25 +1,25 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-08-18T20:21:29+08:00",
+  "generated_at": "2026-08-18T22:01:19+08:00",
   "passed": true,
-  "latest_period": 115000079,
-  "latest_date": "2026-08-14",
-  "target_date": "2026-08-18",
+  "latest_period": 115000080,
+  "latest_date": "2026-08-18",
+  "target_date": "2026-08-21",
   "checks": [
     {
       "name": "official_history_complete",
       "passed": true,
-      "detail": "2161 draws"
+      "detail": "2162 draws"
     },
     {
       "name": "official_history_latest",
       "passed": true,
-      "detail": "actual=115000079 2026-08-14; expected>=2026-08-14"
+      "detail": "actual=115000080 2026-08-18; expected>=2026-08-14"
     },
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -7.144e-05, \"special_edge\": 0.00010353, \"main_avg_hits\": 1.1769, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6827, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.12840653}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -7.331e-05, \"special_edge\": 0.00011219, \"main_avg_hits\": 1.1769, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6808, \"special_avg_hits\": 0.0788, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.12719025}"
     },
     {
       "name": "walk_forward_520",
@@ -39,7 +39,7 @@
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.12840653"
+      "detail": "0.12719025"
     },
     {
       "name": "top9_precision_compression_v6",
@@ -54,7 +54,7 @@
     {
       "name": "every_draw_rank_boundary_audit",
       "passed": true,
-      "detail": "recent=20; periods_with_spill=9; next_rotation=4"
+      "detail": "recent=20; periods_with_spill=8; next_rotation=4"
     },
     {
       "name": "production_policy_locked",
@@ -64,7 +64,7 @@
     {
       "name": "v6_walk_forward_improves_v5",
       "passed": true,
-      "detail": "{\"prior_v5_avg520\": 1.1692, \"v6_avg520\": 1.1769, \"prior_v5_recent20\": 1.15, \"v6_recent20\": 1.35, \"v6_first400\": 1.1775, \"v6_last120\": 1.175, \"random_avg520\": 1.102}"
+      "detail": "{\"prior_v5_avg520\": 1.1692, \"v6_avg520\": 1.1769, \"prior_v5_recent20\": 1.15, \"v6_recent20\": 1.35, \"v6_first400\": 1.1725, \"v6_last120\": 1.1917, \"random_avg520\": 1.102}"
     },
     {
       "name": "candidate_49",
@@ -79,12 +79,12 @@
     {
       "name": "strongest_single_exactly_one",
       "passed": true,
-      "detail": "number=[12]"
+      "detail": "number=[25]"
     },
     {
       "name": "strongest_multilogic_evidence",
       "passed": true,
-      "detail": "{\"label\": \"唯一超高信心強烈推薦（系統內相對最高）\", \"number\": 12, \"count\": 1, \"final_rank\": 1, \"model_count\": 11, \"model_top9_support\": 9, \"model_top15_support\": 9, \"model_rank_evidence\": {\"bayes_24\": 2, \"bayes_60\": 1, \"bayes_150\": 5, \"bayes_360\": 18, \"ewma_8\": 1, \"ewma_21\": 1, \"ewma_55\": 2, \"ewma_144\": 7, \"empirical_hazard\": 22, \"conditional_pair\": 9, \"regime_slope\": 2}, \"logic_checks\": {\"final_rank_is_1\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"walk_forward_beats_random\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"warning\": \"超高信心指本系統內多模型相對共識，不代表開獎保證。\"}"
+      "detail": "{\"label\": \"唯一超高信心強烈推薦（系統內相對最高）\", \"number\": 25, \"count\": 1, \"final_rank\": 1, \"model_count\": 11, \"model_top9_support\": 10, \"model_top15_support\": 11, \"model_rank_evidence\": {\"bayes_24\": 3, \"bayes_60\": 3, \"bayes_150\": 1, \"bayes_360\": 2, \"ewma_8\": 2, \"ewma_21\": 3, \"ewma_55\": 1, \"ewma_144\": 1, \"empirical_hazard\": 15, \"conditional_pair\": 1, \"regime_slope\": 4}, \"logic_checks\": {\"final_rank_is_1\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"walk_forward_beats_random\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"warning\": \"超高信心指本系統內多模型相對共識，不代表開獎保證。\"}"
     },
     {
       "name": "every_module_reviewed",
@@ -94,12 +94,12 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2161, \"latest_period_used\": 115000079, \"prediction_target\": \"2026-08-18\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2162, \"latest_period_used\": 115000080, \"prediction_target\": \"2026-08-21\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 2, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "previous_draw_overlap_capped",
       "passed": true,
-      "detail": "{\"official_rows\": 2161, \"latest_period_used\": 115000079, \"prediction_target\": \"2026-08-18\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2162, \"latest_period_used\": 115000080, \"prediction_target\": \"2026-08-21\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 2, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",
