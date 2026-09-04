@@ -1,25 +1,25 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-09-04T20:59:59+08:00",
+  "generated_at": "2026-09-05T00:53:44+08:00",
   "passed": true,
-  "latest_period": 115000084,
-  "latest_date": "2026-09-01",
-  "target_date": "2026-09-04",
+  "latest_period": 115000085,
+  "latest_date": "2026-09-04",
+  "target_date": "2026-09-08",
   "checks": [
     {
       "name": "official_history_complete",
       "passed": true,
-      "detail": "2166 draws"
+      "detail": "2167 draws"
     },
     {
       "name": "official_history_latest",
       "passed": true,
-      "detail": "actual=115000084 2026-09-01; expected>=2026-09-01"
+      "detail": "actual=115000085 2026-09-04; expected>=2026-09-04"
     },
     {
       "name": "release_gate",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -5.438e-05, \"special_edge\": 0.00011867, \"main_avg_hits\": 1.1846, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6846, \"special_avg_hits\": 0.0827, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.13262183}"
+      "detail": "{\"passed\": true, \"rule\": \"520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷\", \"main_edge\": -5.426e-05, \"special_edge\": 0.00011289, \"main_avg_hits\": 1.1885, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.6865, \"special_avg_hits\": 0.0827, \"special_random_hits\": 0.0612, \"max_main_weight\": 0.13141299}"
     },
     {
       "name": "walk_forward_520",
@@ -29,7 +29,7 @@
     {
       "name": "main_hit_edge",
       "passed": true,
-      "detail": "1.1846 > 1.102"
+      "detail": "1.1885 > 1.102"
     },
     {
       "name": "special_hit_edge",
@@ -39,7 +39,7 @@
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.13262183"
+      "detail": "0.13141299"
     },
     {
       "name": "top9_precision_compression_v6",
@@ -64,7 +64,7 @@
     {
       "name": "v6_walk_forward_improves_v5",
       "passed": true,
-      "detail": "{\"prior_v5_avg520\": 1.1692, \"v6_avg520\": 1.1846, \"prior_v5_recent20\": 1.15, \"v6_recent20\": 1.45, \"v6_first400\": 1.1725, \"v6_last120\": 1.225, \"random_avg520\": 1.102}"
+      "detail": "{\"prior_v5_avg520\": 1.1692, \"v6_avg520\": 1.1885, \"prior_v5_recent20\": 1.15, \"v6_recent20\": 1.4, \"v6_first400\": 1.1775, \"v6_last120\": 1.225, \"random_avg520\": 1.102}"
     },
     {
       "name": "candidate_49",
@@ -84,7 +84,7 @@
     {
       "name": "strongest_multilogic_evidence",
       "passed": true,
-      "detail": "{\"label\": \"唯一超高信心強烈推薦（系統內相對最高）\", \"number\": 26, \"count\": 1, \"final_rank\": 1, \"model_count\": 11, \"model_top9_support\": 10, \"model_top15_support\": 10, \"model_rank_evidence\": {\"bayes_24\": 2, \"bayes_60\": 3, \"bayes_150\": 4, \"bayes_360\": 1, \"ewma_8\": 1, \"ewma_21\": 1, \"ewma_55\": 2, \"ewma_144\": 1, \"empirical_hazard\": 22, \"conditional_pair\": 1, \"regime_slope\": 2}, \"logic_checks\": {\"final_rank_is_1\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"walk_forward_beats_random\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"warning\": \"超高信心指本系統內多模型相對共識，不代表開獎保證。\"}"
+      "detail": "{\"label\": \"唯一超高信心強烈推薦（系統內相對最高）\", \"number\": 26, \"count\": 1, \"final_rank\": 1, \"model_count\": 11, \"model_top9_support\": 10, \"model_top15_support\": 10, \"model_rank_evidence\": {\"bayes_24\": 2, \"bayes_60\": 2, \"bayes_150\": 3, \"bayes_360\": 1, \"ewma_8\": 1, \"ewma_21\": 1, \"ewma_55\": 2, \"ewma_144\": 1, \"empirical_hazard\": 17, \"conditional_pair\": 1, \"regime_slope\": 2}, \"logic_checks\": {\"final_rank_is_1\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"walk_forward_beats_random\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"warning\": \"超高信心指本系統內多模型相對共識，不代表開獎保證。\"}"
     },
     {
       "name": "every_module_reviewed",
@@ -94,12 +94,12 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2166, \"latest_period_used\": 115000084, \"prediction_target\": \"2026-09-04\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2167, \"latest_period_used\": 115000085, \"prediction_target\": \"2026-09-08\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 0, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "previous_draw_overlap_capped",
       "passed": true,
-      "detail": "{\"official_rows\": 2166, \"latest_period_used\": 115000084, \"prediction_target\": \"2026-09-04\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2167, \"latest_period_used\": 115000085, \"prediction_target\": \"2026-09-08\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 0, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",
