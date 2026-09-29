@@ -1,602 +1,602 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_top9_precision_compression_v6",
-  "generated_at": "2026-09-29T17:12:19+08:00",
+  "generated_at": "2026-09-30T01:11:25+08:00",
   "history": {
-    "count": 2173,
+    "count": 2174,
     "first": "2007-01-02",
-    "latest": "2026-09-25",
-    "latest_period": 115000091
+    "latest": "2026-09-29",
+    "latest_period": 115000092
   },
   "latest_draw": {
-    "period": 115000091,
-    "date": "2026-09-25",
+    "period": 115000092,
+    "date": "2026-09-29",
     "main": [
-      5,
+      1,
+      2,
+      4,
       13,
-      24,
-      25,
-      28,
-      33
+      30,
+      38
     ],
-    "special": 40
+    "special": 27
   },
-  "target_date": "2026-09-29",
+  "target_date": "2026-10-02",
   "main_rank": [
     {
       "rank": 1,
-      "number": 35,
-      "probability": 0.131366
+      "number": 25,
+      "probability": 0.130849
     },
     {
       "rank": 2,
-      "number": 15,
-      "probability": 0.130821
+      "number": 35,
+      "probability": 0.129653
     },
     {
       "rank": 3,
-      "number": 25,
-      "probability": 0.130727
+      "number": 26,
+      "probability": 0.129616
     },
     {
       "rank": 4,
-      "number": 26,
-      "probability": 0.129922
+      "number": 12,
+      "probability": 0.129447
     },
     {
       "rank": 5,
-      "number": 12,
-      "probability": 0.129478
+      "number": 15,
+      "probability": 0.128691
     },
     {
       "rank": 6,
       "number": 19,
-      "probability": 0.128385
+      "probability": 0.127311
     },
     {
       "rank": 7,
-      "number": 33,
-      "probability": 0.127393
+      "number": 14,
+      "probability": 0.127137
     },
     {
       "rank": 8,
-      "number": 13,
-      "probability": 0.127347
+      "number": 33,
+      "probability": 0.126922
     },
     {
       "rank": 9,
-      "number": 16,
-      "probability": 0.126501
+      "number": 2,
+      "probability": 0.12621
     },
     {
       "rank": 10,
       "number": 18,
-      "probability": 0.12607
+      "probability": 0.125802
     },
     {
       "rank": 11,
-      "number": 14,
-      "probability": 0.125677
+      "number": 29,
+      "probability": 0.12569
     },
     {
       "rank": 12,
-      "number": 29,
-      "probability": 0.124515
+      "number": 13,
+      "probability": 0.125294
     },
     {
       "rank": 13,
       "number": 24,
-      "probability": 0.123933
+      "probability": 0.124339
     },
     {
       "rank": 14,
-      "number": 23,
-      "probability": 0.123774
+      "number": 16,
+      "probability": 0.123703
     },
     {
       "rank": 15,
-      "number": 39,
-      "probability": 0.123771
+      "number": 48,
+      "probability": 0.123683
     },
     {
       "rank": 16,
-      "number": 48,
-      "probability": 0.123592
+      "number": 4,
+      "probability": 0.1235
     },
     {
       "rank": 17,
-      "number": 8,
-      "probability": 0.123252
+      "number": 39,
+      "probability": 0.123454
     },
     {
       "rank": 18,
       "number": 20,
-      "probability": 0.123168
+      "probability": 0.123302
     },
     {
       "rank": 19,
-      "number": 47,
-      "probability": 0.12302
+      "number": 1,
+      "probability": 0.123003
     },
     {
       "rank": 20,
-      "number": 27,
-      "probability": 0.122973
+      "number": 47,
+      "probability": 0.122874
     },
     {
       "rank": 21,
-      "number": 3,
-      "probability": 0.122513
+      "number": 23,
+      "probability": 0.122488
     },
     {
       "rank": 22,
-      "number": 49,
-      "probability": 0.122389
+      "number": 8,
+      "probability": 0.122449
     },
     {
       "rank": 23,
-      "number": 5,
-      "probability": 0.122258
+      "number": 27,
+      "probability": 0.122282
     },
     {
       "rank": 24,
-      "number": 11,
-      "probability": 0.122036
+      "number": 49,
+      "probability": 0.122217
     },
     {
       "rank": 25,
-      "number": 6,
-      "probability": 0.121991
+      "number": 11,
+      "probability": 0.122055
     },
     {
       "rank": 26,
-      "number": 28,
-      "probability": 0.121856
+      "number": 30,
+      "probability": 0.12193
     },
     {
       "rank": 27,
-      "number": 45,
-      "probability": 0.121828
+      "number": 3,
+      "probability": 0.121845
     },
     {
       "rank": 28,
-      "number": 34,
-      "probability": 0.121547
+      "number": 21,
+      "probability": 0.121747
     },
     {
       "rank": 29,
-      "number": 36,
-      "probability": 0.121399
+      "number": 5,
+      "probability": 0.121696
     },
     {
       "rank": 30,
-      "number": 2,
-      "probability": 0.121278
+      "number": 6,
+      "probability": 0.121633
     },
     {
       "rank": 31,
-      "number": 21,
-      "probability": 0.121173
+      "number": 43,
+      "probability": 0.12155
     },
     {
       "rank": 32,
-      "number": 10,
-      "probability": 0.121065
+      "number": 28,
+      "probability": 0.121388
     },
     {
       "rank": 33,
-      "number": 43,
-      "probability": 0.121037
+      "number": 36,
+      "probability": 0.121211
     },
     {
       "rank": 34,
-      "number": 22,
-      "probability": 0.120525
+      "number": 45,
+      "probability": 0.120825
     },
     {
       "rank": 35,
-      "number": 4,
-      "probability": 0.120497
+      "number": 34,
+      "probability": 0.120609
     },
     {
       "rank": 36,
       "number": 40,
-      "probability": 0.120424
+      "probability": 0.120513
     },
     {
       "rank": 37,
-      "number": 1,
-      "probability": 0.120004
+      "number": 10,
+      "probability": 0.12026
     },
     {
       "rank": 38,
-      "number": 46,
-      "probability": 0.119477
+      "number": 22,
+      "probability": 0.119994
     },
     {
       "rank": 39,
-      "number": 41,
-      "probability": 0.119387
+      "number": 38,
+      "probability": 0.119754
     },
     {
       "rank": 40,
-      "number": 30,
-      "probability": 0.119364
+      "number": 46,
+      "probability": 0.119185
     },
     {
       "rank": 41,
-      "number": 37,
-      "probability": 0.118692
+      "number": 41,
+      "probability": 0.118944
     },
     {
       "rank": 42,
-      "number": 17,
-      "probability": 0.118023
+      "number": 37,
+      "probability": 0.118825
     },
     {
       "rank": 43,
-      "number": 7,
-      "probability": 0.117647
+      "number": 32,
+      "probability": 0.117668
     },
     {
       "rank": 44,
-      "number": 9,
-      "probability": 0.117512
+      "number": 17,
+      "probability": 0.117615
     },
     {
       "rank": 45,
-      "number": 32,
-      "probability": 0.11735
+      "number": 7,
+      "probability": 0.117407
     },
     {
       "rank": 46,
-      "number": 44,
-      "probability": 0.11704
+      "number": 9,
+      "probability": 0.117147
     },
     {
       "rank": 47,
-      "number": 38,
-      "probability": 0.115982
+      "number": 44,
+      "probability": 0.116329
     },
     {
       "rank": 48,
       "number": 31,
-      "probability": 0.115252
+      "probability": 0.115206
     },
     {
       "rank": 49,
       "number": 42,
-      "probability": 0.11477
+      "probability": 0.114748
     }
   ],
   "special_rank": [
     {
       "rank": 1,
-      "number": 10,
-      "probability": 0.026074
+      "number": 27,
+      "probability": 0.025597
     },
     {
       "rank": 2,
-      "number": 30,
-      "probability": 0.025996
+      "number": 10,
+      "probability": 0.025271
     },
     {
       "rank": 3,
-      "number": 40,
-      "probability": 0.023936
+      "number": 30,
+      "probability": 0.024915
     },
     {
       "rank": 4,
-      "number": 31,
-      "probability": 0.023707
+      "number": 40,
+      "probability": 0.024386
     },
     {
       "rank": 5,
-      "number": 27,
-      "probability": 0.02341
+      "number": 2,
+      "probability": 0.022711
     },
     {
       "rank": 6,
       "number": 7,
-      "probability": 0.022648
+      "probability": 0.022518
     },
     {
       "rank": 7,
-      "number": 34,
-      "probability": 0.022403
+      "number": 37,
+      "probability": 0.022119
     },
     {
       "rank": 8,
-      "number": 37,
-      "probability": 0.021891
+      "number": 31,
+      "probability": 0.021959
     },
     {
       "rank": 9,
-      "number": 6,
-      "probability": 0.021695
+      "number": 47,
+      "probability": 0.021674
     },
     {
       "rank": 10,
-      "number": 13,
-      "probability": 0.021657
+      "number": 34,
+      "probability": 0.021654
     },
     {
       "rank": 11,
-      "number": 47,
-      "probability": 0.021624
+      "number": 24,
+      "probability": 0.021068
     },
     {
       "rank": 12,
-      "number": 2,
-      "probability": 0.021492
+      "number": 6,
+      "probability": 0.021042
     },
     {
       "rank": 13,
-      "number": 16,
-      "probability": 0.021388
+      "number": 13,
+      "probability": 0.021029
     },
     {
       "rank": 14,
-      "number": 11,
-      "probability": 0.021329
+      "number": 16,
+      "probability": 0.02072
     },
     {
       "rank": 15,
-      "number": 24,
-      "probability": 0.020872
+      "number": 11,
+      "probability": 0.020677
     },
     {
       "rank": 16,
-      "number": 1,
-      "probability": 0.020663
+      "number": 25,
+      "probability": 0.020626
     },
     {
       "rank": 17,
-      "number": 25,
-      "probability": 0.020603
+      "number": 8,
+      "probability": 0.020502
     },
     {
       "rank": 18,
       "number": 19,
-      "probability": 0.020517
+      "probability": 0.0205
     },
     {
       "rank": 19,
       "number": 4,
-      "probability": 0.020375
+      "probability": 0.020408
     },
     {
       "rank": 20,
       "number": 45,
-      "probability": 0.020333
+      "probability": 0.02038
     },
     {
       "rank": 21,
-      "number": 8,
-      "probability": 0.020312
+      "number": 3,
+      "probability": 0.020296
     },
     {
       "rank": 22,
-      "number": 3,
-      "probability": 0.020199
+      "number": 22,
+      "probability": 0.02021
     },
     {
       "rank": 23,
-      "number": 15,
-      "probability": 0.020077
+      "number": 46,
+      "probability": 0.020194
     },
     {
       "rank": 24,
-      "number": 46,
-      "probability": 0.020061
+      "number": 42,
+      "probability": 0.020161
     },
     {
       "rank": 25,
-      "number": 22,
-      "probability": 0.020055
+      "number": 15,
+      "probability": 0.020095
     },
     {
       "rank": 26,
-      "number": 42,
-      "probability": 0.019974
+      "number": 48,
+      "probability": 0.019956
     },
     {
       "rank": 27,
-      "number": 38,
-      "probability": 0.019897
+      "number": 28,
+      "probability": 0.019949
     },
     {
       "rank": 28,
-      "number": 48,
-      "probability": 0.019868
+      "number": 1,
+      "probability": 0.019918
     },
     {
       "rank": 29,
-      "number": 28,
-      "probability": 0.019764
+      "number": 38,
+      "probability": 0.019908
     },
     {
       "rank": 30,
       "number": 14,
-      "probability": 0.019554
+      "probability": 0.019635
     },
     {
       "rank": 31,
-      "number": 39,
-      "probability": 0.019318
+      "number": 35,
+      "probability": 0.019437
     },
     {
       "rank": 32,
-      "number": 35,
-      "probability": 0.019283
+      "number": 39,
+      "probability": 0.019395
     },
     {
       "rank": 33,
-      "number": 43,
-      "probability": 0.019135
+      "number": 33,
+      "probability": 0.019222
     },
     {
       "rank": 34,
-      "number": 41,
-      "probability": 0.019128
+      "number": 43,
+      "probability": 0.019202
     },
     {
       "rank": 35,
-      "number": 33,
-      "probability": 0.01907
+      "number": 41,
+      "probability": 0.0192
     },
     {
       "rank": 36,
-      "number": 12,
-      "probability": 0.019053
+      "number": 26,
+      "probability": 0.019179
     },
     {
       "rank": 37,
-      "number": 26,
-      "probability": 0.019033
+      "number": 12,
+      "probability": 0.019167
     },
     {
       "rank": 38,
       "number": 21,
-      "probability": 0.019028
+      "probability": 0.019145
     },
     {
       "rank": 39,
-      "number": 18,
-      "probability": 0.018979
+      "number": 49,
+      "probability": 0.019103
     },
     {
       "rank": 40,
-      "number": 49,
-      "probability": 0.018961
+      "number": 18,
+      "probability": 0.019102
     },
     {
       "rank": 41,
-      "number": 36,
-      "probability": 0.01892
+      "number": 17,
+      "probability": 0.019059
     },
     {
       "rank": 42,
-      "number": 17,
-      "probability": 0.018871
+      "number": 36,
+      "probability": 0.018995
     },
     {
       "rank": 43,
       "number": 32,
-      "probability": 0.018511
+      "probability": 0.018658
     },
     {
       "rank": 44,
-      "number": 9,
-      "probability": 0.018503
+      "number": 44,
+      "probability": 0.018642
     },
     {
       "rank": 45,
-      "number": 44,
-      "probability": 0.018461
+      "number": 9,
+      "probability": 0.018618
     },
     {
       "rank": 46,
       "number": 23,
-      "probability": 0.01841
+      "probability": 0.018546
     },
     {
       "rank": 47,
       "number": 29,
-      "probability": 0.018363
+      "probability": 0.018455
     },
     {
       "rank": 48,
       "number": 20,
-      "probability": 0.018361
+      "probability": 0.018445
     },
     {
       "rank": 49,
       "number": 5,
-      "probability": 0.018235
+      "probability": 0.018353
     }
   ],
   "packs": {
     "最強單支": [
-      35
-    ],
-    "二中一": [
-      35,
-      15
-    ],
-    "三中一": [
-      35,
-      15,
       25
     ],
-    "五中二": [
-      35,
-      15,
+    "二中一": [
       25,
+      35
+    ],
+    "三中一": [
+      25,
+      35,
+      26
+    ],
+    "五中二": [
+      25,
+      35,
       26,
-      12
+      12,
+      15
     ],
     "九中三": [
-      35,
-      15,
       25,
+      35,
       26,
       12,
+      15,
       19,
+      14,
       33,
-      13,
-      16
+      2
     ],
     "主攻12碼": [
-      35,
-      15,
       25,
+      35,
       26,
       12,
+      15,
       19,
-      33,
-      13,
-      16,
-      18,
       14,
-      29
+      33,
+      2,
+      18,
+      29,
+      13
     ],
     "防守18碼": [
-      35,
-      15,
       25,
+      35,
       26,
       12,
+      15,
       19,
-      33,
-      13,
-      16,
-      18,
       14,
+      33,
+      2,
+      18,
       29,
+      13,
       24,
-      23,
-      39,
+      16,
       48,
-      8,
+      4,
+      39,
       20
     ]
   },
   "special_packs": {
     "最強單支": [
-      10
+      27
     ],
     "三碼觀察": [
+      27,
       10,
-      30,
-      40
+      30
     ]
   },
   "avoid": {
     "五不中": [
+      7,
+      9,
       31,
-      32,
-      38,
       42,
       44
     ],
@@ -604,23 +604,23 @@
       7,
       9,
       17,
-      30,
       31,
       32,
       37,
-      38,
+      41,
       42,
-      44
+      44,
+      46
     ],
     "十五不中": [
-      1,
-      4,
       7,
       9,
+      10,
       17,
-      30,
+      22,
       31,
       32,
+      34,
       37,
       38,
       40,
@@ -640,46 +640,6 @@
       35
     ],
     [
-      15,
-      16,
-      25,
-      26,
-      33,
-      35
-    ],
-    [
-      12,
-      13,
-      15,
-      26,
-      33,
-      35
-    ],
-    [
-      13,
-      15,
-      18,
-      25,
-      26,
-      35
-    ],
-    [
-      12,
-      15,
-      18,
-      25,
-      33,
-      35
-    ],
-    [
-      12,
-      13,
-      16,
-      25,
-      26,
-      35
-    ],
-    [
       12,
       14,
       25,
@@ -688,12 +648,52 @@
       35
     ],
     [
+      2,
+      14,
+      15,
+      25,
+      26,
+      35
+    ],
+    [
+      2,
+      12,
+      15,
+      25,
+      33,
+      35
+    ],
+    [
+      2,
+      12,
+      18,
+      25,
+      26,
+      35
+    ],
+    [
       15,
       18,
-      19,
+      25,
       26,
       33,
       35
+    ],
+    [
+      12,
+      14,
+      15,
+      25,
+      29,
+      35
+    ],
+    [
+      12,
+      15,
+      25,
+      26,
+      29,
+      33
     ]
   ],
   "backtest": {
@@ -707,26 +707,26 @@
       "rank_fusion_share": 0.25,
       "rank_fusion_diagnostics": {
         "0.0": {
-          "avg_top9_hits": 1.1558,
-          "avg_spill_10_15": 0.7269,
+          "avg_top9_hits": 1.1519,
+          "avg_spill_10_15": 0.7212,
           "recent20_top9_hits": 1.3,
           "recent20_spill_10_15": 0.85
         },
         "0.25": {
-          "avg_top9_hits": 1.1385,
+          "avg_top9_hits": 1.1365,
           "avg_spill_10_15": 0.7365,
           "recent20_top9_hits": 1.35,
           "recent20_spill_10_15": 0.7
         },
         "0.5": {
-          "avg_top9_hits": 1.15,
-          "avg_spill_10_15": 0.7115,
+          "avg_top9_hits": 1.1519,
+          "avg_spill_10_15": 0.7058,
           "recent20_top9_hits": 1.35,
           "recent20_spill_10_15": 0.6
         },
         "0.75": {
-          "avg_top9_hits": 1.1558,
-          "avg_spill_10_15": 0.6942,
+          "avg_top9_hits": 1.15,
+          "avg_spill_10_15": 0.7,
           "recent20_top9_hits": 1.3,
           "recent20_spill_10_15": 0.6
         },
@@ -739,330 +739,330 @@
       },
       "boundary_shift_diagnostics": {
         "0": {
-          "avg_top9_hits": 1.1385,
+          "avg_top9_hits": 1.1365,
           "avg_spill_10_15": 0.7365,
           "recent20_top9_hits": 1.35,
-          "recent60_top9_hits": 1.1333,
-          "recent120_top9_hits": 1.1417
+          "recent60_top9_hits": 1.1167,
+          "recent120_top9_hits": 1.1333
         },
         "1": {
-          "avg_top9_hits": 1.1519,
-          "avg_spill_10_15": 0.7231,
+          "avg_top9_hits": 1.1442,
+          "avg_spill_10_15": 0.7288,
           "recent20_top9_hits": 1.3,
-          "recent60_top9_hits": 1.1333,
-          "recent120_top9_hits": 1.1417
+          "recent60_top9_hits": 1.1167,
+          "recent120_top9_hits": 1.1333
         },
         "2": {
-          "avg_top9_hits": 1.1404,
+          "avg_top9_hits": 1.1385,
           "avg_spill_10_15": 0.7346,
-          "recent20_top9_hits": 1.05,
+          "recent20_top9_hits": 1,
           "recent60_top9_hits": 1,
-          "recent120_top9_hits": 1.05
+          "recent120_top9_hits": 1.0417
         },
         "3": {
-          "avg_top9_hits": 1.1846,
-          "avg_spill_10_15": 0.6904,
+          "avg_top9_hits": 1.1788,
+          "avg_spill_10_15": 0.6942,
           "recent20_top9_hits": 1.1,
-          "recent60_top9_hits": 1.1167,
-          "recent120_top9_hits": 1.125
+          "recent60_top9_hits": 1.1333,
+          "recent120_top9_hits": 1.1167
         },
         "4": {
-          "avg_top9_hits": 1.1827,
-          "avg_spill_10_15": 0.6923,
+          "avg_top9_hits": 1.1788,
+          "avg_spill_10_15": 0.6942,
           "recent20_top9_hits": 1.25,
-          "recent60_top9_hits": 1.25,
-          "recent120_top9_hits": 1.2083
+          "recent60_top9_hits": 1.2667,
+          "recent120_top9_hits": 1.2
         },
         "5": {
-          "avg_top9_hits": 1.1654,
-          "avg_spill_10_15": 0.7096,
+          "avg_top9_hits": 1.1615,
+          "avg_spill_10_15": 0.7115,
           "recent20_top9_hits": 1.2,
-          "recent60_top9_hits": 1.1667,
-          "recent120_top9_hits": 1.1917
+          "recent60_top9_hits": 1.1833,
+          "recent120_top9_hits": 1.1833
         },
         "6": {
           "avg_top9_hits": 1.1288,
-          "avg_spill_10_15": 0.7462,
+          "avg_spill_10_15": 0.7442,
           "recent20_top9_hits": 1.2,
-          "recent60_top9_hits": 1.1333,
-          "recent120_top9_hits": 1.175
+          "recent60_top9_hits": 1.15,
+          "recent120_top9_hits": 1.1583
         }
       },
       "policy_diagnostics": {
         "0.0:0": {
-          "avg520": 1.1558,
-          "avg20": 1.3,
-          "avg60": 1.15,
-          "avg120": 1.1333,
-          "avg_first400": 1.1625
-        },
-        "0.0:1": {
-          "avg520": 1.1346,
-          "avg20": 1.35,
-          "avg60": 1.15,
-          "avg120": 1.1917,
-          "avg_first400": 1.1175
-        },
-        "0.0:2": {
-          "avg520": 1.1038,
-          "avg20": 1.1,
-          "avg60": 1.0667,
-          "avg120": 1.125,
-          "avg_first400": 1.0975
-        },
-        "0.0:3": {
-          "avg520": 1.1538,
-          "avg20": 1.3,
-          "avg60": 1.1,
-          "avg120": 1.1667,
-          "avg_first400": 1.15
-        },
-        "0.0:4": {
-          "avg520": 1.15,
-          "avg20": 1.25,
-          "avg60": 1.1667,
-          "avg120": 1.1917,
-          "avg_first400": 1.1375
-        },
-        "0.0:5": {
-          "avg520": 1.1385,
-          "avg20": 1.2,
-          "avg60": 1.1333,
-          "avg120": 1.2,
-          "avg_first400": 1.12
-        },
-        "0.0:6": {
-          "avg520": 1.1269,
-          "avg20": 1.35,
-          "avg60": 1.1833,
-          "avg120": 1.225,
-          "avg_first400": 1.0975
-        },
-        "0.25:0": {
-          "avg520": 1.1385,
-          "avg20": 1.35,
-          "avg60": 1.1333,
-          "avg120": 1.1417,
-          "avg_first400": 1.1375
-        },
-        "0.25:1": {
           "avg520": 1.1519,
           "avg20": 1.3,
           "avg60": 1.1333,
-          "avg120": 1.1417,
-          "avg_first400": 1.155
+          "avg120": 1.125,
+          "avg_first400": 1.16
+        },
+        "0.0:1": {
+          "avg520": 1.1308,
+          "avg20": 1.35,
+          "avg60": 1.1333,
+          "avg120": 1.1833,
+          "avg_first400": 1.115
+        },
+        "0.0:2": {
+          "avg520": 1.1077,
+          "avg20": 1.1,
+          "avg60": 1.05,
+          "avg120": 1.1167,
+          "avg_first400": 1.105
+        },
+        "0.0:3": {
+          "avg520": 1.1462,
+          "avg20": 1.3,
+          "avg60": 1.1167,
+          "avg120": 1.1583,
+          "avg_first400": 1.1425
+        },
+        "0.0:4": {
+          "avg520": 1.1462,
+          "avg20": 1.25,
+          "avg60": 1.1833,
+          "avg120": 1.1833,
+          "avg_first400": 1.135
+        },
+        "0.0:5": {
+          "avg520": 1.1365,
+          "avg20": 1.2,
+          "avg60": 1.15,
+          "avg120": 1.1917,
+          "avg_first400": 1.12
+        },
+        "0.0:6": {
+          "avg520": 1.1212,
+          "avg20": 1.35,
+          "avg60": 1.2,
+          "avg120": 1.2083,
+          "avg_first400": 1.095
+        },
+        "0.25:0": {
+          "avg520": 1.1365,
+          "avg20": 1.35,
+          "avg60": 1.1167,
+          "avg120": 1.1333,
+          "avg_first400": 1.1375
+        },
+        "0.25:1": {
+          "avg520": 1.1442,
+          "avg20": 1.3,
+          "avg60": 1.1167,
+          "avg120": 1.1333,
+          "avg_first400": 1.1475
         },
         "0.25:2": {
-          "avg520": 1.1404,
-          "avg20": 1.05,
+          "avg520": 1.1385,
+          "avg20": 1,
           "avg60": 1,
-          "avg120": 1.05,
+          "avg120": 1.0417,
           "avg_first400": 1.1675
         },
         "0.25:3": {
-          "avg520": 1.1846,
+          "avg520": 1.1788,
           "avg20": 1.1,
-          "avg60": 1.1167,
-          "avg120": 1.125,
-          "avg_first400": 1.2025
+          "avg60": 1.1333,
+          "avg120": 1.1167,
+          "avg_first400": 1.1975
         },
         "0.25:4": {
-          "avg520": 1.1827,
+          "avg520": 1.1788,
           "avg20": 1.25,
-          "avg60": 1.25,
-          "avg120": 1.2083,
-          "avg_first400": 1.175
+          "avg60": 1.2667,
+          "avg120": 1.2,
+          "avg_first400": 1.1725
         },
         "0.25:5": {
-          "avg520": 1.1654,
+          "avg520": 1.1615,
           "avg20": 1.2,
-          "avg60": 1.1667,
-          "avg120": 1.1917,
-          "avg_first400": 1.1575
+          "avg60": 1.1833,
+          "avg120": 1.1833,
+          "avg_first400": 1.155
         },
         "0.25:6": {
           "avg520": 1.1288,
           "avg20": 1.2,
-          "avg60": 1.1333,
-          "avg120": 1.175,
-          "avg_first400": 1.115
+          "avg60": 1.15,
+          "avg120": 1.1583,
+          "avg_first400": 1.12
         },
         "0.5:0": {
-          "avg520": 1.15,
+          "avg520": 1.1519,
           "avg20": 1.35,
           "avg60": 1.1167,
-          "avg120": 1.1417,
-          "avg_first400": 1.1525
+          "avg120": 1.1333,
+          "avg_first400": 1.1575
         },
         "0.5:1": {
-          "avg520": 1.1385,
+          "avg520": 1.1308,
           "avg20": 1.25,
-          "avg60": 1.1333,
-          "avg120": 1.1417,
-          "avg_first400": 1.1375
+          "avg60": 1.1167,
+          "avg120": 1.1333,
+          "avg_first400": 1.13
         },
         "0.5:2": {
-          "avg520": 1.1442,
+          "avg520": 1.1365,
           "avg20": 1.1,
-          "avg60": 1.0667,
-          "avg120": 1.0833,
-          "avg_first400": 1.1625
+          "avg60": 1.05,
+          "avg120": 1.075,
+          "avg_first400": 1.155
         },
         "0.5:3": {
-          "avg520": 1.1538,
+          "avg520": 1.1365,
           "avg20": 1.15,
           "avg60": 1.1833,
           "avg120": 1.15,
-          "avg_first400": 1.155
+          "avg_first400": 1.1325
         },
         "0.5:4": {
-          "avg520": 1.1442,
+          "avg520": 1.1346,
           "avg20": 1.15,
           "avg60": 1.1833,
-          "avg120": 1.125,
-          "avg_first400": 1.15
+          "avg120": 1.1167,
+          "avg_first400": 1.14
         },
         "0.5:5": {
-          "avg520": 1.1192,
+          "avg520": 1.1154,
           "avg20": 1.2,
           "avg60": 1.1667,
-          "avg120": 1.1417,
+          "avg120": 1.125,
           "avg_first400": 1.1125
         },
         "0.5:6": {
-          "avg520": 1.1115,
+          "avg520": 1.1058,
           "avg20": 1.1,
           "avg60": 1.1167,
-          "avg120": 1.1333,
-          "avg_first400": 1.105
+          "avg120": 1.1167,
+          "avg_first400": 1.1025
         },
         "0.75:0": {
-          "avg520": 1.1558,
+          "avg520": 1.15,
           "avg20": 1.3,
           "avg60": 1.15,
-          "avg120": 1.125,
-          "avg_first400": 1.165
+          "avg120": 1.1167,
+          "avg_first400": 1.16
         },
         "0.75:1": {
-          "avg520": 1.1558,
+          "avg520": 1.1519,
           "avg20": 1.4,
-          "avg60": 1.15,
-          "avg120": 1.175,
-          "avg_first400": 1.15
+          "avg60": 1.1333,
+          "avg120": 1.1667,
+          "avg_first400": 1.1475
         },
         "0.75:2": {
-          "avg520": 1.125,
+          "avg520": 1.1308,
           "avg20": 1.3,
-          "avg60": 1.0833,
-          "avg120": 1.125,
-          "avg_first400": 1.125
+          "avg60": 1.0667,
+          "avg120": 1.1167,
+          "avg_first400": 1.135
         },
         "0.75:3": {
-          "avg520": 1.1346,
-          "avg20": 1.2,
+          "avg520": 1.1404,
+          "avg20": 1.25,
           "avg60": 1.0833,
           "avg120": 1.125,
-          "avg_first400": 1.1375
+          "avg_first400": 1.145
         },
         "0.75:4": {
           "avg520": 1.1038,
           "avg20": 1.1,
           "avg60": 1.05,
-          "avg120": 1.0917,
-          "avg_first400": 1.1075
+          "avg120": 1.0833,
+          "avg_first400": 1.11
         },
         "0.75:5": {
-          "avg520": 1.0827,
+          "avg520": 1.0904,
           "avg20": 1.15,
           "avg60": 1.0833,
-          "avg120": 1.1083,
-          "avg_first400": 1.075
+          "avg120": 1.1,
+          "avg_first400": 1.0875
         },
         "0.75:6": {
-          "avg520": 1.0962,
+          "avg520": 1.1019,
           "avg20": 1.1,
           "avg60": 1,
-          "avg120": 1.0917,
-          "avg_first400": 1.0975
+          "avg120": 1.075,
+          "avg_first400": 1.11
         },
         "1.0:0": {
           "avg520": 1.1442,
           "avg20": 1.3,
           "avg60": 1.1333,
-          "avg120": 1.1333,
-          "avg_first400": 1.1475
+          "avg120": 1.125,
+          "avg_first400": 1.15
         },
         "1.0:1": {
-          "avg520": 1.15,
+          "avg520": 1.1462,
           "avg20": 1.4,
-          "avg60": 1.2167,
-          "avg120": 1.1917,
-          "avg_first400": 1.1375
-        },
-        "1.0:2": {
-          "avg520": 1.1327,
-          "avg20": 1.3,
-          "avg60": 1.1833,
-          "avg120": 1.1667,
-          "avg_first400": 1.1225
-        },
-        "1.0:3": {
-          "avg520": 1.1327,
-          "avg20": 1.25,
-          "avg60": 1.1167,
-          "avg120": 1.125,
+          "avg60": 1.2,
+          "avg120": 1.1833,
           "avg_first400": 1.135
         },
+        "1.0:2": {
+          "avg520": 1.1231,
+          "avg20": 1.3,
+          "avg60": 1.1667,
+          "avg120": 1.1583,
+          "avg_first400": 1.1125
+        },
+        "1.0:3": {
+          "avg520": 1.1269,
+          "avg20": 1.3,
+          "avg60": 1.1167,
+          "avg120": 1.125,
+          "avg_first400": 1.1275
+        },
         "1.0:4": {
-          "avg520": 1.1135,
+          "avg520": 1.1173,
           "avg20": 1.25,
           "avg60": 1.0667,
           "avg120": 1.0917,
-          "avg_first400": 1.12
+          "avg_first400": 1.125
         },
         "1.0:5": {
-          "avg520": 1.0962,
+          "avg520": 1.1019,
           "avg20": 1.15,
           "avg60": 1.05,
-          "avg120": 1.0917,
-          "avg_first400": 1.0975
+          "avg120": 1.0833,
+          "avg_first400": 1.1075
         },
         "1.0:6": {
-          "avg520": 1.1288,
+          "avg520": 1.1269,
           "avg20": 1.1,
           "avg60": 1.0167,
-          "avg120": 1.1,
-          "avg_first400": 1.1375
+          "avg120": 1.0833,
+          "avg_first400": 1.14
         }
       },
       "repeat_cap_diagnostics": {
         "1": {
-          "avg520": 1.1115,
+          "avg520": 1.1096,
           "avg20": 0.95,
           "avg60": 1.0333,
-          "avg120": 1.0667,
+          "avg120": 1.0583,
           "avg_first400": 1.125
         },
         "2": {
-          "avg520": 1.1538,
-          "avg20": 1.1,
+          "avg520": 1.15,
+          "avg20": 1.05,
           "avg60": 1.2,
-          "avg120": 1.1667,
-          "avg_first400": 1.15
+          "avg120": 1.1583,
+          "avg_first400": 1.1475
         },
         "3": {
-          "avg520": 1.1846,
+          "avg520": 1.1788,
           "avg20": 1.2,
-          "avg60": 1.2333,
+          "avg60": 1.25,
           "avg120": 1.1833,
-          "avg_first400": 1.185
+          "avg_first400": 1.1775
         },
         "6": {
-          "avg520": 1.1827,
+          "avg520": 1.1788,
           "avg20": 1.25,
-          "avg60": 1.25,
-          "avg120": 1.2083,
-          "avg_first400": 1.175
+          "avg60": 1.2667,
+          "avg120": 1.2,
+          "avg_first400": 1.1725
         }
       },
       "production_policy": {
@@ -1076,14 +1076,14 @@
         "repeat_cap": 3,
         "promoted": [
           19,
+          14,
           33,
-          13,
-          16
+          2
         ],
         "demoted": [
           18,
-          14,
           29,
+          13,
           24
         ]
       },
@@ -1101,244 +1101,208 @@
         "regime_slope"
       ],
       "weights": {
-        "bayes_24": 0.0647502,
-        "bayes_60": 0.10436938,
-        "bayes_150": 0.08997481,
-        "bayes_360": 0.0835229,
-        "ewma_8": 0.07587578,
-        "ewma_21": 0.09393207,
-        "ewma_55": 0.10574589,
-        "ewma_144": 0.16456893,
-        "empirical_hazard": 0.04938647,
-        "conditional_pair": 0.09664998,
-        "regime_slope": 0.07122359
+        "bayes_24": 0.06276335,
+        "bayes_60": 0.10414852,
+        "bayes_150": 0.08701374,
+        "bayes_360": 0.07629217,
+        "ewma_8": 0.07076049,
+        "ewma_21": 0.09165377,
+        "ewma_55": 0.10568073,
+        "ewma_144": 0.15095953,
+        "empirical_hazard": 0.06080726,
+        "conditional_pair": 0.12172416,
+        "regime_slope": 0.06819628
       },
       "weight_diagnostics": {
         "bayes_24": {
           "hit20": 1.1,
-          "hit60": 1.0167,
-          "hit120": 1.0417,
-          "spill20": 1.05,
+          "hit60": 0.9833,
+          "hit120": 1.025,
+          "spill20": 1,
           "spill60": 0.8833,
-          "spill120": 0.8083,
-          "loss20": 0.3715527,
-          "loss60": 0.37301164,
-          "loss120": 0.37335524,
-          "zero_hit_streak": 1,
-          "quality": -0.23570731
+          "spill120": 0.7917,
+          "loss20": 0.37166912,
+          "loss60": 0.37313231,
+          "loss120": 0.37354874,
+          "zero_hit_streak": 2,
+          "quality": -0.28271015
         },
         "bayes_60": {
           "hit20": 1.15,
           "hit60": 1.1,
-          "hit120": 1.1833,
+          "hit120": 1.175,
           "spill20": 0.65,
-          "spill60": 0.7,
+          "spill60": 0.7167,
           "spill120": 0.6333,
-          "loss20": 0.37256146,
-          "loss60": 0.37226246,
-          "loss120": 0.37255763,
-          "zero_hit_streak": 0,
-          "quality": -0.07657412
+          "loss20": 0.37261638,
+          "loss60": 0.37232533,
+          "loss120": 0.37266415,
+          "zero_hit_streak": 1,
+          "quality": -0.11389461
         },
         "bayes_150": {
           "hit20": 1.2,
-          "hit60": 1.0333,
-          "hit120": 1.0417,
-          "spill20": 0.8,
+          "hit60": 1.0167,
+          "hit120": 1.0333,
+          "spill20": 0.85,
           "spill60": 0.85,
           "spill120": 0.7417,
-          "loss20": 0.37148438,
-          "loss60": 0.37124203,
-          "loss120": 0.37208094,
-          "zero_hit_streak": 0,
-          "quality": -0.12604299
+          "loss20": 0.37212143,
+          "loss60": 0.37146485,
+          "loss120": 0.37221736,
+          "zero_hit_streak": 1,
+          "quality": -0.17381191
         },
         "bayes_360": {
-          "hit20": 1.15,
-          "hit60": 1.0667,
-          "hit120": 0.9667,
+          "hit20": 1.1,
+          "hit60": 1.05,
+          "hit120": 0.9583,
           "spill20": 0.8,
-          "spill60": 0.7,
-          "spill120": 0.7583,
-          "loss20": 0.37177111,
-          "loss60": 0.37219959,
-          "loss120": 0.37263796,
-          "zero_hit_streak": 0,
-          "quality": -0.15084595
+          "spill60": 0.7167,
+          "spill120": 0.775,
+          "loss20": 0.37225106,
+          "loss60": 0.37234165,
+          "loss120": 0.37266601,
+          "zero_hit_streak": 1,
+          "quality": -0.21764379
         },
         "ewma_8": {
           "hit20": 1.3,
-          "hit60": 1.15,
-          "hit120": 1.1917,
-          "spill20": 0.7,
-          "spill60": 0.7333,
-          "spill120": 0.7167,
-          "loss20": 0.39598208,
-          "loss60": 0.3988194,
-          "loss120": 0.39872422,
-          "zero_hit_streak": 1,
-          "quality": -0.18285376
+          "hit60": 1.1333,
+          "hit120": 1.175,
+          "spill20": 0.75,
+          "spill60": 0.75,
+          "spill120": 0.7083,
+          "loss20": 0.39866526,
+          "loss60": 0.39962331,
+          "loss120": 0.39968165,
+          "zero_hit_streak": 2,
+          "quality": -0.24273365
         },
         "ewma_21": {
           "hit20": 1.3,
-          "hit60": 1.0667,
-          "hit120": 1.1,
-          "spill20": 0.85,
+          "hit60": 1.05,
+          "hit120": 1.0833,
+          "spill20": 0.8,
           "spill60": 0.9333,
-          "spill120": 0.8167,
-          "loss20": 0.37828404,
-          "loss60": 0.37896333,
-          "loss120": 0.37987103,
-          "zero_hit_streak": 0,
-          "quality": -0.11169564
+          "spill120": 0.8083,
+          "loss20": 0.37916634,
+          "loss60": 0.37952304,
+          "loss120": 0.38043366,
+          "zero_hit_streak": 1,
+          "quality": -0.15649456
         },
         "ewma_55": {
           "hit20": 1.25,
           "hit60": 1.1333,
-          "hit120": 1.1083,
-          "spill20": 0.9,
+          "hit120": 1.1,
+          "spill20": 0.85,
           "spill60": 0.8,
-          "spill120": 0.7417,
-          "loss20": 0.37363137,
-          "loss60": 0.37331177,
-          "loss120": 0.37448986,
-          "zero_hit_streak": 0,
-          "quality": -0.07220659
+          "spill120": 0.7333,
+          "loss20": 0.37454684,
+          "loss60": 0.37377684,
+          "loss120": 0.37480108,
+          "zero_hit_streak": 1,
+          "quality": -0.10902638
         },
         "ewma_144": {
-          "hit20": 1.45,
-          "hit60": 1.1833,
-          "hit120": 1.125,
+          "hit20": 1.4,
+          "hit60": 1.1667,
+          "hit120": 1.1167,
           "spill20": 0.55,
-          "spill60": 0.7,
-          "spill120": 0.6917,
-          "loss20": 0.37187149,
-          "loss60": 0.37213973,
-          "loss120": 0.37310641,
-          "zero_hit_streak": 0,
-          "quality": 0.07522359
+          "spill60": 0.6833,
+          "spill120": 0.6833,
+          "loss20": 0.37265547,
+          "loss60": 0.37243181,
+          "loss120": 0.3732304,
+          "zero_hit_streak": 1,
+          "quality": 0.00983668
         },
         "empirical_hazard": {
-          "hit20": 0.8,
-          "hit60": 1.0833,
-          "hit120": 1.0833,
-          "spill20": 0.7,
-          "spill60": 0.6833,
-          "spill120": 0.675,
-          "loss20": 0.37780471,
-          "loss60": 0.37597881,
-          "loss120": 0.37638284,
+          "hit20": 0.85,
+          "hit60": 1.1167,
+          "hit120": 1.0917,
+          "spill20": 0.8,
+          "spill60": 0.7167,
+          "spill120": 0.7,
+          "loss20": 0.37662772,
+          "loss60": 0.37573618,
+          "loss120": 0.37630053,
           "zero_hit_streak": 0,
-          "quality": -0.3259941
+          "quality": -0.29326419
         },
         "conditional_pair": {
           "hit20": 1.2,
-          "hit60": 1.0833,
+          "hit60": 1.1,
           "hit120": 1.175,
           "spill20": 0.6,
-          "spill60": 0.6,
-          "spill120": 0.6167,
-          "loss20": 0.37488311,
-          "loss60": 0.37567426,
-          "loss120": 0.37448316,
-          "zero_hit_streak": 1,
-          "quality": -0.10218759
+          "spill60": 0.5833,
+          "spill120": 0.6083,
+          "loss20": 0.37545662,
+          "loss60": 0.37580843,
+          "loss120": 0.37465898,
+          "zero_hit_streak": 0,
+          "quality": -0.06191474
         },
         "regime_slope": {
           "hit20": 1.05,
-          "hit60": 1.0833,
-          "hit120": 1.125,
-          "spill20": 0.9,
+          "hit60": 1.0333,
+          "hit120": 1.1,
+          "spill20": 0.85,
           "spill60": 0.8,
-          "spill120": 0.725,
-          "loss20": 0.37189357,
-          "loss60": 0.37252955,
-          "loss120": 0.37267046,
-          "zero_hit_streak": 1,
-          "quality": -0.20394487
+          "spill120": 0.7167,
+          "loss20": 0.3720184,
+          "loss60": 0.37264219,
+          "loss120": 0.37284166,
+          "zero_hit_streak": 2,
+          "quality": -0.25503722
         }
       },
       "model_logloss": {
-        "bayes_24": 0.37319874,
-        "bayes_60": 0.37265872,
-        "bayes_150": 0.37230265,
-        "bayes_360": 0.37255295,
-        "ewma_8": 0.39976527,
-        "ewma_21": 0.38080496,
-        "ewma_55": 0.37495,
-        "ewma_144": 0.37309619,
-        "empirical_hazard": 0.37610017,
-        "conditional_pair": 0.3747741,
-        "regime_slope": 0.37299132
+        "bayes_24": 0.37322182,
+        "bayes_60": 0.37267697,
+        "bayes_150": 0.37231848,
+        "bayes_360": 0.37256262,
+        "ewma_8": 0.39996898,
+        "ewma_21": 0.38090502,
+        "ewma_55": 0.37500316,
+        "ewma_144": 0.37312146,
+        "empirical_hazard": 0.37606881,
+        "conditional_pair": 0.37480955,
+        "regime_slope": 0.37301076
       },
       "model_avg_hits": {
-        "bayes_24": 1.0962,
-        "bayes_60": 1.1577,
-        "bayes_150": 1.1212,
+        "bayes_24": 1.0942,
+        "bayes_60": 1.1538,
+        "bayes_150": 1.1192,
         "bayes_360": 1.0192,
-        "ewma_8": 1.1462,
-        "ewma_21": 1.1154,
-        "ewma_55": 1.1269,
-        "ewma_144": 1.1038,
-        "empirical_hazard": 1.0769,
+        "ewma_8": 1.1423,
+        "ewma_21": 1.1115,
+        "ewma_55": 1.125,
+        "ewma_144": 1.1019,
+        "empirical_hazard": 1.0788,
         "conditional_pair": 1.1231,
-        "regime_slope": 1.0962
+        "regime_slope": 1.0942
       },
       "model_avg_spill_10_15": {
-        "bayes_24": 0.7769,
-        "bayes_60": 0.725,
+        "bayes_24": 0.7731,
+        "bayes_60": 0.7269,
         "bayes_150": 0.7327,
-        "bayes_360": 0.7269,
-        "ewma_8": 0.6942,
-        "ewma_21": 0.7654,
-        "ewma_55": 0.7346,
-        "ewma_144": 0.7385,
-        "empirical_hazard": 0.6904,
-        "conditional_pair": 0.6885,
-        "regime_slope": 0.7115
+        "bayes_360": 0.725,
+        "ewma_8": 0.6923,
+        "ewma_21": 0.7635,
+        "ewma_55": 0.7327,
+        "ewma_144": 0.7365,
+        "empirical_hazard": 0.6962,
+        "conditional_pair": 0.6865,
+        "regime_slope": 0.7096
       },
-      "ensemble_logloss": 0.37184562,
+      "ensemble_logloss": 0.37185196,
       "uniform_logloss": 0.37177618,
-      "logloss_edge": -6.944e-05,
-      "avg_hits": 1.1846,
-      "avg_spill_10_15": 0.6904,
+      "logloss_edge": -7.578e-05,
+      "avg_hits": 1.1788,
+      "avg_spill_10_15": 0.6942,
       "recent_rank_audit": [
-        {
-          "period": 115000072,
-          "date": "2026-07-21",
-          "hit": 1,
-          "top9_hits": 1,
-          "spill_10_15": 0,
-          "top15_hits": 1,
-          "actual_ranks": [
-            7,
-            24,
-            31,
-            32,
-            38,
-            39
-          ],
-          "rank_share": 0.25,
-          "boundary_rotation": {
-            "count": 4,
-            "rank_share": 0.25,
-            "repeat_cap": 3,
-            "promoted": [
-              10,
-              26,
-              4,
-              20
-            ],
-            "demoted": [
-              11,
-              6,
-              39,
-              19
-            ]
-          },
-          "brier": 0.1076569361020925,
-          "logloss": 0.37269224398792317
-        },
         {
           "period": 115000073,
           "date": "2026-07-24",
@@ -2012,855 +1976,884 @@
           },
           "brier": 0.10783084429685229,
           "logloss": 0.37348388918822645
+        },
+        {
+          "period": 115000092,
+          "date": "2026-09-29",
+          "hit": 1,
+          "top9_hits": 1,
+          "spill_10_15": 0,
+          "top15_hits": 1,
+          "actual_ranks": [
+            8,
+            30,
+            35,
+            37,
+            40,
+            47
+          ],
+          "rank_share": 0.25,
+          "boundary_rotation": {
+            "count": 4,
+            "rank_share": 0.25,
+            "repeat_cap": 3,
+            "promoted": [
+              19,
+              33,
+              13,
+              16
+            ],
+            "demoted": [
+              18,
+              14,
+              29,
+              24
+            ]
+          },
+          "brier": 0.10788886445360231,
+          "logloss": 0.3737867670153543
         }
       ],
       "rows": [
         {
-          "period": 111000038,
-          "date": "2022-04-08",
-          "hit": 1,
-          "brier": 0.10729992533934181,
-          "logloss": 0.37103409416620375
-        },
-        {
           "period": 111000039,
           "date": "2022-04-12",
-          "hit": 1,
-          "brier": 0.10747183568472936,
-          "logloss": 0.3717518548407104
+          "hit": 0,
+          "brier": 0.10757416207294675,
+          "logloss": 0.3722796380672336
         },
         {
           "period": 111000040,
           "date": "2022-04-15",
           "hit": 2,
-          "brier": 0.10708071821983066,
-          "logloss": 0.370027751767884
+          "brier": 0.1071677059846851,
+          "logloss": 0.37043778285093254
         },
         {
           "period": 111000041,
           "date": "2022-04-19",
-          "hit": 1,
-          "brier": 0.10758561911572294,
-          "logloss": 0.3723777250978977
+          "hit": 0,
+          "brier": 0.10765433175506141,
+          "logloss": 0.3726836951646966
         },
         {
           "period": 111000042,
           "date": "2022-04-22",
           "hit": 0,
-          "brier": 0.10812660938896335,
-          "logloss": 0.3749286078201889
+          "brier": 0.10806413345028629,
+          "logloss": 0.37463499736462025
         },
         {
           "period": 111000043,
           "date": "2022-04-26",
           "hit": 2,
-          "brier": 0.10746382040886547,
-          "logloss": 0.3718179560692977
+          "brier": 0.10747790688958868,
+          "logloss": 0.3718834790921862
         },
         {
           "period": 111000044,
           "date": "2022-04-29",
           "hit": 2,
-          "brier": 0.10744003253772298,
-          "logloss": 0.37171948718087633
+          "brier": 0.10742570539637529,
+          "logloss": 0.3716524819834306
         },
         {
           "period": 111000045,
           "date": "2022-05-03",
           "hit": 2,
-          "brier": 0.1069326601188389,
-          "logloss": 0.36936504325649555
+          "brier": 0.1069649458920754,
+          "logloss": 0.36951162222417683
         },
         {
           "period": 111000046,
           "date": "2022-05-06",
-          "hit": 1,
-          "brier": 0.10770083521132369,
-          "logloss": 0.3729076908577545
+          "hit": 0,
+          "brier": 0.10768201859760781,
+          "logloss": 0.37282033213614285
         },
         {
           "period": 111000047,
           "date": "2022-05-10",
           "hit": 1,
-          "brier": 0.10769302592422983,
-          "logloss": 0.3728615287315118
+          "brier": 0.10766355634543795,
+          "logloss": 0.37273061681652914
         },
         {
           "period": 111000048,
           "date": "2022-05-13",
           "hit": 0,
-          "brier": 0.1074297406886247,
-          "logloss": 0.37163142987033215
+          "brier": 0.1074337360953064,
+          "logloss": 0.37165276117160134
         },
         {
           "period": 111000049,
           "date": "2022-05-17",
           "hit": 0,
-          "brier": 0.10783186077467234,
-          "logloss": 0.3735116603185704
+          "brier": 0.10781258791400321,
+          "logloss": 0.3734253037465495
         },
         {
           "period": 111000050,
           "date": "2022-05-20",
           "hit": 1,
-          "brier": 0.10737335343295684,
-          "logloss": 0.3713859929049263
+          "brier": 0.10738801903335143,
+          "logloss": 0.371455326147758
         },
         {
           "period": 111000051,
           "date": "2022-05-24",
           "hit": 1,
-          "brier": 0.10762574409635974,
-          "logloss": 0.3725702768142055
+          "brier": 0.10759889449921496,
+          "logloss": 0.37244451881426227
         },
         {
           "period": 111000052,
           "date": "2022-05-27",
-          "hit": 1,
-          "brier": 0.1075090597669856,
-          "logloss": 0.37203630148869204
+          "hit": 2,
+          "brier": 0.10747851799900932,
+          "logloss": 0.37189528774018715
         },
         {
           "period": 111000053,
           "date": "2022-05-31",
           "hit": 1,
-          "brier": 0.10764203713587912,
-          "logloss": 0.3726456795596102
+          "brier": 0.10762406245230374,
+          "logloss": 0.3725612256928535
         },
         {
           "period": 111000054,
           "date": "2022-06-03",
           "hit": 1,
-          "brier": 0.10733820362678084,
-          "logloss": 0.371257082212629
+          "brier": 0.10735377008266139,
+          "logloss": 0.37132657931379753
         },
         {
           "period": 111000055,
           "date": "2022-06-07",
           "hit": 1,
-          "brier": 0.1070278141268109,
-          "logloss": 0.36979428395304603
+          "brier": 0.10705105596015181,
+          "logloss": 0.36990273111580896
         },
         {
           "period": 111000056,
           "date": "2022-06-10",
           "hit": 0,
-          "brier": 0.10798478977018046,
-          "logloss": 0.37422668863276104
+          "brier": 0.1079606120719659,
+          "logloss": 0.3741162040393484
         },
         {
           "period": 111000057,
           "date": "2022-06-14",
           "hit": 1,
-          "brier": 0.10751980121056305,
-          "logloss": 0.37206492220077214
+          "brier": 0.10752298743083233,
+          "logloss": 0.37207981609697305
         },
         {
           "period": 111000058,
           "date": "2022-06-17",
           "hit": 1,
-          "brier": 0.10760629983966224,
-          "logloss": 0.37247813068875013
+          "brier": 0.10761003875336742,
+          "logloss": 0.3724948628211463
         },
         {
           "period": 111000059,
           "date": "2022-06-21",
           "hit": 1,
-          "brier": 0.10743310023193922,
-          "logloss": 0.37164932297605224
+          "brier": 0.10739194597973468,
+          "logloss": 0.37146365180976987
         },
         {
           "period": 111000060,
           "date": "2022-06-24",
           "hit": 1,
-          "brier": 0.10740342798261555,
-          "logloss": 0.37154363038736027
+          "brier": 0.10739739624610128,
+          "logloss": 0.37151515240543187
         },
         {
           "period": 111000061,
           "date": "2022-06-28",
           "hit": 1,
-          "brier": 0.1075605952459618,
-          "logloss": 0.372253855195689
+          "brier": 0.10752287603007284,
+          "logloss": 0.3720819363475646
         },
         {
           "period": 111000062,
           "date": "2022-07-01",
           "hit": 2,
-          "brier": 0.10708731191281103,
-          "logloss": 0.37006909112955116
+          "brier": 0.10710053793449893,
+          "logloss": 0.37013022715791505
         },
         {
           "period": 111000063,
           "date": "2022-07-05",
-          "hit": 1,
-          "brier": 0.10741688552208285,
-          "logloss": 0.3715751877167305
+          "hit": 2,
+          "brier": 0.10737788102262857,
+          "logloss": 0.37139785739383674
         },
         {
           "period": 111000064,
           "date": "2022-07-08",
           "hit": 1,
-          "brier": 0.10777362274037129,
-          "logloss": 0.3732359044795722
+          "brier": 0.10775675844868016,
+          "logloss": 0.37315827260037976
         },
         {
           "period": 111000065,
           "date": "2022-07-12",
           "hit": 2,
-          "brier": 0.1070987272499344,
-          "logloss": 0.3701081770370467
+          "brier": 0.10710397468711148,
+          "logloss": 0.37013269689789374
         },
         {
           "period": 111000066,
           "date": "2022-07-15",
           "hit": 3,
-          "brier": 0.10687590983441934,
-          "logloss": 0.3690755496063526
+          "brier": 0.1068804918782248,
+          "logloss": 0.3690974266020248
         },
         {
           "period": 111000067,
           "date": "2022-07-19",
           "hit": 1,
-          "brier": 0.1072992445269258,
-          "logloss": 0.3710806689025292
+          "brier": 0.10729907379755942,
+          "logloss": 0.3710792486542848
         },
         {
           "period": 111000068,
           "date": "2022-07-22",
           "hit": 0,
-          "brier": 0.10794046398431233,
-          "logloss": 0.3740330250150293
+          "brier": 0.10793456242483063,
+          "logloss": 0.37400559849222914
         },
         {
           "period": 111000069,
           "date": "2022-07-26",
           "hit": 1,
-          "brier": 0.10745956377447603,
-          "logloss": 0.37184911740161325
+          "brier": 0.10746062178268798,
+          "logloss": 0.3718527241240329
         },
         {
           "period": 111000070,
           "date": "2022-07-29",
           "hit": 1,
-          "brier": 0.1076242483259634,
-          "logloss": 0.3725497508422634
+          "brier": 0.10762256200013402,
+          "logloss": 0.37254280459517475
         },
         {
           "period": 111000071,
           "date": "2022-08-02",
           "hit": 1,
-          "brier": 0.10714799692042407,
-          "logloss": 0.3704165289491857
+          "brier": 0.10714647855196222,
+          "logloss": 0.3704077077091157
         },
         {
           "period": 111000072,
           "date": "2022-08-05",
           "hit": 2,
-          "brier": 0.10738127461939526,
-          "logloss": 0.3714469626249311
+          "brier": 0.10738423454537832,
+          "logloss": 0.37146037142629323
         },
         {
           "period": 111000073,
           "date": "2022-08-09",
           "hit": 2,
-          "brier": 0.10709398922899542,
-          "logloss": 0.3700706995591033
+          "brier": 0.10709682596555681,
+          "logloss": 0.3700840987087562
         },
         {
           "period": 111000074,
           "date": "2022-08-12",
           "hit": 2,
-          "brier": 0.10719577299625083,
-          "logloss": 0.3705819423612871
+          "brier": 0.1072000772621463,
+          "logloss": 0.3706013639706631
         },
         {
           "period": 111000075,
           "date": "2022-08-16",
           "hit": 3,
-          "brier": 0.10727045061431188,
-          "logloss": 0.3709648010631712
+          "brier": 0.10735033492139266,
+          "logloss": 0.37132659382699823
         },
         {
           "period": 111000076,
           "date": "2022-08-19",
           "hit": 3,
-          "brier": 0.10693053567808751,
-          "logloss": 0.3693518670962234
+          "brier": 0.10690287249555257,
+          "logloss": 0.3692279730792409
         },
         {
           "period": 111000077,
           "date": "2022-08-23",
           "hit": 0,
-          "brier": 0.10822283634758334,
-          "logloss": 0.37538435961354055
+          "brier": 0.10821354657237552,
+          "logloss": 0.3753407203437899
         },
         {
           "period": 111000078,
           "date": "2022-08-26",
           "hit": 1,
-          "brier": 0.10732591124055885,
-          "logloss": 0.3711453968598824
+          "brier": 0.1073265558861989,
+          "logloss": 0.37114865424911375
         },
         {
           "period": 111000079,
           "date": "2022-08-30",
           "hit": 0,
-          "brier": 0.10785450278721431,
-          "logloss": 0.3736229857555844
+          "brier": 0.10784932215245017,
+          "logloss": 0.3735989124055748
         },
         {
           "period": 111000080,
           "date": "2022-09-02",
           "hit": 2,
-          "brier": 0.10761225186200563,
-          "logloss": 0.372524280501778
+          "brier": 0.10761146620257948,
+          "logloss": 0.37252036475844064
         },
         {
           "period": 111000081,
           "date": "2022-09-06",
           "hit": 0,
-          "brier": 0.1080177160222061,
-          "logloss": 0.3743900881506394
+          "brier": 0.10801448569478213,
+          "logloss": 0.37437519738449965
         },
         {
           "period": 111000082,
           "date": "2022-09-09",
           "hit": 1,
-          "brier": 0.10774371537608618,
-          "logloss": 0.3731332126816279
+          "brier": 0.10774337862105413,
+          "logloss": 0.37313148023965304
         },
         {
           "period": 111000083,
           "date": "2022-09-13",
-          "hit": 3,
-          "brier": 0.10739075830233584,
-          "logloss": 0.3714886592163837
+          "hit": 2,
+          "brier": 0.10739549094017978,
+          "logloss": 0.37151001518085985
         },
         {
           "period": 111000084,
           "date": "2022-09-16",
           "hit": 1,
-          "brier": 0.10779746928007743,
-          "logloss": 0.373415088715801
+          "brier": 0.10779468333174876,
+          "logloss": 0.3734012612091904
         },
         {
           "period": 111000085,
           "date": "2022-09-20",
           "hit": 2,
-          "brier": 0.10739600909746869,
-          "logloss": 0.37150748247429327
+          "brier": 0.10739478080323626,
+          "logloss": 0.3715015631618831
         },
         {
           "period": 111000086,
           "date": "2022-09-23",
           "hit": 1,
-          "brier": 0.10753909628359663,
-          "logloss": 0.372157507616056
+          "brier": 0.10753994616731843,
+          "logloss": 0.3721618676626688
         },
         {
           "period": 111000087,
           "date": "2022-09-27",
           "hit": 1,
-          "brier": 0.10750969165176057,
-          "logloss": 0.3720497455541446
+          "brier": 0.1075087734529206,
+          "logloss": 0.3720452233534265
         },
         {
           "period": 111000088,
           "date": "2022-09-30",
           "hit": 1,
-          "brier": 0.10744512822101397,
-          "logloss": 0.3717213268838077
+          "brier": 0.10744755271405011,
+          "logloss": 0.3717326905080085
         },
         {
           "period": 111000089,
           "date": "2022-10-04",
           "hit": 1,
-          "brier": 0.10727646929289289,
-          "logloss": 0.37096219896799076
+          "brier": 0.10727761655073055,
+          "logloss": 0.3709670833771433
         },
         {
           "period": 111000090,
           "date": "2022-10-07",
           "hit": 0,
-          "brier": 0.10746104460678337,
-          "logloss": 0.3717733667686586
+          "brier": 0.10746357583806962,
+          "logloss": 0.3717856440762953
         },
         {
           "period": 111000091,
           "date": "2022-10-11",
           "hit": 1,
-          "brier": 0.10775482908786885,
-          "logloss": 0.37315515039806996
+          "brier": 0.10774603571064492,
+          "logloss": 0.37311411726931515
         },
         {
           "period": 111000092,
           "date": "2022-10-14",
           "hit": 0,
-          "brier": 0.1078087335086554,
-          "logloss": 0.3734137025661989
+          "brier": 0.10780781274030472,
+          "logloss": 0.37340951804480654
         },
         {
           "period": 111000093,
           "date": "2022-10-18",
           "hit": 1,
-          "brier": 0.10781743601544255,
-          "logloss": 0.373473227668166
+          "brier": 0.10781415374174276,
+          "logloss": 0.3734579093370496
         },
         {
           "period": 111000094,
           "date": "2022-10-21",
           "hit": 2,
-          "brier": 0.1073136662060642,
-          "logloss": 0.37111686508178066
+          "brier": 0.10731498262386077,
+          "logloss": 0.3711229263726376
         },
         {
           "period": 111000095,
           "date": "2022-10-25",
           "hit": 3,
-          "brier": 0.10706743978881351,
-          "logloss": 0.3700028799279528
+          "brier": 0.10706575661366519,
+          "logloss": 0.3699953396756477
         },
         {
           "period": 111000096,
           "date": "2022-10-28",
           "hit": 2,
-          "brier": 0.10721391247468663,
-          "logloss": 0.3706554223187351
+          "brier": 0.1072141138317924,
+          "logloss": 0.3706565044126526
         },
         {
           "period": 111000097,
           "date": "2022-11-01",
           "hit": 1,
-          "brier": 0.10745834114647905,
-          "logloss": 0.3717846451733008
+          "brier": 0.10745999421622254,
+          "logloss": 0.37179250328874525
         },
         {
           "period": 111000098,
           "date": "2022-11-04",
           "hit": 3,
-          "brier": 0.10706966298647855,
-          "logloss": 0.3699791980937012
+          "brier": 0.10709846041449277,
+          "logloss": 0.3701113228287463
         },
         {
           "period": 111000099,
           "date": "2022-11-08",
           "hit": 1,
-          "brier": 0.10729638184335537,
-          "logloss": 0.3710282681224375
+          "brier": 0.10729573138681925,
+          "logloss": 0.37102545506455115
         },
         {
           "period": 111000100,
           "date": "2022-11-11",
           "hit": 1,
-          "brier": 0.10755263913915313,
-          "logloss": 0.3722133200450264
+          "brier": 0.107552621483963,
+          "logloss": 0.37221331437643046
         },
         {
           "period": 111000101,
           "date": "2022-11-15",
           "hit": 0,
-          "brier": 0.1073839727014154,
-          "logloss": 0.3714116376616353
+          "brier": 0.10738526346579597,
+          "logloss": 0.3714177990177252
         },
         {
           "period": 111000102,
           "date": "2022-11-18",
           "hit": 2,
-          "brier": 0.10712334404514175,
-          "logloss": 0.37021651820362295
+          "brier": 0.10709902692746893,
+          "logloss": 0.37010636824277315
         },
         {
           "period": 111000103,
           "date": "2022-11-22",
           "hit": 1,
-          "brier": 0.1073236208240349,
-          "logloss": 0.37115273654946684
+          "brier": 0.10732428688689354,
+          "logloss": 0.371155847778057
         },
         {
           "period": 111000104,
           "date": "2022-11-25",
           "hit": 0,
-          "brier": 0.10765273511421913,
-          "logloss": 0.372667425614512
+          "brier": 0.10765127648007612,
+          "logloss": 0.3726608199174869
         },
         {
           "period": 111000105,
           "date": "2022-11-29",
           "hit": 1,
-          "brier": 0.10763676347982076,
-          "logloss": 0.3726455273561818
+          "brier": 0.10763641058683616,
+          "logloss": 0.372643777579798
         },
         {
           "period": 111000106,
           "date": "2022-12-02",
           "hit": 0,
-          "brier": 0.10822339746361234,
-          "logloss": 0.3753867013216848
+          "brier": 0.10822205787399208,
+          "logloss": 0.37538031470958777
         },
         {
           "period": 111000107,
           "date": "2022-12-06",
           "hit": 0,
-          "brier": 0.10754030536412496,
-          "logloss": 0.37215643335392584
+          "brier": 0.10754100763755735,
+          "logloss": 0.3721597864270685
         },
         {
           "period": 111000108,
           "date": "2022-12-09",
           "hit": 1,
-          "brier": 0.10755320863632953,
-          "logloss": 0.3722281863981823
+          "brier": 0.1075537196375062,
+          "logloss": 0.37223058248774726
         },
         {
           "period": 111000109,
           "date": "2022-12-13",
           "hit": 0,
-          "brier": 0.10844268343395792,
-          "logloss": 0.37641660413846506
+          "brier": 0.10844106173435665,
+          "logloss": 0.3764089276553153
         },
         {
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "brier": 0.10754347665640747,
-          "logloss": 0.37217102201923064
+          "brier": 0.1075450437260428,
+          "logloss": 0.3721783990898639
         },
         {
           "period": 111000111,
           "date": "2022-12-20",
           "hit": 0,
-          "brier": 0.1078199707954366,
-          "logloss": 0.3734712802253285
+          "brier": 0.10781958343159843,
+          "logloss": 0.37346945176616586
         },
         {
           "period": 111000112,
           "date": "2022-12-23",
           "hit": 1,
-          "brier": 0.10755711690513022,
-          "logloss": 0.3722456493838993
+          "brier": 0.1075564880234851,
+          "logloss": 0.3722426743106104
         },
         {
           "period": 111000113,
           "date": "2022-12-27",
           "hit": 1,
-          "brier": 0.10751247914760201,
-          "logloss": 0.3720358717850312
+          "brier": 0.10751391625595753,
+          "logloss": 0.37204255189527025
         },
         {
           "period": 111000114,
           "date": "2022-12-30",
           "hit": 0,
-          "brier": 0.10790071064483653,
-          "logloss": 0.37384725563699844
+          "brier": 0.1079000468601711,
+          "logloss": 0.37384415496281276
         },
         {
           "period": 112000001,
           "date": "2023-01-03",
           "hit": 0,
-          "brier": 0.10784502378974802,
-          "logloss": 0.3735942375849667
+          "brier": 0.1078441629131838,
+          "logloss": 0.37359023939264707
         },
         {
           "period": 112000002,
           "date": "2023-01-06",
           "hit": 0,
-          "brier": 0.10750438900002718,
-          "logloss": 0.37198971891037375
+          "brier": 0.10750435612484112,
+          "logloss": 0.3719896538004045
         },
         {
           "period": 112000003,
           "date": "2023-01-10",
           "hit": 1,
-          "brier": 0.107473710229223,
-          "logloss": 0.3718594195302479
+          "brier": 0.10747397863383541,
+          "logloss": 0.37186067043306964
         },
         {
           "period": 112000004,
           "date": "2023-01-13",
           "hit": 1,
-          "brier": 0.10734895407882414,
-          "logloss": 0.3712777887487462
+          "brier": 0.10734895745188347,
+          "logloss": 0.3712778031716214
         },
         {
           "period": 112000005,
           "date": "2023-01-17",
           "hit": 2,
-          "brier": 0.10701049248265183,
-          "logloss": 0.36969447410482914
+          "brier": 0.10701154878850273,
+          "logloss": 0.36969942181411086
         },
         {
           "period": 112000006,
           "date": "2023-01-20",
           "hit": 0,
-          "brier": 0.10771925843712084,
-          "logloss": 0.37299882820192726
+          "brier": 0.10771889950832557,
+          "logloss": 0.37299714093936825
         },
         {
           "period": 112000007,
           "date": "2023-01-21",
           "hit": 3,
-          "brier": 0.10712303254585073,
-          "logloss": 0.3702354480686391
+          "brier": 0.10712521342081482,
+          "logloss": 0.3702454680491987
         },
         {
           "period": 112000008,
           "date": "2023-01-22",
           "hit": 1,
-          "brier": 0.10751943909068001,
-          "logloss": 0.37206185057566465
+          "brier": 0.10751955345523521,
+          "logloss": 0.3720623586329152
         },
         {
           "period": 112000009,
           "date": "2023-01-23",
           "hit": 3,
-          "brier": 0.10725217873916297,
-          "logloss": 0.37085035605060995
+          "brier": 0.10725271715612456,
+          "logloss": 0.37085273788132894
         },
         {
           "period": 112000010,
           "date": "2023-01-24",
           "hit": 1,
-          "brier": 0.10764711358418885,
-          "logloss": 0.3726648568924015
+          "brier": 0.10764651705468228,
+          "logloss": 0.37266206360405046
         },
         {
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 1,
-          "brier": 0.10724225050768835,
-          "logloss": 0.37079227630383715
+          "brier": 0.10724279033092218,
+          "logloss": 0.37079475354620917
         },
         {
           "period": 112000012,
           "date": "2023-01-26",
           "hit": 1,
-          "brier": 0.10753049523395576,
-          "logloss": 0.3721219026031941
+          "brier": 0.10753101211931203,
+          "logloss": 0.37212432305598214
         },
         {
           "period": 112000013,
           "date": "2023-01-27",
           "hit": 0,
-          "brier": 0.10824312046576273,
-          "logloss": 0.3754621438180708
+          "brier": 0.10824227404492277,
+          "logloss": 0.3754581689777245
         },
         {
           "period": 112000014,
           "date": "2023-01-28",
           "hit": 1,
-          "brier": 0.1076126025717139,
-          "logloss": 0.3725035046194274
+          "brier": 0.10761200950617045,
+          "logloss": 0.3725007768364728
         },
         {
           "period": 112000015,
           "date": "2023-01-29",
           "hit": 0,
-          "brier": 0.1076964176147051,
-          "logloss": 0.37290183667763427
+          "brier": 0.1076956135610479,
+          "logloss": 0.3728980669531043
         },
         {
           "period": 112000016,
           "date": "2023-01-30",
           "hit": 2,
-          "brier": 0.10721667861171214,
-          "logloss": 0.3706924789956288
+          "brier": 0.10721716071802546,
+          "logloss": 0.37069460110666097
         },
         {
           "period": 112000017,
           "date": "2023-01-31",
           "hit": 0,
-          "brier": 0.10773894316984897,
-          "logloss": 0.3730877702632249
+          "brier": 0.10773808485335142,
+          "logloss": 0.3730838265086036
         },
         {
           "period": 112000018,
           "date": "2023-02-01",
           "hit": 1,
-          "brier": 0.1072914976240528,
-          "logloss": 0.37104707006710985
+          "brier": 0.10729218105581288,
+          "logloss": 0.3710501079989448
         },
         {
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 2,
-          "brier": 0.1073320858408022,
-          "logloss": 0.3712087225240363
+          "brier": 0.10733229240562618,
+          "logloss": 0.37120964964608855
         },
         {
           "period": 112000020,
           "date": "2023-02-03",
           "hit": 0,
-          "brier": 0.10794303406192161,
-          "logloss": 0.3740305374271637
+          "brier": 0.10794094185900026,
+          "logloss": 0.3740208433158761
         },
         {
           "period": 112000021,
           "date": "2023-02-04",
           "hit": 1,
-          "brier": 0.10741227911871802,
-          "logloss": 0.37158109935886285
+          "brier": 0.10741215924350869,
+          "logloss": 0.3715805270701885
         },
         {
           "period": 112000022,
           "date": "2023-02-05",
           "hit": 2,
-          "brier": 0.10744958415476168,
-          "logloss": 0.3717557978050276
+          "brier": 0.10745030978882435,
+          "logloss": 0.37175913539461497
         },
         {
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 0,
-          "brier": 0.1078738461110007,
-          "logloss": 0.373721962020206
+          "brier": 0.10787266892869357,
+          "logloss": 0.3737164898727319
         },
         {
           "period": 112000024,
           "date": "2023-02-10",
           "hit": 2,
-          "brier": 0.10742188956708269,
-          "logloss": 0.37161336541376283
+          "brier": 0.1074225586821436,
+          "logloss": 0.37161648191634783
         },
         {
           "period": 112000025,
           "date": "2023-02-14",
           "hit": 2,
-          "brier": 0.10723484499455521,
-          "logloss": 0.3707596988351358
+          "brier": 0.1072351406779573,
+          "logloss": 0.37076104252326936
         },
         {
           "period": 112000026,
           "date": "2023-02-17",
-          "hit": 1,
-          "brier": 0.1078125626240186,
-          "logloss": 0.37343594411932485
+          "hit": 0,
+          "brier": 0.10788033843347773,
+          "logloss": 0.3737460177140508
         },
         {
           "period": 112000027,
           "date": "2023-02-21",
           "hit": 1,
-          "brier": 0.10751345023787251,
-          "logloss": 0.37205654786690795
+          "brier": 0.1075133298815814,
+          "logloss": 0.37205597470700275
         },
         {
           "period": 112000028,
           "date": "2023-02-24",
           "hit": 0,
-          "brier": 0.10806022094791273,
-          "logloss": 0.3745904221178126
+          "brier": 0.10805918417079348,
+          "logloss": 0.37458563512356546
         },
         {
           "period": 112000029,
           "date": "2023-02-28",
           "hit": 3,
-          "brier": 0.10715646123212615,
-          "logloss": 0.37039502674191116
+          "brier": 0.10715704363978722,
+          "logloss": 0.37039766330122703
         },
         {
           "period": 112000030,
           "date": "2023-03-03",
           "hit": 1,
-          "brier": 0.10742115228287731,
-          "logloss": 0.37159815000084007
+          "brier": 0.1074211989955057,
+          "logloss": 0.37159843876167886
         },
         {
           "period": 112000031,
           "date": "2023-03-07",
           "hit": 2,
-          "brier": 0.10743292395881768,
-          "logloss": 0.3717041344405868
+          "brier": 0.1074326744572905,
+          "logloss": 0.37170288372021093
         },
         {
           "period": 112000032,
           "date": "2023-03-10",
           "hit": 0,
-          "brier": 0.10757117773495195,
-          "logloss": 0.37228369990071863
+          "brier": 0.10757129770839349,
+          "logloss": 0.37228440928679024
         },
         {
           "period": 112000033,
           "date": "2023-03-14",
           "hit": 1,
-          "brier": 0.1080117979437575,
-          "logloss": 0.3743960866515526
+          "brier": 0.10801091719882572,
+          "logloss": 0.3743918635122727
         },
         {
           "period": 112000034,
           "date": "2023-03-17",
           "hit": 1,
-          "brier": 0.10765563654670918,
-          "logloss": 0.372718707114151
+          "brier": 0.10765525608188187,
+          "logloss": 0.3727169826721657
         },
         {
           "period": 112000035,
           "date": "2023-03-21",
           "hit": 1,
-          "brier": 0.10724057076498372,
-          "logloss": 0.37078558274415335
+          "brier": 0.10724100549882482,
+          "logloss": 0.3707875304320116
         },
         {
           "period": 112000036,
           "date": "2023-03-24",
           "hit": 0,
-          "brier": 0.1076185749267593,
-          "logloss": 0.3725122485195544
+          "brier": 0.10761815706540129,
+          "logloss": 0.3725103900632464
         },
         {
           "period": 112000037,
           "date": "2023-03-28",
           "hit": 2,
-          "brier": 0.10768044736846287,
-          "logloss": 0.372834467899433
+          "brier": 0.1076798688631742,
+          "logloss": 0.37283174448726636
         },
         {
           "period": 112000038,
           "date": "2023-03-31",
           "hit": 3,
-          "brier": 0.10715167730992449,
-          "logloss": 0.3703861634946032
+          "brier": 0.10715233159954352,
+          "logloss": 0.37038911255733636
         },
         {
           "period": 112000039,
           "date": "2023-04-04",
           "hit": 1,
-          "brier": 0.10732025948919657,
-          "logloss": 0.3711198232260583
+          "brier": 0.10732062485938917,
+          "logloss": 0.37112166517615575
         },
         {
           "period": 112000040,
           "date": "2023-04-07",
           "hit": 1,
-          "brier": 0.10764474146110883,
-          "logloss": 0.37265462517879655
+          "brier": 0.10764471659642968,
+          "logloss": 0.3726545896800297
         },
         {
           "period": 112000041,
           "date": "2023-04-11",
           "hit": 0,
-          "brier": 0.10813522765076965,
-          "logloss": 0.37495529403402084
+          "brier": 0.10813418664090661,
+          "logloss": 0.37495041947601665
         },
         {
           "period": 112000042,
           "date": "2023-04-14",
           "hit": 2,
-          "brier": 0.10736928827296582,
-          "logloss": 0.3713665225395383
+          "brier": 0.10736942584561243,
+          "logloss": 0.371367179199211
         },
         {
           "period": 112000043,
           "date": "2023-04-18",
           "hit": 1,
-          "brier": 0.10790373906823751,
-          "logloss": 0.3739074720730895
+          "brier": 0.10790317816897452,
+          "logloss": 0.37390468726631615
         },
         {
           "period": 112000044,
           "date": "2023-04-21",
           "hit": 2,
-          "brier": 0.1071506267054327,
-          "logloss": 0.3703872467275856
+          "brier": 0.10715059574135899,
+          "logloss": 0.37038706964029017
         },
         {
           "period": 112000045,
@@ -3006,7 +2999,7 @@
           "period": 112000065,
           "date": "2023-07-04",
           "hit": 0,
-          "brier": 0.10771028283013209,
+          "brier": 0.1077102828301321,
           "logloss": 0.37293559709432955
         },
         {
@@ -3014,7 +3007,7 @@
           "date": "2023-07-07",
           "hit": 1,
           "brier": 0.10738602530533405,
-          "logloss": 0.37142722929886834
+          "logloss": 0.3714272292988684
         },
         {
           "period": 112000067,
@@ -3028,13 +3021,13 @@
           "date": "2023-07-14",
           "hit": 1,
           "brier": 0.10745844154313201,
-          "logloss": 0.3718064865341098
+          "logloss": 0.37180648653410975
         },
         {
           "period": 112000069,
           "date": "2023-07-18",
           "hit": 1,
-          "brier": 0.10759017795986155,
+          "brier": 0.10759017795986156,
           "logloss": 0.3724225588679097
         },
         {
@@ -3056,7 +3049,7 @@
           "date": "2023-07-28",
           "hit": 0,
           "brier": 0.10764161328526499,
-          "logloss": 0.37261380267656985
+          "logloss": 0.3726138026765698
         },
         {
           "period": 112000073,
@@ -3119,7 +3112,7 @@
           "date": "2023-08-29",
           "hit": 2,
           "brier": 0.10699893104227716,
-          "logloss": 0.369764895929612
+          "logloss": 0.36976489592961204
         },
         {
           "period": 112000082,
@@ -3188,7 +3181,7 @@
           "period": 112000091,
           "date": "2023-10-03",
           "hit": 1,
-          "brier": 0.10789042683766734,
+          "brier": 0.10789042683766735,
           "logloss": 0.3737699975117641
         },
         {
@@ -3434,7 +3427,7 @@
           "date": "2024-02-02",
           "hit": 1,
           "brier": 0.10785329585715236,
-          "logloss": 0.3736870892648621
+          "logloss": 0.3736870892648622
         },
         {
           "period": 113000011,
@@ -3448,7 +3441,7 @@
           "date": "2024-02-07",
           "hit": 2,
           "brier": 0.1068663163159883,
-          "logloss": 0.3690597892254211
+          "logloss": 0.36905978922542104
         },
         {
           "period": 113000013,
@@ -3511,7 +3504,7 @@
           "date": "2024-02-16",
           "hit": 1,
           "brier": 0.10798166602653805,
-          "logloss": 0.374261669311884
+          "logloss": 0.37426166931188387
         },
         {
           "period": 113000022,
@@ -3790,7 +3783,7 @@
           "period": 113000061,
           "date": "2024-06-14",
           "hit": 0,
-          "brier": 0.10803067705241258,
+          "brier": 0.10803067705241255,
           "logloss": 0.37445041814806435
         },
         {
@@ -4064,7 +4057,7 @@
           "date": "2024-10-29",
           "hit": 4,
           "brier": 0.10637866225748949,
-          "logloss": 0.3668425946029776
+          "logloss": 0.3668425946029775
         },
         {
           "period": 113000101,
@@ -4175,7 +4168,7 @@
           "period": 113000116,
           "date": "2024-12-24",
           "hit": 1,
-          "brier": 0.107622054416126,
+          "brier": 0.10762205441612599,
           "logloss": 0.3725488328257956
         },
         {
@@ -4203,7 +4196,7 @@
           "period": 114000002,
           "date": "2025-01-07",
           "hit": 2,
-          "brier": 0.10719804047556827,
+          "brier": 0.1071980404755683,
           "logloss": 0.37059780931519015
         },
         {
@@ -4337,7 +4330,7 @@
           "date": "2025-02-07",
           "hit": 0,
           "brier": 0.10788297889985284,
-          "logloss": 0.3737623185436355
+          "logloss": 0.37376231854363556
         },
         {
           "period": 114000022,
@@ -4553,7 +4546,7 @@
           "period": 114000052,
           "date": "2025-05-13",
           "hit": 1,
-          "brier": 0.10753267522618448,
+          "brier": 0.1075326752261845,
           "logloss": 0.37213399131657204
         },
         {
@@ -4770,7 +4763,7 @@
           "period": 114000083,
           "date": "2025-08-29",
           "hit": 0,
-          "brier": 0.10775363345665176,
+          "brier": 0.10775363345665177,
           "logloss": 0.3731765487235868
         },
         {
@@ -4778,7 +4771,7 @@
           "date": "2025-09-02",
           "hit": 1,
           "brier": 0.10754041454642024,
-          "logloss": 0.3721749773724554
+          "logloss": 0.37217497737245553
         },
         {
           "period": 114000085,
@@ -4812,7 +4805,7 @@
           "period": 114000089,
           "date": "2025-09-19",
           "hit": 2,
-          "brier": 0.1071241245113363,
+          "brier": 0.10712412451133627,
           "logloss": 0.3702207381237748
         },
         {
@@ -4862,7 +4855,7 @@
           "date": "2025-10-14",
           "hit": 1,
           "brier": 0.107359120575496,
-          "logloss": 0.3713491349576852
+          "logloss": 0.3713491349576851
         },
         {
           "period": 114000097,
@@ -5072,7 +5065,7 @@
           "date": "2026-01-27",
           "hit": 0,
           "brier": 0.10770891394634383,
-          "logloss": 0.372950882044005
+          "logloss": 0.3729508820440049
         },
         {
           "period": 115000009,
@@ -5345,7 +5338,7 @@
           "date": "2026-04-24",
           "hit": 1,
           "brier": 0.10735645847733181,
-          "logloss": 0.37130141780728915
+          "logloss": 0.3713014178072892
         },
         {
           "period": 115000048,
@@ -5654,6 +5647,13 @@
           "hit": 0,
           "brier": 0.10783084429685229,
           "logloss": 0.37348388918822645
+        },
+        {
+          "period": 115000092,
+          "date": "2026-09-29",
+          "hit": 1,
+          "brier": 0.10788886445360231,
+          "logloss": 0.3737867670153543
         }
       ]
     },
@@ -5680,120 +5680,120 @@
         "empirical_hazard"
       ],
       "weights": {
-        "bayes_24": 0.16237879,
-        "bayes_60": 0.10597422,
-        "bayes_150": 0.10822153,
-        "bayes_360": 0.11543491,
-        "ewma_8": 0.05010048,
-        "ewma_21": 0.08986784,
-        "ewma_55": 0.10900188,
-        "ewma_144": 0.09672482,
-        "empirical_hazard": 0.16229551
+        "bayes_24": 0.17703304,
+        "bayes_60": 0.09398622,
+        "bayes_150": 0.09616072,
+        "bayes_360": 0.19154795,
+        "ewma_8": 0.04506574,
+        "ewma_21": 0.08094469,
+        "ewma_55": 0.09803453,
+        "ewma_144": 0.08601418,
+        "empirical_hazard": 0.13121294
       },
       "weight_diagnostics": {
         "bayes_24": {
-          "hit20": 0.1,
-          "hit60": 0.0833,
-          "hit120": 0.075,
+          "hit20": 0.15,
+          "hit60": 0.1,
+          "hit120": 0.0833,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.09824999,
-          "loss60": 0.09953905,
-          "loss120": 0.10006165,
-          "zero_hit_streak": 1,
-          "quality": -0.00809532
+          "loss20": 0.09789231,
+          "loss60": 0.0995392,
+          "loss120": 0.10000205,
+          "zero_hit_streak": 0,
+          "quality": 0.05534316
         },
         "bayes_60": {
           "hit20": 0.1,
-          "hit60": 0.0833,
+          "hit60": 0.0667,
           "hit120": 0.0667,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.09857597,
-          "loss60": 0.09985784,
-          "loss120": 0.09975995,
-          "zero_hit_streak": 7,
-          "quality": -0.15034065
+          "loss20": 0.09809783,
+          "loss60": 0.09996812,
+          "loss120": 0.09968025,
+          "zero_hit_streak": 8,
+          "quality": -0.15571958
         },
         "bayes_150": {
           "hit20": 0.1,
-          "hit60": 0.1,
+          "hit60": 0.0833,
           "hit120": 0.075,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.09882464,
-          "loss60": 0.0994875,
-          "loss120": 0.09959698,
-          "zero_hit_streak": 7,
-          "quality": -0.14334581
+          "loss20": 0.09851017,
+          "loss60": 0.09960297,
+          "loss120": 0.09957275,
+          "zero_hit_streak": 8,
+          "quality": -0.14809532
         },
         "bayes_360": {
-          "hit20": 0.15,
-          "hit60": 0.1,
-          "hit120": 0.075,
+          "hit20": 0.2,
+          "hit60": 0.1167,
+          "hit120": 0.0833,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.09687962,
-          "loss60": 0.09818557,
-          "loss120": 0.09966351,
-          "zero_hit_streak": 5,
-          "quality": -0.12183698
+          "loss20": 0.09628918,
+          "loss60": 0.09811101,
+          "loss120": 0.0996042,
+          "zero_hit_streak": 0,
+          "quality": 0.08161042
         },
         "ewma_8": {
           "hit20": 0.1,
-          "hit60": 0.1,
+          "hit60": 0.0833,
           "hit120": 0.075,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.13850107,
-          "loss60": 0.14797523,
-          "loss120": 0.14383192,
-          "zero_hit_streak": 7,
-          "quality": -0.40006241
+          "loss20": 0.13707029,
+          "loss60": 0.14823006,
+          "loss120": 0.14362358,
+          "zero_hit_streak": 8,
+          "quality": -0.40072824
         },
         "ewma_21": {
           "hit20": 0.1,
-          "hit60": 0.1167,
+          "hit60": 0.1,
           "hit120": 0.1,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.10974878,
-          "loss60": 0.11391965,
-          "loss120": 0.11341038,
-          "zero_hit_streak": 7,
-          "quality": -0.20529253
+          "loss20": 0.10859955,
+          "loss60": 0.1140781,
+          "loss120": 0.11324186,
+          "zero_hit_streak": 8,
+          "quality": -0.20551363
         },
         "ewma_55": {
           "hit20": 0.1,
-          "hit60": 0.1333,
+          "hit60": 0.1167,
           "hit120": 0.0917,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.10027129,
-          "loss60": 0.10187283,
-          "loss120": 0.10281227,
-          "zero_hit_streak": 7,
-          "quality": -0.14095087
+          "loss20": 0.09927757,
+          "loss60": 0.10198707,
+          "loss120": 0.10269275,
+          "zero_hit_streak": 8,
+          "quality": -0.1416624
         },
         "ewma_144": {
           "hit20": 0.05,
-          "hit60": 0.0667,
+          "hit60": 0.05,
           "hit120": 0.0583,
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.09752212,
-          "loss60": 0.09875814,
-          "loss120": 0.10034364,
-          "zero_hit_streak": 7,
-          "quality": -0.18078257
+          "loss20": 0.09668621,
+          "loss60": 0.09878302,
+          "loss120": 0.10026417,
+          "zero_hit_streak": 8,
+          "quality": -0.18526493
         },
         "empirical_hazard": {
           "hit20": 0.1,
@@ -5802,29 +5802,29 @@
           "spill20": 0,
           "spill60": 0,
           "spill120": 0,
-          "loss20": 0.10113726,
-          "loss60": 0.10121258,
-          "loss120": 0.10181879,
-          "zero_hit_streak": 0,
-          "quality": -0.00826633
+          "loss20": 0.10136245,
+          "loss60": 0.10150773,
+          "loss120": 0.10183709,
+          "zero_hit_streak": 1,
+          "quality": -0.04449515
         }
       },
       "model_logloss": {
-        "bayes_24": 0.10036195,
-        "bayes_60": 0.10011673,
-        "bayes_150": 0.09963035,
-        "bayes_360": 0.09982487,
-        "ewma_8": 0.14444328,
-        "ewma_21": 0.1131694,
-        "ewma_55": 0.10274757,
-        "ewma_144": 0.10043454,
-        "empirical_hazard": 0.1010537
+        "bayes_24": 0.10032741,
+        "bayes_60": 0.10008468,
+        "bayes_150": 0.09962476,
+        "bayes_360": 0.09980217,
+        "ewma_8": 0.14418599,
+        "ewma_21": 0.11307011,
+        "ewma_55": 0.1027062,
+        "ewma_144": 0.10040329,
+        "empirical_hazard": 0.10107232
       },
       "model_avg_hits": {
-        "bayes_24": 0.0596,
+        "bayes_24": 0.0615,
         "bayes_60": 0.0673,
         "bayes_150": 0.0808,
-        "bayes_360": 0.0635,
+        "bayes_360": 0.0654,
         "ewma_8": 0.0692,
         "ewma_21": 0.0712,
         "ewma_55": 0.075,
@@ -5832,859 +5832,852 @@
         "empirical_hazard": 0.0731
       },
       "model_avg_spill_10_15": {},
-      "ensemble_logloss": 0.09950403,
+      "ensemble_logloss": 0.09949619,
       "uniform_logloss": 0.09962339,
-      "logloss_edge": 0.00011936,
+      "logloss_edge": 0.0001272,
       "avg_hits": 0.0827,
       "avg_spill_10_15": null,
       "recent_rank_audit": [],
       "rows": [
         {
-          "period": 111000038,
-          "date": "2022-04-08",
-          "hit": 0,
-          "brier": 0.020048230864477407,
-          "logloss": 0.1010033850048454
-        },
-        {
           "period": 111000039,
           "date": "2022-04-12",
           "hit": 0,
-          "brier": 0.020019447413284146,
-          "logloss": 0.10028499143668032
+          "brier": 0.020039269100159234,
+          "logloss": 0.10076831385653164
         },
         {
           "period": 111000040,
           "date": "2022-04-15",
           "hit": 0,
-          "brier": 0.01999544402326176,
-          "logloss": 0.09967798893511942
+          "brier": 0.019995383107855088,
+          "logloss": 0.09967679014388534
         },
         {
           "period": 111000041,
           "date": "2022-04-19",
           "hit": 0,
-          "brier": 0.019938082711067742,
-          "logloss": 0.09828180252811951
+          "brier": 0.019935813849813317,
+          "logloss": 0.09822687771790677
         },
         {
           "period": 111000042,
           "date": "2022-04-22",
           "hit": 1,
-          "brier": 0.019871313968860486,
-          "logloss": 0.09676500947984501
+          "brier": 0.01986609305376631,
+          "logloss": 0.0966465832679768
         },
         {
           "period": 111000043,
           "date": "2022-04-26",
           "hit": 0,
-          "brier": 0.019889130424692866,
-          "logloss": 0.09713181335509125
+          "brier": 0.019887215576116668,
+          "logloss": 0.09708355684357009
         },
         {
           "period": 111000044,
           "date": "2022-04-29",
           "hit": 0,
-          "brier": 0.01999784425391707,
-          "logloss": 0.09970686592608835
+          "brier": 0.019997272651508535,
+          "logloss": 0.0996882946296732
         },
         {
           "period": 111000045,
           "date": "2022-05-03",
           "hit": 0,
-          "brier": 0.019967271267393706,
-          "logloss": 0.09895846644773981
+          "brier": 0.019968381253409398,
+          "logloss": 0.09898266862675908
         },
         {
           "period": 111000046,
           "date": "2022-05-06",
           "hit": 0,
-          "brier": 0.019887759844691752,
-          "logloss": 0.09711230615900183
+          "brier": 0.019885584091940873,
+          "logloss": 0.09706175952422663
         },
         {
           "period": 111000047,
           "date": "2022-05-10",
           "hit": 0,
-          "brier": 0.020085707049148395,
-          "logloss": 0.10203648071174419
+          "brier": 0.020086786251499848,
+          "logloss": 0.10206291083299189
         },
         {
           "period": 111000048,
           "date": "2022-05-13",
           "hit": 1,
-          "brier": 0.019850860688589777,
-          "logloss": 0.09632151254578222
+          "brier": 0.019847302851409374,
+          "logloss": 0.09624368809965117
         },
         {
           "period": 111000049,
           "date": "2022-05-17",
           "hit": 0,
-          "brier": 0.019851418555039153,
-          "logloss": 0.09630085492029312
+          "brier": 0.019848090553775302,
+          "logloss": 0.09622587641920777
         },
         {
           "period": 111000050,
           "date": "2022-05-20",
           "hit": 0,
-          "brier": 0.020021095103847572,
-          "logloss": 0.10027193555791031
+          "brier": 0.020022802451113715,
+          "logloss": 0.1003112759866033
         },
         {
           "period": 111000051,
           "date": "2022-05-24",
           "hit": 0,
-          "brier": 0.020045199244525167,
-          "logloss": 0.10091064502020966
+          "brier": 0.020046751323946784,
+          "logloss": 0.10094811784123257
         },
         {
           "period": 111000052,
           "date": "2022-05-27",
           "hit": 0,
-          "brier": 0.019991697924589113,
-          "logloss": 0.09954748141966233
+          "brier": 0.019990599753783554,
+          "logloss": 0.0995177911407256
         },
         {
           "period": 111000053,
           "date": "2022-05-31",
           "hit": 0,
-          "brier": 0.02005053452173349,
-          "logloss": 0.1010636233891617
+          "brier": 0.020051615236560794,
+          "logloss": 0.10108995783057845
         },
         {
           "period": 111000054,
           "date": "2022-06-03",
           "hit": 0,
-          "brier": 0.020036957561416862,
-          "logloss": 0.1007168349770574
+          "brier": 0.020037430138247905,
+          "logloss": 0.10072774998271919
         },
         {
           "period": 111000055,
           "date": "2022-06-07",
           "hit": 0,
-          "brier": 0.0199254621662458,
-          "logloss": 0.09796967278287118
+          "brier": 0.019924927223500682,
+          "logloss": 0.09795610670145594
         },
         {
           "period": 111000056,
           "date": "2022-06-10",
           "hit": 0,
-          "brier": 0.02008236631019769,
-          "logloss": 0.10195142747158449
+          "brier": 0.020082908216929655,
+          "logloss": 0.101965126115605
         },
         {
           "period": 111000057,
           "date": "2022-06-14",
           "hit": 0,
-          "brier": 0.019969746292524727,
-          "logloss": 0.0990256924370224
+          "brier": 0.019969958224986088,
+          "logloss": 0.09902998998911564
         },
         {
           "period": 111000058,
           "date": "2022-06-17",
           "hit": 0,
-          "brier": 0.020048414213118912,
-          "logloss": 0.10102276771308372
+          "brier": 0.020048621783962453,
+          "logloss": 0.10102733816961952
         },
         {
           "period": 111000059,
           "date": "2022-06-21",
           "hit": 0,
-          "brier": 0.020021234966118663,
-          "logloss": 0.10031857434068404
+          "brier": 0.020021484829706754,
+          "logloss": 0.10032462661679252
         },
         {
           "period": 111000060,
           "date": "2022-06-24",
           "hit": 0,
-          "brier": 0.01996697327631332,
-          "logloss": 0.09896267297353274
+          "brier": 0.01996706296777387,
+          "logloss": 0.09896452868802885
         },
         {
           "period": 111000061,
           "date": "2022-06-28",
           "hit": 0,
-          "brier": 0.019996650097429493,
-          "logloss": 0.09968500754160708
+          "brier": 0.01999637510641577,
+          "logloss": 0.09967772854630545
         },
         {
           "period": 111000062,
           "date": "2022-07-01",
           "hit": 0,
-          "brier": 0.019980671169474464,
-          "logloss": 0.09929015826180608
+          "brier": 0.019980612947741172,
+          "logloss": 0.09928834103442956
         },
         {
           "period": 111000063,
           "date": "2022-07-05",
           "hit": 0,
-          "brier": 0.019904359998235678,
-          "logloss": 0.09749249493038051
+          "brier": 0.019904103059788503,
+          "logloss": 0.09748632848973364
         },
         {
           "period": 111000064,
           "date": "2022-07-08",
           "hit": 0,
-          "brier": 0.020033195339918722,
-          "logloss": 0.10062428480365403
+          "brier": 0.020033385231113573,
+          "logloss": 0.1006288689704824
         },
         {
           "period": 111000065,
           "date": "2022-07-12",
           "hit": 0,
-          "brier": 0.020057901222407245,
-          "logloss": 0.10128798619294017
+          "brier": 0.02005803863186951,
+          "logloss": 0.1012913724493376
         },
         {
           "period": 111000066,
           "date": "2022-07-15",
           "hit": 0,
-          "brier": 0.019997300256608962,
-          "logloss": 0.09971064331305368
+          "brier": 0.019997466661971105,
+          "logloss": 0.09971456941566997
         },
         {
           "period": 111000067,
           "date": "2022-07-19",
           "hit": 0,
-          "brier": 0.019965025462546686,
-          "logloss": 0.09891431970506309
+          "brier": 0.019964901754775766,
+          "logloss": 0.09891109626302973
         },
         {
           "period": 111000068,
           "date": "2022-07-22",
           "hit": 0,
-          "brier": 0.019980502574097857,
-          "logloss": 0.09928784513875226
+          "brier": 0.019980533942392804,
+          "logloss": 0.09928832938652289
         },
         {
           "period": 111000069,
           "date": "2022-07-26",
           "hit": 0,
-          "brier": 0.020057037520995483,
-          "logloss": 0.10126316208842669
+          "brier": 0.020057149348696627,
+          "logloss": 0.10126588383640828
         },
         {
           "period": 111000070,
           "date": "2022-07-29",
           "hit": 0,
-          "brier": 0.02006578342755505,
-          "logloss": 0.101507899285992
+          "brier": 0.02006591396151165,
+          "logloss": 0.10151121607259112
         },
         {
           "period": 111000071,
           "date": "2022-08-02",
           "hit": 0,
-          "brier": 0.020014111913948158,
-          "logloss": 0.10014760813441602
+          "brier": 0.020014215421150956,
+          "logloss": 0.1001500860182519
         },
         {
           "period": 111000072,
           "date": "2022-08-05",
           "hit": 0,
-          "brier": 0.019992883541749374,
-          "logloss": 0.09960602036975445
+          "brier": 0.01999295228409104,
+          "logloss": 0.09960757179232715
         },
         {
           "period": 111000073,
           "date": "2022-08-09",
           "hit": 0,
-          "brier": 0.019932377225368014,
-          "logloss": 0.09814763844838542
+          "brier": 0.01993222580004863,
+          "logloss": 0.09814395119194894
         },
         {
           "period": 111000074,
           "date": "2022-08-12",
           "hit": 0,
-          "brier": 0.019945258327185276,
-          "logloss": 0.09845244401546774
+          "brier": 0.019945014539970808,
+          "logloss": 0.09844652174627314
         },
         {
           "period": 111000075,
           "date": "2022-08-16",
           "hit": 0,
-          "brier": 0.01997921846970993,
-          "logloss": 0.09926084497349547
+          "brier": 0.01997936120534742,
+          "logloss": 0.09926414966048404
         },
         {
           "period": 111000076,
           "date": "2022-08-19",
           "hit": 0,
-          "brier": 0.020002280561647632,
-          "logloss": 0.09984202130248872
+          "brier": 0.02000212012149922,
+          "logloss": 0.09983779122364951
         },
         {
           "period": 111000077,
           "date": "2022-08-23",
           "hit": 1,
-          "brier": 0.019836301113449535,
-          "logloss": 0.09601030590216136
+          "brier": 0.019835764356007337,
+          "logloss": 0.09599879066514612
         },
         {
           "period": 111000078,
           "date": "2022-08-26",
           "hit": 1,
-          "brier": 0.01969120466358243,
-          "logloss": 0.09311643882222984
+          "brier": 0.019689707343318714,
+          "logloss": 0.09308836009567523
         },
         {
           "period": 111000079,
           "date": "2022-08-30",
           "hit": 0,
-          "brier": 0.020026434968523524,
-          "logloss": 0.10040104974140635
+          "brier": 0.020026622183158902,
+          "logloss": 0.10040512233934429
         },
         {
           "period": 111000080,
           "date": "2022-09-02",
           "hit": 0,
-          "brier": 0.020006287400841503,
-          "logloss": 0.09989442781502642
+          "brier": 0.02000648044161005,
+          "logloss": 0.09989863817198968
         },
         {
           "period": 111000081,
           "date": "2022-09-06",
           "hit": 0,
-          "brier": 0.0199569135727805,
-          "logloss": 0.09867886145217775
+          "brier": 0.019956936220736205,
+          "logloss": 0.09867883104630652
         },
         {
           "period": 111000082,
           "date": "2022-09-09",
           "hit": 0,
-          "brier": 0.02008495208287895,
-          "logloss": 0.10199510763142959
+          "brier": 0.020085108814172848,
+          "logloss": 0.10199886957409515
         },
         {
           "period": 111000083,
           "date": "2022-09-13",
           "hit": 1,
-          "brier": 0.01989970279687651,
-          "logloss": 0.09736731462449758
+          "brier": 0.019899419438710812,
+          "logloss": 0.09736059576959716
         },
         {
           "period": 111000084,
           "date": "2022-09-16",
           "hit": 0,
-          "brier": 0.02009721018315453,
-          "logloss": 0.1023670947918972
+          "brier": 0.020097303987872146,
+          "logloss": 0.10236937046056577
         },
         {
           "period": 111000085,
           "date": "2022-09-20",
           "hit": 0,
-          "brier": 0.01998963532049036,
-          "logloss": 0.09950948491092419
+          "brier": 0.019989380712165397,
+          "logloss": 0.09950288617607088
         },
         {
           "period": 111000086,
           "date": "2022-09-23",
           "hit": 0,
-          "brier": 0.019959595408087567,
-          "logloss": 0.09877289220429902
+          "brier": 0.01995967541314789,
+          "logloss": 0.09877451711006645
         },
         {
           "period": 111000087,
           "date": "2022-09-27",
           "hit": 0,
-          "brier": 0.019951652210408052,
-          "logloss": 0.09858478028006652
+          "brier": 0.019951743846171037,
+          "logloss": 0.09858672335449692
         },
         {
           "period": 111000088,
           "date": "2022-09-30",
           "hit": 0,
-          "brier": 0.019968051429686343,
-          "logloss": 0.09897878996778642
+          "brier": 0.019968027115573037,
+          "logloss": 0.09897795236421272
         },
         {
           "period": 111000089,
           "date": "2022-10-04",
           "hit": 0,
-          "brier": 0.01999643653409484,
-          "logloss": 0.09966902820948155
+          "brier": 0.019996515908613264,
+          "logloss": 0.09967072162631271
         },
         {
           "period": 111000090,
           "date": "2022-10-07",
           "hit": 0,
-          "brier": 0.02003542500387544,
-          "logloss": 0.10068448321603096
+          "brier": 0.020035525469183087,
+          "logloss": 0.10068690523933699
         },
         {
           "period": 111000091,
           "date": "2022-10-11",
           "hit": 0,
-          "brier": 0.019953246125539253,
-          "logloss": 0.09862352745633356
+          "brier": 0.019953292487643493,
+          "logloss": 0.09862444421666224
         },
         {
           "period": 111000092,
           "date": "2022-10-14",
           "hit": 0,
-          "brier": 0.02003024364716218,
-          "logloss": 0.10054997721852606
+          "brier": 0.020030279620205295,
+          "logloss": 0.1005507315883336
         },
         {
           "period": 111000093,
           "date": "2022-10-18",
           "hit": 0,
-          "brier": 0.020003473687016472,
-          "logloss": 0.09986722655672063
+          "brier": 0.02000355704382598,
+          "logloss": 0.0998691795001397
         },
         {
           "period": 111000094,
           "date": "2022-10-21",
           "hit": 0,
-          "brier": 0.02001292223508844,
-          "logloss": 0.10010706499727087
+          "brier": 0.0200130016612266,
+          "logloss": 0.10010894700170818
         },
         {
           "period": 111000095,
           "date": "2022-10-25",
           "hit": 0,
-          "brier": 0.020003394922612844,
-          "logloss": 0.09986305434811306
+          "brier": 0.020003485345542346,
+          "logloss": 0.09986519740651296
         },
         {
           "period": 111000096,
           "date": "2022-10-28",
           "hit": 0,
-          "brier": 0.019982082975387533,
-          "logloss": 0.09932802140679253
+          "brier": 0.019982126867045705,
+          "logloss": 0.09932894752306703
         },
         {
           "period": 111000097,
           "date": "2022-11-01",
           "hit": 0,
-          "brier": 0.019901527646886068,
-          "logloss": 0.09742774066323362
+          "brier": 0.01990133180750217,
+          "logloss": 0.09742317864637866
         },
         {
           "period": 111000098,
           "date": "2022-11-04",
           "hit": 0,
-          "brier": 0.020084665749844098,
-          "logloss": 0.10200162454795626
+          "brier": 0.020084769918185443,
+          "logloss": 0.10200418973508835
         },
         {
           "period": 111000099,
           "date": "2022-11-08",
           "hit": 0,
-          "brier": 0.019988049809100655,
-          "logloss": 0.09947863694417738
+          "brier": 0.01998808245858591,
+          "logloss": 0.09947937765014898
         },
         {
           "period": 111000100,
           "date": "2022-11-11",
           "hit": 0,
-          "brier": 0.01996481972715753,
-          "logloss": 0.09891170905790013
+          "brier": 0.01996483855430169,
+          "logloss": 0.09891211085460937
         },
         {
           "period": 111000101,
           "date": "2022-11-15",
           "hit": 0,
-          "brier": 0.02005799713490733,
-          "logloss": 0.10129067912459978
+          "brier": 0.020058020615614923,
+          "logloss": 0.10129125695031303
         },
         {
           "period": 111000102,
           "date": "2022-11-18",
           "hit": 0,
-          "brier": 0.02002680322791811,
-          "logloss": 0.10047370963720803
+          "brier": 0.020026830833725286,
+          "logloss": 0.10047438856595724
         },
         {
           "period": 111000103,
           "date": "2022-11-22",
           "hit": 0,
-          "brier": 0.020071668899625614,
-          "logloss": 0.10167338845124656
+          "brier": 0.020071691171862055,
+          "logloss": 0.10167396337250778
         },
         {
           "period": 111000104,
           "date": "2022-11-25",
           "hit": 0,
-          "brier": 0.019990872518949737,
-          "logloss": 0.09956162386836898
+          "brier": 0.019990900392731915,
+          "logloss": 0.09956229108803248
         },
         {
           "period": 111000105,
           "date": "2022-11-29",
           "hit": 0,
-          "brier": 0.020081862389495872,
-          "logloss": 0.10195673575839981
+          "brier": 0.02008188123363319,
+          "logloss": 0.10195722622245432
         },
         {
           "period": 111000106,
           "date": "2022-12-02",
           "hit": 0,
-          "brier": 0.01999433829697623,
-          "logloss": 0.09965267443519472
+          "brier": 0.019994347913207047,
+          "logloss": 0.09965289323199256
         },
         {
           "period": 111000107,
           "date": "2022-12-06",
           "hit": 0,
-          "brier": 0.02003484378288418,
-          "logloss": 0.10069229436542779
+          "brier": 0.020034844975734212,
+          "logloss": 0.10069230499517698
         },
         {
           "period": 111000108,
           "date": "2022-12-09",
           "hit": 0,
-          "brier": 0.019988093914939026,
-          "logloss": 0.0995010724421331
+          "brier": 0.01998811204740002,
+          "logloss": 0.09950150144523637
         },
         {
           "period": 111000109,
           "date": "2022-12-13",
           "hit": 1,
-          "brier": 0.019915148349870303,
-          "logloss": 0.09775534577902062
+          "brier": 0.01991509653002385,
+          "logloss": 0.09775413979926968
         },
         {
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "brier": 0.019940116053247123,
-          "logloss": 0.09832012059130768
+          "brier": 0.01994000948418391,
+          "logloss": 0.09831755515038917
         },
         {
           "period": 111000111,
           "date": "2022-12-20",
           "hit": 0,
-          "brier": 0.01998852736033824,
-          "logloss": 0.09947908924368233
+          "brier": 0.019988559204679256,
+          "logloss": 0.09947978229037684
         },
         {
           "period": 111000112,
           "date": "2022-12-23",
           "hit": 0,
-          "brier": 0.020001018523787936,
-          "logloss": 0.09978986880705337
+          "brier": 0.020001024147675982,
+          "logloss": 0.09978991512681586
         },
         {
           "period": 111000113,
           "date": "2022-12-27",
           "hit": 0,
-          "brier": 0.01999819201261856,
-          "logloss": 0.0997255144879959
+          "brier": 0.019998166540660944,
+          "logloss": 0.0997247921410608
         },
         {
           "period": 111000114,
           "date": "2022-12-30",
           "hit": 0,
-          "brier": 0.020060132685562813,
-          "logloss": 0.10134256099945149
+          "brier": 0.020060167120936622,
+          "logloss": 0.1013434076942848
         },
         {
           "period": 112000001,
           "date": "2023-01-03",
           "hit": 1,
-          "brier": 0.019863305351433495,
-          "logloss": 0.09658848062370566
+          "brier": 0.0198631646851161,
+          "logloss": 0.0965853804212367
         },
         {
           "period": 112000002,
           "date": "2023-01-06",
           "hit": 0,
-          "brier": 0.020002431991567357,
-          "logloss": 0.09981315041198921
+          "brier": 0.020002450745579724,
+          "logloss": 0.09981349152223644
         },
         {
           "period": 112000003,
           "date": "2023-01-10",
           "hit": 0,
-          "brier": 0.019992696038309617,
-          "logloss": 0.09957150250911499
+          "brier": 0.019992724877837178,
+          "logloss": 0.09957209996252116
         },
         {
           "period": 112000004,
           "date": "2023-01-13",
           "hit": 0,
-          "brier": 0.020093011500666672,
-          "logloss": 0.10224224085104434
+          "brier": 0.020093038048377955,
+          "logloss": 0.10224287656797285
         },
         {
           "period": 112000005,
           "date": "2023-01-17",
           "hit": 0,
-          "brier": 0.02003889504408723,
-          "logloss": 0.1007774086934635
+          "brier": 0.020038933921010943,
+          "logloss": 0.10077835397592275
         },
         {
           "period": 112000006,
           "date": "2023-01-20",
           "hit": 0,
-          "brier": 0.020029025098633642,
-          "logloss": 0.10052051764618564
+          "brier": 0.02002903039693612,
+          "logloss": 0.1005205979235764
         },
         {
           "period": 112000007,
           "date": "2023-01-21",
           "hit": 0,
-          "brier": 0.01990352934605691,
-          "logloss": 0.09748366369388516
+          "brier": 0.019903468381564784,
+          "logloss": 0.09748224096798985
         },
         {
           "period": 112000008,
           "date": "2023-01-22",
           "hit": 0,
-          "brier": 0.02000502676429566,
-          "logloss": 0.09990860042018988
+          "brier": 0.02000504595543905,
+          "logloss": 0.09990902612201497
         },
         {
           "period": 112000009,
           "date": "2023-01-23",
           "hit": 0,
-          "brier": 0.020067303034966705,
-          "logloss": 0.10154710936249996
+          "brier": 0.020067331301708503,
+          "logloss": 0.10154781754768459
         },
         {
           "period": 112000010,
           "date": "2023-01-24",
           "hit": 0,
-          "brier": 0.02002964846408433,
-          "logloss": 0.10053923817452844
+          "brier": 0.02002967856732191,
+          "logloss": 0.10053996532171
         },
         {
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 0,
-          "brier": 0.020071115786559655,
-          "logloss": 0.10164627882533435
+          "brier": 0.020071139801446754,
+          "logloss": 0.10164688098333134
         },
         {
           "period": 112000012,
           "date": "2023-01-26",
           "hit": 0,
-          "brier": 0.02001016146685923,
-          "logloss": 0.10004480239511232
+          "brier": 0.02001018247857556,
+          "logloss": 0.10004529653037218
         },
         {
           "period": 112000013,
           "date": "2023-01-27",
           "hit": 0,
-          "brier": 0.020058734576450365,
-          "logloss": 0.10132189882573006
+          "brier": 0.02005876056423376,
+          "logloss": 0.10132255689511993
         },
         {
           "period": 112000014,
           "date": "2023-01-28",
           "hit": 0,
-          "brier": 0.02003760090216655,
-          "logloss": 0.10076485700020155
+          "brier": 0.020037626327333313,
+          "logloss": 0.10076549357807559
         },
         {
           "period": 112000015,
           "date": "2023-01-29",
           "hit": 0,
-          "brier": 0.01995099115887527,
-          "logloss": 0.0985965965465459
+          "brier": 0.019950930995530223,
+          "logloss": 0.09859513829547539
         },
         {
           "period": 112000016,
           "date": "2023-01-30",
           "hit": 0,
-          "brier": 0.020060464719181336,
-          "logloss": 0.10136681782155055
+          "brier": 0.020060493689804275,
+          "logloss": 0.1013675383458306
         },
         {
           "period": 112000017,
           "date": "2023-01-31",
           "hit": 0,
-          "brier": 0.019997627315446142,
-          "logloss": 0.09973407040523506
+          "brier": 0.019997649089364147,
+          "logloss": 0.09973457688197752
         },
         {
           "period": 112000018,
           "date": "2023-02-01",
           "hit": 0,
-          "brier": 0.0200633141431349,
-          "logloss": 0.10145780508368231
+          "brier": 0.020063334598702184,
+          "logloss": 0.10145832643093645
         },
         {
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 1,
-          "brier": 0.019904190187521664,
-          "logloss": 0.09751393420178954
+          "brier": 0.019904126755452393,
+          "logloss": 0.09751247545901086
         },
         {
           "period": 112000020,
           "date": "2023-02-03",
           "hit": 0,
-          "brier": 0.02001012721106558,
-          "logloss": 0.10004836196981011
+          "brier": 0.020010160985743753,
+          "logloss": 0.10004917170967667
         },
         {
           "period": 112000021,
           "date": "2023-02-04",
           "hit": 0,
-          "brier": 0.019990834881461868,
-          "logloss": 0.09955839468561833
+          "brier": 0.01999086804873383,
+          "logloss": 0.09955917155337796
         },
         {
           "period": 112000022,
           "date": "2023-02-05",
           "hit": 0,
-          "brier": 0.020017429220788828,
-          "logloss": 0.10023686264051114
+          "brier": 0.02001746087336049,
+          "logloss": 0.10023763822750813
         },
         {
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 0,
-          "brier": 0.019964016211741455,
-          "logloss": 0.09890620378569312
+          "brier": 0.019964043239825625,
+          "logloss": 0.09890682883083753
         },
         {
           "period": 112000024,
           "date": "2023-02-10",
           "hit": 0,
-          "brier": 0.019976293437354048,
-          "logloss": 0.09920622779589505
+          "brier": 0.019976306052643212,
+          "logloss": 0.0992065189223847
         },
         {
           "period": 112000025,
           "date": "2023-02-14",
           "hit": 0,
-          "brier": 0.020011881003408033,
-          "logloss": 0.10009605200932954
+          "brier": 0.020011874310488096,
+          "logloss": 0.10009586106231634
         },
         {
           "period": 112000026,
           "date": "2023-02-17",
           "hit": 0,
-          "brier": 0.020058279515502667,
-          "logloss": 0.10131390001834173
+          "brier": 0.020058294245763268,
+          "logloss": 0.10131427192633274
         },
         {
           "period": 112000027,
           "date": "2023-02-21",
           "hit": 0,
-          "brier": 0.01995831241794551,
-          "logloss": 0.09877089204122969
+          "brier": 0.019958285692817802,
+          "logloss": 0.09877022976868012
         },
         {
           "period": 112000028,
           "date": "2023-02-24",
           "hit": 0,
-          "brier": 0.019998542021281943,
-          "logloss": 0.09976265593211456
+          "brier": 0.0199985601021466,
+          "logloss": 0.09976308951675533
         },
         {
           "period": 112000029,
           "date": "2023-02-28",
           "hit": 0,
-          "brier": 0.02000389211650455,
-          "logloss": 0.09989343353626723
+          "brier": 0.020003894449591768,
+          "logloss": 0.09989347000177685
         },
         {
           "period": 112000030,
           "date": "2023-03-03",
           "hit": 0,
-          "brier": 0.01994363795557165,
-          "logloss": 0.09841856874101451
+          "brier": 0.019943589598785488,
+          "logloss": 0.09841740188657622
         },
         {
           "period": 112000031,
           "date": "2023-03-07",
           "hit": 0,
-          "brier": 0.019995492840770283,
-          "logloss": 0.09967511375989016
+          "brier": 0.01999550596058197,
+          "logloss": 0.09967540857337463
         },
         {
           "period": 112000032,
           "date": "2023-03-10",
           "hit": 0,
-          "brier": 0.02002106566376039,
-          "logloss": 0.10032660924604991
+          "brier": 0.020021084952743576,
+          "logloss": 0.10032707687602141
         },
         {
           "period": 112000033,
           "date": "2023-03-14",
           "hit": 0,
-          "brier": 0.01992943139446701,
-          "logloss": 0.0980809956856446
+          "brier": 0.019929422528524764,
+          "logloss": 0.09808076299810278
         },
         {
           "period": 112000034,
           "date": "2023-03-17",
           "hit": 0,
-          "brier": 0.01989094209161848,
-          "logloss": 0.09719730307733918
+          "brier": 0.019890905674900126,
+          "logloss": 0.09719646696481908
         },
         {
           "period": 112000035,
           "date": "2023-03-21",
           "hit": 0,
-          "brier": 0.019961136669065224,
-          "logloss": 0.09881956550108562
+          "brier": 0.01996114775795525,
+          "logloss": 0.09881980071652874
         },
         {
           "period": 112000036,
           "date": "2023-03-24",
           "hit": 0,
-          "brier": 0.020025225501178197,
-          "logloss": 0.10042031024129923
+          "brier": 0.020025240913180323,
+          "logloss": 0.1004206854379772
         },
         {
           "period": 112000037,
           "date": "2023-03-28",
           "hit": 0,
-          "brier": 0.02004546091475969,
-          "logloss": 0.10095952684218132
+          "brier": 0.020045472762544612,
+          "logloss": 0.10095981544837813
         },
         {
           "period": 112000038,
           "date": "2023-03-31",
           "hit": 1,
-          "brier": 0.019879601522707093,
-          "logloss": 0.0969467862807603
+          "brier": 0.019879589515643368,
+          "logloss": 0.09694650162133006
         },
         {
           "period": 112000039,
           "date": "2023-04-04",
           "hit": 0,
-          "brier": 0.02003119406604153,
-          "logloss": 0.10059557871245446
+          "brier": 0.020031200773264687,
+          "logloss": 0.10059573632810176
         },
         {
           "period": 112000040,
           "date": "2023-04-07",
           "hit": 0,
-          "brier": 0.01999266628966464,
-          "logloss": 0.09959783036058223
+          "brier": 0.01999267226320098,
+          "logloss": 0.09959796149717515
         },
         {
           "period": 112000041,
           "date": "2023-04-11",
           "hit": 0,
-          "brier": 0.020035457944893975,
-          "logloss": 0.1006982458435877
+          "brier": 0.02003546110602336,
+          "logloss": 0.100698310109417
         },
         {
           "period": 112000042,
           "date": "2023-04-14",
           "hit": 0,
-          "brier": 0.019918327196347323,
-          "logloss": 0.09782027176558698
+          "brier": 0.019918329590990977,
+          "logloss": 0.09782030902763021
         },
         {
           "period": 112000043,
           "date": "2023-04-18",
           "hit": 0,
-          "brier": 0.020022907018686028,
-          "logloss": 0.10036096175700931
+          "brier": 0.02002291515618276,
+          "logloss": 0.10036114966776233
         },
         {
           "period": 112000044,
           "date": "2023-04-21",
           "hit": 0,
-          "brier": 0.019902322815837252,
-          "logloss": 0.09744745466662229
+          "brier": 0.019902314465273185,
+          "logloss": 0.09744724628272983
         },
         {
           "period": 112000045,
@@ -6767,7 +6760,7 @@
           "period": 112000056,
           "date": "2023-06-02",
           "hit": 0,
-          "brier": 0.01999070104204981,
+          "brier": 0.019990701042049808,
           "logloss": 0.09954455344521373
         },
         {
@@ -7069,13 +7062,13 @@
           "date": "2023-10-31",
           "hit": 1,
           "brier": 0.0196509427121898,
-          "logloss": 0.09237774771202611
+          "logloss": 0.0923777477120261
         },
         {
           "period": 112000100,
           "date": "2023-11-03",
           "hit": 0,
-          "brier": 0.02001598077689889,
+          "brier": 0.020015980776898895,
           "logloss": 0.10011365179426211
         },
         {
@@ -7517,7 +7510,7 @@
           "date": "2024-04-26",
           "hit": 0,
           "brier": 0.019995116804926733,
-          "logloss": 0.09962258151893369
+          "logloss": 0.09962258151893372
         },
         {
           "period": 113000048,
@@ -7551,7 +7544,7 @@
           "period": 113000052,
           "date": "2024-05-14",
           "hit": 0,
-          "brier": 0.020078405506950982,
+          "brier": 0.020078405506950985,
           "logloss": 0.10182384667380136
         },
         {
@@ -7691,7 +7684,7 @@
           "period": 113000072,
           "date": "2024-07-23",
           "hit": 1,
-          "brier": 0.019883444626953656,
+          "brier": 0.019883444626953652,
           "logloss": 0.09702237729311934
         },
         {
@@ -7944,7 +7937,7 @@
           "date": "2024-11-26",
           "hit": 1,
           "brier": 0.019841224973926985,
-          "logloss": 0.0961169549838292
+          "logloss": 0.09611695498382918
         },
         {
           "period": 113000109,
@@ -8252,7 +8245,7 @@
           "date": "2025-03-11",
           "hit": 0,
           "brier": 0.01996185487216783,
-          "logloss": 0.09881940359806897
+          "logloss": 0.09881940359806898
         },
         {
           "period": 114000035,
@@ -8364,7 +8357,7 @@
           "date": "2025-05-06",
           "hit": 0,
           "brier": 0.01999290386429614,
-          "logloss": 0.09959536486432238
+          "logloss": 0.09959536486432236
         },
         {
           "period": 114000051,
@@ -8420,7 +8413,7 @@
           "date": "2025-06-03",
           "hit": 1,
           "brier": 0.019857694437566804,
-          "logloss": 0.09646016294566695
+          "logloss": 0.09646016294566698
         },
         {
           "period": 114000059,
@@ -8448,7 +8441,7 @@
           "date": "2025-06-17",
           "hit": 1,
           "brier": 0.019825189149976562,
-          "logloss": 0.09576951927455443
+          "logloss": 0.0957695192745544
         },
         {
           "period": 114000063,
@@ -8853,7 +8846,7 @@
           "period": 115000002,
           "date": "2026-01-06",
           "hit": 0,
-          "brier": 0.019988530554142212,
+          "brier": 0.01998853055414221,
           "logloss": 0.09947289833434916
         },
         {
@@ -8874,7 +8867,7 @@
           "period": 115000005,
           "date": "2026-01-16",
           "hit": 0,
-          "brier": 0.020109765747749978,
+          "brier": 0.020109765747749975,
           "logloss": 0.10273138423221094
         },
         {
@@ -8987,7 +8980,7 @@
           "date": "2026-02-20",
           "hit": 0,
           "brier": 0.020001539702159798,
-          "logloss": 0.09980684926108657
+          "logloss": 0.09980684926108659
         },
         {
           "period": 115000022,
@@ -9316,7 +9309,7 @@
           "date": "2026-07-07",
           "hit": 0,
           "brier": 0.019908117678003826,
-          "logloss": 0.09755547734300045
+          "logloss": 0.09755547734300046
         },
         {
           "period": 115000069,
@@ -9372,7 +9365,7 @@
           "date": "2026-08-04",
           "hit": 0,
           "brier": 0.01995991537111479,
-          "logloss": 0.09877316444015549
+          "logloss": 0.09877316444015546
         },
         {
           "period": 115000077,
@@ -9478,6 +9471,13 @@
           "hit": 0,
           "brier": 0.019905451355175942,
           "logloss": 0.09750083246913761
+        },
+        {
+          "period": 115000092,
+          "date": "2026-09-29",
+          "hit": 0,
+          "brier": 0.019872576093751843,
+          "logloss": 0.09676237261932576
         }
       ]
     }
@@ -9485,14 +9485,14 @@
   "release_gate": {
     "passed": true,
     "rule": "520期走步驗證須通過前9碼命中、10–15名外溢追責與機率校準，且不得由單一模型壟斷",
-    "main_edge": -6.944e-05,
-    "special_edge": 0.00011936,
-    "main_avg_hits": 1.1846,
+    "main_edge": -7.578e-05,
+    "special_edge": 0.0001272,
+    "main_avg_hits": 1.1788,
     "main_random_hits": 1.102,
-    "main_avg_spill_10_15": 0.6904,
+    "main_avg_spill_10_15": 0.6942,
     "special_avg_hits": 0.0827,
     "special_random_hits": 0.0612,
-    "max_main_weight": 0.16456893
+    "max_main_weight": 0.15095953
   },
   "notice": "開獎為隨機事件；模型只做可驗證的機率排序，不保證中獎。",
   "weight_logic": {
@@ -9539,52 +9539,18 @@
       "repeat_cap": 3,
       "promoted": [
         19,
+        14,
         33,
-        13,
-        16
+        2
       ],
       "demoted": [
         18,
-        14,
         29,
+        13,
         24
       ]
     },
     "latest_rows": [
-      {
-        "period": 115000082,
-        "date": "2026-08-25",
-        "hit": 2,
-        "top9_hits": 2,
-        "spill_10_15": 2,
-        "top15_hits": 4,
-        "actual_ranks": [
-          3,
-          4,
-          10,
-          15,
-          33,
-          43
-        ],
-        "rank_share": 0.25,
-        "boundary_rotation": {
-          "count": 4,
-          "rank_share": 0.25,
-          "repeat_cap": 3,
-          "promoted": [
-            15,
-            47,
-            19
-          ],
-          "demoted": [
-            14,
-            23,
-            16
-          ]
-        },
-        "brier": 0.107031280593867,
-        "logloss": 0.36982184492648373
-      },
       {
         "period": 115000083,
         "date": "2026-08-28",
@@ -9906,10 +9872,46 @@
         },
         "brier": 0.10783084429685229,
         "logloss": 0.37348388918822645
+      },
+      {
+        "period": 115000092,
+        "date": "2026-09-29",
+        "hit": 1,
+        "top9_hits": 1,
+        "spill_10_15": 0,
+        "top15_hits": 1,
+        "actual_ranks": [
+          8,
+          30,
+          35,
+          37,
+          40,
+          47
+        ],
+        "rank_share": 0.25,
+        "boundary_rotation": {
+          "count": 4,
+          "rank_share": 0.25,
+          "repeat_cap": 3,
+          "promoted": [
+            19,
+            33,
+            13,
+            16
+          ],
+          "demoted": [
+            18,
+            14,
+            29,
+            24
+          ]
+        },
+        "brier": 0.10788886445360231,
+        "logloss": 0.3737867670153543
       }
     ],
     "root_causes": [
-      "最新一期六顆實開順位為12、15、26、33、41、43；前9命中0顆，第10–15名外溢2顆",
+      "最新一期六顆實開順位為8、30、35、37、40、47；前9命中1顆，第10–15名外溢0顆",
       "最近20期前9平均命中為1.2，低命中期必須逐期追責而不能用單期答案改牌",
       "舊版自適應邊界會因短期狀態切換，且未限制上期號占位，造成候選邊界不穩定"
     ],
@@ -9925,33 +9927,33 @@
     "main": [
       {
         "model": "bayes_24",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 15,
         "top1_hit": false,
         "top_candidates": [
           15,
           26,
           35,
-          19,
           12,
-          3,
-          18,
+          24,
+          25,
+          19,
           14,
-          8
+          18
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.38009997,
-        "weight_before": 0.07768356,
-        "weight_after": 0.0647502,
-        "weight_change": -0.01293336,
+        "logloss": 0.38206803,
+        "weight_before": 0.0647502,
+        "weight_after": 0.06276335,
+        "weight_change": -0.00198685,
         "action": "失敗降權／重新校準"
       },
       {
         "model": "bayes_60",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 12,
         "top1_hit": false,
         "top_candidates": [
@@ -9963,77 +9965,70 @@
           18,
           16,
           14,
-          19
+          15
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          25
-        ],
-        "logloss": 0.37251981,
-        "weight_before": 0.09757155,
-        "weight_after": 0.10436938,
-        "weight_change": 0.00679783,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.38125103,
+        "weight_before": 0.10436938,
+        "weight_after": 0.10414852,
+        "weight_change": -0.00022086,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "bayes_150",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 25,
-        "top1_hit": true,
+        "top1_hit": false,
         "top_candidates": [
           25,
           20,
           12,
-          39,
           18,
-          14,
           16,
-          15,
-          26
+          14,
+          39,
+          26,
+          15
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          25
-        ],
-        "logloss": 0.3675468,
-        "weight_before": 0.08126675,
-        "weight_after": 0.08997481,
-        "weight_change": 0.00870806,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.38491626,
+        "weight_before": 0.08997481,
+        "weight_after": 0.08701374,
+        "weight_change": -0.00296107,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "bayes_360",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 25,
-        "top1_hit": true,
+        "top1_hit": false,
         "top_candidates": [
           25,
           39,
-          35,
-          26,
           33,
+          26,
+          35,
           20,
-          40,
           29,
+          40,
           15
         ],
-        "hit_count": 2,
-        "hit_numbers": [
-          25,
-          33
-        ],
-        "logloss": 0.3700569,
-        "weight_before": 0.07771488,
-        "weight_after": 0.0835229,
-        "weight_change": 0.00580802,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.37555159,
+        "weight_before": 0.0835229,
+        "weight_after": 0.07629217,
+        "weight_change": -0.00723073,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_8",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 35,
         "top1_hit": false,
         "top_candidates": [
@@ -10043,22 +10038,22 @@
           18,
           12,
           26,
-          3,
-          19,
-          27
+          24,
+          25,
+          3
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.42874613,
-        "weight_before": 0.08331603,
-        "weight_after": 0.07587578,
-        "weight_change": -0.00744025,
+        "logloss": 0.45423533,
+        "weight_before": 0.07587578,
+        "weight_after": 0.07076049,
+        "weight_change": -0.00511529,
         "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_21",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 12,
         "top1_hit": false,
         "top_candidates": [
@@ -10066,58 +10061,54 @@
           35,
           26,
           15,
+          25,
           18,
           29,
           14,
-          19,
-          25
+          19
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          25
-        ],
-        "logloss": 0.39310987,
-        "weight_before": 0.09000766,
-        "weight_after": 0.09393207,
-        "weight_change": 0.00392441,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.41756828,
+        "weight_before": 0.09393207,
+        "weight_after": 0.09165377,
+        "weight_change": -0.0022783,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_55",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 12,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 25,
         "top1_hit": false,
         "top_candidates": [
-          12,
           25,
+          12,
           26,
           35,
           15,
           29,
           18,
-          14,
-          16
+          24,
+          14
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          25
-        ],
-        "logloss": 0.3726968,
-        "weight_before": 0.10050881,
-        "weight_after": 0.10574589,
-        "weight_change": 0.00523708,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.40012975,
+        "weight_before": 0.10574589,
+        "weight_after": 0.10568073,
+        "weight_change": -6.516e-05,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_144",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 26,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 25,
         "top1_hit": false,
         "top_candidates": [
-          26,
           25,
+          26,
           35,
           15,
           29,
@@ -10126,72 +10117,74 @@
           18,
           20
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          25
-        ],
-        "logloss": 0.36876263,
-        "weight_before": 0.15955816,
-        "weight_after": 0.16456893,
-        "weight_change": 0.00501077,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.38467094,
+        "weight_before": 0.16456893,
+        "weight_after": 0.15095953,
+        "weight_change": -0.0136094,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "empirical_hazard",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 37,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 22,
         "top1_hit": false,
         "top_candidates": [
-          37,
-          26,
-          3,
-          19,
-          24,
-          10,
-          21,
-          12,
-          17
+          22,
+          34,
+          41,
+          23,
+          33,
+          13,
+          15,
+          45,
+          30
         ],
-        "hit_count": 1,
+        "hit_count": 2,
         "hit_numbers": [
-          24
+          13,
+          30
         ],
-        "logloss": 0.37087059,
-        "weight_before": 0.04520153,
-        "weight_after": 0.04938647,
-        "weight_change": 0.00418494,
+        "logloss": 0.3597501,
+        "weight_before": 0.04938647,
+        "weight_after": 0.06080726,
+        "weight_change": 0.01142079,
         "action": "失敗但受權重上限約束，列入下期監控"
       },
       {
         "model": "conditional_pair",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 35,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 33,
         "top1_hit": false,
         "top_candidates": [
-          35,
+          33,
+          5,
+          25,
           15,
-          6,
-          21,
+          13,
+          35,
           30,
-          14,
           18,
-          45,
-          26
+          14
         ],
-        "hit_count": 0,
-        "hit_numbers": [],
-        "logloss": 0.38822538,
-        "weight_before": 0.10367054,
-        "weight_after": 0.09664998,
-        "weight_change": -0.00702056,
-        "action": "失敗降權／重新校準"
+        "hit_count": 2,
+        "hit_numbers": [
+          13,
+          30
+        ],
+        "logloss": 0.37913802,
+        "weight_before": 0.09664998,
+        "weight_after": 0.12172416,
+        "weight_change": 0.02507418,
+        "action": "通過，依滾動成績調整"
       },
       {
         "model": "regime_slope",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 35,
         "top1_hit": false,
         "top_candidates": [
@@ -10201,62 +10194,64 @@
           12,
           26,
           19,
+          24,
           18,
-          34,
-          36
+          34
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.37814544,
-        "weight_before": 0.08350052,
-        "weight_after": 0.07122359,
-        "weight_change": -0.01227693,
+        "logloss": 0.38116045,
+        "weight_before": 0.07122359,
+        "weight_after": 0.06819628,
+        "weight_change": -0.00302731,
         "action": "失敗降權／重新校準"
       }
     ],
     "special": [
       {
         "model": "bayes_24",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 10,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 40,
         "top1_hit": false,
         "top_candidates": [
+          40,
           10,
-          27,
-          7
+          27
         ],
-        "hit_count": 0,
-        "hit_numbers": [],
-        "logloss": 0.08766126,
-        "weight_before": 0.17581988,
-        "weight_after": 0.16237879,
-        "weight_change": -0.01344109,
-        "action": "失敗降權／重新校準"
+        "hit_count": 1,
+        "hit_numbers": [
+          27
+        ],
+        "logloss": 0.08766597,
+        "weight_before": 0.16237879,
+        "weight_after": 0.17703304,
+        "weight_change": 0.01465425,
+        "action": "通過，依滾動成績調整"
       },
       {
         "model": "bayes_60",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 30,
         "top1_hit": false,
         "top_candidates": [
           30,
           10,
-          37
+          40
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.09564978,
-        "weight_before": 0.10475112,
-        "weight_after": 0.10597422,
-        "weight_change": 0.0012231,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.09139536,
+        "weight_before": 0.10597422,
+        "weight_after": 0.09398622,
+        "weight_change": -0.011988,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "bayes_150",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 30,
         "top1_hit": false,
         "top_candidates": [
@@ -10266,73 +10261,75 @@
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.0998341,
-        "weight_before": 0.10625373,
-        "weight_after": 0.10822153,
-        "weight_change": 0.0019678,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.09692112,
+        "weight_before": 0.10822153,
+        "weight_after": 0.09616072,
+        "weight_change": -0.01206081,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "bayes_360",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 27,
-        "top1_hit": false,
+        "top1_hit": true,
         "top_candidates": [
           27,
           24,
           31
         ],
-        "hit_count": 0,
-        "hit_numbers": [],
-        "logloss": 0.09418492,
-        "weight_before": 0.13307451,
-        "weight_after": 0.11543491,
-        "weight_change": -0.0176396,
-        "action": "失敗降權／重新校準"
+        "hit_count": 1,
+        "hit_numbers": [
+          27
+        ],
+        "logloss": 0.08842906,
+        "weight_before": 0.11543491,
+        "weight_after": 0.19154795,
+        "weight_change": 0.07611304,
+        "action": "通過，依滾動成績調整"
       },
       {
         "model": "ewma_8",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 10,
         "top1_hit": false,
         "top_candidates": [
           10,
-          30,
-          27
+          40,
+          30
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.08414238,
-        "weight_before": 0.04717132,
-        "weight_after": 0.05010048,
-        "weight_change": 0.00292916,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.06929555,
+        "weight_before": 0.05010048,
+        "weight_after": 0.04506574,
+        "weight_change": -0.00503474,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_21",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 30,
         "top1_hit": false,
         "top_candidates": [
           30,
           10,
-          27
+          40
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.08590671,
-        "weight_before": 0.08697152,
-        "weight_after": 0.08986784,
-        "weight_change": 0.00289632,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.07702197,
+        "weight_before": 0.08986784,
+        "weight_after": 0.08094469,
+        "weight_change": -0.00892315,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_55",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 30,
         "top1_hit": false,
         "top_candidates": [
@@ -10342,16 +10339,16 @@
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.0937067,
-        "weight_before": 0.10714453,
-        "weight_after": 0.10900188,
-        "weight_change": 0.00185735,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.084623,
+        "weight_before": 0.10900188,
+        "weight_after": 0.09803453,
+        "weight_change": -0.01096735,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "ewma_144",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
         "top1": 30,
         "top1_hit": false,
         "top_candidates": [
@@ -10361,55 +10358,53 @@
         ],
         "hit_count": 0,
         "hit_numbers": [],
-        "logloss": 0.09579055,
-        "weight_before": 0.09429218,
-        "weight_after": 0.09672482,
-        "weight_change": 0.00243264,
-        "action": "失敗但受權重上限約束，列入下期監控"
+        "logloss": 0.08682584,
+        "weight_before": 0.09672482,
+        "weight_after": 0.08601418,
+        "weight_change": -0.01071064,
+        "action": "失敗降權／重新校準"
       },
       {
         "model": "empirical_hazard",
-        "prediction_basis_period": 115000090,
-        "evaluated_period": 115000091,
-        "top1": 27,
+        "prediction_basis_period": 115000091,
+        "evaluated_period": 115000092,
+        "top1": 31,
         "top1_hit": false,
         "top_candidates": [
-          27,
-          1,
-          40
+          31,
+          10,
+          1
         ],
-        "hit_count": 1,
-        "hit_numbers": [
-          40
-        ],
-        "logloss": 0.08477413,
-        "weight_before": 0.14452121,
-        "weight_after": 0.16229551,
-        "weight_change": 0.0177743,
-        "action": "通過，依滾動成績調整"
+        "hit_count": 0,
+        "hit_numbers": [],
+        "logloss": 0.11146925,
+        "weight_before": 0.16229551,
+        "weight_after": 0.13121294,
+        "weight_change": -0.03108257,
+        "action": "失敗降權／重新校準"
       }
     ]
   },
   "strongest_recommendation": {
     "label": "唯一超高信心強烈推薦（系統內相對最高）",
-    "number": 35,
+    "number": 25,
     "count": 1,
     "final_rank": 1,
     "model_count": 11,
     "model_top9_support": 9,
-    "model_top15_support": 10,
+    "model_top15_support": 11,
     "model_rank_evidence": {
-      "bayes_24": 3,
-      "bayes_60": 5,
-      "bayes_150": 11,
-      "bayes_360": 5,
-      "ewma_8": 1,
-      "ewma_21": 2,
-      "ewma_55": 4,
-      "ewma_144": 3,
-      "empirical_hazard": 24,
-      "conditional_pair": 6,
-      "regime_slope": 1
+      "bayes_24": 5,
+      "bayes_60": 4,
+      "bayes_150": 1,
+      "bayes_360": 1,
+      "ewma_8": 11,
+      "ewma_21": 5,
+      "ewma_55": 1,
+      "ewma_144": 1,
+      "empirical_hazard": 3,
+      "conditional_pair": 1,
+      "regime_slope": 13
     },
     "logic_checks": {
       "final_rank_is_1": true,
@@ -10484,24 +10479,24 @@
     ],
     "performance": {
       "prior_v5_avg520": 1.1692,
-      "v6_avg520": 1.1846,
+      "v6_avg520": 1.1788,
       "prior_v5_recent20": 1.15,
       "v6_recent20": 1.2,
-      "v6_first400": 1.185,
+      "v6_first400": 1.1775,
       "v6_last120": 1.1833,
       "random_avg520": 1.102
     }
   },
   "calculation_integrity": {
-    "official_rows": 2173,
-    "latest_period_used": 115000091,
-    "prediction_target": "2026-09-29",
+    "official_rows": 2174,
+    "latest_period_used": 115000092,
+    "prediction_target": "2026-10-02",
     "future_data_used": false,
     "previous_prediction_rewritten": false,
     "prediction_revision_append_only": true,
     "strongest_single_count": 1,
     "previous_draw_overlap_cap": 3,
-    "top9_previous_draw_overlap": 3,
+    "top9_previous_draw_overlap": 1,
     "research_methods_without_walk_forward_rejected": true,
     "rule": "只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測"
   }
