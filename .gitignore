@@ -1,3 +1,4 @@
 __pycache__/
 *.pyc
 work/
+reports/live_cloud_verification.json

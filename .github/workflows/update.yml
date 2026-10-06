@@ -12,7 +12,7 @@ permissions:
   contents: write
 concurrency:
   group: tw649-new-engine
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -32,5 +32,23 @@ jobs:
         run: |
           git config user.name "tw649-new-engine-bot"
           git config user.email "actions@github.com"
+          if git diff --quiet -- data/official_lotto649.csv; then
+            echo "官方資料沒有新期別，不製造無效提交與重複部署。"
+            exit 0
+          fi
           git add data reports site docs mobile_cloud
-          git diff --cached --quiet || (git commit -m "大樂透新核心開獎後自動更新" && git push)
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "大樂透新核心開獎後自動更新"
+          git pull --rebase origin main
+          git push
+      - name: 保存故障診斷
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tw649-repair-diagnostics-${{ github.run_id }}
+          path: |
+            reports/self_test_report.json
+            reports/integrity_audit.json
+            reports/self_repair_status.json
+          if-no-files-found: ignore
+          retention-days: 14

@@ -1,0 +1,42 @@
+from __future__ import annotations
+
+import json
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+from urllib.request import Request, urlopen
+
+ROOT=Path(__file__).resolve().parent
+
+BASE_URL="https://pingshen670822.github.io/taiwan-lotto649-ironlaw-cloud/mobile_cloud"
+OUTPUT=ROOT/"reports"/"live_cloud_verification.json"
+
+def fetch(name: str):
+    url=f"{BASE_URL}/{name}?t={int(time.time())}"
+    with urlopen(Request(url,headers={"Cache-Control":"no-cache","Pragma":"no-cache"}),timeout=30) as response:
+        data=response.read()
+    return json.loads(data.decode("utf-8")) if name.endswith(".json") else data.decode("utf-8",errors="replace")
+
+def main() -> int:
+    local_analysis=json.loads((ROOT/"docs"/"mobile_cloud"/"latest_analysis.json").read_text(encoding="utf-8"))
+    local_version=json.loads((ROOT/"docs"/"mobile_cloud"/"version.json").read_text(encoding="utf-8"))
+    checks=[]
+    try:
+        remote_analysis=fetch("latest_analysis.json"); remote_version=fetch("version.json"); remote_test=fetch("self_test_report.json"); remote_repair=fetch("self_repair_status.json"); remote_html=fetch("latest_battle_report.html"); remote_app=fetch("app.js")
+        checks=[
+            {"name":"version_hash_matches","passed":remote_version.get("hash")==local_version.get("hash"),"detail":f"local={local_version.get('hash')} remote={remote_version.get('hash')}"},
+            {"name":"latest_period_matches","passed":remote_analysis.get("latest_draw",{}).get("period")==local_analysis.get("latest_draw",{}).get("period"),"detail":f"local={local_analysis.get('latest_draw',{}).get('period')} remote={remote_analysis.get('latest_draw',{}).get('period')}"},
+            {"name":"prediction_matches","passed":remote_analysis.get("packs")==local_analysis.get("packs"),"detail":"all prediction packs"},
+            {"name":"remote_self_test_passed","passed":remote_test.get("passed") is True,"detail":remote_test.get("generated_at")},
+            {"name":"remote_repair_healthy","passed":remote_repair.get("status")=="healthy","detail":remote_repair.get("checked_at")},
+            {"name":"mobile_no_store_and_refresh","passed":"no-cache, no-store" in remote_html and "refreshVersion" in remote_app and "visibilitychange" in remote_app,"detail":"HTML cache and foreground refresh"},
+        ]
+        error=None
+    except Exception as exc:
+        error=str(exc); checks=[{"name":"cloud_reachable","passed":False,"detail":error}]
+    report={"system":"台灣大樂透新世代鐵律預測系統","checked_at":datetime.now().astimezone().isoformat(timespec="seconds"),"base_url":BASE_URL,"passed":all(x["passed"] for x in checks),"checks":checks}
+    OUTPUT.parent.mkdir(parents=True,exist_ok=True); OUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
+    print(json.dumps(report,ensure_ascii=False,indent=2)); return 0 if report["passed"] else 1
+
+if __name__=="__main__": sys.exit(main())

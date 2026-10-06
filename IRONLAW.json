@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "version": 3,
+  "version": 4,
   "automatic_update_locked": true,
   "rules_must_not_be_removed": true,
   "official_draw_source_required": true,
@@ -35,6 +35,13 @@
   "repair_retry_interval_minutes": 10,
   "mobile_foreground_refresh_required": true,
   "mobile_version_poll_seconds": 60,
+  "no_new_draw_no_cloud_commit": true,
+  "previous_month_recovery_fetch_required": true,
+  "atomic_last_valid_rollback_required": true,
+  "daily_integrity_audit_required": true,
+  "live_cloud_sync_verification_required": true,
+  "pages_deployment_watchdog_required": true,
+  "pages_repair_max_attempts": 3,
   "draw_polling_taipei": "Tuesday and Friday 21:25-22:30 every 5 minutes",
   "background_health_check": "every 3 hours"
 }

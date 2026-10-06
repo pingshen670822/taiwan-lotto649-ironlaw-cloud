@@ -1,6 +1,6 @@
 from __future__ import annotations
 import csv,json,urllib.parse,urllib.request
-from datetime import date, datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from engine import ROOT,load_draws,analyze,latest_module_review,model_suite
@@ -20,13 +20,20 @@ def fetch_month(month: str) -> list[dict]:
 def update_current_month() -> int:
     rows=list(csv.DictReader(CSV_PATH.open(encoding="utf-8-sig",newline="")))
     by_period={int(r["period"]):r for r in rows}
-    for item in fetch_month(date.today().strftime("%Y-%m")):
-        nums=list(map(int,item["drawNumberSize"])); main=sorted(nums[:6]); special=nums[6]
-        if len(set(main))!=6 or special in main or not all(1<=n<=49 for n in nums): raise ValueError("official draw failed validation")
-        period=int(item["period"]); old=by_period.get(period,{k:"" for k in rows[0]})
-        old.update({"period":str(period),"draw_date":item["lotteryDate"][:10],**{f"n{i+1}":str(n) for i,n in enumerate(main)},"special":str(special),"sales_amount":str(item.get("sellAmount") or ""),"prize_total":str(item.get("totalAmount") or ""),"source":"taiwanlottery_official_api","fetched_at":date.today().isoformat()})
-        by_period[period]=old
+    now=datetime.now(ZoneInfo("Asia/Taipei")); first=now.replace(day=1); previous=first-timedelta(days=1)
+    months=sorted({now.strftime("%Y-%m"),previous.strftime("%Y-%m")})
+    for month in months:
+        for item in fetch_month(month):
+            nums=list(map(int,item["drawNumberSize"])); main=sorted(nums[:6]); special=nums[6]
+            draw_date=item["lotteryDate"][:10]; datetime.fromisoformat(draw_date)
+            if len(nums)!=7 or len(set(main))!=6 or special in main or not all(1<=n<=49 for n in nums): raise ValueError("official draw failed validation")
+            period=int(item["period"]); old=by_period.get(period,{k:"" for k in rows[0]})
+            values={"period":str(period),"draw_date":draw_date,**{f"n{i+1}":str(n) for i,n in enumerate(main)},"special":str(special),"sales_amount":str(item.get("sellAmount") or ""),"prize_total":str(item.get("totalAmount") or ""),"source":"taiwanlottery_official_api"}
+            changed=any(str(old.get(key,""))!=str(value) for key,value in values.items())
+            if changed: values["fetched_at"]=now.date().isoformat()
+            old.update(values); by_period[period]=old
     fields=list(rows[0]); ordered=[by_period[k] for k in sorted(by_period)]
+    if len({r["period"] for r in ordered})!=len(ordered) or len({r["draw_date"] for r in ordered})!=len(ordered): raise ValueError("official history duplicate period/date")
     tmp=CSV_PATH.with_suffix(".tmp")
     with tmp.open("w",encoding="utf-8-sig",newline="") as f:
         w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(ordered)

@@ -1,0 +1,88 @@
+{
+  "system": "台灣大樂透新世代鐵律預測系統",
+  "generated_at": "2026-10-06T08:14:05+08:00",
+  "passed": true,
+  "latest_period": 115000093,
+  "latest_date": "2026-10-02",
+  "target_date": "2026-10-06",
+  "checks": [
+    {
+      "name": "official_rows_valid",
+      "passed": true,
+      "detail": "valid=2175/2175"
+    },
+    {
+      "name": "no_duplicate_periods",
+      "passed": true,
+      "detail": "rows=2175 unique=2175"
+    },
+    {
+      "name": "no_duplicate_dates",
+      "passed": true,
+      "detail": "rows=2175 unique=2175"
+    },
+    {
+      "name": "periods_strictly_increasing",
+      "passed": true,
+      "detail": "first=96000001 latest=115000093"
+    },
+    {
+      "name": "dates_strictly_increasing",
+      "passed": true,
+      "detail": "first=2007-01-02 latest=2026-10-02"
+    },
+    {
+      "name": "draw_dates_calendar_valid",
+      "passed": true,
+      "detail": "parsed=2175 future=[]"
+    },
+    {
+      "name": "official_special_schedule_preserved",
+      "passed": true,
+      "detail": "official holiday/special draws=113"
+    },
+    {
+      "name": "latest_draw_fresh",
+      "passed": true,
+      "detail": "actual=2026-10-02 expected>=2026-10-02"
+    },
+    {
+      "name": "analysis_matches_official_csv",
+      "passed": true,
+      "detail": {
+        "csv_period": 115000093,
+        "analysis_period": 115000093
+      }
+    },
+    {
+      "name": "analysis_row_count_matches",
+      "passed": true,
+      "detail": "csv=2175 engine=2175"
+    },
+    {
+      "name": "prediction_history_no_duplicate_revisions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "prediction_history_no_stale_pending",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "prediction_settlements_match_official",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "all_report_artifacts_exist",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "five_destinations_byte_identical",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

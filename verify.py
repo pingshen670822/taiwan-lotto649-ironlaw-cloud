@@ -4,6 +4,7 @@ from datetime import datetime,timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from engine import ROOT,load_draws
+from integrity_audit import build_audit,save as save_integrity_audit
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def expected_latest_date():
@@ -18,6 +19,8 @@ def main():
     checks=[]
     def add(name,ok,detail): checks.append({"name":name,"passed":bool(ok),"detail":detail})
     draws=load_draws(); analysis=json.loads((ROOT/"reports/latest_analysis.json").read_text(encoding="utf-8"))
+    integrity_audit=build_audit(); save_integrity_audit(integrity_audit)
+    add("daily_integrity_audit",integrity_audit["passed"],json.dumps(integrity_audit,ensure_ascii=False))
     add("official_history_complete",len(draws)>=2152,f"{len(draws)} draws")
     expected=expected_latest_date()
     add("official_history_latest",draws[-1].draw_date>=expected,f"actual={draws[-1].period} {draws[-1].draw_date}; expected>={expected}")
@@ -47,7 +50,7 @@ def main():
     integrity=analysis.get("calculation_integrity",{})
     add("no_fake_or_future_data",integrity.get("official_rows")==len(draws) and integrity.get("future_data_used") is False and integrity.get("previous_prediction_rewritten") is False and integrity.get("prediction_revision_append_only") is True and integrity.get("research_methods_without_walk_forward_rejected") is True,json.dumps(integrity,ensure_ascii=False))
     add("previous_draw_overlap_capped",integrity.get("previous_draw_overlap_cap")==3 and integrity.get("top9_previous_draw_overlap",99)<=3,json.dumps(integrity,ensure_ascii=False))
-    required=["index.html","latest_battle_report.html","latest_analysis.json","prediction_history.json","version.json","self_repair_status.json","style.css","app.js","service-worker.js","manifest.webmanifest"]
+    required=["index.html","latest_battle_report.html","latest_analysis.json","prediction_history.json","version.json","self_repair_status.json","integrity_audit.json","integrity_audit.md","style.css","app.js","service-worker.js","manifest.webmanifest"]
     cloud_bases=(ROOT/"reports",ROOT/"site",ROOT/"docs",ROOT/"mobile_cloud",ROOT/"docs/mobile_cloud")
     add("artifacts_complete",all((base/x).exists() for base in cloud_bases for x in required),"desktop, site, Pages and independent mobile files")
     add("report_cloud_sync",all(len({sha(base/x) for base in cloud_bases})==1 for x in required),"all five destinations byte-identical")
@@ -56,11 +59,13 @@ def main():
     found={term:[str(p.relative_to(ROOT)) for p in files if p.exists() and term.lower() in p.read_text(encoding="utf-8").lower()] for term in banned}
     found={k:v for k,v in found.items() if v}; add("independent_branding",not found,json.dumps(found,ensure_ascii=False))
     workflow=(ROOT/".github/workflows/update.yml").read_text(encoding="utf-8")
+    watchdog_workflow=(ROOT/".github/workflows/cloud-watchdog.yml").read_text(encoding="utf-8")
     update_code=(ROOT/"update.py").read_text(encoding="utf-8")
     repair_code=(ROOT/"auto_repair.py").read_text(encoding="utf-8")
     report_code=(ROOT/"report.py").read_text(encoding="utf-8")
+    one_click=(ROOT/"一鍵更新並檢測.ps1").read_text(encoding="utf-8")
     ironlaw=json.loads((ROOT/"IRONLAW.json").read_text(encoding="utf-8"))
-    auto_rules=["25-55/5 13 * * 2,5" in workflow,"0-30/5 14 * * 2,5" in workflow,"40-50/10 14 * * 2,5" in workflow,"0-50/10 15 * * 2,5" in workflow,"0-30/10 16 * * 2,5" in workflow,"python auto_repair.py" in workflow,"update.py" in repair_code,"verify.py" in repair_code,"MAX_ATTEMPTS = 3" in repair_code,"RETRY_SECONDS = 60" in repair_code,"git add data reports site docs mobile_cloud" in workflow,"update_current_month()" in update_code,"settle_and_save(result)" in update_code,"latest_module_review" in update_code,ironlaw.get("automatic_update_locked") is True,ironlaw.get("failed_validation_must_not_publish") is True,ironlaw.get("every_module_must_be_reviewed") is True,ironlaw.get("main_training_cutoff_locked")==9,ironlaw.get("rank_spill_audit_locked")==[10,15],ironlaw.get("rank_spill_penalty_required") is True,ironlaw.get("rank_fusion_share_locked")==.25,ironlaw.get("boundary_shift_count_locked")==4,ironlaw.get("previous_draw_overlap_cap_locked")==3,ironlaw.get("external_method_walk_forward_gate_required") is True,ironlaw.get("rejected_method_must_not_publish") is True,ironlaw.get("latest_draw_weight_recalculation_required") is True,ironlaw.get("every_draw_rank_boundary_audit_required") is True,ironlaw.get("strongest_multilogic_evidence_required") is True,ironlaw.get("autonomous_repair_required") is True,ironlaw.get("after_draw_repair_deadline_minutes")==120,ironlaw.get("repair_retry_interval_minutes")==10,ironlaw.get("mobile_foreground_refresh_required") is True,ironlaw.get("mobile_version_poll_seconds")==60,"visibilitychange" in report_code,"setInterval(refreshVersion,60000)" in report_code,"cache:'no-store'" in report_code]
+    auto_rules=["25-55/5 13 * * 2,5" in workflow,"0-30/5 14 * * 2,5" in workflow,"40-50/10 14 * * 2,5" in workflow,"0-50/10 15 * * 2,5" in workflow,"0-30/10 16 * * 2,5" in workflow,"python auto_repair.py" in workflow,"auto_repair.py" in one_click,"python pages_watchdog.py" in watchdog_workflow,"35-55/10 14 * * 2,5" in watchdog_workflow,"5-35/10 16 * * 2,5" in watchdog_workflow,"MAX_ATTEMPTS=3" in (ROOT/"pages_watchdog.py").read_text(encoding="utf-8"),"update.py" in repair_code,"verify.py" in repair_code,"snapshot_state" in repair_code,"restore_state" in repair_code,"MAX_ATTEMPTS = 3" in repair_code,"RETRY_SECONDS = 60" in repair_code,"git diff --quiet -- data/official_lotto649.csv" in workflow,"git add data reports site docs mobile_cloud" in workflow,"update_current_month()" in update_code,"settle_and_save(result)" in update_code,"latest_module_review" in update_code,ironlaw.get("automatic_update_locked") is True,ironlaw.get("failed_validation_must_not_publish") is True,ironlaw.get("every_module_must_be_reviewed") is True,ironlaw.get("main_training_cutoff_locked")==9,ironlaw.get("rank_spill_audit_locked")==[10,15],ironlaw.get("rank_spill_penalty_required") is True,ironlaw.get("rank_fusion_share_locked")==.25,ironlaw.get("boundary_shift_count_locked")==4,ironlaw.get("previous_draw_overlap_cap_locked")==3,ironlaw.get("external_method_walk_forward_gate_required") is True,ironlaw.get("rejected_method_must_not_publish") is True,ironlaw.get("latest_draw_weight_recalculation_required") is True,ironlaw.get("every_draw_rank_boundary_audit_required") is True,ironlaw.get("strongest_multilogic_evidence_required") is True,ironlaw.get("autonomous_repair_required") is True,ironlaw.get("after_draw_repair_deadline_minutes")==120,ironlaw.get("repair_retry_interval_minutes")==10,ironlaw.get("mobile_foreground_refresh_required") is True,ironlaw.get("mobile_version_poll_seconds")==60,ironlaw.get("no_new_draw_no_cloud_commit") is True,ironlaw.get("previous_month_recovery_fetch_required") is True,ironlaw.get("atomic_last_valid_rollback_required") is True,ironlaw.get("daily_integrity_audit_required") is True,ironlaw.get("live_cloud_sync_verification_required") is True,ironlaw.get("pages_deployment_watchdog_required") is True,ironlaw.get("pages_repair_max_attempts")==3,"visibilitychange" in report_code,"setInterval(refreshVersion,60000)" in report_code,"cache:'no-store'" in report_code]
     add("automatic_update_ironlaw",all(auto_rules),f"{sum(auto_rules)}/{len(auto_rules)} locked rules present")
     report={"system":analysis["system"],"generated_at":analysis["generated_at"],"passed":all(x["passed"] for x in checks),"latest_period":draws[-1].period,"latest_date":draws[-1].draw_date,"target_date":analysis["target_date"],"checks":checks}
     text=json.dumps(report,ensure_ascii=False,indent=2)

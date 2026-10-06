@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -13,6 +15,7 @@ from engine import ROOT
 TAIPEI = ZoneInfo("Asia/Taipei")
 DESTINATIONS = (ROOT / "reports", ROOT / "site", ROOT / "docs", ROOT / "mobile_cloud", ROOT / "docs" / "mobile_cloud")
 STATUS_FILE = "self_repair_status.json"
+STATE_PATHS = (ROOT / "data" / "official_lotto649.csv", ROOT / "data" / "prediction_history.json", *DESTINATIONS)
 MAX_ATTEMPTS = 3
 RETRY_SECONDS = 60
 
@@ -63,14 +66,41 @@ def run_once() -> tuple[bool, str]:
     return reports_are_fresh()
 
 
+def snapshot_state() -> Path:
+    backup=Path(tempfile.mkdtemp(prefix="tw649-last-valid-"))
+    for index,path in enumerate(STATE_PATHS):
+        target=backup/str(index)
+        if path.is_dir(): shutil.copytree(path,target)
+        elif path.exists(): target.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(path,target)
+    return backup
+
+
+def restore_state(backup: Path) -> None:
+    for index,path in enumerate(STATE_PATHS):
+        source=backup/str(index)
+        if not source.exists(): continue
+        if path.is_dir(): shutil.rmtree(path); shutil.copytree(source,path)
+        else: path.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(source,path)
+
+
+def remove_snapshot(backup: Path) -> None:
+    shutil.rmtree(backup,ignore_errors=True)
+
+
 def main() -> int:
     for attempt in range(1, MAX_ATTEMPTS + 1):
+        backup=snapshot_state()
         write_status("repairing", attempt, "抓取官方資料、全量重算與五處同步檢測")
-        ok, detail = run_once()
+        try:
+            ok, detail = run_once()
+        except Exception as exc:
+            ok, detail = False, f"自主修復未預期錯誤: {exc}"
         if ok:
+            remove_snapshot(backup)
             write_status("healthy", attempt, detail)
             print(json.dumps({"status": "healthy", "attempt": attempt, "detail": detail}, ensure_ascii=False))
             return 0
+        restore_state(backup); remove_snapshot(backup)
         write_status("retrying" if attempt < MAX_ATTEMPTS else "failed", attempt, detail)
         if attempt < MAX_ATTEMPTS:
             time.sleep(RETRY_SECONDS)
