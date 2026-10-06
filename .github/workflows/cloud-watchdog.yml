@@ -1,5 +1,8 @@
 name: 台灣大樂透手機雲端自主修復
 on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
   schedule:
     - cron: "17 */3 * * *"
     - cron: "35-55/10 14 * * 2,5"
@@ -13,6 +16,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify-and-repair:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'skipped' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
