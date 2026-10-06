@@ -41,7 +41,7 @@
   "daily_integrity_audit_required": true,
   "live_cloud_sync_verification_required": true,
   "pages_deployment_watchdog_required": true,
-  "pages_completion_immediate_watchdog_required": true,
+  "pages_push_immediate_watchdog_required": true,
   "pages_repair_max_attempts": 3,
   "draw_polling_taipei": "Tuesday and Friday 21:25-22:30 every 5 minutes",
   "background_health_check": "every 3 hours"

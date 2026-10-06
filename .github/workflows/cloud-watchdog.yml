@@ -1,8 +1,8 @@
 name: 台灣大樂透手機雲端自主修復
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
+    branches: [main]
+    paths: ["docs/**"]
   schedule:
     - cron: "17 */3 * * *"
     - cron: "35-55/10 14 * * 2,5"
@@ -16,12 +16,14 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify-and-repair:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion != 'skipped' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with: {fetch-depth: 0}
+      - name: 等待Pages完成新版部署
+        if: github.event_name == 'push'
+        run: sleep 75
       - name: 線上手機版逐項驗證與Pages修復判定
         run: python pages_watchdog.py
       - name: 觸發Pages重新建置
