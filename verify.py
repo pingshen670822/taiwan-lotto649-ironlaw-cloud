@@ -1,5 +1,6 @@
 from __future__ import annotations
-import hashlib,json,sys
+import hashlib,importlib.util,json,shutil,subprocess,sys
+from importlib.metadata import version as installed_version
 from datetime import datetime,timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -65,7 +66,45 @@ def main():
     report_code=(ROOT/"report.py").read_text(encoding="utf-8")
     one_click=(ROOT/"一鍵更新並檢測.ps1").read_text(encoding="utf-8")
     ironlaw=json.loads((ROOT/"IRONLAW.json").read_text(encoding="utf-8"))
+    python_failures=[]
+    for path in sorted([*ROOT.glob("*.py"),*(ROOT/"tests").glob("*.py")]):
+        try: compile(path.read_text(encoding="utf-8"),str(path),"exec")
+        except Exception as exc: python_failures.append(f"{path.relative_to(ROOT)}: {exc}")
+    add("python_source_syntax",not python_failures,python_failures or "all Python sources compile")
+    dependency_failures=[name for name in ("numpy","requests") if importlib.util.find_spec(name) is None]
+    add("runtime_dependencies_available",not dependency_failures,dependency_failures or "numpy, requests")
+    pinned_requirements=dict(line.strip().split("==",1) for line in (ROOT/"requirements.txt").read_text(encoding="utf-8").splitlines() if "==" in line)
+    version_mismatches=[]
+    for name,expected_version in pinned_requirements.items():
+        try:
+            actual_version=installed_version(name)
+            if actual_version!=expected_version: version_mismatches.append(f"{name}: {actual_version} != {expected_version}")
+        except Exception as exc: version_mismatches.append(f"{name}: {exc}")
+    add("project_dependency_versions_pinned",not version_mismatches,version_mismatches or pinned_requirements)
+    json_failures=[]
+    json_paths=[ROOT/"IRONLAW.json",ROOT/"data/prediction_history.json",ROOT/"reports/latest_analysis.json",ROOT/"reports/version.json",ROOT/"reports/self_repair_status.json"]
+    for path in json_paths:
+        try: json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc: json_failures.append(f"{path.relative_to(ROOT)}: {exc}")
+    add("critical_json_parseable",not json_failures,json_failures or f"{len(json_paths)} critical JSON files")
+    temporary_files=[str(path.relative_to(ROOT)) for path in ROOT.rglob("*") if path.is_file() and path.suffix.lower() in (".tmp",".partial") and ".git" not in path.parts]
+    add("no_partial_or_temporary_artifacts",not temporary_files,temporary_files or "none")
+    workflow_targets=[ROOT/"auto_repair.py",ROOT/"pages_watchdog.py",ROOT/"cloud_verify.py",ROOT/"update.py",ROOT/"verify.py"]
+    add("workflow_targets_exist",all(path.exists() for path in workflow_targets),[str(path.name) for path in workflow_targets if not path.exists()] or "all workflow scripts exist")
+    report_html=(ROOT/"docs/mobile_cloud/latest_battle_report.html").read_text(encoding="utf-8")
+    report_css=(ROOT/"docs/mobile_cloud/style.css").read_text(encoding="utf-8")
+    report_js=(ROOT/"docs/mobile_cloud/app.js").read_text(encoding="utf-8")
+    interface_ok=all(marker in report_html for marker in ('class="status"','本期結論','9碼核心','更新執行狀態','data-manual-time','data-repair-time')) and all(marker in report_css for marker in ('--green-dark:#10231e','.grid.two','.pill')) and "data-tab" not in report_html
+    add("single_page_green_status_interface",interface_ok,"single-page green header, status pills, conclusions, core, and update table")
+    timestamp_ok=all(marker in report_js for marker in ("taipeiNow","tw649-manual-update-time","tw649-repair-time","showStoredTimes")) and all(marker in report_html for marker in ("calculation-updated-at","data-manual-time","data-repair-time"))
+    add("visible_update_and_repair_timestamps",timestamp_ok,"calculation, manual update, and repair completion times")
+    node=shutil.which("node")
+    js_result=subprocess.run([node,"--check",str(ROOT/"docs/mobile_cloud/app.js")],capture_output=True,text=True) if node else None
+    add("javascript_syntax",bool(js_result and js_result.returncode==0),"node --check passed" if js_result and js_result.returncode==0 else (js_result.stderr if js_result else "node runtime missing"))
+    service_worker=(ROOT/"docs/mobile_cloud/service-worker.js").read_text(encoding="utf-8")
+    add("service_worker_upgrade_safe",all(marker in service_worker for marker in ("tw649-top9-v9","skipWaiting","clients.claim","cache:'no-store'")),"cache v9, immediate activation, old-cache cleanup, network-first")
     auto_rules=["25-55/5 13 * * 2,5" in workflow,"0-30/5 14 * * 2,5" in workflow,"40-50/10 14 * * 2,5" in workflow,"0-50/10 15 * * 2,5" in workflow,"0-30/10 16 * * 2,5" in workflow,"python auto_repair.py" in workflow,"pip install -r requirements.txt" in workflow,"requests.get" in update_code,"auto_repair.py" in one_click,"push:" in watchdog_workflow,"paths: [\"docs/**\"]" in watchdog_workflow,"sleep 75" in watchdog_workflow,"python pages_watchdog.py" in watchdog_workflow,"35-55/10 14 * * 2,5" in watchdog_workflow,"5-35/10 16 * * 2,5" in watchdog_workflow,"MAX_ATTEMPTS=3" in (ROOT/"pages_watchdog.py").read_text(encoding="utf-8"),"update.py" in repair_code,"verify.py" in repair_code,"snapshot_state" in repair_code,"restore_state" in repair_code,"MAX_ATTEMPTS = 3" in repair_code,"RETRY_SECONDS = 60" in repair_code,"git diff --quiet -- data/official_lotto649.csv" in workflow,"git add data reports site docs mobile_cloud" in workflow,"update_current_month()" in update_code,"settle_and_save(result)" in update_code,"latest_module_review" in update_code,ironlaw.get("automatic_update_locked") is True,ironlaw.get("failed_validation_must_not_publish") is True,ironlaw.get("every_module_must_be_reviewed") is True,ironlaw.get("main_training_cutoff_locked")==9,ironlaw.get("rank_spill_audit_locked")==[10,15],ironlaw.get("rank_spill_penalty_required") is True,ironlaw.get("rank_fusion_share_locked")==.25,ironlaw.get("boundary_shift_count_locked")==4,ironlaw.get("previous_draw_overlap_cap_locked")==3,ironlaw.get("external_method_walk_forward_gate_required") is True,ironlaw.get("rejected_method_must_not_publish") is True,ironlaw.get("latest_draw_weight_recalculation_required") is True,ironlaw.get("every_draw_rank_boundary_audit_required") is True,ironlaw.get("strongest_multilogic_evidence_required") is True,ironlaw.get("autonomous_repair_required") is True,ironlaw.get("after_draw_repair_deadline_minutes")==120,ironlaw.get("repair_retry_interval_minutes")==10,ironlaw.get("mobile_foreground_refresh_required") is True,ironlaw.get("mobile_version_poll_seconds")==60,ironlaw.get("mobile_manual_update_button_required") is True,ironlaw.get("mobile_immediate_repair_button_required") is True,ironlaw.get("manual_repair_must_not_false_report_success") is True,ironlaw.get("no_new_draw_no_cloud_commit") is True,ironlaw.get("previous_month_recovery_fetch_required") is True,ironlaw.get("atomic_last_valid_rollback_required") is True,ironlaw.get("daily_integrity_audit_required") is True,ironlaw.get("live_cloud_sync_verification_required") is True,ironlaw.get("pages_deployment_watchdog_required") is True,ironlaw.get("pages_push_immediate_watchdog_required") is True,ironlaw.get("pages_repair_max_attempts")==3,"visibilitychange" in report_code,"setInterval(refreshVersion,60000)" in report_code,"cache:'no-store'" in report_code,"id=\"manual-update\"" in report_code,"id=\"immediate-repair\"" in report_code,"manualUpdateLatest" in report_code,"immediateRepair" in report_code,"attempt<=3" in report_code,"validateCloudBundle" in report_code]
+    auto_rules.extend([ironlaw.get("battle_report_interface_spec")=="single_page_green_status_v6",ironlaw.get("manual_update_taipei_timestamp_required") is True,ironlaw.get("repair_completion_taipei_timestamp_required") is True,ironlaw.get("full_fault_scan_required_before_publish") is True,"taipeiNow" in report_code,"tw649-manual-update-time" in report_code,"tw649-repair-time" in report_code,"tw649-top9-v9" in report_code])
     add("automatic_update_ironlaw",all(auto_rules),f"{sum(auto_rules)}/{len(auto_rules)} locked rules present")
     report={"system":analysis["system"],"generated_at":analysis["generated_at"],"passed":all(x["passed"] for x in checks),"latest_period":draws[-1].period,"latest_date":draws[-1].draw_date,"target_date":analysis["target_date"],"checks":checks}
     text=json.dumps(report,ensure_ascii=False,indent=2)

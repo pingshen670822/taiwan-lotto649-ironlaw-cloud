@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "version": 5,
+  "version": 6,
   "automatic_update_locked": true,
   "rules_must_not_be_removed": true,
   "official_draw_source_required": true,
@@ -38,6 +38,10 @@
   "mobile_manual_update_button_required": true,
   "mobile_immediate_repair_button_required": true,
   "manual_repair_must_not_false_report_success": true,
+  "battle_report_interface_spec": "single_page_green_status_v6",
+  "manual_update_taipei_timestamp_required": true,
+  "repair_completion_taipei_timestamp_required": true,
+  "full_fault_scan_required_before_publish": true,
   "no_new_draw_no_cloud_commit": true,
   "previous_month_recovery_fetch_required": true,
   "atomic_last_valid_rollback_required": true,

@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_top9_precision_compression_v6",
-  "generated_at": "2026-10-06T13:52:27+08:00",
+  "generated_at": "2026-10-06T14:34:28+08:00",
   "history": {
     "count": 2175,
     "first": "2007-01-02",
@@ -10508,6 +10508,8 @@
   },
   "calculation_integrity": {
     "official_rows": 2175,
+    "first_period": 96000001,
+    "first_date": "2007-01-02",
     "latest_period_used": 115000093,
     "prediction_target": "2026-10-06",
     "future_data_used": false,

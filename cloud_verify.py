@@ -32,6 +32,7 @@ def main() -> int:
             {"name":"remote_repair_healthy","passed":remote_repair.get("status")=="healthy","detail":remote_repair.get("checked_at")},
             {"name":"mobile_no_store_and_refresh","passed":"no-cache, no-store" in remote_html and "refreshVersion" in remote_app and "visibilitychange" in remote_app,"detail":"HTML cache and foreground refresh"},
             {"name":"manual_update_and_repair_controls","passed":all(x in remote_html for x in ('id=\"manual-update\"','id=\"immediate-repair\"','id=\"cloud-action-status\"')) and all(x in remote_app for x in ('manualUpdateLatest','immediateRepair','clearBrokenClientState','validateCloudBundle','attempt<=3')),"detail":"manual update, three-pass repair, and truthful validation"},
+            {"name":"single_page_interface_and_visible_times","passed":all(x in remote_html for x in ('class=\"status\"','本期結論','9碼核心','更新執行狀態','data-manual-time','data-repair-time')) and all(x in remote_app for x in ('taipeiNow','tw649-manual-update-time','tw649-repair-time','showStoredTimes')) and 'data-tab' not in remote_html,"detail":"single-page status layout and persistent Taipei timestamps"},
         ]
         error=None
     except Exception as exc:

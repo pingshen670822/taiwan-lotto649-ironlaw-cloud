@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-10-06T13:52:27+08:00",
+  "generated_at": "2026-10-06T14:34:28+08:00",
   "passed": true,
   "latest_period": 115000093,
   "latest_date": "2026-10-02",
@@ -9,7 +9,7 @@
     {
       "name": "daily_integrity_audit",
       "passed": true,
-      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-06T13:52:50+08:00\", \"passed\": true, \"latest_period\": 115000093, \"latest_date\": \"2026-10-02\", \"target_date\": \"2026-10-06\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2175/2175\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2175 unique=2175\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2175 unique=2175\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000093\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-02\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2175 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-02 expected>=2026-10-02\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000093, \"analysis_period\": 115000093}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2175 engine=2175\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
+      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-06T14:34:57+08:00\", \"passed\": true, \"latest_period\": 115000093, \"latest_date\": \"2026-10-02\", \"target_date\": \"2026-10-06\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2175/2175\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2175 unique=2175\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2175 unique=2175\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000093\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-02\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2175 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-02 expected>=2026-10-02\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000093, \"analysis_period\": 115000093}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2175 engine=2175\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
     },
     {
       "name": "official_history_complete",
@@ -99,12 +99,12 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2175, \"latest_period_used\": 115000093, \"prediction_target\": \"2026-10-06\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2175, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000093, \"prediction_target\": \"2026-10-06\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "previous_draw_overlap_capped",
       "passed": true,
-      "detail": "{\"official_rows\": 2175, \"latest_period_used\": 115000093, \"prediction_target\": \"2026-10-06\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2175, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000093, \"prediction_target\": \"2026-10-06\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",
@@ -122,9 +122,62 @@
       "detail": "{}"
     },
     {
+      "name": "python_source_syntax",
+      "passed": true,
+      "detail": "all Python sources compile"
+    },
+    {
+      "name": "runtime_dependencies_available",
+      "passed": true,
+      "detail": "numpy, requests"
+    },
+    {
+      "name": "project_dependency_versions_pinned",
+      "passed": true,
+      "detail": {
+        "numpy": "2.4.4",
+        "requests": "2.34.2"
+      }
+    },
+    {
+      "name": "critical_json_parseable",
+      "passed": true,
+      "detail": "5 critical JSON files"
+    },
+    {
+      "name": "no_partial_or_temporary_artifacts",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "name": "workflow_targets_exist",
+      "passed": true,
+      "detail": "all workflow scripts exist"
+    },
+    {
+      "name": "single_page_green_status_interface",
+      "passed": true,
+      "detail": "single-page green header, status pills, conclusions, core, and update table"
+    },
+    {
+      "name": "visible_update_and_repair_timestamps",
+      "passed": true,
+      "detail": "calculation, manual update, and repair completion times"
+    },
+    {
+      "name": "javascript_syntax",
+      "passed": true,
+      "detail": "node --check passed"
+    },
+    {
+      "name": "service_worker_upgrade_safe",
+      "passed": true,
+      "detail": "cache v9, immediate activation, old-cache cleanup, network-first"
+    },
+    {
       "name": "automatic_update_ironlaw",
       "passed": true,
-      "detail": "66/66 locked rules present"
+      "detail": "74/74 locked rules present"
     }
   ]
 }
