@@ -1,19 +1,19 @@
 from __future__ import annotations
-import csv,json,urllib.parse,urllib.request
+import csv,json
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from engine import ROOT,load_draws,analyze,latest_module_review,model_suite
 from report import build_reports
+import requests
 
 API="https://api.taiwanlottery.com/TLCAPIWeB/Lottery/Lotto649Result"
 CSV_PATH=ROOT/"data"/"official_lotto649.csv"
 HISTORY_PATH=ROOT/"data"/"prediction_history.json"
 
 def fetch_month(month: str) -> list[dict]:
-    q=urllib.parse.urlencode({"period":"","month":month,"pageNum":1,"pageSize":50})
-    req=urllib.request.Request(API+"?"+q,headers={"User-Agent":"Mozilla/5.0 TW649-cleanroom/1.0"})
-    with urllib.request.urlopen(req,timeout=30) as r: obj=json.load(r)
+    response=requests.get(API,params={"period":"","month":month,"pageNum":1,"pageSize":50},headers={"User-Agent":"Mozilla/5.0 TW649-cleanroom/1.0"},timeout=30)
+    response.raise_for_status(); obj=response.json()
     if obj.get("rtCode")!=0: raise RuntimeError(f"official API error: {obj.get('rtMsg')}")
     return obj.get("content",{}).get("lotto649Res",[])
 

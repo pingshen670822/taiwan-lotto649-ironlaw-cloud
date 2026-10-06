@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install numpy==2.3.5
+      - run: pip install -r requirements.txt
       - name: 官方抓號、結算、重算、驗證與自主修復
         run: python auto_repair.py
       - name: 自動更新鐵律不可缺少

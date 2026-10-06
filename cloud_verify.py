@@ -31,6 +31,7 @@ def main() -> int:
             {"name":"remote_self_test_passed","passed":remote_test.get("passed") is True,"detail":remote_test.get("generated_at")},
             {"name":"remote_repair_healthy","passed":remote_repair.get("status")=="healthy","detail":remote_repair.get("checked_at")},
             {"name":"mobile_no_store_and_refresh","passed":"no-cache, no-store" in remote_html and "refreshVersion" in remote_app and "visibilitychange" in remote_app,"detail":"HTML cache and foreground refresh"},
+            {"name":"manual_update_and_repair_controls","passed":all(x in remote_html for x in ('id=\"manual-update\"','id=\"immediate-repair\"','id=\"cloud-action-status\"')) and all(x in remote_app for x in ('manualUpdateLatest','immediateRepair','clearBrokenClientState','validateCloudBundle','attempt<=3')),"detail":"manual update, three-pass repair, and truthful validation"},
         ]
         error=None
     except Exception as exc:
