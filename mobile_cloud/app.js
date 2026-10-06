@@ -1,14 +1,15 @@
-const updateButton=document.getElementById('manual-update');
-const repairButton=document.getElementById('immediate-repair');
+document.querySelectorAll('nav button').forEach((button,index)=>{if(!index)button.classList.add('on');button.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(tab=>tab.classList.remove('active'));document.querySelectorAll('nav button').forEach(item=>item.classList.remove('on'));document.getElementById(button.dataset.tab)?.classList.add('active');button.classList.add('on');window.scrollTo({top:0,behavior:'smooth'});})});
+const updateButton=document.getElementById('manual-refresh');
+const repairButton=document.getElementById('emergency-repair');
 const cloudStatus=document.getElementById('cloud-action-status');
 const repairCenter=document.getElementById('cloud-repair-center');
 let cloudActionRunning=false;
-function setCloudStatus(message,state=''){cloudStatus.textContent=message;cloudStatus.className='cloud-status'+(state?' '+state:'');}
+function setCloudStatus(message,state=''){cloudStatus.textContent=message;cloudStatus.className='cloud-action-status'+(state?' '+state:'');}
 function setCloudBusy(busy){cloudActionRunning=busy;updateButton.disabled=busy;repairButton.disabled=busy;}
 function freshUrl(path){return path+(path.includes('?')?'&':'?')+'t='+Date.now();}
 function pause(ms){return new Promise(resolve=>setTimeout(resolve,ms));}
 function taipeiNow(){const parts=new Intl.DateTimeFormat('zh-TW',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(new Date());const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));return p.year+'-'+p.month+'-'+p.day+' '+p.hour+':'+p.minute+':'+p.second;}
-function showStoredTimes(){const manual=localStorage.getItem('tw649-manual-update-time')||'尚未執行';const repair=localStorage.getItem('tw649-repair-time')||'尚未執行';document.querySelectorAll('[data-manual-time]').forEach(x=>x.textContent=manual);document.querySelectorAll('[data-repair-time]').forEach(x=>x.textContent=repair);}
+function showStoredTimes(){const manual=localStorage.getItem('tw649-manual-update-time')||'尚未手動更新';const repair=localStorage.getItem('tw649-repair-time')||'尚未執行';document.querySelectorAll('[data-manual-time]').forEach(x=>x.textContent=manual);document.querySelectorAll('[data-repair-time]').forEach(x=>x.textContent=repair);}
 async function fetchJson(path,timeout=10000){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),timeout);try{const response=await fetch(freshUrl(path),{cache:'no-store',headers:{'Cache-Control':'no-cache'},signal:controller.signal});if(!response.ok)throw new Error(path+' HTTP '+response.status);return await response.json();}finally{clearTimeout(timer);}}
 function forceFreshReload(reason){const url=new URL(location.href);url.searchParams.set('cloud_refresh',Date.now());url.searchParams.set('reason',reason);location.replace(url.toString());}
 function validateCloudBundle(version,analysis,selfTest,repairStatus){if(!version.hash||!version.latest_period)throw new Error('版本資料不完整');if(String(analysis?.latest_draw?.period)!==String(version.latest_period))throw new Error('期別不同步');if(selfTest.passed!==true)throw new Error('全系統自測未通過');if(!['healthy','awaiting_verification'].includes(repairStatus.status))throw new Error('雲端修復狀態異常');return version;}
