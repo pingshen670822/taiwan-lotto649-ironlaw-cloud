@@ -32,6 +32,13 @@ class EngineTest(unittest.TestCase):
         self.assertEqual(len(bt["recent_rank_audit"]),20)
         self.assertTrue(all(len(x["actual_ranks"])==6 for x in bt["recent_rank_audit"]))
         self.assertIn(bt["rank_fusion_share"],engine.RANK_BLEND_CHOICES)
+        selector=bt["single_selector"]
+        self.assertEqual(selector["name"],"top1_vote_blend_v2")
+        self.assertTrue(selector["failed_repeat_cooldown"])
+        self.assertEqual(selector["rounds"],30)
+        self.assertTrue(0<=selector["hit_rate_520"]<=1)
+        self.assertEqual(set(selector["model_weights"]),set(bt["names"]))
+        self.assertAlmostEqual(sum(selector["model_weights"].values()),1.0,places=6)
     def test_production_precision_compression(self):
         import numpy as np
         score=np.arange(1,50,dtype=float)
