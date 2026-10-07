@@ -30,17 +30,18 @@ def main() -> int:
     local_version=json.loads((ROOT/"docs"/"mobile_cloud"/"version.json").read_text(encoding="utf-8"))
     checks=[]
     try:
-        remote_analysis=fetch("latest_analysis.json"); remote_version=fetch("version.json"); remote_test=fetch("self_test_report.json"); remote_repair=fetch("self_repair_status.json"); remote_html=fetch("latest_battle_report.html"); remote_app=fetch("app.js")
+        remote_analysis=fetch("latest_analysis.json"); remote_pattern=fetch("single_pattern_audit.json"); remote_version=fetch("version.json"); remote_test=fetch("self_test_report.json"); remote_repair=fetch("self_repair_status.json"); remote_html=fetch("latest_battle_report.html"); remote_app=fetch("app.js")
         checks=[
             {"name":"version_hash_matches","passed":remote_version.get("hash")==local_version.get("hash"),"detail":f"local={local_version.get('hash')} remote={remote_version.get('hash')}"},
             {"name":"latest_period_matches","passed":remote_analysis.get("latest_draw",{}).get("period")==local_analysis.get("latest_draw",{}).get("period"),"detail":f"local={local_analysis.get('latest_draw',{}).get('period')} remote={remote_analysis.get('latest_draw',{}).get('period')}"},
             {"name":"remote_latest_draw_fresh","passed":remote_analysis.get("latest_draw",{}).get("date","")>=expected_latest_date(),"detail":f"remote={remote_analysis.get('latest_draw',{}).get('date')} expected>={expected_latest_date()}"},
             {"name":"prediction_matches","passed":remote_analysis.get("packs")==local_analysis.get("packs"),"detail":"all prediction packs"},
+            {"name":"dual_window_pattern_audit","passed":remote_pattern.get("development_rounds")==520 and remote_pattern.get("holdout_rounds")==520 and len(remote_pattern.get("methods",{}))>=10 and remote_analysis.get("pattern_audit")==remote_pattern,"detail":f"methods={len(remote_pattern.get('methods',{}))}; accepted={remote_pattern.get('accepted_methods',[])}"},
             {"name":"remote_self_test_passed","passed":remote_test.get("passed") is True,"detail":remote_test.get("generated_at")},
             {"name":"remote_repair_healthy","passed":remote_repair.get("status")=="healthy","detail":remote_repair.get("checked_at")},
             {"name":"mobile_no_store_and_refresh","passed":"no-cache, no-store" in remote_html and "refreshVersion" in remote_app and "visibilitychange" in remote_app,"detail":"HTML cache and foreground refresh"},
             {"name":"manual_update_and_repair_controls","passed":all(x in remote_html for x in ('id=\"manual-refresh\"','id=\"emergency-repair\"','id=\"cloud-action-status\"')) and all(x in remote_app for x in ('manualUpdateLatest','immediateRepair','clearBrokenClientState','validateCloudBundle','attempt<=3','pageHash','version.hash!==pageHash','目前已是最新，不需重新載入')),"detail":"manual update visibly reports current/new version, three-pass repair, and truthful validation"},
-            {"name":"marksix_interface_and_visible_times","passed":all(x in remote_html for x in ('台灣大樂透・本期戰報','data-tab=\"decision\"','data-tab=\"models\"','data-tab=\"review\"','data-tab=\"monthly\"','data-tab=\"verify\"','data-tab=\"iron\"','本期其他鐵律號碼','last-manual-update','last-repair-time','data-manual-time','data-repair-time')) and all(x in remote_app for x in ('taipeiNow','tw649-manual-update-time','tw649-repair-time','showStoredTimes')),"detail":"Mark Six-style burgundy tabbed layout and persistent Taipei timestamps"},
+            {"name":"marksix_interface_and_visible_times","passed":all(x in remote_html for x in ('台灣大樂透・本期戰報','data-tab=\"decision\"','data-tab=\"models\"','data-tab=\"review\"','data-tab=\"monthly\"','data-tab=\"verify\"','data-tab=\"iron\"','每日相對最強獨隻','軌跡、週期與拖牌雙區段稽核','本期其他鐵律號碼','last-manual-update','last-repair-time','data-manual-time','data-repair-time')) and all(x in remote_app for x in ('taipeiNow','tw649-manual-update-time','tw649-repair-time','showStoredTimes')),"detail":"Mark Six-style burgundy tabbed layout and persistent Taipei timestamps"},
         ]
         error=None
     except Exception as exc:

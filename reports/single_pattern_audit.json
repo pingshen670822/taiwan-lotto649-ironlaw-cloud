@@ -1,0 +1,259 @@
+{
+  "rule": "每期只讀當期以前資料；開發段與最後520期保留段分離；兩段都勝過6/49才可進正式模型",
+  "official_draws": 2176,
+  "evaluated_rounds": 1040,
+  "development_rounds": 520,
+  "holdout_rounds": 520,
+  "random_rate": 0.122449,
+  "methods": {
+    "frequency_60": {
+      "development": {
+        "rounds": 520,
+        "hits": 61,
+        "rate": 0.117308
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 68,
+        "rate": 0.130769
+      },
+      "recent": {
+        "20": 5,
+        "60": 7,
+        "120": 12
+      },
+      "latest_pick": 12,
+      "accepted": false
+    },
+    "frequency_240": {
+      "development": {
+        "rounds": 520,
+        "hits": 59,
+        "rate": 0.113462
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 61,
+        "rate": 0.117308
+      },
+      "recent": {
+        "20": 4,
+        "60": 11,
+        "120": 17
+      },
+      "latest_pick": 25,
+      "accepted": false
+    },
+    "weekday_cycle": {
+      "development": {
+        "rounds": 520,
+        "hits": 65,
+        "rate": 0.125
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 51,
+        "rate": 0.098077
+      },
+      "recent": {
+        "20": 0,
+        "60": 3,
+        "120": 9
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "transition_drag": {
+      "development": {
+        "rounds": 520,
+        "hits": 57,
+        "rate": 0.109615
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 68,
+        "rate": 0.130769
+      },
+      "recent": {
+        "20": 5,
+        "60": 15,
+        "120": 18
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "two_step_drag": {
+      "development": {
+        "rounds": 520,
+        "hits": 57,
+        "rate": 0.109615
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 54,
+        "rate": 0.103846
+      },
+      "recent": {
+        "20": 2,
+        "60": 7,
+        "120": 12
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "neighbor_track": {
+      "development": {
+        "rounds": 520,
+        "hits": 57,
+        "rate": 0.109615
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 58,
+        "rate": 0.111538
+      },
+      "recent": {
+        "20": 2,
+        "60": 9,
+        "120": 13
+      },
+      "latest_pick": 21,
+      "accepted": false
+    },
+    "interval_recurrence": {
+      "development": {
+        "rounds": 520,
+        "hits": 66,
+        "rate": 0.126923
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 54,
+        "rate": 0.103846
+      },
+      "recent": {
+        "20": 2,
+        "60": 4,
+        "120": 13
+      },
+      "latest_pick": 20,
+      "accepted": false
+    },
+    "cooccurrence_drag": {
+      "development": {
+        "rounds": 520,
+        "hits": 59,
+        "rate": 0.113462
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 65,
+        "rate": 0.125
+      },
+      "recent": {
+        "20": 5,
+        "60": 12,
+        "120": 19
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "multi_condition_equal": {
+      "development": {
+        "rounds": 520,
+        "hits": 57,
+        "rate": 0.109615
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 73,
+        "rate": 0.140385
+      },
+      "recent": {
+        "20": 6,
+        "60": 14,
+        "120": 23
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "rolling_best_60": {
+      "development": {
+        "rounds": 520,
+        "hits": 64,
+        "rate": 0.123077
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 60,
+        "rate": 0.115385
+      },
+      "recent": {
+        "20": 3,
+        "60": 9,
+        "120": 14
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "rolling_best_120": {
+      "development": {
+        "rounds": 520,
+        "hits": 55,
+        "rate": 0.105769
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 64,
+        "rate": 0.123077
+      },
+      "recent": {
+        "20": 6,
+        "60": 10,
+        "120": 15
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "performance_vote_60": {
+      "development": {
+        "rounds": 520,
+        "hits": 59,
+        "rate": 0.113462
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 62,
+        "rate": 0.119231
+      },
+      "recent": {
+        "20": 4,
+        "60": 10,
+        "120": 19
+      },
+      "latest_pick": 26,
+      "accepted": false
+    },
+    "performance_vote_120": {
+      "development": {
+        "rounds": 520,
+        "hits": 55,
+        "rate": 0.105769
+      },
+      "holdout": {
+        "rounds": 520,
+        "hits": 64,
+        "rate": 0.123077
+      },
+      "recent": {
+        "20": 5,
+        "60": 12,
+        "120": 19
+      },
+      "latest_pick": 26,
+      "accepted": false
+    }
+  },
+  "accepted_methods": [],
+  "conclusion": "沒有任何受測軌跡、週期或拖牌方法同時通過兩段驗證"
+}
