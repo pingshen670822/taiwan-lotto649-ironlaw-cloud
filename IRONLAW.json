@@ -24,6 +24,7 @@
   "consecutive_failure_penalty_required": true,
   "model_stability_penalty_required": true,
   "strongest_single_exactly_one_required": true,
+  "strongest_single_date_metadata_required": true,
   "strongest_multilogic_evidence_required": true,
   "strongest_single_independent_walk_forward_required": true,
   "strongest_single_validation_rounds": 1040,

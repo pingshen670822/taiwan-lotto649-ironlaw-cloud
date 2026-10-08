@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-10-08T11:59:36+08:00",
+  "generated_at": "2026-10-08T12:02:42+08:00",
   "passed": true,
   "latest_period": 115000094,
   "latest_date": "2026-10-06",
@@ -9,7 +9,7 @@
     {
       "name": "daily_integrity_audit",
       "passed": true,
-      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-08T12:00:48+08:00\", \"passed\": true, \"latest_period\": 115000094, \"latest_date\": \"2026-10-06\", \"target_date\": \"2026-10-09\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2176/2176\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000094\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-06\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2176 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-06 expected>=2026-10-06\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000094, \"analysis_period\": 115000094}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2176 engine=2176\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
+      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-08T12:03:52+08:00\", \"passed\": true, \"latest_period\": 115000094, \"latest_date\": \"2026-10-06\", \"target_date\": \"2026-10-09\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2176/2176\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000094\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-06\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2176 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-06 expected>=2026-10-06\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000094, \"analysis_period\": 115000094}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2176 engine=2176\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
     },
     {
       "name": "official_history_complete",
@@ -24,7 +24,7 @@
     {
       "name": "daily_prediction_recalculated",
       "passed": true,
-      "detail": "generated=2026-10-08T11:59:36+08:00; today=2026-10-08"
+      "detail": "generated=2026-10-08T12:02:42+08:00; today=2026-10-08"
     },
     {
       "name": "prediction_target_calendar_correct",
@@ -99,7 +99,7 @@
     {
       "name": "strongest_multilogic_evidence",
       "passed": true,
-      "detail": "{\"label\": \"每日相對最強獨隻・未達超強門檻\", \"number\": 12, \"count\": 1, \"final_rank\": 1, \"selector\": \"top1_vote_blend_v3_dual_window\", \"walk_forward_hits\": 131, \"walk_forward_rounds\": 1040, \"walk_forward_hit_rate\": 0.125962, \"development\": {\"rounds\": 520, \"hits\": 54, \"rate\": 0.103846}, \"holdout\": {\"rounds\": 520, \"hits\": 77, \"rate\": 0.148077}, \"random_hit_rate\": 0.122449, \"recent_hits\": {\"20\": 4, \"60\": 10, \"120\": 19}, \"recent_rates\": {\"20\": 0.2, \"60\": 0.166667, \"120\": 0.158333}, \"model_count\": 11, \"model_top9_support\": 8, \"model_top15_support\": 9, \"model_rank_evidence\": {\"bayes_24\": 4, \"bayes_60\": 2, \"bayes_150\": 3, \"bayes_360\": 19, \"ewma_8\": 10, \"ewma_21\": 2, \"ewma_55\": 3, \"ewma_144\": 8, \"empirical_hazard\": 6, \"conditional_pair\": 18, \"regime_slope\": 8}, \"logic_checks\": {\"independent_single_selector\": true, \"dual_520_windows_complete\": true, \"development_520_beats_random\": false, \"holdout_520_beats_random\": true, \"failed_repeat_cooldown\": true, \"recent_60_not_below_random\": true, \"recent_120_not_below_random\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"pattern_methods_pass_both_windows\": false, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": false, \"warning\": \"系統每天仍產生唯一相對最強號，但只有開發段、保留段與多條件規律都通過才可標成超強；目前不得宣稱90%或保證命中。\"}"
+      "detail": "{\"label\": \"每日相對最強獨隻・未達超強門檻\", \"number\": 12, \"count\": 1, \"final_rank\": 1, \"target_draw_date\": \"2026-10-09\", \"based_on_period\": 115000094, \"data_cutoff_date\": \"2026-10-06\", \"calculated_at\": \"2026-10-08T12:02:42+08:00\", \"selector\": \"top1_vote_blend_v3_dual_window\", \"walk_forward_hits\": 131, \"walk_forward_rounds\": 1040, \"walk_forward_hit_rate\": 0.125962, \"development\": {\"rounds\": 520, \"hits\": 54, \"rate\": 0.103846}, \"holdout\": {\"rounds\": 520, \"hits\": 77, \"rate\": 0.148077}, \"random_hit_rate\": 0.122449, \"recent_hits\": {\"20\": 4, \"60\": 10, \"120\": 19}, \"recent_rates\": {\"20\": 0.2, \"60\": 0.166667, \"120\": 0.158333}, \"model_count\": 11, \"model_top9_support\": 8, \"model_top15_support\": 9, \"model_rank_evidence\": {\"bayes_24\": 4, \"bayes_60\": 2, \"bayes_150\": 3, \"bayes_360\": 19, \"ewma_8\": 10, \"ewma_21\": 2, \"ewma_55\": 3, \"ewma_144\": 8, \"empirical_hazard\": 6, \"conditional_pair\": 18, \"regime_slope\": 8}, \"logic_checks\": {\"independent_single_selector\": true, \"dual_520_windows_complete\": true, \"development_520_beats_random\": false, \"holdout_520_beats_random\": true, \"failed_repeat_cooldown\": true, \"recent_60_not_below_random\": true, \"recent_120_not_below_random\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"pattern_methods_pass_both_windows\": false, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": false, \"warning\": \"系統每天仍產生唯一相對最強號，但只有開發段、保留段與多條件規律都通過才可標成超強；目前不得宣稱90%或保證命中。\"}"
     },
     {
       "name": "trajectory_cycle_drag_dual_window_audit",
@@ -192,7 +192,7 @@
     {
       "name": "automatic_update_ironlaw",
       "passed": true,
-      "detail": "99/99 locked rules present"
+      "detail": "100/100 locked rules present"
     }
   ]
 }

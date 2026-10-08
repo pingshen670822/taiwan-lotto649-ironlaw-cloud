@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_top9_single_dual_window_v9",
-  "generated_at": "2026-10-08T11:59:36+08:00",
+  "generated_at": "2026-10-08T12:02:42+08:00",
   "history": {
     "count": 2176,
     "first": "2007-01-02",
@@ -17550,6 +17550,10 @@
     "number": 12,
     "count": 1,
     "final_rank": 1,
+    "target_draw_date": "2026-10-09",
+    "based_on_period": 115000094,
+    "data_cutoff_date": "2026-10-06",
+    "calculated_at": "2026-10-08T12:02:42+08:00",
     "selector": "top1_vote_blend_v3_dual_window",
     "walk_forward_hits": 131,
     "walk_forward_rounds": 1040,
