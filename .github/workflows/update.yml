@@ -1,6 +1,7 @@
 name: 台灣大樂透新核心自動更新
 on:
   schedule:
+    - cron: "5 16 * * *"
     - cron: "0 */3 * * *"
     - cron: "25-55/5 13 * * 2,5"
     - cron: "0-30/5 14 * * 2,5"
@@ -32,13 +33,19 @@ jobs:
         run: |
           git config user.name "tw649-new-engine-bot"
           git config user.email "actions@github.com"
-          if git diff --quiet -- data/official_lotto649.csv; then
-            echo "官方資料沒有新期別，不製造無效提交與重複部署。"
+          TODAY_TAIPEI="$(TZ=Asia/Taipei date +%F)"
+          PUBLISHED_DATE="$(git show HEAD:docs/mobile_cloud/latest_analysis.json | python -c 'import json,sys; print(json.load(sys.stdin).get("generated_at","")[:10])')"
+          if git diff --quiet -- data/official_lotto649.csv && [ "$PUBLISHED_DATE" = "$TODAY_TAIPEI" ]; then
+            echo "今日戰報已重算發布，且官方資料沒有新期別；不製造同日重複提交。"
             exit 0
           fi
           git add data reports site docs mobile_cloud
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "大樂透新核心開獎後自動更新"
+          if git diff --cached --quiet -- data/official_lotto649.csv; then
+            git commit -m "大樂透每日預測日期與資料重算"
+          else
+            git commit -m "大樂透新核心開獎後自動更新"
+          fi
           git pull --rebase origin main
           git push
       - name: 保存故障診斷

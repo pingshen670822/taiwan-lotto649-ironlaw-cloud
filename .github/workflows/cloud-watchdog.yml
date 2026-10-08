@@ -30,14 +30,20 @@ jobs:
         run: |
           pip install -r requirements.txt
           python auto_repair.py
-          if git diff --quiet -- data/official_lotto649.csv; then
+          TODAY_TAIPEI="$(TZ=Asia/Taipei date +%F)"
+          PUBLISHED_DATE="$(git show HEAD:docs/mobile_cloud/latest_analysis.json | python -c 'import json,sys; print(json.load(sys.stdin).get("generated_at","")[:10])')"
+          if git diff --quiet -- data/official_lotto649.csv && [ "$PUBLISHED_DATE" = "$TODAY_TAIPEI" ]; then
             echo "updated=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "tw649-cloud-self-repair"
           git config user.email "actions@github.com"
           git add data reports site docs mobile_cloud
-          git commit -m "大樂透雲端逾時自主修復更新"
+          if git diff --cached --quiet -- data/official_lotto649.csv; then
+            git commit -m "大樂透雲端每日日期自主修復"
+          else
+            git commit -m "大樂透雲端逾時自主修復更新"
+          fi
           git pull --rebase origin main
           git push
           echo "updated=true" >> "$GITHUB_OUTPUT"
