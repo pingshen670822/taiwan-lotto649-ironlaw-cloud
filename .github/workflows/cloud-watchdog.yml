@@ -54,14 +54,18 @@ jobs:
         run: python pages_watchdog.py
       - name: 觸發Pages重新建置
         run: |
-          if git diff --quiet -- docs/.pages-repair-trigger.json; then
+          if git diff --quiet -- docs/.pages-repair-trigger.json reports/self_repair_status.json site/self_repair_status.json docs/self_repair_status.json mobile_cloud/self_repair_status.json docs/mobile_cloud/self_repair_status.json; then
             echo "手機雲端同步正常，無需修復提交。"
             exit 0
           fi
           git config user.name "tw649-pages-watchdog"
           git config user.email "actions@github.com"
-          git add docs/.pages-repair-trigger.json
-          git commit -m "手機雲端Pages自主修復重建"
+          git add docs/.pages-repair-trigger.json reports/self_repair_status.json site/self_repair_status.json docs/self_repair_status.json mobile_cloud/self_repair_status.json docs/mobile_cloud/self_repair_status.json
+          if git diff --cached --quiet -- docs/.pages-repair-trigger.json; then
+            git commit -m "手機雲端實網驗證健康"
+          else
+            git commit -m "手機雲端Pages自主修復重建"
+          fi
           git pull --rebase origin main
           git push
       - name: 保存線上驗證診斷

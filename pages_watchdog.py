@@ -5,14 +5,39 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT=Path(__file__).resolve().parent
 MARKER=ROOT/"docs"/".pages-repair-trigger.json"
 MAX_ATTEMPTS=3
+STATUS_PATHS=(
+    ROOT/"reports"/"self_repair_status.json",
+    ROOT/"site"/"self_repair_status.json",
+    ROOT/"docs"/"self_repair_status.json",
+    ROOT/"mobile_cloud"/"self_repair_status.json",
+    ROOT/"docs"/"mobile_cloud"/"self_repair_status.json",
+)
+
+def write_healthy_status() -> None:
+    source=STATUS_PATHS[0]
+    status=json.loads(source.read_text(encoding="utf-8")) if source.exists() else {}
+    if status.get("status")=="healthy":
+        return
+    version=json.loads((ROOT/"docs"/"mobile_cloud"/"version.json").read_text(encoding="utf-8"))
+    status.update({
+        "status":"healthy",
+        "checked_at":datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+        "latest_period":version.get("latest_period"),
+        "live_cloud_verification":"passed",
+    })
+    text=json.dumps(status,ensure_ascii=False,indent=2)
+    for path in STATUS_PATHS:
+        path.write_text(text,encoding="utf-8")
 
 def main() -> int:
     result=subprocess.run([sys.executable,str(ROOT/"cloud_verify.py")],cwd=ROOT)
     if result.returncode==0:
+        write_healthy_status()
         print("Pages與手機雲端同步正常，不需要重建。")
         return 0
     version=json.loads((ROOT/"docs"/"mobile_cloud"/"version.json").read_text(encoding="utf-8"))

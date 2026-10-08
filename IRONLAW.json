@@ -67,6 +67,7 @@
   "atomic_last_valid_rollback_required": true,
   "daily_integrity_audit_required": true,
   "live_cloud_sync_verification_required": true,
+  "live_cloud_verification_must_mark_healthy": true,
   "pages_deployment_watchdog_required": true,
   "pages_push_immediate_watchdog_required": true,
   "pages_repair_max_attempts": 3,
