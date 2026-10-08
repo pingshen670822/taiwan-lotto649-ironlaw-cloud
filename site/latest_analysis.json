@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_top9_single_dual_window_v9",
-  "generated_at": "2026-10-08T12:06:56+08:00",
+  "generated_at": "2026-10-08T12:38:29+08:00",
   "history": {
     "count": 2176,
     "first": "2007-01-02",
@@ -17774,14 +17774,14 @@
     "coverage_note": "涵蓋本系統全部已登錄模組與公開可重現候選；無法誠實宣稱涵蓋全世界未知、封閉或未取得的模組。"
   },
   "strongest_recommendation": {
-    "label": "每日相對最強獨隻・未達超強門檻",
+    "label": "終極獨隻・全系統最高順位",
     "number": 12,
     "count": 1,
     "final_rank": 1,
     "target_draw_date": "2026-10-09",
     "based_on_period": 115000094,
     "data_cutoff_date": "2026-10-06",
-    "calculated_at": "2026-10-08T12:06:56+08:00",
+    "calculated_at": "2026-10-08T12:38:29+08:00",
     "module_registry_summary": {
       "registered": 24,
       "evaluated": 24,
@@ -17846,7 +17846,9 @@
       "previous_draw_used_as_direct_pick": false
     },
     "all_passed": false,
-    "warning": "系統每天仍產生唯一相對最強號，但只有開發段、保留段與多條件規律都通過才可標成超強；目前不得宣稱90%或保證命中。"
+    "confidence_status": "回測審慎級",
+    "selection_basis": "本期全部已登錄且可重現模組完成運算後的唯一最高順位",
+    "warning": "本期終極獨隻已完成全系統逐項運算並固定輸出唯一最高順位；回測信心另外如實揭露，不得把名稱與驗證門檻混為一談，也不得宣稱90%或保證命中。"
   },
   "research_review": {
     "objective": "只採用可同時通過開發段與保留段的無未來資料方法",
@@ -17936,6 +17938,7 @@
   "data_sync_policy": {
     "official_data_always_syncs_after_validation": true,
     "model_gate_blocks_data_sync": false,
-    "prediction_label": "觀察級"
+    "prediction_label": "終極獨隻最高順位",
+    "confidence_status": "回測審慎級"
   }
 }

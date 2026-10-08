@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "version": 10,
+  "version": 11,
   "automatic_update_locked": true,
   "rules_must_not_be_removed": true,
   "official_draw_source_required": true,
@@ -24,6 +24,8 @@
   "consecutive_failure_penalty_required": true,
   "model_stability_penalty_required": true,
   "strongest_single_exactly_one_required": true,
+  "strongest_single_always_named_ultimate_highest_rank": true,
+  "strongest_single_confidence_must_be_separately_disclosed": true,
   "strongest_single_date_metadata_required": true,
   "all_registered_modules_daily_evaluation_required": true,
   "unverified_pattern_module_zero_weight_required": true,
