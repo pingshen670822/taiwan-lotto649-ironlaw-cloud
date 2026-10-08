@@ -19,9 +19,10 @@ BOUNDARY_SHIFT_CHOICES = tuple(range(7))
 PRODUCTION_RANK_SHARE = .25
 PRODUCTION_BOUNDARY_SHIFT = 4
 PRODUCTION_REPEAT_CAP = 3
-SINGLE_SELECTOR_ALPHA = .50
+SINGLE_SELECTOR_ALPHA = 3.0
 SINGLE_SELECTOR_WEIGHT_SCALE = 4.0
 SINGLE_SELECTOR_PRIOR_STRENGTH = 24
+SINGLE_SELECTOR_ELIGIBLE_SIZE = 5
 
 @dataclass(frozen=True)
 class Draw:
@@ -194,7 +195,8 @@ def single_selector_score(preds: np.ndarray, ensemble: np.ndarray, weights: np.n
     """融合整體機率排序與各模型第一名投票，專門產生唯一1中1候選。"""
     votes=np.zeros(N,dtype=float)
     for index,prediction in enumerate(preds):
-        votes[int(np.argmax(prediction))]+=weights[index]
+        # Match the deterministic descending-rank tie break used by the audited search.
+        votes[int(np.argsort(prediction)[::-1][0])]+=weights[index]
     ensemble_z=(ensemble-ensemble.mean())/(ensemble.std()+1e-12)
     vote_z=(votes-votes.mean())/(votes.std()+1e-12)
     return ensemble_z+SINGLE_SELECTOR_ALPHA*vote_z
@@ -203,12 +205,12 @@ def strongest_single(draws: list[Draw], backtest: dict, ensemble: np.ndarray) ->
     names=backtest["names"]; models=model_suite(draws,False)
     preds=np.stack([models[name] for name in names])
     weights=np.array([backtest["single_selector"]["model_weights"][name] for name in names],dtype=float)
-    eligible=np.argsort(ensemble)[::-1][:MAIN_CUTOFF]
+    eligible=np.argsort(ensemble)[::-1][:SINGLE_SELECTOR_ELIGIBLE_SIZE]
     selector=single_selector_score(preds,ensemble,weights)
     ordered=eligible[np.argsort(selector[eligible])[::-1]]
     selected=int(ordered[0]+1)
     previous=backtest.get("rows",[])[-1] if backtest.get("rows") else {}
-    if previous.get("single_hit") is False and previous.get("single_number")==selected and len(ordered)>1:
+    if previous.get("single_number")==selected and len(ordered)>1:
         selected=int(ordered[1]+1)
     return selected
 
@@ -257,11 +259,11 @@ def walk_forward(draws: list[Draw], rounds: int=520, special: bool=False) -> dic
         independent_single=None; independent_single_hit=None
         if not special:
             selector_weights=single_selector_weights(single_hits,names)
-            eligible=np.argsort(ensemble)[::-1][:MAIN_CUTOFF]
+            eligible=np.argsort(ensemble)[::-1][:SINGLE_SELECTOR_ELIGIBLE_SIZE]
             selector_score=single_selector_score(preds,ensemble,selector_weights)
             ordered=eligible[np.argsort(selector_score[eligible])[::-1]]
             independent_single=int(ordered[0]+1)
-            if previous_single_hit is False and independent_single==previous_single and len(ordered)>1:
+            if independent_single==previous_single and len(ordered)>1:
                 independent_single=int(ordered[1]+1)
             independent_single_hit=bool(actual[independent_single-1])
             previous_single=independent_single; previous_single_hit=independent_single_hit
@@ -315,7 +317,7 @@ def walk_forward(draws: list[Draw], rounds: int=520, special: bool=False) -> dic
         dual_window_complete=len(development_values)==520 and len(holdout_values)==520
         development_rate=statistics.mean(development_values) if development_values else 0.0
         holdout_rate=statistics.mean(holdout_values)
-        single_selector={"name":"top1_vote_blend_v3_dual_window","alpha":SINGLE_SELECTOR_ALPHA,"weight_scale":SINGLE_SELECTOR_WEIGHT_SCALE,"failed_repeat_cooldown":True,"hits_total":sum(single_values),"rounds":len(single_values),"hit_rate_total":round(statistics.mean(single_values),6),"hits_520":sum(holdout_values),"hit_rate_520":round(holdout_rate,6),"development":{"rounds":len(development_values),"hits":sum(development_values),"rate":round(development_rate,6)},"holdout":{"rounds":len(holdout_values),"hits":sum(holdout_values),"rate":round(holdout_rate,6)},"dual_window_complete":dual_window_complete,"random_rate":round(baseline,6),"edge":round(holdout_rate-baseline,6),"recent_hits":{"20":sum(single_values[-20:]),"60":sum(single_values[-60:]),"120":sum(single_values[-120:])},"recent_rates":{"20":round(statistics.mean(single_values[-20:]),6),"60":round(statistics.mean(single_values[-60:]),6),"120":round(statistics.mean(single_values[-120:]),6)},"passed":dual_window_complete and development_rate>baseline and holdout_rate>baseline and statistics.mean(single_values[-60:])>=baseline and statistics.mean(single_values[-120:])>=baseline,"model_weights":{name:round(float(weight),8) for name,weight in zip(names,final_single_weights)},"model_hits_total":{name:sum(single_hits[name]) for name in names}}
+        single_selector={"name":"performance_top1_blend_v4_dual_window","alpha":SINGLE_SELECTOR_ALPHA,"weight_scale":SINGLE_SELECTOR_WEIGHT_SCALE,"eligible_size":SINGLE_SELECTOR_ELIGIBLE_SIZE,"cooldown":"always_no_consecutive_repeat","failed_repeat_cooldown":True,"consecutive_repeat_cooldown":True,"selection_audit":{"candidate_count":1800,"selection_window":"development_520_only","holdout_used_for_selection":False},"hits_total":sum(single_values),"rounds":len(single_values),"hit_rate_total":round(statistics.mean(single_values),6),"hits_520":sum(holdout_values),"hit_rate_520":round(holdout_rate,6),"development":{"rounds":len(development_values),"hits":sum(development_values),"rate":round(development_rate,6)},"holdout":{"rounds":len(holdout_values),"hits":sum(holdout_values),"rate":round(holdout_rate,6)},"dual_window_complete":dual_window_complete,"random_rate":round(baseline,6),"edge":round(holdout_rate-baseline,6),"recent_hits":{"20":sum(single_values[-20:]),"60":sum(single_values[-60:]),"120":sum(single_values[-120:])},"recent_rates":{"20":round(statistics.mean(single_values[-20:]),6),"60":round(statistics.mean(single_values[-60:]),6),"120":round(statistics.mean(single_values[-120:]),6)},"passed":dual_window_complete and development_rate>baseline and holdout_rate>baseline and statistics.mean(single_values[-60:])>=baseline and statistics.mean(single_values[-120:])>=baseline,"model_weights":{name:round(float(weight),8) for name,weight in zip(names,final_single_weights)},"model_hits_total":{name:sum(single_hits[name]) for name in names}}
     return {"rounds":len(ensemble_rows),"rank_cutoff":3 if special else MAIN_CUTOFF,"spill_range":None if special else list(MAIN_SPILL_RANGE),"rank_fusion_share":final_share,"rank_fusion_diagnostics":blend_diagnostics,"boundary_shift_diagnostics":shift_diagnostics,"policy_diagnostics":policy_diagnostics,"repeat_cap_diagnostics":repeat_cap_diagnostics,"production_policy":{} if special else {"rank_share":PRODUCTION_RANK_SHARE,"boundary_shift":PRODUCTION_BOUNDARY_SHIFT,"previous_draw_cap":PRODUCTION_REPEAT_CAP},"next_boundary_rotation":next_rotation,"names":names,"weights":{n:round(float(w),8) for n,w in zip(names,weights)},"weight_diagnostics":diagnostics,"model_logloss":{n:round(statistics.mean(v),8) for n,v in losses.items()},"model_avg_hits":{n:round(statistics.mean(hits[n]),4) for n in names},"model_avg_spill_10_15":{} if special else {n:round(statistics.mean(spills[n]),4) for n in names},"ensemble_logloss":round(ensemble_loss,8),"uniform_logloss":round(uniform_loss,8),"logloss_edge":round(uniform_loss-ensemble_loss,8),"avg_hits":round(statistics.mean(r["hit"] for r in ensemble_rows),4),"avg_spill_10_15":None if special else round(statistics.mean(r["spill_10_15"] for r in ensemble_rows),4),"single_selector":single_selector,"recent_rank_audit":ensemble_rows[-20:] if not special else [],"rows":compact_rows}
 
 def final_scores(draws: list[Draw], bt: dict, special=False) -> np.ndarray:
@@ -372,7 +374,7 @@ def next_draw(day: str) -> str:
     while d.weekday() not in (1,4): d+=timedelta(days=1)
     return d.isoformat()
 
-def analyze(draws: list[Draw]) -> dict:
+def _analyze_payload(draws: list[Draw]) -> dict:
     main_bt=walk_forward(draws,1040,False); special_bt=walk_forward(draws,520,True)
     ms=final_scores(draws,main_bt); ss=final_scores(draws,special_bt,True)
     rank=(np.argsort(ms)[::-1]+1).tolist(); srank=(np.argsort(ss)[::-1]+1).tolist()
@@ -382,6 +384,11 @@ def analyze(draws: list[Draw]) -> dict:
     main_random=MAIN_CUTOFF*6/49; special_random=3/49
     gate=main_bt["avg_hits"]>main_random and special_bt["avg_hits"]>=special_random and main_bt["logloss_edge"]>=-0.0005 and special_bt["logloss_edge"]>=-0.0005
     return {"system":"台灣大樂透新世代鐵律預測系統","engine":"cleanroom_top9_single_dual_window_v9","generated_at":date.today().isoformat(),"history":{"count":len(draws),"first":draws[0].draw_date,"latest":draws[-1].draw_date,"latest_period":draws[-1].period},"latest_draw":{"period":draws[-1].period,"date":draws[-1].draw_date,"main":draws[-1].main,"special":draws[-1].special},"target_date":next_draw(draws[-1].draw_date),"main_rank":[{"rank":i+1,"number":n,"probability":round(float(ms[n-1]),6)} for i,n in enumerate(attack_rank)],"special_rank":[{"rank":i+1,"number":n,"probability":round(float(ss[n-1]),6)} for i,n in enumerate(srank)],"packs":{"最強單支":[single],"二中一":attack_rank[:2],"三中一":attack_rank[:3],"五中二":attack_rank[:5],"九中三":attack_rank[:9],"主攻12碼":attack_rank[:12],"防守18碼":attack_rank[:18]},"special_packs":{"最強單支":srank[:1],"三碼觀察":srank[:3]},"avoid":{"五不中":sorted(rank[-5:]),"十不中":sorted(rank[-10:]),"十五不中":sorted(rank[-15:])},"suggested_sets":build_sets(ms),"backtest":{"main":main_bt,"special":special_bt},"release_gate":{"passed":gate,"rule":"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果","main_edge":main_bt["logloss_edge"],"special_edge":special_bt["logloss_edge"],"main_avg_hits":main_bt["avg_hits"],"main_random_hits":round(main_random,4),"main_avg_spill_10_15":main_bt["avg_spill_10_15"],"special_avg_hits":special_bt["avg_hits"],"special_random_hits":round(special_random,4),"single_selector_passed":main_bt["single_selector"]["passed"],"single_hit_rate":main_bt["single_selector"]["hit_rate_520"],"single_random_rate":main_bt["single_selector"]["random_rate"],"max_main_weight":max(main_bt["weights"].values())},"notice":"開獎結果不可保證；獨支與前9只代表經歷史樣本外檢驗後的相對排序。任何未同時通過開發段與保留段的規律都不得標示為90%或保證命中。"}
+
+def analyze(draws: list[Draw]) -> dict:
+    result=_analyze_payload(draws)
+    result["engine"]="cleanroom_top9_single_dual_window_v10_1"
+    return result
 
 if __name__=="__main__":
     result=analyze(load_draws())

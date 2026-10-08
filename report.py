@@ -157,17 +157,18 @@ def build_reports(analysis_data, history):
     confidence_title = "終極獨隻 1中1"
     check_labels = {
         "independent_single_selector": "獨支使用獨立1中1選擇器",
+        "development_only_model_selection": "只用較舊520期選型，保留段不參與挑選",
         "all_registered_modules_evaluated": "全部已登錄模組完成本期運算",
         "rejected_pattern_modules_zero_weight": "未通過雙區段模組權重歸零",
         "dual_520_windows_complete": "開發520期與保留520期完整",
         "development_520_beats_random": "較舊520期開發段勝過隨機",
         "holdout_520_beats_random": "最新520期保留段勝過隨機",
-        "failed_repeat_cooldown": "上期獨支未中禁止同號原地連任",
+        "consecutive_repeat_cooldown": "禁止終極獨隻連續兩期使用同號",
         "recent_60_not_below_random": "近60期獨支命中率不低於隨機",
         "recent_120_not_below_random": "近120期獨支命中率不低於隨機",
         "at_least_half_models_top9": "至少半數模型列入前9",
         "at_least_two_thirds_models_top15": "至少三分之二模型列入前15",
-        "pattern_methods_pass_both_windows": "至少一項軌跡／拖牌規則通過雙區段",
+        "rejected_pattern_candidates_excluded": "未通過雙區段的軌跡候選全部排除",
         "release_gate_passed": "正式發布守門通過",
         "previous_draw_used_as_direct_pick": "禁止直接照抄上期開獎號",
     }
@@ -211,7 +212,7 @@ def build_reports(analysis_data, history):
 
 <section id="models" class="tab"><div class="band"><h2>獨立1中1與前9碼走步回測</h2><div class="grid"><div class="card primary"><div class="label">獨支較舊520期開發段</div><div class="value">{selector.get('development', {}).get('hits', '—')}/520（{selector.get('development', {}).get('rate', 0) * 100:.2f}%）</div><div class="note">必須勝過隨機 {selector.get('random_rate', 6 / 49) * 100:.3f}%</div></div><div class="card primary"><div class="label">獨支最新520期保留段</div><div class="value">{selector.get('holdout', {}).get('hits', '—')}/520（{selector.get('holdout', {}).get('rate', 0) * 100:.2f}%）</div><div class="note">禁止只挑這段漂亮數字</div></div><div class="card"><div class="label">獨支近20／60／120期</div><div class="value">{selector.get('recent_hits', {}).get('20', '—')}／{selector.get('recent_hits', {}).get('60', '—')}／{selector.get('recent_hits', {}).get('120', '—')}中</div><div class="note">只使用各期開獎前資料</div></div><div class="card"><div class="label">前9碼1040期平均命中</div><div class="value">{backtest['main']['avg_hits']}</div><div class="note">隨機基準 {a['release_gate']['main_random_hits']}</div></div><div class="card"><div class="label">最近20期前9平均命中</div><div class="value">{performance.get('v9_recent20', '—')}</div><div class="note">短期表現獨立監控</div></div><div class="card"><div class="label">第10–15名平均外溢</div><div class="value">{backtest['main']['avg_spill_10_15']}</div><div class="note">外溢不算前9成功</div></div></div></div><div class="band"><h2>軌跡、週期與拖牌雙區段稽核</h2><p><b>{e(pattern.get('conclusion', '尚未產生稽核結果'))}</b></p><p class="note">准入規則：較舊520期與最新520期必須同時高於6/49（12.2449%）；只在近期漂亮的一律淘汰。</p>{table(['受測規則','開發520期','保留520期','近20／60／120中','下期候選','結果'], pattern_rows)}</div><div class="band"><h2>第10名後問題專項檢測</h2>{rotation_card}{table(['開獎日','前9命中','第10–15名外溢','六顆實開順位','撤換數','升入前9','撤出前9'], boundary_rows)}</div><details class="report-details"><summary>查看逐模組錯誤檢討與滾動調整</summary><div class="band"><h2>前9碼三層滾動權重</h2>{table(['模型','最終權重','近20前9命中','近60前9命中','近120前9命中','近20外溢','連續零命中','對數損失'], model_rows)}</div><div class="band"><h2>主號模型錯誤追責</h2>{table(['模型','原第一名','1中1','前9命中','命中號','權重變動','處置'], module_review_rows)}</div><div class="band"><h2>特別號模型錯誤追責</h2>{table(['模型','原第一名','1中1','前三命中','權重變動','處置'], special_review_rows)}</div></details></section>
 
-<section id="review" class="tab"><div class="band"><h2>預測對實際逐期驗算</h2><p>預測先封存，開獎後只結算，禁止回改舊牌；第10名後命中不算前9成功。</p>{table(['目標日','版本','原前9碼','實際開獎','前9命中','命中號','特別號'], settled_rows(history))}</div><div class="band warning"><h2>最新一期錯誤檢討</h2><p>上期實開：{last_actual_balls}</p><p><b>Top5／Top10／Top15 命中＝{last_rank_result}</b></p><p><b>封存獨支實戰＝{sealed_single_hits}/{len(sealed_single_rows)}（{sealed_single_rate * 100:.2f}%）；上期獨支 {latest_settled['packs']['最強單支'][0] if latest_settled else '—'} {'命中' if latest_settled and latest_settled['settlement']['pack_hits']['最強單支']['count'] else '未中'}。</b></p><ul><li>現行獨支最新520期為77中，但較舊520期只有54中，因此禁止單獨拿77/520冒充穩定能力。</li><li>星期、拖牌、鄰號、間隔與共現軌跡必須雙區段都勝過隨機，否則不進正式核心。</li><li>第10–15名外溢一律列失敗並扣除責任模型權重。</li><li>每期重算20／60／120期權重、連續失準與穩定度懲罰。</li><li>模型守門不足只降級標示，永遠不得阻擋最新官方資料同步。</li></ul></div><details class="report-details"><summary>查看低機率號碼誤開檢討</summary><div class="band">{table(['目標日','原十不中','誤開號','顆數','修正'], low_rows)}</div></details></section>
+<section id="review" class="tab"><div class="band"><h2>預測對實際逐期驗算</h2><p>預測先封存，開獎後只結算，禁止回改舊牌；第10名後命中不算前9成功。</p>{table(['目標日','版本','原前9碼','實際開獎','前9命中','命中號','特別號'], settled_rows(history))}</div><div class="band warning"><h2>最新一期錯誤檢討</h2><p>上期實開：{last_actual_balls}</p><p><b>Top5／Top10／Top15 命中＝{last_rank_result}</b></p><p><b>封存獨支實戰＝{sealed_single_hits}/{len(sealed_single_rows)}（{sealed_single_rate * 100:.2f}%）；上期獨支 {latest_settled['packs']['最強單支'][0] if latest_settled else '—'} {'命中' if latest_settled and latest_settled['settlement']['pack_hits']['最強單支']['count'] else '未中'}。</b></p><ul><li>重建後獨隻較舊520期為{selector.get('development', {}).get('hits', '—')}中，最新520期保留驗證為{selector.get('holdout', {}).get('hits', '—')}中；選型只使用較舊520期。</li><li>星期、拖牌、鄰號、間隔與共現軌跡必須雙區段都勝過隨機，否則權重歸零。</li><li>第10–15名外溢一律列失敗並扣除責任模型權重。</li><li>每期重算20／60／120期權重、連續失準與穩定度懲罰。</li><li>模型守門與官方資料同步分開執行，禁止舊資料卡住最新戰報。</li></ul></div><details class="report-details"><summary>查看低機率號碼誤開檢討</summary><div class="band">{table(['目標日','原十不中','誤開號','顆數','修正'], low_rows)}</div></details></section>
 
 <section id="monthly" class="tab"><div class="band"><h2>歷史封存與每月總整理</h2><p>每一筆依開獎前的目標日與版本獨立封存，不合併、不回改。</p>{table(['月份','封存結算筆數','總命中','平均命中','單筆最高','特別號命中'], monthly_rows(history))}</div></section>
 
@@ -263,7 +264,7 @@ showStoredTimes();refreshVersion();setInterval(refreshVersion,60000);document.ad
         "theme_color": "#7f1017",
         "background_color": "#f3f4f6",
     }, ensure_ascii=False)
-    service_worker = "const C='tw649-dual-window-v12';self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(['./','index.html','style.css','app.js'])))});self.addEventListener('activate',e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(xs=>Promise.all(xs.filter(x=>x!==C).map(x=>caches.delete(x))))])));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request))))"
+    service_worker = "const C='tw649-dual-window-v13';self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(['./','index.html','style.css','app.js'])))});self.addEventListener('activate',e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(xs=>Promise.all(xs.filter(x=>x!==C).map(x=>caches.delete(x))))])));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request,{cache:'no-store'}).catch(()=>caches.match(e.request))))"
 
     for base in DESTINATIONS:
         (base / "index.html").write_text(html_text, encoding="utf-8")

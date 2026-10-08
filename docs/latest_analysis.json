@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "engine": "cleanroom_top9_single_dual_window_v9",
-  "generated_at": "2026-10-08T12:38:29+08:00",
+  "engine": "cleanroom_top9_single_dual_window_v10_1",
+  "generated_at": "2026-10-08T14:12:06+08:00",
   "history": {
     "count": 2176,
     "first": "2007-01-02",
@@ -25,8 +25,8 @@
   "main_rank": [
     {
       "rank": 1,
-      "number": 12,
-      "probability": 0.128681
+      "number": 20,
+      "probability": 0.12906
     },
     {
       "rank": 2,
@@ -35,8 +35,8 @@
     },
     {
       "rank": 3,
-      "number": 20,
-      "probability": 0.12906
+      "number": 12,
+      "probability": 0.128681
     },
     {
       "rank": 4,
@@ -518,28 +518,28 @@
   ],
   "packs": {
     "最強單支": [
-      12
+      20
     ],
     "二中一": [
-      12,
+      20,
       26
     ],
     "三中一": [
-      12,
+      20,
       26,
-      20
+      12
     ],
     "五中二": [
-      12,
-      26,
       20,
+      26,
+      12,
       14,
       35
     ],
     "九中三": [
-      12,
-      26,
       20,
+      26,
+      12,
       14,
       35,
       29,
@@ -548,9 +548,9 @@
       6
     ],
     "主攻12碼": [
-      12,
-      26,
       20,
+      26,
+      12,
       14,
       35,
       29,
@@ -562,9 +562,9 @@
       4
     ],
     "防守18碼": [
-      12,
-      26,
       20,
+      26,
+      12,
       14,
       35,
       29,
@@ -1303,39 +1303,47 @@
       "avg_hits": 1.1327,
       "avg_spill_10_15": 0.7125,
       "single_selector": {
-        "name": "top1_vote_blend_v3_dual_window",
-        "alpha": 0.5,
+        "name": "performance_top1_blend_v4_dual_window",
+        "alpha": 3.0,
         "weight_scale": 4.0,
+        "eligible_size": 5,
+        "cooldown": "always_no_consecutive_repeat",
         "failed_repeat_cooldown": true,
-        "hits_total": 131,
+        "consecutive_repeat_cooldown": true,
+        "selection_audit": {
+          "candidate_count": 1800,
+          "selection_window": "development_520_only",
+          "holdout_used_for_selection": false
+        },
+        "hits_total": 145,
         "rounds": 1040,
-        "hit_rate_total": 0.125962,
-        "hits_520": 77,
-        "hit_rate_520": 0.148077,
+        "hit_rate_total": 0.139423,
+        "hits_520": 74,
+        "hit_rate_520": 0.142308,
         "development": {
           "rounds": 520,
-          "hits": 54,
-          "rate": 0.103846
+          "hits": 71,
+          "rate": 0.136538
         },
         "holdout": {
           "rounds": 520,
-          "hits": 77,
-          "rate": 0.148077
+          "hits": 74,
+          "rate": 0.142308
         },
         "dual_window_complete": true,
         "random_rate": 0.122449,
-        "edge": 0.025628,
+        "edge": 0.019859,
         "recent_hits": {
-          "20": 4,
-          "60": 10,
-          "120": 19
+          "20": 2,
+          "60": 8,
+          "120": 16
         },
         "recent_rates": {
-          "20": 0.2,
-          "60": 0.166667,
-          "120": 0.158333
+          "20": 0.1,
+          "60": 0.133333,
+          "120": 0.133333
         },
-        "passed": false,
+        "passed": true,
         "model_weights": {
           "bayes_24": 0.08938423,
           "bayes_60": 0.09541541,
@@ -1603,7 +1611,7 @@
             23,
             25
           ],
-          "single_number": 25,
+          "single_number": 12,
           "single_hit": false,
           "rank_share": 0.25,
           "boundary_rotation": {
@@ -1641,8 +1649,8 @@
             33,
             43
           ],
-          "single_number": 12,
-          "single_hit": true,
+          "single_number": 25,
+          "single_hit": false,
           "rank_share": 0.25,
           "boundary_rotation": {
             "count": 4,
@@ -1715,8 +1723,8 @@
             27,
             31
           ],
-          "single_number": 26,
-          "single_hit": true,
+          "single_number": 25,
+          "single_hit": false,
           "rank_share": 0.25,
           "boundary_rotation": {
             "count": 4,
@@ -2055,7 +2063,7 @@
             20,
             36
           ],
-          "single_number": 12,
+          "single_number": 35,
           "single_hit": false,
           "rank_share": 0.25,
           "boundary_rotation": {
@@ -2129,7 +2137,7 @@
           "period": 106000076,
           "date": "2017-09-08",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10728073292195818,
           "logloss": 0.3709495503142524
@@ -2156,7 +2164,7 @@
           "period": 106000079,
           "date": "2017-09-19",
           "hit": 1,
-          "single_number": 16,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10749077305130368,
           "logloss": 0.3719036500632925
@@ -2165,7 +2173,7 @@
           "period": 106000080,
           "date": "2017-09-22",
           "hit": 1,
-          "single_number": 33,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.107614878144063,
           "logloss": 0.3725061504974611
@@ -2174,7 +2182,7 @@
           "period": 106000081,
           "date": "2017-09-26",
           "hit": 0,
-          "single_number": 16,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10784228106588287,
           "logloss": 0.3735547135421445
@@ -2183,7 +2191,7 @@
           "period": 106000082,
           "date": "2017-09-29",
           "hit": 3,
-          "single_number": 33,
+          "single_number": 16,
           "single_hit": true,
           "brier": 0.10692836968144584,
           "logloss": 0.3693403611030422
@@ -2192,8 +2200,8 @@
           "period": 106000083,
           "date": "2017-10-03",
           "hit": 1,
-          "single_number": 16,
-          "single_hit": false,
+          "single_number": 33,
+          "single_hit": true,
           "brier": 0.10712699010110598,
           "logloss": 0.37023586673328734
         },
@@ -2201,7 +2209,7 @@
           "period": 106000084,
           "date": "2017-10-06",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10780375476251193,
           "logloss": 0.3733629020647132
@@ -2210,7 +2218,7 @@
           "period": 106000085,
           "date": "2017-10-10",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10745855072259841,
           "logloss": 0.37178418410725816
@@ -2219,7 +2227,7 @@
           "period": 106000086,
           "date": "2017-10-13",
           "hit": 2,
-          "single_number": 16,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10759749525075223,
           "logloss": 0.3724602670154503
@@ -2237,7 +2245,7 @@
           "period": 106000088,
           "date": "2017-10-20",
           "hit": 0,
-          "single_number": 16,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10741836365363766,
           "logloss": 0.3715915176578368
@@ -2282,7 +2290,7 @@
           "period": 106000093,
           "date": "2017-11-07",
           "hit": 1,
-          "single_number": 33,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.10785367858741404,
           "logloss": 0.3736327583431186
@@ -2291,7 +2299,7 @@
           "period": 106000094,
           "date": "2017-11-10",
           "hit": 1,
-          "single_number": 36,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.1077931296520191,
           "logloss": 0.3733663906682937
@@ -2300,7 +2308,7 @@
           "period": 106000095,
           "date": "2017-11-14",
           "hit": 1,
-          "single_number": 16,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.10752214102912519,
           "logloss": 0.37208814481335983
@@ -2309,7 +2317,7 @@
           "period": 106000096,
           "date": "2017-11-17",
           "hit": 1,
-          "single_number": 23,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.1072207796758157,
           "logloss": 0.37067017218852166
@@ -2354,7 +2362,7 @@
           "period": 106000101,
           "date": "2017-12-05",
           "hit": 0,
-          "single_number": 23,
+          "single_number": 2,
           "single_hit": false,
           "brier": 0.1077857556963446,
           "logloss": 0.3732953923441906
@@ -2390,7 +2398,7 @@
           "period": 106000105,
           "date": "2017-12-19",
           "hit": 2,
-          "single_number": 19,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10714960100773004,
           "logloss": 0.3703480081912396
@@ -2399,7 +2407,7 @@
           "period": 106000106,
           "date": "2017-12-22",
           "hit": 0,
-          "single_number": 14,
+          "single_number": 19,
           "single_hit": false,
           "brier": 0.10770640068203884,
           "logloss": 0.3729546471754184
@@ -2408,7 +2416,7 @@
           "period": 106000107,
           "date": "2017-12-26",
           "hit": 1,
-          "single_number": 19,
+          "single_number": 28,
           "single_hit": false,
           "brier": 0.10775415282393752,
           "logloss": 0.37317657168894347
@@ -2444,7 +2452,7 @@
           "period": 107000003,
           "date": "2018-01-09",
           "hit": 1,
-          "single_number": 19,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10726622900160068,
           "logloss": 0.3708790519535383
@@ -2453,7 +2461,7 @@
           "period": 107000004,
           "date": "2018-01-12",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 19,
           "single_hit": false,
           "brier": 0.10777903469728899,
           "logloss": 0.37329365225054195
@@ -2489,7 +2497,7 @@
           "period": 107000008,
           "date": "2018-01-26",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.1079821081961727,
           "logloss": 0.374215607938082
@@ -2498,8 +2506,8 @@
           "period": 107000009,
           "date": "2018-01-30",
           "hit": 4,
-          "single_number": 8,
-          "single_hit": true,
+          "single_number": 2,
+          "single_hit": false,
           "brier": 0.10685357607621983,
           "logloss": 0.36897990312630435
         },
@@ -2507,8 +2515,8 @@
           "period": 107000010,
           "date": "2018-02-02",
           "hit": 1,
-          "single_number": 2,
-          "single_hit": true,
+          "single_number": 8,
+          "single_hit": false,
           "brier": 0.10722482350086394,
           "logloss": 0.37069066538572276
         },
@@ -2561,7 +2569,7 @@
           "period": 107000016,
           "date": "2018-02-17",
           "hit": 0,
-          "single_number": 7,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10791668870585597,
           "logloss": 0.3738895897481365
@@ -2588,7 +2596,7 @@
           "period": 107000019,
           "date": "2018-02-20",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10788161559251996,
           "logloss": 0.3737903341688253
@@ -2597,8 +2605,8 @@
           "period": 107000020,
           "date": "2018-02-23",
           "hit": 1,
-          "single_number": 8,
-          "single_hit": false,
+          "single_number": 7,
+          "single_hit": true,
           "brier": 0.10729980811774908,
           "logloss": 0.37104904050693005
         },
@@ -2606,7 +2614,7 @@
           "period": 107000021,
           "date": "2018-02-27",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10733577213963591,
           "logloss": 0.37120137781227946
@@ -2615,7 +2623,7 @@
           "period": 107000022,
           "date": "2018-03-02",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10761162153826907,
           "logloss": 0.3724905684893151
@@ -2624,7 +2632,7 @@
           "period": 107000023,
           "date": "2018-03-06",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10831076753067642,
           "logloss": 0.3758030643294797
@@ -2633,8 +2641,8 @@
           "period": 107000024,
           "date": "2018-03-09",
           "hit": 1,
-          "single_number": 12,
-          "single_hit": true,
+          "single_number": 7,
+          "single_hit": false,
           "brier": 0.1074008111986555,
           "logloss": 0.3715225729941877
         },
@@ -2651,7 +2659,7 @@
           "period": 107000026,
           "date": "2018-03-16",
           "hit": 1,
-          "single_number": 8,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.1072099268276393,
           "logloss": 0.3705996363505832
@@ -2714,7 +2722,7 @@
           "period": 107000033,
           "date": "2018-04-10",
           "hit": 3,
-          "single_number": 7,
+          "single_number": 41,
           "single_hit": true,
           "brier": 0.1064278357592716,
           "logloss": 0.36704324087534634
@@ -2795,7 +2803,7 @@
           "period": 107000042,
           "date": "2018-05-11",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10778534397741295,
           "logloss": 0.3732818999257279
@@ -2804,7 +2812,7 @@
           "period": 107000043,
           "date": "2018-05-15",
           "hit": 0,
-          "single_number": 7,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10754157716851828,
           "logloss": 0.3721481225877095
@@ -2813,8 +2821,8 @@
           "period": 107000044,
           "date": "2018-05-18",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": true,
+          "single_number": 32,
+          "single_hit": false,
           "brier": 0.10719454169602786,
           "logloss": 0.3705825329721537
         },
@@ -2831,8 +2839,8 @@
           "period": 107000046,
           "date": "2018-05-25",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": false,
+          "single_number": 32,
+          "single_hit": true,
           "brier": 0.10746746745561038,
           "logloss": 0.37186134883393285
         },
@@ -2840,8 +2848,8 @@
           "period": 107000047,
           "date": "2018-05-29",
           "hit": 1,
-          "single_number": 32,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.1074388497039399,
           "logloss": 0.3717547187143704
         },
@@ -2849,7 +2857,7 @@
           "period": 107000048,
           "date": "2018-06-01",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10762659187253565,
           "logloss": 0.3725279928316351
@@ -2858,8 +2866,8 @@
           "period": 107000049,
           "date": "2018-06-05",
           "hit": 2,
-          "single_number": 32,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.1068021429748803,
           "logloss": 0.36878568981049004
         },
@@ -2867,8 +2875,8 @@
           "period": 107000050,
           "date": "2018-06-08",
           "hit": 1,
-          "single_number": 41,
-          "single_hit": false,
+          "single_number": 32,
+          "single_hit": true,
           "brier": 0.10737933761124932,
           "logloss": 0.37141563235728486
         },
@@ -2876,7 +2884,7 @@
           "period": 107000051,
           "date": "2018-06-12",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10738896070123659,
           "logloss": 0.3714429601060871
@@ -2885,7 +2893,7 @@
           "period": 107000052,
           "date": "2018-06-15",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10741037398519916,
           "logloss": 0.37152222835854165
@@ -2894,7 +2902,7 @@
           "period": 107000053,
           "date": "2018-06-19",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10726645422584423,
           "logloss": 0.37086969150583016
@@ -2903,7 +2911,7 @@
           "period": 107000054,
           "date": "2018-06-22",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10741316214893298,
           "logloss": 0.3715580094619055
@@ -2912,7 +2920,7 @@
           "period": 107000055,
           "date": "2018-06-26",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10748047270161518,
           "logloss": 0.37190549954105023
@@ -2921,7 +2929,7 @@
           "period": 107000056,
           "date": "2018-06-29",
           "hit": 3,
-          "single_number": 41,
+          "single_number": 37,
           "single_hit": true,
           "brier": 0.10691909670905833,
           "logloss": 0.36931701675367806
@@ -2975,7 +2983,7 @@
           "period": 107000062,
           "date": "2018-07-20",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10811646598746552,
           "logloss": 0.37487700045950734
@@ -2984,7 +2992,7 @@
           "period": 107000063,
           "date": "2018-07-24",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10754741668952957,
           "logloss": 0.37217260828385157
@@ -2993,7 +3001,7 @@
           "period": 107000064,
           "date": "2018-07-27",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10841408532348364,
           "logloss": 0.3762512016493183
@@ -3002,7 +3010,7 @@
           "period": 107000065,
           "date": "2018-07-31",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10743526879927665,
           "logloss": 0.37165099890076053
@@ -3011,7 +3019,7 @@
           "period": 107000066,
           "date": "2018-08-03",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10786949103799533,
           "logloss": 0.37369190547054426
@@ -3020,7 +3028,7 @@
           "period": 107000067,
           "date": "2018-08-07",
           "hit": 0,
-          "single_number": 37,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10723952642313062,
           "logloss": 0.3707371912013038
@@ -3029,7 +3037,7 @@
           "period": 107000068,
           "date": "2018-08-10",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10838672528458507,
           "logloss": 0.37613717841238575
@@ -3038,7 +3046,7 @@
           "period": 107000069,
           "date": "2018-08-14",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10738808581562664,
           "logloss": 0.37144904640139104
@@ -3047,7 +3055,7 @@
           "period": 107000070,
           "date": "2018-08-17",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10769796266774119,
           "logloss": 0.3728903340689296
@@ -3056,7 +3064,7 @@
           "period": 107000071,
           "date": "2018-08-21",
           "hit": 0,
-          "single_number": 35,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10733784155050537,
           "logloss": 0.371202787109096
@@ -3065,7 +3073,7 @@
           "period": 107000072,
           "date": "2018-08-24",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10767854469292434,
           "logloss": 0.3728379289990123
@@ -3074,7 +3082,7 @@
           "period": 107000073,
           "date": "2018-08-28",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 31,
           "single_hit": false,
           "brier": 0.10761636408732768,
           "logloss": 0.3725026371788152
@@ -3119,7 +3127,7 @@
           "period": 107000078,
           "date": "2018-09-14",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10759291630017229,
           "logloss": 0.37244120655163476
@@ -3209,7 +3217,7 @@
           "period": 107000088,
           "date": "2018-10-19",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.10763872698744703,
           "logloss": 0.3726253535503837
@@ -3227,8 +3235,8 @@
           "period": 107000090,
           "date": "2018-10-26",
           "hit": 3,
-          "single_number": 42,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10712247295141038,
           "logloss": 0.37023216815516424
         },
@@ -3236,7 +3244,7 @@
           "period": 107000091,
           "date": "2018-10-30",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 42,
           "single_hit": false,
           "brier": 0.10743888716658488,
           "logloss": 0.3716796476739696
@@ -3245,8 +3253,8 @@
           "period": 107000092,
           "date": "2018-11-02",
           "hit": 1,
-          "single_number": 42,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10738649781572275,
           "logloss": 0.3714713508212351
         },
@@ -3254,7 +3262,7 @@
           "period": 107000093,
           "date": "2018-11-06",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 42,
           "single_hit": false,
           "brier": 0.10791336682317106,
           "logloss": 0.37393727617736544
@@ -3263,7 +3271,7 @@
           "period": 107000094,
           "date": "2018-11-09",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10794108152529375,
           "logloss": 0.3740407782280575
@@ -3272,7 +3280,7 @@
           "period": 107000095,
           "date": "2018-11-13",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10755077535796563,
           "logloss": 0.3722111645078619
@@ -3308,8 +3316,8 @@
           "period": 107000099,
           "date": "2018-11-27",
           "hit": 2,
-          "single_number": 7,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10714703664036379,
           "logloss": 0.37033892542122027
         },
@@ -3317,7 +3325,7 @@
           "period": 107000100,
           "date": "2018-11-30",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10783220611291404,
           "logloss": 0.3735219840343243
@@ -3326,7 +3334,7 @@
           "period": 107000101,
           "date": "2018-12-04",
           "hit": 2,
-          "single_number": 36,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10747710183371295,
           "logloss": 0.3718796520319308
@@ -3335,8 +3343,8 @@
           "period": 107000102,
           "date": "2018-12-07",
           "hit": 3,
-          "single_number": 41,
-          "single_hit": false,
+          "single_number": 20,
+          "single_hit": true,
           "brier": 0.10695695824190551,
           "logloss": 0.3694634772062895
         },
@@ -3344,7 +3352,7 @@
           "period": 107000103,
           "date": "2018-12-11",
           "hit": 1,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.1073049058504008,
           "logloss": 0.37106469521917324
@@ -3353,7 +3361,7 @@
           "period": 107000104,
           "date": "2018-12-14",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10798388451580916,
           "logloss": 0.3742280383725433
@@ -3362,7 +3370,7 @@
           "period": 107000105,
           "date": "2018-12-18",
           "hit": 2,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10722617726982507,
           "logloss": 0.3706946981047935
@@ -3371,8 +3379,8 @@
           "period": 107000106,
           "date": "2018-12-21",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": true,
+          "single_number": 20,
+          "single_hit": false,
           "brier": 0.10716031221240675,
           "logloss": 0.3704018026453068
         },
@@ -3398,7 +3406,7 @@
           "period": 108000001,
           "date": "2019-01-01",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10760724655849027,
           "logloss": 0.37247883109571805
@@ -3407,8 +3415,8 @@
           "period": 108000002,
           "date": "2019-01-04",
           "hit": 1,
-          "single_number": 34,
-          "single_hit": false,
+          "single_number": 7,
+          "single_hit": true,
           "brier": 0.10760242965125827,
           "logloss": 0.3724846938043015
         },
@@ -3416,7 +3424,7 @@
           "period": 108000003,
           "date": "2019-01-08",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.1073790825787187,
           "logloss": 0.3713905396124209
@@ -3425,7 +3433,7 @@
           "period": 108000004,
           "date": "2019-01-11",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10754000858381321,
           "logloss": 0.3721775988220365
@@ -3434,8 +3442,8 @@
           "period": 108000005,
           "date": "2019-01-15",
           "hit": 2,
-          "single_number": 7,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10730043844230307,
           "logloss": 0.371094159928776
         },
@@ -3470,8 +3478,8 @@
           "period": 108000009,
           "date": "2019-01-29",
           "hit": 1,
-          "single_number": 20,
-          "single_hit": true,
+          "single_number": 7,
+          "single_hit": false,
           "brier": 0.10728119064492177,
           "logloss": 0.3710468417625748
         },
@@ -3488,7 +3496,7 @@
           "period": 108000011,
           "date": "2019-02-02",
           "hit": 1,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10768311030212589,
           "logloss": 0.37282378632750673
@@ -3497,7 +3505,7 @@
           "period": 108000012,
           "date": "2019-02-03",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10761219162288634,
           "logloss": 0.3724953035744455
@@ -3506,7 +3514,7 @@
           "period": 108000013,
           "date": "2019-02-04",
           "hit": 1,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.1073294833472674,
           "logloss": 0.37117606607311565
@@ -3515,7 +3523,7 @@
           "period": 108000014,
           "date": "2019-02-05",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10763947965862275,
           "logloss": 0.37265050651881
@@ -3524,7 +3532,7 @@
           "period": 108000015,
           "date": "2019-02-06",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10757686146698134,
           "logloss": 0.3723138872867068
@@ -3533,8 +3541,8 @@
           "period": 108000016,
           "date": "2019-02-07",
           "hit": 1,
-          "single_number": 7,
-          "single_hit": true,
+          "single_number": 20,
+          "single_hit": false,
           "brier": 0.10735162244802914,
           "logloss": 0.37130816197238475
         },
@@ -3542,7 +3550,7 @@
           "period": 108000017,
           "date": "2019-02-08",
           "hit": 3,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10697715746530506,
           "logloss": 0.3695576515331744
@@ -3551,8 +3559,8 @@
           "period": 108000018,
           "date": "2019-02-09",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": false,
+          "single_number": 20,
+          "single_hit": true,
           "brier": 0.10723947949370286,
           "logloss": 0.37078926588274763
         },
@@ -3560,7 +3568,7 @@
           "period": 108000019,
           "date": "2019-02-10",
           "hit": 3,
-          "single_number": 20,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10716220878474031,
           "logloss": 0.37043021883300437
@@ -3569,7 +3577,7 @@
           "period": 108000020,
           "date": "2019-02-12",
           "hit": 1,
-          "single_number": 8,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10734342309570673,
           "logloss": 0.37122763878042214
@@ -3578,7 +3586,7 @@
           "period": 108000021,
           "date": "2019-02-15",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.1082230545659136,
           "logloss": 0.375353440093793
@@ -3587,7 +3595,7 @@
           "period": 108000022,
           "date": "2019-02-19",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10792059162081427,
           "logloss": 0.37393106738070464
@@ -3596,8 +3604,8 @@
           "period": 108000023,
           "date": "2019-02-22",
           "hit": 1,
-          "single_number": 20,
-          "single_hit": true,
+          "single_number": 32,
+          "single_hit": false,
           "brier": 0.10748989404931505,
           "logloss": 0.3719331676293909
         },
@@ -3749,7 +3757,7 @@
           "period": 108000040,
           "date": "2019-04-23",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 45,
           "single_hit": false,
           "brier": 0.10760822297217269,
           "logloss": 0.3724957932445421
@@ -3758,7 +3766,7 @@
           "period": 108000041,
           "date": "2019-04-26",
           "hit": 1,
-          "single_number": 45,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10722148878346206,
           "logloss": 0.37067426435680995
@@ -3767,7 +3775,7 @@
           "period": 108000042,
           "date": "2019-04-30",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.10762433872635283,
           "logloss": 0.37253267241939525
@@ -3821,8 +3829,8 @@
           "period": 108000048,
           "date": "2019-05-21",
           "hit": 1,
-          "single_number": 7,
-          "single_hit": true,
+          "single_number": 45,
+          "single_hit": false,
           "brier": 0.10742084685050722,
           "logloss": 0.37164570634581173
         },
@@ -3848,7 +3856,7 @@
           "period": 108000051,
           "date": "2019-05-31",
           "hit": 2,
-          "single_number": 12,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10724946831135387,
           "logloss": 0.370819882245854
@@ -3857,7 +3865,7 @@
           "period": 108000052,
           "date": "2019-06-04",
           "hit": 0,
-          "single_number": 7,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.10769313610827674,
           "logloss": 0.37286639952329714
@@ -3875,7 +3883,7 @@
           "period": 108000054,
           "date": "2019-06-11",
           "hit": 0,
-          "single_number": 19,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.1075191541438953,
           "logloss": 0.3720599802283568
@@ -3938,8 +3946,8 @@
           "period": 108000061,
           "date": "2019-07-05",
           "hit": 2,
-          "single_number": 12,
-          "single_hit": false,
+          "single_number": 32,
+          "single_hit": true,
           "brier": 0.10713797691363207,
           "logloss": 0.37032357907478974
         },
@@ -3947,7 +3955,7 @@
           "period": 108000062,
           "date": "2019-07-09",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10728430689257148,
           "logloss": 0.3709839547002131
@@ -3956,7 +3964,7 @@
           "period": 108000063,
           "date": "2019-07-12",
           "hit": 1,
-          "single_number": 11,
+          "single_number": 32,
           "single_hit": false,
           "brier": 0.10745781511038349,
           "logloss": 0.37178595931104025
@@ -3992,7 +4000,7 @@
           "period": 108000067,
           "date": "2019-07-26",
           "hit": 2,
-          "single_number": 12,
+          "single_number": 37,
           "single_hit": false,
           "brier": 0.10732451315642877,
           "logloss": 0.3711679257829114
@@ -4001,8 +4009,8 @@
           "period": 108000068,
           "date": "2019-07-30",
           "hit": 1,
-          "single_number": 37,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10721930792130016,
           "logloss": 0.3706910004159233
         },
@@ -4010,7 +4018,7 @@
           "period": 108000069,
           "date": "2019-08-02",
           "hit": 0,
-          "single_number": 12,
+          "single_number": 37,
           "single_hit": false,
           "brier": 0.10788302331381369,
           "logloss": 0.3737411047687594
@@ -4019,8 +4027,8 @@
           "period": 108000070,
           "date": "2019-08-06",
           "hit": 1,
-          "single_number": 37,
-          "single_hit": true,
+          "single_number": 12,
+          "single_hit": false,
           "brier": 0.10769990312431914,
           "logloss": 0.3729271123593374
         },
@@ -4028,7 +4036,7 @@
           "period": 108000071,
           "date": "2019-08-09",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 37,
           "single_hit": false,
           "brier": 0.10776681406217814,
           "logloss": 0.3732205760642127
@@ -4037,7 +4045,7 @@
           "period": 108000072,
           "date": "2019-08-13",
           "hit": 2,
-          "single_number": 37,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10739550056898438,
           "logloss": 0.37152044722457445
@@ -4046,8 +4054,8 @@
           "period": 108000073,
           "date": "2019-08-16",
           "hit": 2,
-          "single_number": 12,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10696408783283821,
           "logloss": 0.3694864353144872
         },
@@ -4055,7 +4063,7 @@
           "period": 108000074,
           "date": "2019-08-20",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10761922484715213,
           "logloss": 0.37252346040201306
@@ -4064,7 +4072,7 @@
           "period": 108000075,
           "date": "2019-08-23",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10737310718889904,
           "logloss": 0.3713707903124849
@@ -4073,7 +4081,7 @@
           "period": 108000076,
           "date": "2019-08-27",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10764525348242893,
           "logloss": 0.3726301626476002
@@ -4082,7 +4090,7 @@
           "period": 108000077,
           "date": "2019-08-30",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10765910810172953,
           "logloss": 0.37273262984245664
@@ -4091,7 +4099,7 @@
           "period": 108000078,
           "date": "2019-09-03",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 42,
           "single_hit": false,
           "brier": 0.10735463908949831,
           "logloss": 0.3713133714173429
@@ -4100,7 +4108,7 @@
           "period": 108000079,
           "date": "2019-09-06",
           "hit": 1,
-          "single_number": 11,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10748882080357913,
           "logloss": 0.37192055158352233
@@ -4109,8 +4117,8 @@
           "period": 108000080,
           "date": "2019-09-10",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10744442824266,
           "logloss": 0.371745708195313
         },
@@ -4118,7 +4126,7 @@
           "period": 108000081,
           "date": "2019-09-13",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10756799412211322,
           "logloss": 0.3722946432993989
@@ -4127,7 +4135,7 @@
           "period": 108000082,
           "date": "2019-09-17",
           "hit": 3,
-          "single_number": 41,
+          "single_number": 12,
           "single_hit": true,
           "brier": 0.10708268564594936,
           "logloss": 0.37008353231789787
@@ -4136,7 +4144,7 @@
           "period": 108000083,
           "date": "2019-09-20",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10771670572173302,
           "logloss": 0.3729904665678897
@@ -4145,7 +4153,7 @@
           "period": 108000084,
           "date": "2019-09-24",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10764102465507072,
           "logloss": 0.37262559721865296
@@ -4154,7 +4162,7 @@
           "period": 108000085,
           "date": "2019-09-27",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10758079951495224,
           "logloss": 0.37236316319653207
@@ -4163,8 +4171,8 @@
           "period": 108000086,
           "date": "2019-10-01",
           "hit": 2,
-          "single_number": 37,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10742224007527708,
           "logloss": 0.3716667452287952
         },
@@ -4172,7 +4180,7 @@
           "period": 108000087,
           "date": "2019-10-04",
           "hit": 3,
-          "single_number": 12,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10719608681275795,
           "logloss": 0.37056044046606257
@@ -4181,7 +4189,7 @@
           "period": 108000088,
           "date": "2019-10-08",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.1075756653977315,
           "logloss": 0.3723132680625341
@@ -4190,8 +4198,8 @@
           "period": 108000089,
           "date": "2019-10-11",
           "hit": 2,
-          "single_number": 12,
-          "single_hit": true,
+          "single_number": 42,
+          "single_hit": false,
           "brier": 0.10680684234631292,
           "logloss": 0.3687949599957229
         },
@@ -4244,8 +4252,8 @@
           "period": 108000095,
           "date": "2019-11-01",
           "hit": 2,
-          "single_number": 12,
-          "single_hit": true,
+          "single_number": 21,
+          "single_hit": false,
           "brier": 0.10676651276726014,
           "logloss": 0.3686052404666311
         },
@@ -4298,8 +4306,8 @@
           "period": 108000101,
           "date": "2019-11-22",
           "hit": 2,
-          "single_number": 26,
-          "single_hit": true,
+          "single_number": 42,
+          "single_hit": false,
           "brier": 0.10747881343910262,
           "logloss": 0.37191368955302406
         },
@@ -4316,7 +4324,7 @@
           "period": 108000103,
           "date": "2019-11-29",
           "hit": 1,
-          "single_number": 3,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10741498971697905,
           "logloss": 0.3715652795236529
@@ -4334,7 +4342,7 @@
           "period": 108000105,
           "date": "2019-12-06",
           "hit": 1,
-          "single_number": 15,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.1073174018334519,
           "logloss": 0.3711011902597603
@@ -4370,7 +4378,7 @@
           "period": 108000109,
           "date": "2019-12-20",
           "hit": 1,
-          "single_number": 37,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.1075975249007069,
           "logloss": 0.37245661623806897
@@ -4415,7 +4423,7 @@
           "period": 109000002,
           "date": "2020-01-07",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10743089059413986,
           "logloss": 0.37164986000795364
@@ -4424,7 +4432,7 @@
           "period": 109000003,
           "date": "2020-01-10",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10772306393852185,
           "logloss": 0.3730353714435959
@@ -4469,8 +4477,8 @@
           "period": 109000008,
           "date": "2020-01-24",
           "hit": 3,
-          "single_number": 18,
-          "single_hit": true,
+          "single_number": 30,
+          "single_hit": false,
           "brier": 0.10648035283774818,
           "logloss": 0.36729895498275467
         },
@@ -4487,7 +4495,7 @@
           "period": 109000010,
           "date": "2020-01-26",
           "hit": 0,
-          "single_number": 12,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10791835984203027,
           "logloss": 0.3739072102461896
@@ -4649,8 +4657,8 @@
           "period": 109000028,
           "date": "2020-03-10",
           "hit": 2,
-          "single_number": 13,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10770972541868687,
           "logloss": 0.37301572724955273
         },
@@ -4658,7 +4666,7 @@
           "period": 109000029,
           "date": "2020-03-13",
           "hit": 0,
-          "single_number": 12,
+          "single_number": 13,
           "single_hit": false,
           "brier": 0.10771216133720778,
           "logloss": 0.37293652314971987
@@ -4667,7 +4675,7 @@
           "period": 109000030,
           "date": "2020-03-17",
           "hit": 0,
-          "single_number": 13,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10795671063838708,
           "logloss": 0.3741139973554241
@@ -4676,8 +4684,8 @@
           "period": 109000031,
           "date": "2020-03-20",
           "hit": 1,
-          "single_number": 12,
-          "single_hit": false,
+          "single_number": 13,
+          "single_hit": true,
           "brier": 0.10735805278493328,
           "logloss": 0.37131133893136486
         },
@@ -4685,8 +4693,8 @@
           "period": 109000032,
           "date": "2020-03-24",
           "hit": 2,
-          "single_number": 13,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10713109025301851,
           "logloss": 0.37025775109825737
         },
@@ -4694,7 +4702,7 @@
           "period": 109000033,
           "date": "2020-03-27",
           "hit": 2,
-          "single_number": 12,
+          "single_number": 13,
           "single_hit": false,
           "brier": 0.10715364872744797,
           "logloss": 0.3703639938618901
@@ -4703,7 +4711,7 @@
           "period": 109000034,
           "date": "2020-03-31",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10796897867836623,
           "logloss": 0.37416023181034014
@@ -4712,7 +4720,7 @@
           "period": 109000035,
           "date": "2020-04-03",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10738118173630315,
           "logloss": 0.37140022583684035
@@ -4721,8 +4729,8 @@
           "period": 109000036,
           "date": "2020-04-07",
           "hit": 1,
-          "single_number": 13,
-          "single_hit": false,
+          "single_number": 12,
+          "single_hit": true,
           "brier": 0.10776015690617975,
           "logloss": 0.3732069491677516
         },
@@ -4730,7 +4738,7 @@
           "period": 109000037,
           "date": "2020-04-10",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10704194698230929,
           "logloss": 0.36982562580958794
@@ -4739,7 +4747,7 @@
           "period": 109000038,
           "date": "2020-04-14",
           "hit": 0,
-          "single_number": 13,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10749820890055861,
           "logloss": 0.37193704023275886
@@ -4748,7 +4756,7 @@
           "period": 109000039,
           "date": "2020-04-17",
           "hit": 0,
-          "single_number": 12,
+          "single_number": 13,
           "single_hit": false,
           "brier": 0.10759648829405583,
           "logloss": 0.37239783953209055
@@ -4757,8 +4765,8 @@
           "period": 109000040,
           "date": "2020-04-21",
           "hit": 3,
-          "single_number": 33,
-          "single_hit": true,
+          "single_number": 12,
+          "single_hit": false,
           "brier": 0.10684075176333488,
           "logloss": 0.3689364105096062
         },
@@ -4820,7 +4828,7 @@
           "period": 109000047,
           "date": "2020-05-15",
           "hit": 1,
-          "single_number": 8,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10796200776462819,
           "logloss": 0.37418954006055954
@@ -4829,7 +4837,7 @@
           "period": 109000048,
           "date": "2020-05-19",
           "hit": 0,
-          "single_number": 45,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10762432004548779,
           "logloss": 0.3725450746974634
@@ -4847,7 +4855,7 @@
           "period": 109000050,
           "date": "2020-05-26",
           "hit": 1,
-          "single_number": 12,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10777080081717227,
           "logloss": 0.3732703163185046
@@ -4892,8 +4900,8 @@
           "period": 109000055,
           "date": "2020-06-12",
           "hit": 3,
-          "single_number": 8,
-          "single_hit": false,
+          "single_number": 33,
+          "single_hit": true,
           "brier": 0.10713209042406316,
           "logloss": 0.37032995442607414
         },
@@ -4901,7 +4909,7 @@
           "period": 109000056,
           "date": "2020-06-16",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10804061711172128,
           "logloss": 0.374491010119627
@@ -4910,7 +4918,7 @@
           "period": 109000057,
           "date": "2020-06-19",
           "hit": 1,
-          "single_number": 49,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10736093941227688,
           "logloss": 0.3713367512971457
@@ -4919,8 +4927,8 @@
           "period": 109000058,
           "date": "2020-06-23",
           "hit": 2,
-          "single_number": 33,
-          "single_hit": false,
+          "single_number": 1,
+          "single_hit": true,
           "brier": 0.10712309565678524,
           "logloss": 0.3702697965546331
         },
@@ -4928,7 +4936,7 @@
           "period": 109000059,
           "date": "2020-06-26",
           "hit": 2,
-          "single_number": 1,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10741633657806882,
           "logloss": 0.37157844216572133
@@ -4937,7 +4945,7 @@
           "period": 109000060,
           "date": "2020-06-30",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10730103654388697,
           "logloss": 0.37101903201946185
@@ -4946,7 +4954,7 @@
           "period": 109000061,
           "date": "2020-07-03",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10769676520875435,
           "logloss": 0.3729030371214963
@@ -4955,7 +4963,7 @@
           "period": 109000062,
           "date": "2020-07-07",
           "hit": 1,
-          "single_number": 45,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10788125894139874,
           "logloss": 0.373771402751754
@@ -4964,7 +4972,7 @@
           "period": 109000063,
           "date": "2020-07-10",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 45,
           "single_hit": false,
           "brier": 0.10734847079674643,
           "logloss": 0.37127363717487705
@@ -4982,7 +4990,7 @@
           "period": 109000065,
           "date": "2020-07-17",
           "hit": 0,
-          "single_number": 49,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10784437827489853,
           "logloss": 0.37356302717346473
@@ -4991,7 +4999,7 @@
           "period": 109000066,
           "date": "2020-07-21",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10731086115645307,
           "logloss": 0.3710805114813465
@@ -5000,7 +5008,7 @@
           "period": 109000067,
           "date": "2020-07-24",
           "hit": 0,
-          "single_number": 49,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10797584533468088,
           "logloss": 0.37418399083571713
@@ -5009,7 +5017,7 @@
           "period": 109000068,
           "date": "2020-07-28",
           "hit": 2,
-          "single_number": 1,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10716046096897802,
           "logloss": 0.37039230848345395
@@ -5018,8 +5026,8 @@
           "period": 109000069,
           "date": "2020-07-31",
           "hit": 3,
-          "single_number": 49,
-          "single_hit": false,
+          "single_number": 33,
+          "single_hit": true,
           "brier": 0.1070710770294499,
           "logloss": 0.37002525672033304
         },
@@ -5027,8 +5035,8 @@
           "period": 109000070,
           "date": "2020-08-04",
           "hit": 2,
-          "single_number": 33,
-          "single_hit": true,
+          "single_number": 16,
+          "single_hit": false,
           "brier": 0.1069782588450194,
           "logloss": 0.36958470438109337
         },
@@ -5045,7 +5053,7 @@
           "period": 109000072,
           "date": "2020-08-11",
           "hit": 1,
-          "single_number": 45,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10754733000862185,
           "logloss": 0.37218729443196663
@@ -5063,7 +5071,7 @@
           "period": 109000074,
           "date": "2020-08-18",
           "hit": 2,
-          "single_number": 33,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10744645328117716,
           "logloss": 0.37173045532660143
@@ -5072,8 +5080,8 @@
           "period": 109000075,
           "date": "2020-08-21",
           "hit": 1,
-          "single_number": 45,
-          "single_hit": true,
+          "single_number": 33,
+          "single_hit": false,
           "brier": 0.10727489322333236,
           "logloss": 0.37096275183995786
         },
@@ -5126,7 +5134,7 @@
           "period": 109000081,
           "date": "2020-09-11",
           "hit": 2,
-          "single_number": 2,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10708546974502367,
           "logloss": 0.37005853385209997
@@ -5144,7 +5152,7 @@
           "period": 109000083,
           "date": "2020-09-18",
           "hit": 0,
-          "single_number": 16,
+          "single_number": 45,
           "single_hit": false,
           "brier": 0.1076645864560317,
           "logloss": 0.37273108550460216
@@ -5153,8 +5161,8 @@
           "period": 109000084,
           "date": "2020-09-22",
           "hit": 1,
-          "single_number": 1,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10737329393104376,
           "logloss": 0.3713878658807419
         },
@@ -5162,7 +5170,7 @@
           "period": 109000085,
           "date": "2020-09-25",
           "hit": 0,
-          "single_number": 29,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10751551528441185,
           "logloss": 0.3720176807593778
@@ -5171,7 +5179,7 @@
           "period": 109000086,
           "date": "2020-09-29",
           "hit": 2,
-          "single_number": 48,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10721308675535848,
           "logloss": 0.3706656844334794
@@ -5189,7 +5197,7 @@
           "period": 109000088,
           "date": "2020-10-06",
           "hit": 0,
-          "single_number": 16,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10782904574775584,
           "logloss": 0.37349737520485643
@@ -5198,7 +5206,7 @@
           "period": 109000089,
           "date": "2020-10-09",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10763375317254836,
           "logloss": 0.37259135809557387
@@ -5207,8 +5215,8 @@
           "period": 109000090,
           "date": "2020-10-13",
           "hit": 1,
-          "single_number": 2,
-          "single_hit": false,
+          "single_number": 1,
+          "single_hit": true,
           "brier": 0.10788458560784957,
           "logloss": 0.37379532412701505
         },
@@ -5216,7 +5224,7 @@
           "period": 109000091,
           "date": "2020-10-16",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 16,
           "single_hit": false,
           "brier": 0.10751930485974044,
           "logloss": 0.37208146073329235
@@ -5324,7 +5332,7 @@
           "period": 109000103,
           "date": "2020-11-27",
           "hit": 2,
-          "single_number": 29,
+          "single_number": 5,
           "single_hit": false,
           "brier": 0.1070042958103574,
           "logloss": 0.36965674660625364
@@ -5333,8 +5341,8 @@
           "period": 109000104,
           "date": "2020-12-01",
           "hit": 2,
-          "single_number": 19,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10738530881046587,
           "logloss": 0.3715050058266018
         },
@@ -5342,7 +5350,7 @@
           "period": 109000105,
           "date": "2020-12-04",
           "hit": 2,
-          "single_number": 29,
+          "single_number": 48,
           "single_hit": false,
           "brier": 0.10723212889081375,
           "logloss": 0.37075388240544555
@@ -5351,7 +5359,7 @@
           "period": 109000106,
           "date": "2020-12-08",
           "hit": 0,
-          "single_number": 44,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10775481229099595,
           "logloss": 0.3731305998395494
@@ -5360,7 +5368,7 @@
           "period": 109000107,
           "date": "2020-12-11",
           "hit": 0,
-          "single_number": 29,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.1080646605435631,
           "logloss": 0.3745809408365289
@@ -5369,7 +5377,7 @@
           "period": 109000108,
           "date": "2020-12-15",
           "hit": 2,
-          "single_number": 44,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10728697526218768,
           "logloss": 0.3709931504210302
@@ -5378,8 +5386,8 @@
           "period": 109000109,
           "date": "2020-12-18",
           "hit": 2,
-          "single_number": 29,
-          "single_hit": false,
+          "single_number": 2,
+          "single_hit": true,
           "brier": 0.1074010488724813,
           "logloss": 0.37156018478252484
         },
@@ -5387,7 +5395,7 @@
           "period": 109000110,
           "date": "2020-12-22",
           "hit": 2,
-          "single_number": 2,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10715582749679246,
           "logloss": 0.3703786999565997
@@ -5396,7 +5404,7 @@
           "period": 109000111,
           "date": "2020-12-25",
           "hit": 2,
-          "single_number": 29,
+          "single_number": 30,
           "single_hit": true,
           "brier": 0.10647579410553618,
           "logloss": 0.36725825426691605
@@ -5405,7 +5413,7 @@
           "period": 109000112,
           "date": "2020-12-29",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10827755182933664,
           "logloss": 0.3756168228350558
@@ -5414,7 +5422,7 @@
           "period": 110000001,
           "date": "2021-01-01",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10765312893163678,
           "logloss": 0.3726820056068995
@@ -5423,7 +5431,7 @@
           "period": 110000002,
           "date": "2021-01-05",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10739825641142124,
           "logloss": 0.3714592028980128
@@ -5432,7 +5440,7 @@
           "period": 110000003,
           "date": "2021-01-08",
           "hit": 0,
-          "single_number": 29,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10801411784220091,
           "logloss": 0.37436851087186257
@@ -5441,7 +5449,7 @@
           "period": 110000004,
           "date": "2021-01-12",
           "hit": 2,
-          "single_number": 30,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.1070420436044192,
           "logloss": 0.36982911826996884
@@ -5450,7 +5458,7 @@
           "period": 110000005,
           "date": "2021-01-15",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10756034170526635,
           "logloss": 0.3722660714450022
@@ -5540,7 +5548,7 @@
           "period": 110000015,
           "date": "2021-02-12",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 43,
           "single_hit": false,
           "brier": 0.10741547420826987,
           "logloss": 0.3715672406597695
@@ -5549,8 +5557,8 @@
           "period": 110000016,
           "date": "2021-02-13",
           "hit": 3,
-          "single_number": 43,
-          "single_hit": true,
+          "single_number": 41,
+          "single_hit": false,
           "brier": 0.10721186236758733,
           "logloss": 0.3706761888529211
         },
@@ -5693,7 +5701,7 @@
           "period": 110000032,
           "date": "2021-03-19",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10766775883301452,
           "logloss": 0.3727543467944691
@@ -5702,7 +5710,7 @@
           "period": 110000033,
           "date": "2021-03-23",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10759116176784238,
           "logloss": 0.3724081103297924
@@ -5711,7 +5719,7 @@
           "period": 110000034,
           "date": "2021-03-26",
           "hit": 2,
-          "single_number": 8,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10749252565176523,
           "logloss": 0.37196088887695633
@@ -5864,7 +5872,7 @@
           "period": 110000051,
           "date": "2021-05-25",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.1075314677017018,
           "logloss": 0.37212764651466085
@@ -5882,7 +5890,7 @@
           "period": 110000053,
           "date": "2021-06-01",
           "hit": 2,
-          "single_number": 46,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10724722114208635,
           "logloss": 0.37079259017691685
@@ -5918,7 +5926,7 @@
           "period": 110000057,
           "date": "2021-06-15",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10749448099022166,
           "logloss": 0.37195644660493626
@@ -5936,8 +5944,8 @@
           "period": 110000059,
           "date": "2021-06-22",
           "hit": 1,
-          "single_number": 43,
-          "single_hit": true,
+          "single_number": 46,
+          "single_hit": false,
           "brier": 0.10743120859345687,
           "logloss": 0.3716640808592667
         },
@@ -5999,7 +6007,7 @@
           "period": 110000066,
           "date": "2021-07-16",
           "hit": 0,
-          "single_number": 9,
+          "single_number": 27,
           "single_hit": false,
           "brier": 0.10778994685344154,
           "logloss": 0.37330760088472154
@@ -6008,8 +6016,8 @@
           "period": 110000067,
           "date": "2021-07-20",
           "hit": 2,
-          "single_number": 1,
-          "single_hit": true,
+          "single_number": 9,
+          "single_hit": false,
           "brier": 0.10734551474070071,
           "logloss": 0.3712702307690682
         },
@@ -6017,7 +6025,7 @@
           "period": 110000068,
           "date": "2021-07-23",
           "hit": 1,
-          "single_number": 9,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10758854338310611,
           "logloss": 0.3723682372626624
@@ -6026,7 +6034,7 @@
           "period": 110000069,
           "date": "2021-07-27",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 9,
           "single_hit": false,
           "brier": 0.10766617087122117,
           "logloss": 0.3727524851691608
@@ -6035,7 +6043,7 @@
           "period": 110000070,
           "date": "2021-07-30",
           "hit": 1,
-          "single_number": 9,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10698379101516298,
           "logloss": 0.3695717236063329
@@ -6062,7 +6070,7 @@
           "period": 110000073,
           "date": "2021-08-10",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 43,
           "single_hit": false,
           "brier": 0.1072280489502072,
           "logloss": 0.3706836112372696
@@ -6089,7 +6097,7 @@
           "period": 110000076,
           "date": "2021-08-20",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.1076469363461656,
           "logloss": 0.3726135856450083
@@ -6098,8 +6106,8 @@
           "period": 110000077,
           "date": "2021-08-24",
           "hit": 1,
-          "single_number": 29,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10760095751317607,
           "logloss": 0.37251815346590195
         },
@@ -6107,7 +6115,7 @@
           "period": 110000078,
           "date": "2021-08-27",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10739242994713771,
           "logloss": 0.3714404674578352
@@ -6116,7 +6124,7 @@
           "period": 110000079,
           "date": "2021-08-31",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10777014184524043,
           "logloss": 0.37327648460646773
@@ -6152,8 +6160,8 @@
           "period": 110000083,
           "date": "2021-09-14",
           "hit": 1,
-          "single_number": 1,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10754948941733983,
           "logloss": 0.37225794280572555
         },
@@ -6161,7 +6169,7 @@
           "period": 110000084,
           "date": "2021-09-17",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10760147625948605,
           "logloss": 0.3724352990415071
@@ -6170,7 +6178,7 @@
           "period": 110000085,
           "date": "2021-09-21",
           "hit": 2,
-          "single_number": 1,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10757829829583851,
           "logloss": 0.3723483502336533
@@ -6179,7 +6187,7 @@
           "period": 110000086,
           "date": "2021-09-24",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 1,
           "single_hit": false,
           "brier": 0.10810239234299449,
           "logloss": 0.3748098863179974
@@ -6188,7 +6196,7 @@
           "period": 110000087,
           "date": "2021-09-28",
           "hit": 0,
-          "single_number": 1,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10801987952369785,
           "logloss": 0.3744060467122958
@@ -6197,8 +6205,8 @@
           "period": 110000088,
           "date": "2021-10-01",
           "hit": 1,
-          "single_number": 41,
-          "single_hit": true,
+          "single_number": 1,
+          "single_hit": false,
           "brier": 0.10712882746935501,
           "logloss": 0.3702794489119666
         },
@@ -6332,7 +6340,7 @@
           "period": 110000103,
           "date": "2021-11-23",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10767454399567011,
           "logloss": 0.3727941315866259
@@ -6359,8 +6367,8 @@
           "period": 110000106,
           "date": "2021-12-03",
           "hit": 1,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10726921181058961,
           "logloss": 0.3709044371934368
         },
@@ -6368,7 +6376,7 @@
           "period": 110000107,
           "date": "2021-12-07",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.1075321624821994,
           "logloss": 0.3721192365505454
@@ -6377,7 +6385,7 @@
           "period": 110000108,
           "date": "2021-12-10",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.1077660036327368,
           "logloss": 0.37320596041304904
@@ -6395,8 +6403,8 @@
           "period": 110000110,
           "date": "2021-12-17",
           "hit": 3,
-          "single_number": 21,
-          "single_hit": false,
+          "single_number": 30,
+          "single_hit": true,
           "brier": 0.10715038969079486,
           "logloss": 0.3703660160869687
         },
@@ -6404,7 +6412,7 @@
           "period": 110000111,
           "date": "2021-12-21",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.1078904505915885,
           "logloss": 0.3737948542142335
@@ -6485,7 +6493,7 @@
           "period": 111000006,
           "date": "2022-01-21",
           "hit": 1,
-          "single_number": 1,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10725681540590137,
           "logloss": 0.37085609984058465
@@ -6494,8 +6502,8 @@
           "period": 111000007,
           "date": "2022-01-25",
           "hit": 2,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 27,
+          "single_hit": true,
           "brier": 0.1067832577934629,
           "logloss": 0.3686618450820567
         },
@@ -6503,7 +6511,7 @@
           "period": 111000008,
           "date": "2022-01-28",
           "hit": 1,
-          "single_number": 27,
+          "single_number": 37,
           "single_hit": false,
           "brier": 0.10739258417706105,
           "logloss": 0.3714571305569142
@@ -6512,7 +6520,7 @@
           "period": 111000009,
           "date": "2022-01-29",
           "hit": 1,
-          "single_number": 9,
+          "single_number": 27,
           "single_hit": false,
           "brier": 0.10735840052279227,
           "logloss": 0.3713381945287867
@@ -6521,7 +6529,7 @@
           "period": 111000010,
           "date": "2022-01-30",
           "hit": 1,
-          "single_number": 27,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10757390390713942,
           "logloss": 0.37230091425719447
@@ -6530,7 +6538,7 @@
           "period": 111000011,
           "date": "2022-01-31",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 15,
           "single_hit": false,
           "brier": 0.1077416462125311,
           "logloss": 0.37310041296563357
@@ -6539,8 +6547,8 @@
           "period": 111000012,
           "date": "2022-02-01",
           "hit": 1,
-          "single_number": 15,
-          "single_hit": false,
+          "single_number": 44,
+          "single_hit": true,
           "brier": 0.10767730032887635,
           "logloss": 0.3728254145425455
         },
@@ -6548,7 +6556,7 @@
           "period": 111000013,
           "date": "2022-02-02",
           "hit": 0,
-          "single_number": 44,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10759919355997104,
           "logloss": 0.3724256216241507
@@ -6557,7 +6565,7 @@
           "period": 111000014,
           "date": "2022-02-03",
           "hit": 1,
-          "single_number": 41,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10739421921676133,
           "logloss": 0.37146672683930726
@@ -6566,7 +6574,7 @@
           "period": 111000015,
           "date": "2022-02-04",
           "hit": 0,
-          "single_number": 44,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10758628067638702,
           "logloss": 0.3723882445404511
@@ -6584,7 +6592,7 @@
           "period": 111000017,
           "date": "2022-02-06",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10786816887506485,
           "logloss": 0.37368723164801515
@@ -6602,7 +6610,7 @@
           "period": 111000019,
           "date": "2022-02-08",
           "hit": 2,
-          "single_number": 2,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10725969788013567,
           "logloss": 0.37086521343745105
@@ -6656,7 +6664,7 @@
           "period": 111000025,
           "date": "2022-02-22",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10756637422757959,
           "logloss": 0.3722604615051613
@@ -6719,8 +6727,8 @@
           "period": 111000032,
           "date": "2022-03-18",
           "hit": 4,
-          "single_number": 1,
-          "single_hit": false,
+          "single_number": 26,
+          "single_hit": true,
           "brier": 0.1066085329641186,
           "logloss": 0.36786291454063075
         },
@@ -6728,8 +6736,8 @@
           "period": 111000033,
           "date": "2022-03-22",
           "hit": 3,
-          "single_number": 44,
-          "single_hit": false,
+          "single_number": 21,
+          "single_hit": true,
           "brier": 0.10693771479835394,
           "logloss": 0.36938582151501764
         },
@@ -6737,7 +6745,7 @@
           "period": 111000034,
           "date": "2022-03-25",
           "hit": 0,
-          "single_number": 21,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10761666422917487,
           "logloss": 0.3724849140081289
@@ -6746,8 +6754,8 @@
           "period": 111000035,
           "date": "2022-03-29",
           "hit": 1,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 21,
+          "single_hit": true,
           "brier": 0.10718833304516283,
           "logloss": 0.370522816320423
         },
@@ -6755,7 +6763,7 @@
           "period": 111000036,
           "date": "2022-04-01",
           "hit": 0,
-          "single_number": 21,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10794327524066853,
           "logloss": 0.3740358223252389
@@ -6764,7 +6772,7 @@
           "period": 111000037,
           "date": "2022-04-05",
           "hit": 0,
-          "single_number": 18,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10736422921979243,
           "logloss": 0.371309798720119
@@ -6773,7 +6781,7 @@
           "period": 111000038,
           "date": "2022-04-08",
           "hit": 1,
-          "single_number": 21,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10734081400896643,
           "logloss": 0.37122795673401976
@@ -6782,7 +6790,7 @@
           "period": 111000039,
           "date": "2022-04-12",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10751409763818436,
           "logloss": 0.3720064798069504
@@ -6791,7 +6799,7 @@
           "period": 111000040,
           "date": "2022-04-15",
           "hit": 1,
-          "single_number": 21,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10716811480488461,
           "logloss": 0.3704228200029723
@@ -6800,8 +6808,8 @@
           "period": 111000041,
           "date": "2022-04-19",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": true,
+          "single_number": 21,
+          "single_hit": false,
           "brier": 0.10756617705306452,
           "logloss": 0.37229290973154483
         },
@@ -6818,7 +6826,7 @@
           "period": 111000043,
           "date": "2022-04-26",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10754746399036037,
           "logloss": 0.37220452726622943
@@ -6836,8 +6844,8 @@
           "period": 111000045,
           "date": "2022-05-03",
           "hit": 2,
-          "single_number": 18,
-          "single_hit": true,
+          "single_number": 44,
+          "single_hit": false,
           "brier": 0.10690467713827079,
           "logloss": 0.3692378491155
         },
@@ -6854,7 +6862,7 @@
           "period": 111000047,
           "date": "2022-05-10",
           "hit": 1,
-          "single_number": 21,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10770090989570988,
           "logloss": 0.37290067892060436
@@ -6908,7 +6916,7 @@
           "period": 111000053,
           "date": "2022-05-31",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 44,
           "single_hit": false,
           "brier": 0.10769282888525417,
           "logloss": 0.3728834572169873
@@ -6917,8 +6925,8 @@
           "period": 111000054,
           "date": "2022-06-03",
           "hit": 1,
-          "single_number": 11,
-          "single_hit": true,
+          "single_number": 18,
+          "single_hit": false,
           "brier": 0.10731681470912893,
           "logloss": 0.3711572457783132
         },
@@ -6926,8 +6934,8 @@
           "period": 111000055,
           "date": "2022-06-07",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": true,
+          "single_number": 11,
+          "single_hit": false,
           "brier": 0.10704038831375444,
           "logloss": 0.3698504152074525
         },
@@ -6944,7 +6952,7 @@
           "period": 111000057,
           "date": "2022-06-14",
           "hit": 1,
-          "single_number": 4,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10753476825295648,
           "logloss": 0.3721354313395039
@@ -6962,7 +6970,7 @@
           "period": 111000059,
           "date": "2022-06-21",
           "hit": 1,
-          "single_number": 11,
+          "single_number": 28,
           "single_hit": false,
           "brier": 0.10741983002834261,
           "logloss": 0.37158889799000094
@@ -6980,7 +6988,7 @@
           "period": 111000061,
           "date": "2022-06-28",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 3,
           "single_hit": false,
           "brier": 0.10751684995850651,
           "logloss": 0.37205278558152655
@@ -6989,8 +6997,8 @@
           "period": 111000062,
           "date": "2022-07-01",
           "hit": 2,
-          "single_number": 29,
-          "single_hit": true,
+          "single_number": 18,
+          "single_hit": false,
           "brier": 0.10711449942415421,
           "logloss": 0.37019452958700705
         },
@@ -6998,7 +7006,7 @@
           "period": 111000063,
           "date": "2022-07-05",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10743397850288129,
           "logloss": 0.371654708220377
@@ -7007,7 +7015,7 @@
           "period": 111000064,
           "date": "2022-07-08",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.1077695964672574,
           "logloss": 0.3732191714190791
@@ -7016,7 +7024,7 @@
           "period": 111000065,
           "date": "2022-07-12",
           "hit": 2,
-          "single_number": 18,
+          "single_number": 3,
           "single_hit": false,
           "brier": 0.10710910521677118,
           "logloss": 0.3701565598594954
@@ -7025,7 +7033,7 @@
           "period": 111000066,
           "date": "2022-07-15",
           "hit": 3,
-          "single_number": 29,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10686852145676172,
           "logloss": 0.3690428598435953
@@ -7034,8 +7042,8 @@
           "period": 111000067,
           "date": "2022-07-19",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10729107464286051,
           "logloss": 0.3710407623730629
         },
@@ -7043,7 +7051,7 @@
           "period": 111000068,
           "date": "2022-07-22",
           "hit": 0,
-          "single_number": 29,
+          "single_number": 3,
           "single_hit": false,
           "brier": 0.10791408321000596,
           "logloss": 0.373910968924846
@@ -7052,8 +7060,8 @@
           "period": 111000069,
           "date": "2022-07-26",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10747505329146924,
           "logloss": 0.3719184240593743
         },
@@ -7061,8 +7069,8 @@
           "period": 111000070,
           "date": "2022-07-29",
           "hit": 1,
-          "single_number": 29,
-          "single_hit": false,
+          "single_number": 18,
+          "single_hit": true,
           "brier": 0.107598969171629,
           "logloss": 0.3724333658050814
         },
@@ -7070,8 +7078,8 @@
           "period": 111000071,
           "date": "2022-08-02",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10715024285954398,
           "logloss": 0.370419677281172
         },
@@ -7079,8 +7087,8 @@
           "period": 111000072,
           "date": "2022-08-05",
           "hit": 2,
-          "single_number": 29,
-          "single_hit": false,
+          "single_number": 18,
+          "single_hit": true,
           "brier": 0.10737440375482543,
           "logloss": 0.37141586653420616
         },
@@ -7088,7 +7096,7 @@
           "period": 111000073,
           "date": "2022-08-09",
           "hit": 2,
-          "single_number": 18,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10710320090758331,
           "logloss": 0.3701142831837647
@@ -7097,7 +7105,7 @@
           "period": 111000074,
           "date": "2022-08-12",
           "hit": 2,
-          "single_number": 29,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10717609433817267,
           "logloss": 0.3704885654191798
@@ -7106,8 +7114,8 @@
           "period": 111000075,
           "date": "2022-08-16",
           "hit": 3,
-          "single_number": 18,
-          "single_hit": true,
+          "single_number": 29,
+          "single_hit": false,
           "brier": 0.10735861774089747,
           "logloss": 0.37136068017675966
         },
@@ -7142,7 +7150,7 @@
           "period": 111000079,
           "date": "2022-08-30",
           "hit": 0,
-          "single_number": 29,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10785036729852095,
           "logloss": 0.373603142530605
@@ -7151,7 +7159,7 @@
           "period": 111000080,
           "date": "2022-09-02",
           "hit": 2,
-          "single_number": 21,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10761019434869414,
           "logloss": 0.3725134111300137
@@ -7160,7 +7168,7 @@
           "period": 111000081,
           "date": "2022-09-06",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10801053666796172,
           "logloss": 0.37435638395034626
@@ -7196,7 +7204,7 @@
           "period": 111000085,
           "date": "2022-09-20",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10750108907547258,
           "logloss": 0.3719871553339508
@@ -7205,7 +7213,7 @@
           "period": 111000086,
           "date": "2022-09-23",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10753187579330674,
           "logloss": 0.3721230836007016
@@ -7214,7 +7222,7 @@
           "period": 111000087,
           "date": "2022-09-27",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10751468959801455,
           "logloss": 0.37207317054398337
@@ -7313,7 +7321,7 @@
           "period": 111000098,
           "date": "2022-11-04",
           "hit": 3,
-          "single_number": 17,
+          "single_number": 28,
           "single_hit": false,
           "brier": 0.10704683489716871,
           "logloss": 0.36987454767095646
@@ -7331,8 +7339,8 @@
           "period": 111000100,
           "date": "2022-11-11",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 36,
+          "single_hit": true,
           "brier": 0.10755417756075226,
           "logloss": 0.3722202767797616
         },
@@ -7340,7 +7348,7 @@
           "period": 111000101,
           "date": "2022-11-15",
           "hit": 0,
-          "single_number": 36,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10738515294540425,
           "logloss": 0.37141656675071427
@@ -7349,7 +7357,7 @@
           "period": 111000102,
           "date": "2022-11-18",
           "hit": 2,
-          "single_number": 18,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.10712458075121793,
           "logloss": 0.37022200043849485
@@ -7358,8 +7366,8 @@
           "period": 111000103,
           "date": "2022-11-22",
           "hit": 1,
-          "single_number": 36,
-          "single_hit": false,
+          "single_number": 18,
+          "single_hit": true,
           "brier": 0.10731859388267942,
           "logloss": 0.3711296402219962
         },
@@ -7367,7 +7375,7 @@
           "period": 111000104,
           "date": "2022-11-25",
           "hit": 0,
-          "single_number": 18,
+          "single_number": 36,
           "single_hit": false,
           "brier": 0.1076515435127263,
           "logloss": 0.37266151750943466
@@ -7376,7 +7384,7 @@
           "period": 111000105,
           "date": "2022-11-29",
           "hit": 1,
-          "single_number": 36,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.1076385382192409,
           "logloss": 0.3726540234629065
@@ -7385,7 +7393,7 @@
           "period": 111000106,
           "date": "2022-12-02",
           "hit": 0,
-          "single_number": 18,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10822205005513076,
           "logloss": 0.3753803211551193
@@ -7394,7 +7402,7 @@
           "period": 111000107,
           "date": "2022-12-06",
           "hit": 0,
-          "single_number": 37,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10753415732596885,
           "logloss": 0.3721276440694341
@@ -7403,7 +7411,7 @@
           "period": 111000108,
           "date": "2022-12-09",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 27,
           "single_hit": false,
           "brier": 0.10755589326404255,
           "logloss": 0.3722406321679247
@@ -7412,7 +7420,7 @@
           "period": 111000109,
           "date": "2022-12-13",
           "hit": 0,
-          "single_number": 10,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.108442550062511,
           "logloss": 0.3764161073709716
@@ -7421,7 +7429,7 @@
           "period": 111000110,
           "date": "2022-12-16",
           "hit": 0,
-          "single_number": 18,
+          "single_number": 43,
           "single_hit": false,
           "brier": 0.10754081622083983,
           "logloss": 0.3721586720552188
@@ -7430,7 +7438,7 @@
           "period": 111000111,
           "date": "2022-12-20",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10782109192620365,
           "logloss": 0.37347619048181135
@@ -7439,7 +7447,7 @@
           "period": 111000112,
           "date": "2022-12-23",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10756107215034226,
           "logloss": 0.3722640470898435
@@ -7448,7 +7456,7 @@
           "period": 111000113,
           "date": "2022-12-27",
           "hit": 1,
-          "single_number": 32,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.1075000749124633,
           "logloss": 0.37197866484209713
@@ -7457,7 +7465,7 @@
           "period": 111000114,
           "date": "2022-12-30",
           "hit": 0,
-          "single_number": 18,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10789993953955956,
           "logloss": 0.37384396698208966
@@ -7493,8 +7501,8 @@
           "period": 112000004,
           "date": "2023-01-13",
           "hit": 1,
-          "single_number": 21,
-          "single_hit": true,
+          "single_number": 43,
+          "single_hit": false,
           "brier": 0.10734724051416655,
           "logloss": 0.3712697851474441
         },
@@ -7520,8 +7528,8 @@
           "period": 112000007,
           "date": "2023-01-21",
           "hit": 3,
-          "single_number": 21,
-          "single_hit": true,
+          "single_number": 42,
+          "single_hit": false,
           "brier": 0.10712358737760772,
           "logloss": 0.37023822571910325
         },
@@ -7547,8 +7555,8 @@
           "period": 112000010,
           "date": "2023-01-24",
           "hit": 1,
-          "single_number": 23,
-          "single_hit": false,
+          "single_number": 18,
+          "single_hit": true,
           "brier": 0.10764472464340369,
           "logloss": 0.3726537242685444
         },
@@ -7556,7 +7564,7 @@
           "period": 112000011,
           "date": "2023-01-25",
           "hit": 1,
-          "single_number": 18,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10724328359002677,
           "logloss": 0.3707970061033113
@@ -7592,7 +7600,7 @@
           "period": 112000015,
           "date": "2023-01-29",
           "hit": 0,
-          "single_number": 23,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10769651411852466,
           "logloss": 0.37290229434647565
@@ -7601,8 +7609,8 @@
           "period": 112000016,
           "date": "2023-01-30",
           "hit": 2,
-          "single_number": 21,
-          "single_hit": false,
+          "single_number": 23,
+          "single_hit": true,
           "brier": 0.10721630842352596,
           "logloss": 0.3706906505485193
         },
@@ -7610,7 +7618,7 @@
           "period": 112000017,
           "date": "2023-01-31",
           "hit": 0,
-          "single_number": 23,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10773833501934575,
           "logloss": 0.3730851727970539
@@ -7619,8 +7627,8 @@
           "period": 112000018,
           "date": "2023-02-01",
           "hit": 1,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 23,
+          "single_hit": true,
           "brier": 0.10729232888570368,
           "logloss": 0.3710509674150634
         },
@@ -7628,7 +7636,7 @@
           "period": 112000019,
           "date": "2023-02-02",
           "hit": 2,
-          "single_number": 23,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.10733303702919912,
           "logloss": 0.3712132177304379
@@ -7637,7 +7645,7 @@
           "period": 112000020,
           "date": "2023-02-03",
           "hit": 0,
-          "single_number": 21,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10794488402280211,
           "logloss": 0.3740391369957765
@@ -7646,7 +7654,7 @@
           "period": 112000021,
           "date": "2023-02-04",
           "hit": 1,
-          "single_number": 23,
+          "single_number": 18,
           "single_hit": false,
           "brier": 0.1074126603480405,
           "logloss": 0.3715828215143173
@@ -7655,7 +7663,7 @@
           "period": 112000022,
           "date": "2023-02-05",
           "hit": 2,
-          "single_number": 21,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10745030654926041,
           "logloss": 0.3717592593461849
@@ -7664,7 +7672,7 @@
           "period": 112000023,
           "date": "2023-02-07",
           "hit": 0,
-          "single_number": 23,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10787428972236088,
           "logloss": 0.37372384044120327
@@ -7673,7 +7681,7 @@
           "period": 112000024,
           "date": "2023-02-10",
           "hit": 2,
-          "single_number": 8,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10742257184727848,
           "logloss": 0.371616735960139
@@ -7682,8 +7690,8 @@
           "period": 112000025,
           "date": "2023-02-14",
           "hit": 2,
-          "single_number": 23,
-          "single_hit": true,
+          "single_number": 8,
+          "single_hit": false,
           "brier": 0.10723406138103092,
           "logloss": 0.3707562358567887
         },
@@ -7718,7 +7726,7 @@
           "period": 112000029,
           "date": "2023-02-28",
           "hit": 3,
-          "single_number": 1,
+          "single_number": 21,
           "single_hit": false,
           "brier": 0.10715684028200594,
           "logloss": 0.3703968792887726
@@ -7763,7 +7771,7 @@
           "period": 112000034,
           "date": "2023-03-17",
           "hit": 1,
-          "single_number": 11,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10765561356089072,
           "logloss": 0.37271853830192536
@@ -7772,8 +7780,8 @@
           "period": 112000035,
           "date": "2023-03-21",
           "hit": 1,
-          "single_number": 23,
-          "single_hit": false,
+          "single_number": 11,
+          "single_hit": true,
           "brier": 0.10724025086322436,
           "logloss": 0.37078409792031
         },
@@ -7781,7 +7789,7 @@
           "period": 112000036,
           "date": "2023-03-24",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10761952391717587,
           "logloss": 0.372516485872268
@@ -7790,7 +7798,7 @@
           "period": 112000037,
           "date": "2023-03-28",
           "hit": 2,
-          "single_number": 23,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10768062778047507,
           "logloss": 0.372835297873069
@@ -7799,8 +7807,8 @@
           "period": 112000038,
           "date": "2023-03-31",
           "hit": 3,
-          "single_number": 11,
-          "single_hit": false,
+          "single_number": 26,
+          "single_hit": true,
           "brier": 0.10715157663980264,
           "logloss": 0.37038567021790864
         },
@@ -7808,7 +7816,7 @@
           "period": 112000039,
           "date": "2023-04-04",
           "hit": 1,
-          "single_number": 26,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10731933674588841,
           "logloss": 0.371115484467627
@@ -7817,8 +7825,8 @@
           "period": 112000040,
           "date": "2023-04-07",
           "hit": 1,
-          "single_number": 11,
-          "single_hit": true,
+          "single_number": 26,
+          "single_hit": false,
           "brier": 0.10764693489564636,
           "logloss": 0.37266479699379196
         },
@@ -7889,8 +7897,8 @@
           "period": 112000048,
           "date": "2023-05-05",
           "hit": 1,
-          "single_number": 10,
-          "single_hit": true,
+          "single_number": 23,
+          "single_hit": false,
           "brier": 0.10762664800458464,
           "logloss": 0.37257938754186154
         },
@@ -7898,7 +7906,7 @@
           "period": 112000049,
           "date": "2023-05-09",
           "hit": 1,
-          "single_number": 10,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10761272161688488,
           "logloss": 0.372514962845557
@@ -7907,7 +7915,7 @@
           "period": 112000050,
           "date": "2023-05-12",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10779494338125499,
           "logloss": 0.37333862180391314
@@ -7916,7 +7924,7 @@
           "period": 112000051,
           "date": "2023-05-16",
           "hit": 2,
-          "single_number": 10,
+          "single_number": 11,
           "single_hit": false,
           "brier": 0.10755907945031606,
           "logloss": 0.3722687371085361
@@ -7925,7 +7933,7 @@
           "period": 112000052,
           "date": "2023-05-19",
           "hit": 0,
-          "single_number": 11,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10756073940695161,
           "logloss": 0.37224409066089376
@@ -7934,7 +7942,7 @@
           "period": 112000053,
           "date": "2023-05-23",
           "hit": 2,
-          "single_number": 10,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10696250630882619,
           "logloss": 0.3694840133677111
@@ -7970,7 +7978,7 @@
           "period": 112000057,
           "date": "2023-06-06",
           "hit": 2,
-          "single_number": 5,
+          "single_number": 23,
           "single_hit": false,
           "brier": 0.10704836142640194,
           "logloss": 0.3698658193149148
@@ -7979,7 +7987,7 @@
           "period": 112000058,
           "date": "2023-06-09",
           "hit": 0,
-          "single_number": 23,
+          "single_number": 5,
           "single_hit": false,
           "brier": 0.10792793066015752,
           "logloss": 0.3739706939943317
@@ -7988,7 +7996,7 @@
           "period": 112000059,
           "date": "2023-06-13",
           "hit": 1,
-          "single_number": 5,
+          "single_number": 43,
           "single_hit": false,
           "brier": 0.10720781118956443,
           "logloss": 0.3706208626807159
@@ -7997,7 +8005,7 @@
           "period": 112000060,
           "date": "2023-06-16",
           "hit": 1,
-          "single_number": 10,
+          "single_number": 5,
           "single_hit": false,
           "brier": 0.10724003686874606,
           "logloss": 0.37076272285661366
@@ -8006,8 +8014,8 @@
           "period": 112000061,
           "date": "2023-06-20",
           "hit": 1,
-          "single_number": 5,
-          "single_hit": true,
+          "single_number": 10,
+          "single_hit": false,
           "brier": 0.1073962124477766,
           "logloss": 0.3715193231407916
         },
@@ -8123,8 +8131,8 @@
           "period": 112000074,
           "date": "2023-08-04",
           "hit": 3,
-          "single_number": 5,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10644536420796692,
           "logloss": 0.36712359751213575
         },
@@ -8132,8 +8140,8 @@
           "period": 112000075,
           "date": "2023-08-08",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10672393717792002,
           "logloss": 0.36842124449423064
         },
@@ -8159,8 +8167,8 @@
           "period": 112000078,
           "date": "2023-08-18",
           "hit": 3,
-          "single_number": 34,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.1067174154970422,
           "logloss": 0.3683855641872972
         },
@@ -8168,7 +8176,7 @@
           "period": 112000079,
           "date": "2023-08-22",
           "hit": 2,
-          "single_number": 41,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10681553858001502,
           "logloss": 0.3688664420731973
@@ -8186,7 +8194,7 @@
           "period": 112000081,
           "date": "2023-08-29",
           "hit": 2,
-          "single_number": 10,
+          "single_number": 41,
           "single_hit": true,
           "brier": 0.10699893104227716,
           "logloss": 0.36976489592961204
@@ -8195,7 +8203,7 @@
           "period": 112000082,
           "date": "2023-09-01",
           "hit": 3,
-          "single_number": 41,
+          "single_number": 10,
           "single_hit": false,
           "brier": 0.10647825422364332,
           "logloss": 0.3672865780783866
@@ -8213,8 +8221,8 @@
           "period": 112000084,
           "date": "2023-09-08",
           "hit": 3,
-          "single_number": 34,
-          "single_hit": true,
+          "single_number": 41,
+          "single_hit": false,
           "brier": 0.10675545680751004,
           "logloss": 0.36861910145605414
         },
@@ -8231,7 +8239,7 @@
           "period": 112000086,
           "date": "2023-09-15",
           "hit": 2,
-          "single_number": 34,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10753143109931161,
           "logloss": 0.37208772240166377
@@ -8240,7 +8248,7 @@
           "period": 112000087,
           "date": "2023-09-19",
           "hit": 1,
-          "single_number": 26,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10729278086846337,
           "logloss": 0.37098050723320614
@@ -8249,7 +8257,7 @@
           "period": 112000088,
           "date": "2023-09-22",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10789699351070771,
           "logloss": 0.37380424830876696
@@ -8258,7 +8266,7 @@
           "period": 112000089,
           "date": "2023-09-26",
           "hit": 3,
-          "single_number": 41,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10723793539106465,
           "logloss": 0.3707814070876838
@@ -8267,7 +8275,7 @@
           "period": 112000090,
           "date": "2023-09-29",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.1079016539633967,
           "logloss": 0.37380931847352195
@@ -8276,7 +8284,7 @@
           "period": 112000091,
           "date": "2023-10-03",
           "hit": 1,
-          "single_number": 26,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10789042683766735,
           "logloss": 0.3737699975117641
@@ -8285,7 +8293,7 @@
           "period": 112000092,
           "date": "2023-10-06",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10747764871064754,
           "logloss": 0.3718306474594141
@@ -8294,8 +8302,8 @@
           "period": 112000093,
           "date": "2023-10-10",
           "hit": 1,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 34,
+          "single_hit": true,
           "brier": 0.10732879456770923,
           "logloss": 0.37124131276818223
         },
@@ -8303,7 +8311,7 @@
           "period": 112000094,
           "date": "2023-10-13",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.1077789643464565,
           "logloss": 0.37325733080649376
@@ -8312,8 +8320,8 @@
           "period": 112000095,
           "date": "2023-10-17",
           "hit": 1,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 34,
+          "single_hit": true,
           "brier": 0.1072565593222377,
           "logloss": 0.3708906446059765
         },
@@ -8321,7 +8329,7 @@
           "period": 112000096,
           "date": "2023-10-20",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10757100892012281,
           "logloss": 0.3722633442880063
@@ -8330,8 +8338,8 @@
           "period": 112000097,
           "date": "2023-10-24",
           "hit": 3,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 34,
+          "single_hit": true,
           "brier": 0.10693926251907952,
           "logloss": 0.3694967744250921
         },
@@ -8339,7 +8347,7 @@
           "period": 112000098,
           "date": "2023-10-27",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10786028958299153,
           "logloss": 0.3736343820677945
@@ -8348,7 +8356,7 @@
           "period": 112000099,
           "date": "2023-10-31",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.1083666549094885,
           "logloss": 0.37605489229379674
@@ -8357,7 +8365,7 @@
           "period": 112000100,
           "date": "2023-11-03",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10766580047284013,
           "logloss": 0.3727298941561079
@@ -8366,8 +8374,8 @@
           "period": 112000101,
           "date": "2023-11-07",
           "hit": 2,
-          "single_number": 41,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10741677063274241,
           "logloss": 0.37161530373612706
         },
@@ -8375,7 +8383,7 @@
           "period": 112000102,
           "date": "2023-11-10",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10785018579026308,
           "logloss": 0.3736176919298041
@@ -8384,7 +8392,7 @@
           "period": 112000103,
           "date": "2023-11-14",
           "hit": 2,
-          "single_number": 41,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10707196247027853,
           "logloss": 0.369983219705777
@@ -8393,8 +8401,8 @@
           "period": 112000104,
           "date": "2023-11-17",
           "hit": 3,
-          "single_number": 34,
-          "single_hit": true,
+          "single_number": 41,
+          "single_hit": false,
           "brier": 0.10679004882594646,
           "logloss": 0.368725679085307
         },
@@ -8528,7 +8536,7 @@
           "period": 113000003,
           "date": "2024-01-09",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10777546284121746,
           "logloss": 0.37321737857926424
@@ -8537,7 +8545,7 @@
           "period": 113000004,
           "date": "2024-01-12",
           "hit": 2,
-          "single_number": 34,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10771610938924336,
           "logloss": 0.37303139595227086
@@ -8546,7 +8554,7 @@
           "period": 113000005,
           "date": "2024-01-16",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10764038110593692,
           "logloss": 0.3726441840462867
@@ -8555,7 +8563,7 @@
           "period": 113000006,
           "date": "2024-01-19",
           "hit": 2,
-          "single_number": 20,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10766357040486328,
           "logloss": 0.37274968234411815
@@ -8564,7 +8572,7 @@
           "period": 113000007,
           "date": "2024-01-23",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.10795700173090163,
           "logloss": 0.3741035488249792
@@ -8573,8 +8581,8 @@
           "period": 113000008,
           "date": "2024-01-26",
           "hit": 2,
-          "single_number": 20,
-          "single_hit": true,
+          "single_number": 30,
+          "single_hit": false,
           "brier": 0.1068977278249438,
           "logloss": 0.36919008704614714
         },
@@ -8582,7 +8590,7 @@
           "period": 113000009,
           "date": "2024-01-30",
           "hit": 2,
-          "single_number": 20,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10722904666564523,
           "logloss": 0.3707730820382073
@@ -8618,7 +8626,7 @@
           "period": 113000013,
           "date": "2024-02-08",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.1074199849841159,
           "logloss": 0.3715811443929125
@@ -8627,8 +8635,8 @@
           "period": 113000014,
           "date": "2024-02-09",
           "hit": 2,
-          "single_number": 20,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10726445197929639,
           "logloss": 0.3709457000493539
         },
@@ -8654,7 +8662,7 @@
           "period": 113000017,
           "date": "2024-02-12",
           "hit": 1,
-          "single_number": 30,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10756307978554815,
           "logloss": 0.3722435711970524
@@ -8699,7 +8707,7 @@
           "period": 113000022,
           "date": "2024-02-17",
           "hit": 1,
-          "single_number": 19,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10750583066333604,
           "logloss": 0.3720467629672447
@@ -8762,7 +8770,7 @@
           "period": 113000029,
           "date": "2024-02-24",
           "hit": 3,
-          "single_number": 34,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10719867696857582,
           "logloss": 0.3706185446762541
@@ -8771,7 +8779,7 @@
           "period": 113000030,
           "date": "2024-02-27",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10826085417127636,
           "logloss": 0.37552806230357344
@@ -8780,7 +8788,7 @@
           "period": 113000031,
           "date": "2024-03-01",
           "hit": 3,
-          "single_number": 34,
+          "single_number": 8,
           "single_hit": false,
           "brier": 0.10704137753568392,
           "logloss": 0.3698728306736333
@@ -8825,8 +8833,8 @@
           "period": 113000036,
           "date": "2024-03-19",
           "hit": 3,
-          "single_number": 8,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10714227824889518,
           "logloss": 0.3703673335715929
         },
@@ -8852,7 +8860,7 @@
           "period": 113000039,
           "date": "2024-03-29",
           "hit": 0,
-          "single_number": 8,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.10761437971558192,
           "logloss": 0.37246790641246696
@@ -8888,7 +8896,7 @@
           "period": 113000043,
           "date": "2024-04-12",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.1076800962170642,
           "logloss": 0.3728015012183689
@@ -8906,7 +8914,7 @@
           "period": 113000045,
           "date": "2024-04-19",
           "hit": 1,
-          "single_number": 8,
+          "single_number": 40,
           "single_hit": false,
           "brier": 0.10762001934694851,
           "logloss": 0.3725050441658875
@@ -8924,7 +8932,7 @@
           "period": 113000047,
           "date": "2024-04-26",
           "hit": 0,
-          "single_number": 17,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.1067960842391564,
           "logloss": 0.3686698901201327
@@ -8933,7 +8941,7 @@
           "period": 113000048,
           "date": "2024-04-30",
           "hit": 2,
-          "single_number": 21,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.10675739517515197,
           "logloss": 0.36854240720524944
@@ -8942,8 +8950,8 @@
           "period": 113000049,
           "date": "2024-05-03",
           "hit": 2,
-          "single_number": 34,
-          "single_hit": true,
+          "single_number": 21,
+          "single_hit": false,
           "brier": 0.1072674471089403,
           "logloss": 0.37093147360540857
         },
@@ -8960,7 +8968,7 @@
           "period": 113000051,
           "date": "2024-05-10",
           "hit": 1,
-          "single_number": 33,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.10723983867505296,
           "logloss": 0.370735652240672
@@ -8969,7 +8977,7 @@
           "period": 113000052,
           "date": "2024-05-14",
           "hit": 0,
-          "single_number": 15,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10781011624389342,
           "logloss": 0.3733895524848002
@@ -8978,7 +8986,7 @@
           "period": 113000053,
           "date": "2024-05-17",
           "hit": 3,
-          "single_number": 34,
+          "single_number": 15,
           "single_hit": true,
           "brier": 0.10662371393112632,
           "logloss": 0.3679367452967073
@@ -8996,7 +9004,7 @@
           "period": 113000055,
           "date": "2024-05-24",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10806000631547497,
           "logloss": 0.37465446453736206
@@ -9005,8 +9013,8 @@
           "period": 113000056,
           "date": "2024-05-28",
           "hit": 1,
-          "single_number": 33,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10767378791160748,
           "logloss": 0.3728303533023232
         },
@@ -9032,7 +9040,7 @@
           "period": 113000059,
           "date": "2024-06-07",
           "hit": 1,
-          "single_number": 34,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10789558564460641,
           "logloss": 0.3738119109335563
@@ -9041,7 +9049,7 @@
           "period": 113000060,
           "date": "2024-06-11",
           "hit": 1,
-          "single_number": 33,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10743277158708847,
           "logloss": 0.37162790663197565
@@ -9050,7 +9058,7 @@
           "period": 113000061,
           "date": "2024-06-14",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10803067705241255,
           "logloss": 0.37445041814806435
@@ -9059,7 +9067,7 @@
           "period": 113000062,
           "date": "2024-06-18",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10784278945254232,
           "logloss": 0.37355564915342154
@@ -9068,7 +9076,7 @@
           "period": 113000063,
           "date": "2024-06-21",
           "hit": 0,
-          "single_number": 34,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10792144565061025,
           "logloss": 0.37394015718766027
@@ -9077,7 +9085,7 @@
           "period": 113000064,
           "date": "2024-06-25",
           "hit": 1,
-          "single_number": 33,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10757744600366266,
           "logloss": 0.3723197388216815
@@ -9086,7 +9094,7 @@
           "period": 113000065,
           "date": "2024-06-28",
           "hit": 2,
-          "single_number": 34,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10752735859285874,
           "logloss": 0.37213308050291827
@@ -9095,8 +9103,8 @@
           "period": 113000066,
           "date": "2024-07-02",
           "hit": 2,
-          "single_number": 33,
-          "single_hit": true,
+          "single_number": 34,
+          "single_hit": false,
           "brier": 0.10741379122869954,
           "logloss": 0.3716239144613827
         },
@@ -9131,7 +9139,7 @@
           "period": 113000070,
           "date": "2024-07-16",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 19,
           "single_hit": false,
           "brier": 0.10791399332611172,
           "logloss": 0.3738986491578029
@@ -9140,8 +9148,8 @@
           "period": 113000071,
           "date": "2024-07-19",
           "hit": 2,
-          "single_number": 34,
-          "single_hit": false,
+          "single_number": 33,
+          "single_hit": true,
           "brier": 0.10736576618067901,
           "logloss": 0.37141418492531014
         },
@@ -9149,8 +9157,8 @@
           "period": 113000072,
           "date": "2024-07-23",
           "hit": 1,
-          "single_number": 33,
-          "single_hit": true,
+          "single_number": 19,
+          "single_hit": false,
           "brier": 0.10729349398730202,
           "logloss": 0.3710828528412574
         },
@@ -9185,7 +9193,7 @@
           "period": 113000076,
           "date": "2024-08-06",
           "hit": 4,
-          "single_number": 33,
+          "single_number": 46,
           "single_hit": true,
           "brier": 0.10609671722041666,
           "logloss": 0.3656318173239299
@@ -9275,8 +9283,8 @@
           "period": 113000086,
           "date": "2024-09-10",
           "hit": 1,
-          "single_number": 38,
-          "single_hit": true,
+          "single_number": 46,
+          "single_hit": false,
           "brier": 0.10724002065824971,
           "logloss": 0.3708034667721193
         },
@@ -9311,7 +9319,7 @@
           "period": 113000090,
           "date": "2024-09-24",
           "hit": 0,
-          "single_number": 33,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10778158121536975,
           "logloss": 0.37325495145647025
@@ -9320,7 +9328,7 @@
           "period": 113000091,
           "date": "2024-09-27",
           "hit": 1,
-          "single_number": 35,
+          "single_number": 46,
           "single_hit": false,
           "brier": 0.10761576760502004,
           "logloss": 0.37252258016073647
@@ -9329,7 +9337,7 @@
           "period": 113000092,
           "date": "2024-10-01",
           "hit": 0,
-          "single_number": 46,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10748839112347187,
           "logloss": 0.3719118365295792
@@ -9365,7 +9373,7 @@
           "period": 113000096,
           "date": "2024-10-15",
           "hit": 1,
-          "single_number": 38,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10757674992102662,
           "logloss": 0.37233133077751
@@ -9401,8 +9409,8 @@
           "period": 113000100,
           "date": "2024-10-29",
           "hit": 4,
-          "single_number": 38,
-          "single_hit": true,
+          "single_number": 33,
+          "single_hit": false,
           "brier": 0.10637866225748949,
           "logloss": 0.3668425946029775
         },
@@ -9482,7 +9490,7 @@
           "period": 113000109,
           "date": "2024-11-29",
           "hit": 2,
-          "single_number": 49,
+          "single_number": 38,
           "single_hit": true,
           "brier": 0.1072047964540916,
           "logloss": 0.37070555111208237
@@ -9491,7 +9499,7 @@
           "period": 113000110,
           "date": "2024-12-03",
           "hit": 1,
-          "single_number": 38,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10736659697242253,
           "logloss": 0.37131086961705456
@@ -9500,7 +9508,7 @@
           "period": 113000111,
           "date": "2024-12-06",
           "hit": 1,
-          "single_number": 49,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.10810770078793147,
           "logloss": 0.3748488999408452
@@ -9509,8 +9517,8 @@
           "period": 113000112,
           "date": "2024-12-10",
           "hit": 3,
-          "single_number": 33,
-          "single_hit": false,
+          "single_number": 49,
+          "single_hit": true,
           "brier": 0.10713818513755438,
           "logloss": 0.37039436615766763
         },
@@ -9518,8 +9526,8 @@
           "period": 113000113,
           "date": "2024-12-13",
           "hit": 1,
-          "single_number": 49,
-          "single_hit": false,
+          "single_number": 38,
+          "single_hit": true,
           "brier": 0.10741739801905348,
           "logloss": 0.37161202247428005
         },
@@ -9527,7 +9535,7 @@
           "period": 113000114,
           "date": "2024-12-17",
           "hit": 0,
-          "single_number": 38,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10807978508457598,
           "logloss": 0.3746431736212898
@@ -9536,7 +9544,7 @@
           "period": 113000115,
           "date": "2024-12-20",
           "hit": 0,
-          "single_number": 49,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.10777603914542652,
           "logloss": 0.3732413021456892
@@ -9545,7 +9553,7 @@
           "period": 113000116,
           "date": "2024-12-24",
           "hit": 1,
-          "single_number": 38,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10762205441612599,
           "logloss": 0.3725488328257956
@@ -9554,7 +9562,7 @@
           "period": 113000117,
           "date": "2024-12-27",
           "hit": 2,
-          "single_number": 49,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.10736853982334717,
           "logloss": 0.37137773820900694
@@ -9563,7 +9571,7 @@
           "period": 113000118,
           "date": "2024-12-31",
           "hit": 2,
-          "single_number": 38,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.107141120420953,
           "logloss": 0.370309913155332
@@ -9572,7 +9580,7 @@
           "period": 114000001,
           "date": "2025-01-03",
           "hit": 1,
-          "single_number": 49,
+          "single_number": 38,
           "single_hit": false,
           "brier": 0.10750626783927247,
           "logloss": 0.3719839559194232
@@ -9581,7 +9589,7 @@
           "period": 114000002,
           "date": "2025-01-07",
           "hit": 2,
-          "single_number": 38,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.1071980404755683,
           "logloss": 0.37059780931519015
@@ -9698,7 +9706,7 @@
           "period": 114000015,
           "date": "2025-02-01",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10783580608387443,
           "logloss": 0.3735276277393455
@@ -9725,7 +9733,7 @@
           "period": 114000018,
           "date": "2025-02-04",
           "hit": 2,
-          "single_number": 38,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.1073876480688405,
           "logloss": 0.3714707046002043
@@ -9734,7 +9742,7 @@
           "period": 114000019,
           "date": "2025-02-05",
           "hit": 1,
-          "single_number": 26,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10754425527357978,
           "logloss": 0.3721691485823399
@@ -9743,7 +9751,7 @@
           "period": 114000020,
           "date": "2025-02-06",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10802298862428941,
           "logloss": 0.3744099513219808
@@ -9752,7 +9760,7 @@
           "period": 114000021,
           "date": "2025-02-07",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10788297889985284,
           "logloss": 0.37376231854363556
@@ -9788,8 +9796,8 @@
           "period": 114000025,
           "date": "2025-02-11",
           "hit": 3,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 34,
+          "single_hit": true,
           "brier": 0.10706648528550296,
           "logloss": 0.3699818931236216
         },
@@ -9824,7 +9832,7 @@
           "period": 114000029,
           "date": "2025-02-21",
           "hit": 1,
-          "single_number": 35,
+          "single_number": 34,
           "single_hit": false,
           "brier": 0.10715587990491232,
           "logloss": 0.37038120964845594
@@ -9833,7 +9841,7 @@
           "period": 114000030,
           "date": "2025-02-25",
           "hit": 0,
-          "single_number": 30,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.10763889415460631,
           "logloss": 0.3726274916003184
@@ -9842,7 +9850,7 @@
           "period": 114000031,
           "date": "2025-02-28",
           "hit": 2,
-          "single_number": 35,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10692288828358062,
           "logloss": 0.36929817708803603
@@ -9869,7 +9877,7 @@
           "period": 114000034,
           "date": "2025-03-11",
           "hit": 3,
-          "single_number": 7,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10704339547080688,
           "logloss": 0.3698588779416397
@@ -9878,8 +9886,8 @@
           "period": 114000035,
           "date": "2025-03-14",
           "hit": 1,
-          "single_number": 38,
-          "single_hit": false,
+          "single_number": 7,
+          "single_hit": true,
           "brier": 0.1074629045597199,
           "logloss": 0.37183358052575244
         },
@@ -9887,8 +9895,8 @@
           "period": 114000036,
           "date": "2025-03-18",
           "hit": 1,
-          "single_number": 7,
-          "single_hit": true,
+          "single_number": 38,
+          "single_hit": false,
           "brier": 0.10708451914569218,
           "logloss": 0.37006768193911127
         },
@@ -9923,7 +9931,7 @@
           "period": 114000040,
           "date": "2025-04-01",
           "hit": 2,
-          "single_number": 7,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10751776859429014,
           "logloss": 0.37211376404213187
@@ -9932,8 +9940,8 @@
           "period": 114000041,
           "date": "2025-04-04",
           "hit": 4,
-          "single_number": 30,
-          "single_hit": false,
+          "single_number": 7,
+          "single_hit": true,
           "brier": 0.10655405138752343,
           "logloss": 0.36770356708110463
         },
@@ -9941,7 +9949,7 @@
           "period": 114000042,
           "date": "2025-04-08",
           "hit": 2,
-          "single_number": 7,
+          "single_number": 30,
           "single_hit": false,
           "brier": 0.10741972244084305,
           "logloss": 0.3715926248537492
@@ -9950,7 +9958,7 @@
           "period": 114000043,
           "date": "2025-04-11",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10765664238862382,
           "logloss": 0.3726619058457987
@@ -9959,7 +9967,7 @@
           "period": 114000044,
           "date": "2025-04-15",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10754405722685821,
           "logloss": 0.3721760097673186
@@ -9968,7 +9976,7 @@
           "period": 114000045,
           "date": "2025-04-18",
           "hit": 1,
-          "single_number": 38,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10766294759962493,
           "logloss": 0.3727167702871846
@@ -9977,7 +9985,7 @@
           "period": 114000046,
           "date": "2025-04-22",
           "hit": 2,
-          "single_number": 7,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10762118435147615,
           "logloss": 0.3725395893903659
@@ -9986,7 +9994,7 @@
           "period": 114000047,
           "date": "2025-04-25",
           "hit": 2,
-          "single_number": 29,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10759695977966766,
           "logloss": 0.37244253737829464
@@ -9995,8 +10003,8 @@
           "period": 114000048,
           "date": "2025-04-29",
           "hit": 2,
-          "single_number": 7,
-          "single_hit": true,
+          "single_number": 35,
+          "single_hit": false,
           "brier": 0.10702938323984981,
           "logloss": 0.3698470366512105
         },
@@ -10067,8 +10075,8 @@
           "period": 114000056,
           "date": "2025-05-27",
           "hit": 3,
-          "single_number": 7,
-          "single_hit": false,
+          "single_number": 29,
+          "single_hit": true,
           "brier": 0.10714377588619528,
           "logloss": 0.37039646912856244
         },
@@ -10076,7 +10084,7 @@
           "period": 114000057,
           "date": "2025-05-30",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10785147482395856,
           "logloss": 0.3736345242108102
@@ -10085,7 +10093,7 @@
           "period": 114000058,
           "date": "2025-06-03",
           "hit": 0,
-          "single_number": 7,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10764164051181943,
           "logloss": 0.37262980606505786
@@ -10094,7 +10102,7 @@
           "period": 114000059,
           "date": "2025-06-06",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.1070890255875332,
           "logloss": 0.37004803665101044
@@ -10103,7 +10111,7 @@
           "period": 114000060,
           "date": "2025-06-10",
           "hit": 0,
-          "single_number": 7,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10799216538214122,
           "logloss": 0.3742717424450766
@@ -10112,7 +10120,7 @@
           "period": 114000061,
           "date": "2025-06-13",
           "hit": 1,
-          "single_number": 29,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10760997344116609,
           "logloss": 0.37248159916131657
@@ -10121,8 +10129,8 @@
           "period": 114000062,
           "date": "2025-06-17",
           "hit": 2,
-          "single_number": 7,
-          "single_hit": false,
+          "single_number": 26,
+          "single_hit": true,
           "brier": 0.10735466984544755,
           "logloss": 0.3713677802427765
         },
@@ -10148,7 +10156,7 @@
           "period": 114000065,
           "date": "2025-06-27",
           "hit": 1,
-          "single_number": 20,
+          "single_number": 13,
           "single_hit": false,
           "brier": 0.1077977319919046,
           "logloss": 0.3733775580547279
@@ -10157,7 +10165,7 @@
           "period": 114000066,
           "date": "2025-07-01",
           "hit": 0,
-          "single_number": 13,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.10733596311361542,
           "logloss": 0.3712065396410004
@@ -10193,8 +10201,8 @@
           "period": 114000070,
           "date": "2025-07-15",
           "hit": 2,
-          "single_number": 13,
-          "single_hit": false,
+          "single_number": 49,
+          "single_hit": true,
           "brier": 0.1072590006560276,
           "logloss": 0.3708615358735426
         },
@@ -10202,7 +10210,7 @@
           "period": 114000071,
           "date": "2025-07-18",
           "hit": 1,
-          "single_number": 49,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10744071311271611,
           "logloss": 0.37169841601629544
@@ -10211,7 +10219,7 @@
           "period": 114000072,
           "date": "2025-07-22",
           "hit": 2,
-          "single_number": 34,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10740989478386488,
           "logloss": 0.3715814061813266
@@ -10229,7 +10237,7 @@
           "period": 114000074,
           "date": "2025-07-29",
           "hit": 2,
-          "single_number": 13,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10752402402870521,
           "logloss": 0.37209900112369915
@@ -10301,7 +10309,7 @@
           "period": 114000082,
           "date": "2025-08-26",
           "hit": 0,
-          "single_number": 2,
+          "single_number": 33,
           "single_hit": false,
           "brier": 0.10777941195853788,
           "logloss": 0.37325353753005075
@@ -10337,7 +10345,7 @@
           "period": 114000086,
           "date": "2025-09-09",
           "hit": 2,
-          "single_number": 13,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10738148810630291,
           "logloss": 0.37144219696052666
@@ -10355,8 +10363,8 @@
           "period": 114000088,
           "date": "2025-09-16",
           "hit": 1,
-          "single_number": 2,
-          "single_hit": false,
+          "single_number": 25,
+          "single_hit": true,
           "brier": 0.10739735919684577,
           "logloss": 0.3715172797258691
         },
@@ -10364,7 +10372,7 @@
           "period": 114000089,
           "date": "2025-09-19",
           "hit": 2,
-          "single_number": 25,
+          "single_number": 7,
           "single_hit": false,
           "brier": 0.10712412451133627,
           "logloss": 0.3702207381237748
@@ -10373,8 +10381,8 @@
           "period": 114000090,
           "date": "2025-09-23",
           "hit": 1,
-          "single_number": 26,
-          "single_hit": false,
+          "single_number": 25,
+          "single_hit": true,
           "brier": 0.10692750957325979,
           "logloss": 0.3693351039891305
         },
@@ -10382,8 +10390,8 @@
           "period": 114000091,
           "date": "2025-09-26",
           "hit": 3,
-          "single_number": 25,
-          "single_hit": true,
+          "single_number": 26,
+          "single_hit": false,
           "brier": 0.10672385560099926,
           "logloss": 0.3684267028207447
         },
@@ -10400,8 +10408,8 @@
           "period": 114000093,
           "date": "2025-10-03",
           "hit": 2,
-          "single_number": 2,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10741055372258151,
           "logloss": 0.3716007737495536
         },
@@ -10418,7 +10426,7 @@
           "period": 114000095,
           "date": "2025-10-10",
           "hit": 1,
-          "single_number": 2,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10744068666567513,
           "logloss": 0.3716697580062014
@@ -10454,7 +10462,7 @@
           "period": 114000099,
           "date": "2025-10-24",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.1072403097872304,
           "logloss": 0.3707448724564623
@@ -10463,7 +10471,7 @@
           "period": 114000100,
           "date": "2025-10-28",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10781534068750587,
           "logloss": 0.3734352010643354
@@ -10472,7 +10480,7 @@
           "period": 114000101,
           "date": "2025-10-31",
           "hit": 0,
-          "single_number": 25,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10802167844697101,
           "logloss": 0.37440159878755597
@@ -10481,8 +10489,8 @@
           "period": 114000102,
           "date": "2025-11-04",
           "hit": 2,
-          "single_number": 18,
-          "single_hit": false,
+          "single_number": 25,
+          "single_hit": true,
           "brier": 0.10764235992329556,
           "logloss": 0.3726743932187797
         },
@@ -10490,8 +10498,8 @@
           "period": 114000103,
           "date": "2025-11-07",
           "hit": 2,
-          "single_number": 25,
-          "single_hit": false,
+          "single_number": 41,
+          "single_hit": true,
           "brier": 0.10676323735207016,
           "logloss": 0.36855974101979
         },
@@ -10499,7 +10507,7 @@
           "period": 114000104,
           "date": "2025-11-11",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10769500150545178,
           "logloss": 0.37292633993138935
@@ -10508,8 +10516,8 @@
           "period": 114000105,
           "date": "2025-11-14",
           "hit": 2,
-          "single_number": 25,
-          "single_hit": true,
+          "single_number": 16,
+          "single_hit": false,
           "brier": 0.10719358297933014,
           "logloss": 0.370628836229482
         },
@@ -10526,7 +10534,7 @@
           "period": 114000107,
           "date": "2025-11-21",
           "hit": 0,
-          "single_number": 41,
+          "single_number": 22,
           "single_hit": false,
           "brier": 0.10794149654009515,
           "logloss": 0.3740378829005653
@@ -10544,7 +10552,7 @@
           "period": 114000109,
           "date": "2025-11-28",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 41,
           "single_hit": false,
           "brier": 0.10787678777057222,
           "logloss": 0.3737206298437301
@@ -10589,7 +10597,7 @@
           "period": 114000114,
           "date": "2025-12-16",
           "hit": 0,
-          "single_number": 26,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10771941571464456,
           "logloss": 0.37300299976453627
@@ -10598,7 +10606,7 @@
           "period": 114000115,
           "date": "2025-12-19",
           "hit": 1,
-          "single_number": 20,
+          "single_number": 26,
           "single_hit": false,
           "brier": 0.10728157090313926,
           "logloss": 0.370938668165523
@@ -10607,7 +10615,7 @@
           "period": 114000116,
           "date": "2025-12-23",
           "hit": 2,
-          "single_number": 25,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10724491532314182,
           "logloss": 0.3708323958598212
@@ -10706,7 +10714,7 @@
           "period": 115000009,
           "date": "2026-01-30",
           "hit": 1,
-          "single_number": 7,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10781071304259608,
           "logloss": 0.3734533782372017
@@ -10724,8 +10732,8 @@
           "period": 115000011,
           "date": "2026-02-06",
           "hit": 3,
-          "single_number": 39,
-          "single_hit": true,
+          "single_number": 33,
+          "single_hit": false,
           "brier": 0.10729440129034977,
           "logloss": 0.37108129560195774
         },
@@ -10760,7 +10768,7 @@
           "period": 115000015,
           "date": "2026-02-14",
           "hit": 0,
-          "single_number": 39,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10764334711236889,
           "logloss": 0.3726098399853152
@@ -10769,7 +10777,7 @@
           "period": 115000016,
           "date": "2026-02-15",
           "hit": 2,
-          "single_number": 20,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10728243691775753,
           "logloss": 0.3710032637840916
@@ -10778,7 +10786,7 @@
           "period": 115000017,
           "date": "2026-02-16",
           "hit": 2,
-          "single_number": 39,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10759291234584867,
           "logloss": 0.37243408183470583
@@ -10787,7 +10795,7 @@
           "period": 115000018,
           "date": "2026-02-17",
           "hit": 0,
-          "single_number": 25,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10760818494044878,
           "logloss": 0.37247159570326344
@@ -10796,8 +10804,8 @@
           "period": 115000019,
           "date": "2026-02-18",
           "hit": 1,
-          "single_number": 39,
-          "single_hit": true,
+          "single_number": 25,
+          "single_hit": false,
           "brier": 0.10737358952437522,
           "logloss": 0.37141343364291085
         },
@@ -10868,7 +10876,7 @@
           "period": 115000027,
           "date": "2026-02-26",
           "hit": 2,
-          "single_number": 24,
+          "single_number": 22,
           "single_hit": true,
           "brier": 0.107133939848588,
           "logloss": 0.3702948633181758
@@ -10877,7 +10885,7 @@
           "period": 115000028,
           "date": "2026-02-27",
           "hit": 1,
-          "single_number": 24,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10759465684436668,
           "logloss": 0.37241727127338314
@@ -10886,8 +10894,8 @@
           "period": 115000029,
           "date": "2026-02-28",
           "hit": 1,
-          "single_number": 39,
-          "single_hit": true,
+          "single_number": 24,
+          "single_hit": false,
           "brier": 0.10780069200068924,
           "logloss": 0.37339447655007296
         },
@@ -10904,7 +10912,7 @@
           "period": 115000031,
           "date": "2026-03-02",
           "hit": 2,
-          "single_number": 24,
+          "single_number": 49,
           "single_hit": false,
           "brier": 0.10721300383016868,
           "logloss": 0.3706680390431343
@@ -11003,7 +11011,7 @@
           "period": 115000042,
           "date": "2026-04-07",
           "hit": 0,
-          "single_number": 25,
+          "single_number": 5,
           "single_hit": false,
           "brier": 0.10785094840525795,
           "logloss": 0.3735814980058845
@@ -11012,7 +11020,7 @@
           "period": 115000043,
           "date": "2026-04-10",
           "hit": 0,
-          "single_number": 5,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10792751947822492,
           "logloss": 0.37395797159871935
@@ -11021,7 +11029,7 @@
           "period": 115000044,
           "date": "2026-04-14",
           "hit": 0,
-          "single_number": 25,
+          "single_number": 48,
           "single_hit": false,
           "brier": 0.10780827641427826,
           "logloss": 0.3734007793174934
@@ -11030,8 +11038,8 @@
           "period": 115000045,
           "date": "2026-04-17",
           "hit": 3,
-          "single_number": 24,
-          "single_hit": false,
+          "single_number": 11,
+          "single_hit": true,
           "brier": 0.10686278556604589,
           "logloss": 0.36901688119596876
         },
@@ -11057,8 +11065,8 @@
           "period": 115000048,
           "date": "2026-04-28",
           "hit": 2,
-          "single_number": 25,
-          "single_hit": true,
+          "single_number": 47,
+          "single_hit": false,
           "brier": 0.10708949565360994,
           "logloss": 0.3700794795499476
         },
@@ -11093,7 +11101,7 @@
           "period": 115000052,
           "date": "2026-05-12",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10767701170609006,
           "logloss": 0.3727982960376031
@@ -11102,7 +11110,7 @@
           "period": 115000053,
           "date": "2026-05-15",
           "hit": 1,
-          "single_number": 39,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.1079546069455551,
           "logloss": 0.37411284178905496
@@ -11111,7 +11119,7 @@
           "period": 115000054,
           "date": "2026-05-19",
           "hit": 2,
-          "single_number": 25,
+          "single_number": 43,
           "single_hit": false,
           "brier": 0.10725363805578925,
           "logloss": 0.37082734924548666
@@ -11120,7 +11128,7 @@
           "period": 115000055,
           "date": "2026-05-22",
           "hit": 1,
-          "single_number": 22,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10752245843142737,
           "logloss": 0.3720659897201121
@@ -11129,8 +11137,8 @@
           "period": 115000056,
           "date": "2026-05-26",
           "hit": 1,
-          "single_number": 7,
-          "single_hit": false,
+          "single_number": 47,
+          "single_hit": true,
           "brier": 0.10759093394102227,
           "logloss": 0.37241508707284526
         },
@@ -11174,7 +11182,7 @@
           "period": 115000061,
           "date": "2026-06-12",
           "hit": 2,
-          "single_number": 25,
+          "single_number": 39,
           "single_hit": false,
           "brier": 0.10740850852345395,
           "logloss": 0.37156138077160494
@@ -11183,7 +11191,7 @@
           "period": 115000062,
           "date": "2026-06-16",
           "hit": 0,
-          "single_number": 20,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10826969055665167,
           "logloss": 0.37557744570233115
@@ -11192,7 +11200,7 @@
           "period": 115000063,
           "date": "2026-06-19",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 20,
           "single_hit": false,
           "brier": 0.10724990193498572,
           "logloss": 0.37078963472775
@@ -11201,7 +11209,7 @@
           "period": 115000064,
           "date": "2026-06-23",
           "hit": 3,
-          "single_number": 48,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10698766410561547,
           "logloss": 0.36960100099070087
@@ -11228,7 +11236,7 @@
           "period": 115000067,
           "date": "2026-07-03",
           "hit": 3,
-          "single_number": 29,
+          "single_number": 25,
           "single_hit": false,
           "brier": 0.10690040058011291,
           "logloss": 0.3691869881788669
@@ -11237,7 +11245,7 @@
           "period": 115000068,
           "date": "2026-07-07",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 29,
           "single_hit": false,
           "brier": 0.1077957899973407,
           "logloss": 0.3733562449129511
@@ -11246,8 +11254,8 @@
           "period": 115000069,
           "date": "2026-07-10",
           "hit": 2,
-          "single_number": 29,
-          "single_hit": true,
+          "single_number": 39,
+          "single_hit": false,
           "brier": 0.10710524375690507,
           "logloss": 0.37016432485127326
         },
@@ -11354,7 +11362,7 @@
           "period": 115000081,
           "date": "2026-08-21",
           "hit": 1,
-          "single_number": 25,
+          "single_number": 12,
           "single_hit": false,
           "brier": 0.10711088789494701,
           "logloss": 0.37012342014267363
@@ -11363,8 +11371,8 @@
           "period": 115000082,
           "date": "2026-08-25",
           "hit": 2,
-          "single_number": 12,
-          "single_hit": true,
+          "single_number": 25,
+          "single_hit": false,
           "brier": 0.107031280593867,
           "logloss": 0.36982184492648373
         },
@@ -11381,8 +11389,8 @@
           "period": 115000084,
           "date": "2026-09-01",
           "hit": 4,
-          "single_number": 26,
-          "single_hit": true,
+          "single_number": 25,
+          "single_hit": false,
           "brier": 0.10653900444594289,
           "logloss": 0.3675706741638831
         },
@@ -11462,7 +11470,7 @@
           "period": 115000093,
           "date": "2026-10-02",
           "hit": 2,
-          "single_number": 12,
+          "single_number": 35,
           "single_hit": false,
           "brier": 0.1069695628155237,
           "logloss": 0.3695102421450808
@@ -16354,8 +16362,8 @@
     "main_avg_spill_10_15": 0.7125,
     "special_avg_hits": 0.0827,
     "special_random_hits": 0.0612,
-    "single_selector_passed": false,
-    "single_hit_rate": 0.148077,
+    "single_selector_passed": true,
+    "single_hit_rate": 0.142308,
     "single_random_rate": 0.122449,
     "max_main_weight": 0.16155936
   },
@@ -16385,8 +16393,13 @@
     "failure_streak_penalty": true,
     "stability_penalty": true,
     "single_model_cap": 0.25,
-    "single_selector": "top1_vote_blend_v3_dual_window",
-    "single_selector_alpha": 0.5,
+    "single_selector": "performance_top1_blend_v4_dual_window",
+    "single_selector_alpha": 3.0,
+    "single_selector_eligible_size": 5,
+    "single_selector_cooldown": "always_no_consecutive_repeat",
+    "single_selector_candidate_count": 1800,
+    "single_selector_selection_window": "development_520_only",
+    "holdout_used_for_selector_selection": false,
     "failed_single_repeat_cooldown": true,
     "single_validation_rounds": 1040,
     "development_rounds": 520,
@@ -16394,7 +16407,7 @@
     "pattern_audit_required": true,
     "external_method_walk_forward_gate": true,
     "model_gate_must_not_block_official_data_sync": true,
-    "reason": "前9與唯一獨支分開運算；獨支必須同時公開較舊520期開發段與最新520期保留段。軌跡、週期、拖牌、鄰號、間隔及共現規則兩段都勝過6/49才准進正式核心，禁止只展示較漂亮的一段。模型信心不足只能降級標示，不得阻擋官方開獎資料同步。"
+    "reason": "前9與唯一獨隻分開運算；獨隻以較舊520期選型，最新520期只做保留驗收，兩段都必須勝過6/49。正式規則使用績效加權Top1共識、前5候選池與禁止連續同號；失敗的軌跡候選權重歸零，不得阻擋官方資料同步。"
   },
   "rank_boundary_audit": {
     "cutoff": 9,
@@ -16741,7 +16754,7 @@
           20,
           36
         ],
-        "single_number": 12,
+        "single_number": 35,
         "single_hit": false,
         "rank_share": 0.25,
         "boundary_rotation": {
@@ -17551,14 +17564,14 @@
     "evaluated": 24,
     "weighted": 11,
     "zero_weight": 13,
-    "selected_number": 12,
+    "selected_number": 20,
     "selection": "全系統驗證後最高順位",
     "modules": [
       {
         "module": "bayes_24",
         "family": "核心機率／順位模型",
         "candidate": 26,
-        "strongest_rank": 4,
+        "strongest_rank": 12,
         "weight": 0.06061107,
         "walk_forward_avg_top9_hits": 1.075,
         "status": "正式滾動加權"
@@ -17567,7 +17580,7 @@
         "module": "bayes_60",
         "family": "核心機率／順位模型",
         "candidate": 12,
-        "strongest_rank": 2,
+        "strongest_rank": 16,
         "weight": 0.12391908,
         "walk_forward_avg_top9_hits": 1.1212,
         "status": "正式滾動加權"
@@ -17576,7 +17589,7 @@
         "module": "bayes_150",
         "family": "核心機率／順位模型",
         "candidate": 25,
-        "strongest_rank": 3,
+        "strongest_rank": 2,
         "weight": 0.10270001,
         "walk_forward_avg_top9_hits": 1.0894,
         "status": "正式滾動加權"
@@ -17585,7 +17598,7 @@
         "module": "bayes_360",
         "family": "核心機率／順位模型",
         "candidate": 25,
-        "strongest_rank": 19,
+        "strongest_rank": 3,
         "weight": 0.10034355,
         "walk_forward_avg_top9_hits": 1.0471,
         "status": "正式滾動加權"
@@ -17594,7 +17607,7 @@
         "module": "ewma_8",
         "family": "核心機率／順位模型",
         "candidate": 4,
-        "strongest_rank": 10,
+        "strongest_rank": 5,
         "weight": 0.08057934,
         "walk_forward_avg_top9_hits": 1.1058,
         "status": "正式滾動加權"
@@ -17603,7 +17616,7 @@
         "module": "ewma_21",
         "family": "核心機率／順位模型",
         "candidate": 26,
-        "strongest_rank": 2,
+        "strongest_rank": 10,
         "weight": 0.09842712,
         "walk_forward_avg_top9_hits": 1.0875,
         "status": "正式滾動加權"
@@ -17612,7 +17625,7 @@
         "module": "ewma_55",
         "family": "核心機率／順位模型",
         "candidate": 25,
-        "strongest_rank": 3,
+        "strongest_rank": 9,
         "weight": 0.08669994,
         "walk_forward_avg_top9_hits": 1.1173,
         "status": "正式滾動加權"
@@ -17621,7 +17634,7 @@
         "module": "ewma_144",
         "family": "核心機率／順位模型",
         "candidate": 26,
-        "strongest_rank": 8,
+        "strongest_rank": 3,
         "weight": 0.16155936,
         "walk_forward_avg_top9_hits": 1.0856,
         "status": "正式滾動加權"
@@ -17630,7 +17643,7 @@
         "module": "empirical_hazard",
         "family": "核心機率／順位模型",
         "candidate": 8,
-        "strongest_rank": 6,
+        "strongest_rank": 2,
         "weight": 0.05237445,
         "walk_forward_avg_top9_hits": 1.1183,
         "status": "正式滾動加權"
@@ -17639,7 +17652,7 @@
         "module": "conditional_pair",
         "family": "核心機率／順位模型",
         "candidate": 26,
-        "strongest_rank": 18,
+        "strongest_rank": 2,
         "weight": 0.06970552,
         "walk_forward_avg_top9_hits": 1.1077,
         "status": "正式滾動加權"
@@ -17648,7 +17661,7 @@
         "module": "regime_slope",
         "family": "核心機率／順位模型",
         "candidate": 26,
-        "strongest_rank": 8,
+        "strongest_rank": 22,
         "weight": 0.06308058,
         "walk_forward_avg_top9_hits": 1.0846,
         "status": "正式滾動加權"
@@ -17775,80 +17788,86 @@
   },
   "strongest_recommendation": {
     "label": "終極獨隻・全系統最高順位",
-    "number": 12,
+    "number": 20,
     "count": 1,
     "final_rank": 1,
     "target_draw_date": "2026-10-09",
     "based_on_period": 115000094,
     "data_cutoff_date": "2026-10-06",
-    "calculated_at": "2026-10-08T12:38:29+08:00",
+    "calculated_at": "2026-10-08T14:12:06+08:00",
     "module_registry_summary": {
       "registered": 24,
       "evaluated": 24,
       "weighted": 11,
       "zero_weight": 13
     },
-    "selector": "top1_vote_blend_v3_dual_window",
-    "walk_forward_hits": 131,
+    "selector": "performance_top1_blend_v4_dual_window",
+    "selector_audit": {
+      "candidate_count": 1800,
+      "selection_window": "development_520_only",
+      "holdout_used_for_selection": false
+    },
+    "walk_forward_hits": 145,
     "walk_forward_rounds": 1040,
-    "walk_forward_hit_rate": 0.125962,
+    "walk_forward_hit_rate": 0.139423,
     "development": {
       "rounds": 520,
-      "hits": 54,
-      "rate": 0.103846
+      "hits": 71,
+      "rate": 0.136538
     },
     "holdout": {
       "rounds": 520,
-      "hits": 77,
-      "rate": 0.148077
+      "hits": 74,
+      "rate": 0.142308
     },
     "random_hit_rate": 0.122449,
     "recent_hits": {
-      "20": 4,
-      "60": 10,
-      "120": 19
+      "20": 2,
+      "60": 8,
+      "120": 16
     },
     "recent_rates": {
-      "20": 0.2,
-      "60": 0.166667,
-      "120": 0.158333
+      "20": 0.1,
+      "60": 0.133333,
+      "120": 0.133333
     },
     "model_count": 11,
-    "model_top9_support": 8,
+    "model_top9_support": 7,
     "model_top15_support": 9,
     "model_rank_evidence": {
-      "bayes_24": 4,
-      "bayes_60": 2,
-      "bayes_150": 3,
-      "bayes_360": 19,
-      "ewma_8": 10,
-      "ewma_21": 2,
-      "ewma_55": 3,
-      "ewma_144": 8,
-      "empirical_hazard": 6,
-      "conditional_pair": 18,
-      "regime_slope": 8
+      "bayes_24": 12,
+      "bayes_60": 16,
+      "bayes_150": 2,
+      "bayes_360": 3,
+      "ewma_8": 5,
+      "ewma_21": 10,
+      "ewma_55": 9,
+      "ewma_144": 3,
+      "empirical_hazard": 2,
+      "conditional_pair": 2,
+      "regime_slope": 22
     },
     "logic_checks": {
       "independent_single_selector": true,
+      "development_only_model_selection": true,
       "all_registered_modules_evaluated": true,
       "rejected_pattern_modules_zero_weight": true,
       "dual_520_windows_complete": true,
-      "development_520_beats_random": false,
+      "development_520_beats_random": true,
       "holdout_520_beats_random": true,
-      "failed_repeat_cooldown": true,
+      "consecutive_repeat_cooldown": true,
       "recent_60_not_below_random": true,
       "recent_120_not_below_random": true,
       "at_least_half_models_top9": true,
       "at_least_two_thirds_models_top15": true,
-      "pattern_methods_pass_both_windows": false,
+      "rejected_pattern_candidates_excluded": true,
       "release_gate_passed": true,
       "previous_draw_used_as_direct_pick": false
     },
-    "all_passed": false,
-    "confidence_status": "回測審慎級",
+    "all_passed": true,
+    "confidence_status": "雙區段達標",
     "selection_basis": "本期全部已登錄且可重現模組完成運算後的唯一最高順位",
-    "warning": "本期終極獨隻已完成全系統逐項運算並固定輸出唯一最高順位；回測信心另外如實揭露，不得把名稱與驗證門檻混為一談，也不得宣稱90%或保證命中。"
+    "warning": "終極獨隻已通過較舊520期開發段、最新520期保留段及近60／120期門檻；仍屬機率排序，不代表保證命中。"
   },
   "research_review": {
     "objective": "只採用可同時通過開發段與保留段的無未來資料方法",
@@ -17939,6 +17958,6 @@
     "official_data_always_syncs_after_validation": true,
     "model_gate_blocks_data_sync": false,
     "prediction_label": "終極獨隻最高順位",
-    "confidence_status": "回測審慎級"
+    "confidence_status": "雙區段達標"
   }
 }
