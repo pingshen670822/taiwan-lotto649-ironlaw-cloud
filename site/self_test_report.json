@@ -1,40 +1,40 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-10-09T02:06:42+08:00",
+  "generated_at": "2026-10-10T01:40:02+08:00",
   "passed": true,
-  "latest_period": 115000094,
-  "latest_date": "2026-10-06",
-  "target_date": "2026-10-09",
+  "latest_period": 115000095,
+  "latest_date": "2026-10-09",
+  "target_date": "2026-10-13",
   "checks": [
     {
       "name": "daily_integrity_audit",
       "passed": true,
-      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-09T02:07:20+08:00\", \"passed\": true, \"latest_period\": 115000094, \"latest_date\": \"2026-10-06\", \"target_date\": \"2026-10-09\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2176/2176\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2176 unique=2176\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000094\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-06\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2176 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-06 expected>=2026-10-06\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000094, \"analysis_period\": 115000094}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2176 engine=2176\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
+      "detail": "{\"system\": \"台灣大樂透新世代鐵律預測系統\", \"generated_at\": \"2026-10-10T01:40:30+08:00\", \"passed\": true, \"latest_period\": 115000095, \"latest_date\": \"2026-10-09\", \"target_date\": \"2026-10-13\", \"checks\": [{\"name\": \"official_rows_valid\", \"passed\": true, \"detail\": \"valid=2177/2177\"}, {\"name\": \"no_duplicate_periods\", \"passed\": true, \"detail\": \"rows=2177 unique=2177\"}, {\"name\": \"no_duplicate_dates\", \"passed\": true, \"detail\": \"rows=2177 unique=2177\"}, {\"name\": \"periods_strictly_increasing\", \"passed\": true, \"detail\": \"first=96000001 latest=115000095\"}, {\"name\": \"dates_strictly_increasing\", \"passed\": true, \"detail\": \"first=2007-01-02 latest=2026-10-09\"}, {\"name\": \"draw_dates_calendar_valid\", \"passed\": true, \"detail\": \"parsed=2177 future=[]\"}, {\"name\": \"official_special_schedule_preserved\", \"passed\": true, \"detail\": \"official holiday/special draws=113\"}, {\"name\": \"latest_draw_fresh\", \"passed\": true, \"detail\": \"actual=2026-10-09 expected>=2026-10-09\"}, {\"name\": \"analysis_matches_official_csv\", \"passed\": true, \"detail\": {\"csv_period\": 115000095, \"analysis_period\": 115000095}}, {\"name\": \"analysis_row_count_matches\", \"passed\": true, \"detail\": \"csv=2177 engine=2177\"}, {\"name\": \"prediction_history_no_duplicate_revisions\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_history_no_stale_pending\", \"passed\": true, \"detail\": []}, {\"name\": \"prediction_settlements_match_official\", \"passed\": true, \"detail\": []}, {\"name\": \"all_report_artifacts_exist\", \"passed\": true, \"detail\": []}, {\"name\": \"five_destinations_byte_identical\", \"passed\": true, \"detail\": []}]}"
     },
     {
       "name": "official_history_complete",
       "passed": true,
-      "detail": "2176 draws"
+      "detail": "2177 draws"
     },
     {
       "name": "official_history_latest",
       "passed": true,
-      "detail": "actual=115000094 2026-10-06; expected>=2026-10-06"
+      "detail": "actual=115000095 2026-10-09; expected>=2026-10-09"
     },
     {
       "name": "daily_prediction_recalculated",
       "passed": true,
-      "detail": "generated=2026-10-09T02:06:42+08:00; today=2026-10-09"
+      "detail": "generated=2026-10-10T01:40:02+08:00; today=2026-10-10"
     },
     {
       "name": "prediction_target_calendar_correct",
       "passed": true,
-      "detail": "actual=2026-10-09; expected=2026-10-09"
+      "detail": "actual=2026-10-13; expected=2026-10-13"
     },
     {
       "name": "release_gate_evaluated",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.741e-05, \"special_edge\": 0.00012757, \"main_avg_hits\": 1.1327, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7125, \"special_avg_hits\": 0.0827, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16155936}"
+      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.895e-05, \"special_edge\": 0.00013211, \"main_avg_hits\": 1.1288, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7135, \"special_avg_hits\": 0.0846, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16437335}"
     },
     {
       "name": "walk_forward_1040_and_520",
@@ -44,17 +44,17 @@
     {
       "name": "main_backtest_disclosed",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.741e-05, \"special_edge\": 0.00012757, \"main_avg_hits\": 1.1327, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7125, \"special_avg_hits\": 0.0827, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16155936}"
+      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.895e-05, \"special_edge\": 0.00013211, \"main_avg_hits\": 1.1288, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7135, \"special_avg_hits\": 0.0846, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16437335}"
     },
     {
       "name": "special_backtest_disclosed",
       "passed": true,
-      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.741e-05, \"special_edge\": 0.00012757, \"main_avg_hits\": 1.1327, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7125, \"special_avg_hits\": 0.0827, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16155936}"
+      "detail": "{\"passed\": true, \"rule\": \"模型信心守門獨立於官方資料同步；前9與獨支都必須公開走步驗證結果\", \"main_edge\": -8.895e-05, \"special_edge\": 0.00013211, \"main_avg_hits\": 1.1288, \"main_random_hits\": 1.102, \"main_avg_spill_10_15\": 0.7135, \"special_avg_hits\": 0.0846, \"special_random_hits\": 0.0612, \"single_selector_passed\": true, \"single_hit_rate\": 0.142308, \"single_random_rate\": 0.122449, \"max_main_weight\": 0.16437335}"
     },
     {
       "name": "no_model_monopoly",
       "passed": true,
-      "detail": "0.16155936"
+      "detail": "0.16437335"
     },
     {
       "name": "top9_and_single_selector_v10",
@@ -79,7 +79,7 @@
     {
       "name": "v9_walk_forward_disclosed",
       "passed": true,
-      "detail": "{\"v9_avg1040\": 1.1327, \"v9_recent20\": 1.15, \"v9_first920\": 1.1293, \"v9_last120\": 1.1583, \"random_avg1040\": 1.102}"
+      "detail": "{\"v9_avg1040\": 1.1288, \"v9_recent20\": 1.15, \"v9_first920\": 1.1272, \"v9_last120\": 1.1417, \"random_avg1040\": 1.102}"
     },
     {
       "name": "candidate_49",
@@ -94,17 +94,17 @@
     {
       "name": "strongest_single_exactly_one",
       "passed": true,
-      "detail": "number=[20]"
+      "detail": "number=[25]"
     },
     {
       "name": "strongest_multilogic_evidence",
       "passed": true,
-      "detail": "{\"label\": \"終極獨隻・全系統最高順位\", \"number\": 20, \"count\": 1, \"final_rank\": 1, \"target_draw_date\": \"2026-10-09\", \"based_on_period\": 115000094, \"data_cutoff_date\": \"2026-10-06\", \"calculated_at\": \"2026-10-09T02:06:42+08:00\", \"module_registry_summary\": {\"registered\": 24, \"evaluated\": 24, \"weighted\": 11, \"zero_weight\": 13}, \"selector\": \"performance_top1_blend_v4_dual_window\", \"selector_audit\": {\"candidate_count\": 1800, \"selection_window\": \"development_520_only\", \"holdout_used_for_selection\": false}, \"walk_forward_hits\": 145, \"walk_forward_rounds\": 1040, \"walk_forward_hit_rate\": 0.139423, \"development\": {\"rounds\": 520, \"hits\": 71, \"rate\": 0.136538}, \"holdout\": {\"rounds\": 520, \"hits\": 74, \"rate\": 0.142308}, \"random_hit_rate\": 0.122449, \"recent_hits\": {\"20\": 2, \"60\": 8, \"120\": 16}, \"recent_rates\": {\"20\": 0.1, \"60\": 0.133333, \"120\": 0.133333}, \"model_count\": 11, \"model_top9_support\": 7, \"model_top15_support\": 9, \"model_rank_evidence\": {\"bayes_24\": 12, \"bayes_60\": 16, \"bayes_150\": 2, \"bayes_360\": 3, \"ewma_8\": 5, \"ewma_21\": 10, \"ewma_55\": 9, \"ewma_144\": 3, \"empirical_hazard\": 2, \"conditional_pair\": 2, \"regime_slope\": 22}, \"logic_checks\": {\"independent_single_selector\": true, \"development_only_model_selection\": true, \"all_registered_modules_evaluated\": true, \"rejected_pattern_modules_zero_weight\": true, \"dual_520_windows_complete\": true, \"development_520_beats_random\": true, \"holdout_520_beats_random\": true, \"consecutive_repeat_cooldown\": true, \"recent_60_not_below_random\": true, \"recent_120_not_below_random\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"rejected_pattern_candidates_excluded\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"confidence_status\": \"雙區段達標\", \"selection_basis\": \"本期全部已登錄且可重現模組完成運算後的唯一最高順位\", \"warning\": \"終極獨隻已通過較舊520期開發段、最新520期保留段及近60／120期門檻；仍屬機率排序，不代表保證命中。\"}"
+      "detail": "{\"label\": \"終極獨隻・全系統最高順位\", \"number\": 25, \"count\": 1, \"final_rank\": 1, \"target_draw_date\": \"2026-10-13\", \"based_on_period\": 115000095, \"data_cutoff_date\": \"2026-10-09\", \"calculated_at\": \"2026-10-10T01:40:02+08:00\", \"module_registry_summary\": {\"registered\": 24, \"evaluated\": 24, \"weighted\": 11, \"zero_weight\": 13}, \"selector\": \"performance_top1_blend_v4_dual_window\", \"selector_audit\": {\"candidate_count\": 1800, \"selection_window\": \"development_520_only\", \"holdout_used_for_selection\": false}, \"walk_forward_hits\": 144, \"walk_forward_rounds\": 1040, \"walk_forward_hit_rate\": 0.138462, \"development\": {\"rounds\": 520, \"hits\": 70, \"rate\": 0.134615}, \"holdout\": {\"rounds\": 520, \"hits\": 74, \"rate\": 0.142308}, \"random_hit_rate\": 0.122449, \"recent_hits\": {\"20\": 2, \"60\": 8, \"120\": 15}, \"recent_rates\": {\"20\": 0.1, \"60\": 0.133333, \"120\": 0.125}, \"model_count\": 11, \"model_top9_support\": 10, \"model_top15_support\": 10, \"model_rank_evidence\": {\"bayes_24\": 4, \"bayes_60\": 3, \"bayes_150\": 1, \"bayes_360\": 1, \"ewma_8\": 4, \"ewma_21\": 2, \"ewma_55\": 1, \"ewma_144\": 1, \"empirical_hazard\": 17, \"conditional_pair\": 1, \"regime_slope\": 4}, \"logic_checks\": {\"independent_single_selector\": true, \"development_only_model_selection\": true, \"all_registered_modules_evaluated\": true, \"rejected_pattern_modules_zero_weight\": true, \"dual_520_windows_complete\": true, \"development_520_beats_random\": true, \"holdout_520_beats_random\": true, \"consecutive_repeat_cooldown\": true, \"recent_60_not_below_random\": true, \"recent_120_not_below_random\": true, \"at_least_half_models_top9\": true, \"at_least_two_thirds_models_top15\": true, \"rejected_pattern_candidates_excluded\": true, \"release_gate_passed\": true, \"previous_draw_used_as_direct_pick\": false}, \"all_passed\": true, \"confidence_status\": \"雙區段達標\", \"selection_basis\": \"本期全部已登錄且可重現模組完成運算後的唯一最高順位\", \"warning\": \"終極獨隻已通過較舊520期開發段、最新520期保留段及近60／120期門檻；仍屬機率排序，不代表保證命中。\"}"
     },
     {
       "name": "full_system_module_registry",
       "passed": true,
-      "detail": "{\"registered\": 24, \"evaluated\": 24, \"weighted\": 11, \"zero_weight\": 13, \"selected\": 20}"
+      "detail": "{\"registered\": 24, \"evaluated\": 24, \"weighted\": 11, \"zero_weight\": 13, \"selected\": 25}"
     },
     {
       "name": "trajectory_cycle_drag_dual_window_audit",
@@ -119,12 +119,12 @@
     {
       "name": "no_fake_or_future_data",
       "passed": true,
-      "detail": "{\"official_rows\": 2176, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000094, \"prediction_target\": \"2026-10-09\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2177, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000095, \"prediction_target\": \"2026-10-13\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 1, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "previous_draw_overlap_capped",
       "passed": true,
-      "detail": "{\"official_rows\": 2176, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000094, \"prediction_target\": \"2026-10-09\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 3, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
+      "detail": "{\"official_rows\": 2177, \"first_period\": 96000001, \"first_date\": \"2007-01-02\", \"latest_period_used\": 115000095, \"prediction_target\": \"2026-10-13\", \"future_data_used\": false, \"previous_prediction_rewritten\": false, \"prediction_revision_append_only\": true, \"strongest_single_count\": 1, \"previous_draw_overlap_cap\": 3, \"top9_previous_draw_overlap\": 1, \"research_methods_without_walk_forward_rejected\": true, \"rule\": \"只使用目標期以前的官方開獎資料；上期獎號只用於結算、模型追責及限制過度占位，不得直接指定下期號碼；開獎前若更換核心只可追加版本，不得覆寫舊預測\"}"
     },
     {
       "name": "artifacts_complete",

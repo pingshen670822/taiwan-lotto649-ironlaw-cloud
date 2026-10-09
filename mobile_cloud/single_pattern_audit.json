@@ -1,6 +1,6 @@
 {
   "rule": "每期只讀當期以前資料；開發段與最後520期保留段分離；兩段都勝過6/49才可進正式模型",
-  "official_draws": 2176,
+  "official_draws": 2177,
   "evaluated_rounds": 1040,
   "development_rounds": 520,
   "holdout_rounds": 520,
@@ -33,13 +33,13 @@
       },
       "holdout": {
         "rounds": 520,
-        "hits": 61,
-        "rate": 0.117308
+        "hits": 62,
+        "rate": 0.119231
       },
       "recent": {
-        "20": 4,
-        "60": 11,
-        "120": 17
+        "20": 5,
+        "60": 12,
+        "120": 18
       },
       "latest_pick": 25,
       "accepted": false
@@ -60,7 +60,7 @@
         "60": 3,
         "120": 9
       },
-      "latest_pick": 26,
+      "latest_pick": 15,
       "accepted": false
     },
     "transition_drag": {
@@ -85,13 +85,13 @@
     "two_step_drag": {
       "development": {
         "rounds": 520,
-        "hits": 57,
-        "rate": 0.109615
+        "hits": 58,
+        "rate": 0.111538
       },
       "holdout": {
         "rounds": 520,
-        "hits": 54,
-        "rate": 0.103846
+        "hits": 53,
+        "rate": 0.101923
       },
       "recent": {
         "20": 2,
@@ -117,7 +117,7 @@
         "60": 9,
         "120": 13
       },
-      "latest_pick": 21,
+      "latest_pick": 31,
       "accepted": false
     },
     "interval_recurrence": {
@@ -142,13 +142,13 @@
     "cooccurrence_drag": {
       "development": {
         "rounds": 520,
-        "hits": 59,
-        "rate": 0.113462
+        "hits": 60,
+        "rate": 0.115385
       },
       "holdout": {
         "rounds": 520,
-        "hits": 65,
-        "rate": 0.125
+        "hits": 64,
+        "rate": 0.123077
       },
       "recent": {
         "20": 5,
@@ -161,13 +161,13 @@
     "multi_condition_equal": {
       "development": {
         "rounds": 520,
-        "hits": 57,
-        "rate": 0.109615
+        "hits": 58,
+        "rate": 0.111538
       },
       "holdout": {
         "rounds": 520,
-        "hits": 73,
-        "rate": 0.140385
+        "hits": 72,
+        "rate": 0.138462
       },
       "recent": {
         "20": 6,
