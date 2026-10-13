@@ -1,6 +1,6 @@
 {
   "rule": "每期只讀當期以前資料；開發段與最後520期保留段分離；兩段都勝過6/49才可進正式模型",
-  "official_draws": 2177,
+  "official_draws": 2178,
   "evaluated_rounds": 1040,
   "development_rounds": 520,
   "holdout_rounds": 520,
@@ -22,7 +22,7 @@
         "60": 7,
         "120": 12
       },
-      "latest_pick": 12,
+      "latest_pick": 26,
       "accepted": false
     },
     "frequency_240": {
@@ -47,8 +47,8 @@
     "weekday_cycle": {
       "development": {
         "rounds": 520,
-        "hits": 65,
-        "rate": 0.125
+        "hits": 64,
+        "rate": 0.123077
       },
       "holdout": {
         "rounds": 520,
@@ -60,7 +60,7 @@
         "60": 3,
         "120": 9
       },
-      "latest_pick": 15,
+      "latest_pick": 26,
       "accepted": false
     },
     "transition_drag": {
@@ -98,7 +98,7 @@
         "60": 7,
         "120": 12
       },
-      "latest_pick": 26,
+      "latest_pick": 18,
       "accepted": false
     },
     "neighbor_track": {
@@ -117,7 +117,7 @@
         "60": 9,
         "120": 13
       },
-      "latest_pick": 31,
+      "latest_pick": 20,
       "accepted": false
     },
     "interval_recurrence": {
@@ -136,7 +136,7 @@
         "60": 4,
         "120": 13
       },
-      "latest_pick": 20,
+      "latest_pick": 11,
       "accepted": false
     },
     "cooccurrence_drag": {
@@ -155,7 +155,7 @@
         "60": 12,
         "120": 19
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     },
     "multi_condition_equal": {
@@ -180,8 +180,8 @@
     "rolling_best_60": {
       "development": {
         "rounds": 520,
-        "hits": 64,
-        "rate": 0.123077
+        "hits": 63,
+        "rate": 0.121154
       },
       "holdout": {
         "rounds": 520,
