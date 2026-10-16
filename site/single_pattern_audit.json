@@ -1,6 +1,6 @@
 {
   "rule": "每期只讀當期以前資料；開發段與最後520期保留段分離；兩段都勝過6/49才可進正式模型",
-  "official_draws": 2178,
+  "official_draws": 2179,
   "evaluated_rounds": 1040,
   "development_rounds": 520,
   "holdout_rounds": 520,
@@ -18,7 +18,7 @@
         "rate": 0.130769
       },
       "recent": {
-        "20": 5,
+        "20": 4,
         "60": 7,
         "120": 12
       },
@@ -37,7 +37,7 @@
         "rate": 0.119231
       },
       "recent": {
-        "20": 5,
+        "20": 4,
         "60": 12,
         "120": 18
       },
@@ -52,15 +52,15 @@
       },
       "holdout": {
         "rounds": 520,
-        "hits": 51,
-        "rate": 0.098077
+        "hits": 52,
+        "rate": 0.1
       },
       "recent": {
-        "20": 0,
-        "60": 3,
-        "120": 9
+        "20": 1,
+        "60": 4,
+        "120": 10
       },
-      "latest_pick": 26,
+      "latest_pick": 15,
       "accepted": false
     },
     "transition_drag": {
@@ -75,8 +75,8 @@
         "rate": 0.130769
       },
       "recent": {
-        "20": 5,
-        "60": 15,
+        "20": 4,
+        "60": 14,
         "120": 18
       },
       "latest_pick": 26,
@@ -98,7 +98,7 @@
         "60": 7,
         "120": 12
       },
-      "latest_pick": 18,
+      "latest_pick": 26,
       "accepted": false
     },
     "neighbor_track": {
@@ -117,33 +117,33 @@
         "60": 9,
         "120": 13
       },
-      "latest_pick": 20,
+      "latest_pick": 37,
       "accepted": false
     },
     "interval_recurrence": {
       "development": {
         "rounds": 520,
-        "hits": 66,
-        "rate": 0.126923
+        "hits": 67,
+        "rate": 0.128846
       },
       "holdout": {
         "rounds": 520,
-        "hits": 54,
-        "rate": 0.103846
+        "hits": 53,
+        "rate": 0.101923
       },
       "recent": {
         "20": 2,
         "60": 4,
         "120": 13
       },
-      "latest_pick": 11,
+      "latest_pick": 35,
       "accepted": false
     },
     "cooccurrence_drag": {
       "development": {
         "rounds": 520,
-        "hits": 60,
-        "rate": 0.115385
+        "hits": 59,
+        "rate": 0.113462
       },
       "holdout": {
         "rounds": 520,
@@ -155,7 +155,7 @@
         "60": 12,
         "120": 19
       },
-      "latest_pick": 25,
+      "latest_pick": 35,
       "accepted": false
     },
     "multi_condition_equal": {
@@ -170,7 +170,7 @@
         "rate": 0.138462
       },
       "recent": {
-        "20": 6,
+        "20": 5,
         "60": 14,
         "120": 23
       },
@@ -208,7 +208,7 @@
         "rate": 0.123077
       },
       "recent": {
-        "20": 6,
+        "20": 5,
         "60": 10,
         "120": 15
       },
@@ -227,7 +227,7 @@
         "rate": 0.119231
       },
       "recent": {
-        "20": 4,
+        "20": 3,
         "60": 10,
         "120": 19
       },
@@ -246,7 +246,7 @@
         "rate": 0.123077
       },
       "recent": {
-        "20": 5,
+        "20": 4,
         "60": 12,
         "120": 19
       },

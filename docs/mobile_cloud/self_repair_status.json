@@ -1,9 +1,9 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "status": "healthy",
-  "checked_at": "2026-10-16T00:59:21+08:00",
+  "checked_at": "2026-10-17T00:36:40+08:00",
   "repair_deadline": "開獎後120分鐘（台灣時間22:30）",
   "attempt": 1,
   "max_attempts": 3,
-  "detail": "latest=2026-10-13; expected>=2026-10-13"
+  "detail": "latest=2026-10-16; expected>=2026-10-16"
 }
