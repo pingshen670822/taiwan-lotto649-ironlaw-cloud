@@ -1,6 +1,6 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-10-20T22:19:36+08:00",
+  "generated_at": "2026-10-21T02:02:33+08:00",
   "passed": true,
   "latest_period": 115000098,
   "latest_date": "2026-10-20",
@@ -44,7 +44,7 @@
     {
       "name": "latest_draw_fresh",
       "passed": true,
-      "detail": "actual=2026-10-20 expected>=2026-10-16"
+      "detail": "actual=2026-10-20 expected>=2026-10-20"
     },
     {
       "name": "analysis_matches_official_csv",
