@@ -1,7 +1,7 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
   "engine": "cleanroom_top9_single_dual_window_v10_1",
-  "generated_at": "2026-10-22T01:09:49+08:00",
+  "generated_at": "2026-10-23T01:08:59+08:00",
   "history": {
     "count": 2180,
     "first": "2007-01-02",
@@ -17783,7 +17783,7 @@
     "target_draw_date": "2026-10-23",
     "based_on_period": 115000098,
     "data_cutoff_date": "2026-10-20",
-    "calculated_at": "2026-10-22T01:09:49+08:00",
+    "calculated_at": "2026-10-23T01:08:59+08:00",
     "module_registry_summary": {
       "registered": 24,
       "evaluated": 24,
