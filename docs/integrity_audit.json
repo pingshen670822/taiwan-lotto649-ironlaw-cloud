@@ -1,40 +1,40 @@
 {
   "system": "台灣大樂透新世代鐵律預測系統",
-  "generated_at": "2026-10-27T04:29:03+08:00",
+  "generated_at": "2026-11-04T01:00:46+08:00",
   "passed": true,
-  "latest_period": 115000099,
-  "latest_date": "2026-10-23",
-  "target_date": "2026-10-27",
+  "latest_period": 115000102,
+  "latest_date": "2026-11-03",
+  "target_date": "2026-11-06",
   "checks": [
     {
       "name": "official_rows_valid",
       "passed": true,
-      "detail": "valid=2181/2181"
+      "detail": "valid=2184/2184"
     },
     {
       "name": "no_duplicate_periods",
       "passed": true,
-      "detail": "rows=2181 unique=2181"
+      "detail": "rows=2184 unique=2184"
     },
     {
       "name": "no_duplicate_dates",
       "passed": true,
-      "detail": "rows=2181 unique=2181"
+      "detail": "rows=2184 unique=2184"
     },
     {
       "name": "periods_strictly_increasing",
       "passed": true,
-      "detail": "first=96000001 latest=115000099"
+      "detail": "first=96000001 latest=115000102"
     },
     {
       "name": "dates_strictly_increasing",
       "passed": true,
-      "detail": "first=2007-01-02 latest=2026-10-23"
+      "detail": "first=2007-01-02 latest=2026-11-03"
     },
     {
       "name": "draw_dates_calendar_valid",
       "passed": true,
-      "detail": "parsed=2181 future=[]"
+      "detail": "parsed=2184 future=[]"
     },
     {
       "name": "official_special_schedule_preserved",
@@ -44,20 +44,20 @@
     {
       "name": "latest_draw_fresh",
       "passed": true,
-      "detail": "actual=2026-10-23 expected>=2026-10-23"
+      "detail": "actual=2026-11-03 expected>=2026-11-03"
     },
     {
       "name": "analysis_matches_official_csv",
       "passed": true,
       "detail": {
-        "csv_period": 115000099,
-        "analysis_period": 115000099
+        "csv_period": 115000102,
+        "analysis_period": 115000102
       }
     },
     {
       "name": "analysis_row_count_matches",
       "passed": true,
-      "detail": "csv=2181 engine=2181"
+      "detail": "csv=2184 engine=2184"
     },
     {
       "name": "prediction_history_no_duplicate_revisions",
