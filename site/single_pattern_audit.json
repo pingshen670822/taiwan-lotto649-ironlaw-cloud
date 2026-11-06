@@ -1,6 +1,6 @@
 {
   "rule": "每期只讀當期以前資料；開發段與最後520期保留段分離；兩段都勝過6/49才可進正式模型",
-  "official_draws": 2184,
+  "official_draws": 2185,
   "evaluated_rounds": 1040,
   "development_rounds": 520,
   "holdout_rounds": 520,
@@ -60,7 +60,7 @@
         "60": 3,
         "120": 9
       },
-      "latest_pick": 41,
+      "latest_pick": 15,
       "accepted": false
     },
     "transition_drag": {
@@ -71,13 +71,13 @@
       },
       "holdout": {
         "rounds": 520,
-        "hits": 68,
-        "rate": 0.130769
+        "hits": 69,
+        "rate": 0.132692
       },
       "recent": {
-        "20": 2,
-        "60": 12,
-        "120": 18
+        "20": 3,
+        "60": 13,
+        "120": 19
       },
       "latest_pick": 26,
       "accepted": false
@@ -85,18 +85,18 @@
     "two_step_drag": {
       "development": {
         "rounds": 520,
-        "hits": 57,
-        "rate": 0.109615
+        "hits": 56,
+        "rate": 0.107692
       },
       "holdout": {
         "rounds": 520,
-        "hits": 53,
-        "rate": 0.101923
+        "hits": 54,
+        "rate": 0.103846
       },
       "recent": {
-        "20": 1,
-        "60": 6,
-        "120": 12
+        "20": 2,
+        "60": 7,
+        "120": 13
       },
       "latest_pick": 26,
       "accepted": false
@@ -117,7 +117,7 @@
         "60": 10,
         "120": 15
       },
-      "latest_pick": 29,
+      "latest_pick": 25,
       "accepted": false
     },
     "interval_recurrence": {
@@ -136,26 +136,26 @@
         "60": 5,
         "120": 14
       },
-      "latest_pick": 25,
+      "latest_pick": 2,
       "accepted": false
     },
     "cooccurrence_drag": {
       "development": {
         "rounds": 520,
-        "hits": 58,
-        "rate": 0.111538
+        "hits": 59,
+        "rate": 0.113462
       },
       "holdout": {
         "rounds": 520,
-        "hits": 65,
-        "rate": 0.125
+        "hits": 64,
+        "rate": 0.123077
       },
       "recent": {
-        "20": 5,
+        "20": 4,
         "60": 12,
         "120": 20
       },
-      "latest_pick": 30,
+      "latest_pick": 29,
       "accepted": false
     },
     "multi_condition_equal": {
@@ -170,18 +170,18 @@
         "rate": 0.138462
       },
       "recent": {
-        "20": 2,
+        "20": 1,
         "60": 13,
         "120": 23
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     },
     "rolling_best_60": {
       "development": {
         "rounds": 520,
-        "hits": 61,
-        "rate": 0.117308
+        "hits": 62,
+        "rate": 0.119231
       },
       "holdout": {
         "rounds": 520,
@@ -193,14 +193,14 @@
         "60": 8,
         "120": 14
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     },
     "rolling_best_120": {
       "development": {
         "rounds": 520,
-        "hits": 53,
-        "rate": 0.101923
+        "hits": 54,
+        "rate": 0.103846
       },
       "holdout": {
         "rounds": 520,
@@ -208,11 +208,11 @@
         "rate": 0.121154
       },
       "recent": {
-        "20": 2,
+        "20": 1,
         "60": 10,
         "120": 15
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     },
     "performance_vote_60": {
@@ -227,11 +227,11 @@
         "rate": 0.119231
       },
       "recent": {
-        "20": 2,
+        "20": 1,
         "60": 9,
         "120": 19
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     },
     "performance_vote_120": {
@@ -246,11 +246,11 @@
         "rate": 0.123077
       },
       "recent": {
-        "20": 2,
+        "20": 1,
         "60": 11,
         "120": 19
       },
-      "latest_pick": 26,
+      "latest_pick": 25,
       "accepted": false
     }
   },
